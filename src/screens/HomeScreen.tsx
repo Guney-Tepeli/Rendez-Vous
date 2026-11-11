@@ -20,7 +20,13 @@ const LANGUAGES: readonly LanguageMode[] = ["TR", "EN"];
 const LIST_LIMIT = 30;
 const NEW_PER_DAY_CHOICES = [5, 10, 15, 20] as const;
 
-export function HomeScreen({ onOpenModule }: { onOpenModule: (id: ModuleId) => void }) {
+export function HomeScreen({
+  onOpenModule,
+  onOpenSummary,
+}: {
+  onOpenModule: (id: ModuleId) => void;
+  onOpenSummary: () => void;
+}) {
   const state = useAppState();
   const dispatch = useAppDispatch();
   const { mode, t, l } = useT();
@@ -48,6 +54,7 @@ export function HomeScreen({ onOpenModule }: { onOpenModule: (id: ModuleId) => v
     recall: t("dash.cards", { n: today.queueSize }),
     grammar: l(today.lesson.title),
     output: l(today.lesson.title),
+    reading: today.reading ? l(today.reading.title) : "—",
     phonetics: l(today.phonetics.title),
   };
 
@@ -72,7 +79,7 @@ export function HomeScreen({ onOpenModule }: { onOpenModule: (id: ModuleId) => v
       <section className="panel">
         <h2>{t("dash.today")}</h2>
         <p className="muted">
-          {t("dash.summary", { done: doneCount, minutes: elapsedMinutes, planned: plannedTotal })}
+          {t("dash.summary", { done: doneCount, total: DAILY_MODULES.length, minutes: elapsedMinutes, planned: plannedTotal })}
         </p>
         <progress className="progress" value={doneCount} max={rows.length} />
         {dayDone && <p className="day-done">{t("dash.done")}</p>}
@@ -121,6 +128,10 @@ export function HomeScreen({ onOpenModule }: { onOpenModule: (id: ModuleId) => v
       </section>
 
       <ProgressPanel />
+
+      <button type="button" className="btn btn-wide" onClick={onOpenSummary}>
+        {t("summary.open")}
+      </button>
 
       <WordBrowser />
 

@@ -11,6 +11,7 @@
     "seed": "python3 -I scripts/import_xlsx.py"
   },
   "dependencies": {
+    "docx": "^9.15.3",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },

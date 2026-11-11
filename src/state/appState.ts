@@ -22,7 +22,7 @@ import {
 } from "../domain/types";
 
 /** Bump when the stored shape changes; storage.ts refuses other versions. */
-export const STATE_VERSION = 4;
+export const STATE_VERSION = 5;
 
 /**
  * New words per day. Counted per WORD, not per spelling: the import script
@@ -65,6 +65,7 @@ export type AppAction =
       now: Timestamp;
       lessonId: string;
       phoneticsId: string;
+      readingId: string;
       plan: Record<ModuleId, number>;
     }
   | { type: "tick"; moduleId: ModuleId; seconds: number }
@@ -88,6 +89,7 @@ export function newSession(
   now: Timestamp,
   lessonId: string,
   phoneticsId: string,
+  readingId: string,
   plan: Record<ModuleId, number>,
 ): DailySessionState {
   return {
@@ -101,6 +103,7 @@ export function newSession(
     })),
     lessonId,
     phoneticsId,
+    readingId,
   };
 }
 
@@ -114,7 +117,14 @@ export function introducedToday(state: AppState, now: Timestamp): number {
   return state.history[localDateKey(now)]?.newWords ?? 0;
 }
 
-export const EMPTY_DAY: DayRecord = { seconds: 0, reviews: 0, newWords: 0, modulesCompleted: 0 };
+export const EMPTY_DAY: DayRecord = {
+  seconds: 0,
+  reviews: 0,
+  newWords: 0,
+  modulesCompleted: 0,
+  newWordIds: [],
+  reviewedWordIds: [],
+};
 
 /** History with one day's record changed; the record is created if missing. */
 function withDay(history: History, dateKey: string, change: (day: DayRecord) => DayRecord): History {
@@ -132,10 +142,17 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       const cards = { ...state.cards, [action.itemId]: card };
       // A word with no card yet is new: it uses up one of today's slots.
       const isNew = existing === undefined;
+      const id = action.itemId;
       const history = withDay(state.history, localDateKey(action.now), (day) => ({
         ...day,
         reviews: day.reviews + 1,
         newWords: day.newWords + (isNew ? 1 : 0),
+        // Lists for the day summary: each word once, in the order first met.
+        newWordIds: isNew && !day.newWordIds.includes(id) ? [...day.newWordIds, id] : day.newWordIds,
+        reviewedWordIds:
+          !isNew && !day.newWordIds.includes(id) && !day.reviewedWordIds.includes(id)
+            ? [...day.reviewedWordIds, id]
+            : day.reviewedWordIds,
       }));
       return { ...state, cards, history };
     }
@@ -145,8 +162,19 @@ export function appReducer(state: AppState, action: AppAction): AppState {
 
     case "startSession": {
       // Same day: keep the progress. New day (or first ever): fresh session.
-      if (state.session?.date === localDateKey(action.now)) return state;
-      return { ...state, session: newSession(action.now, action.lessonId, action.phoneticsId, action.plan) };
+      const today = localDateKey(action.now);
+      if (state.session?.date === today) return state;
+      const history = withDay(state.history, today, (day) => ({
+        ...day,
+        lessonId: action.lessonId,
+        readingId: action.readingId,
+        phoneticsId: action.phoneticsId,
+      }));
+      return {
+        ...state,
+        session: newSession(action.now, action.lessonId, action.phoneticsId, action.readingId, action.plan),
+        history,
+      };
     }
 
     // tick and completeModule name their module instead of relying on

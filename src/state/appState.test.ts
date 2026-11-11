@@ -60,8 +60,8 @@ describe("appReducer", () => {
     expect(introducedToday(next, T0 + DAY_MS)).toBe(1);
   });
 
-  const PLAN = { recall: 5, grammar: 15, output: 15, phonetics: 5 };
-  const START = { type: "startSession", now: T0, lessonId: "l1", phoneticsId: "p1", plan: PLAN } as const;
+  const PLAN = { recall: 5, grammar: 20, output: 20, reading: 10, phonetics: 5 };
+  const START = { type: "startSession", now: T0, lessonId: "l1", phoneticsId: "p1", readingId: "r1", plan: PLAN } as const;
 
   it("starts a 4-module session, keeps it within the day, renews it the next day", () => {
     const started = run([START, { type: "tick", moduleId: "recall", seconds: 30 }]);
@@ -69,10 +69,13 @@ describe("appReducer", () => {
       "recall",
       "grammar",
       "output",
+      "reading",
       "phonetics",
     ]);
     expect(started.session?.lessonId).toBe("l1");
-    expect(started.session?.modules.map((module) => module.plannedMinutes)).toEqual([5, 15, 15, 5]);
+    expect(started.session?.readingId).toBe("r1");
+    expect(started.history["2026-11-10"]).toMatchObject({ lessonId: "l1", readingId: "r1", phoneticsId: "p1" });
+    expect(started.session?.modules.map((module) => module.plannedMinutes)).toEqual([5, 20, 20, 10, 5]);
 
     // Same day: untouched, even if another lesson is offered.
     const sameDay = appReducer(started, { ...START, now: T0 + 60_000, lessonId: "l2" });
@@ -91,7 +94,7 @@ describe("appReducer", () => {
       { type: "tick", moduleId: "recall", seconds: 5 },
       { type: "tick", moduleId: "output", seconds: 7 },
     ]);
-    expect(state.session?.modules.map((module) => module.elapsedSeconds)).toEqual([5, 0, 7, 0]);
+    expect(state.session?.modules.map((module) => module.elapsedSeconds)).toEqual([5, 0, 7, 0, 0]);
   });
 
   it("credits late seconds to the module that earned them", () => {
@@ -102,7 +105,7 @@ describe("appReducer", () => {
       { type: "tick", moduleId: "recall", seconds: 9 },
     ]);
     expect(state.session?.moduleIndex).toBe(1);
-    expect(state.session?.modules.map((module) => module.elapsedSeconds)).toEqual([9, 0, 0, 0]);
+    expect(state.session?.modules.map((module) => module.elapsedSeconds)).toEqual([9, 0, 0, 0, 0]);
   });
 
   it("points at the next unfinished module, whatever order they are done in", () => {
@@ -114,11 +117,26 @@ describe("appReducer", () => {
       [
         { type: "completeModule", moduleId: "recall" },
         { type: "completeModule", moduleId: "phonetics" },
+        { type: "completeModule", moduleId: "reading" },
         { type: "completeModule", moduleId: "output" },
       ],
       state,
     );
     expect(done.session && isSessionComplete(done.session)).toBe(true);
+  });
+
+  it("lists each word once per day, as new or reviewed", () => {
+    const yesterday = run([{ type: "reviewCard", itemId: "bain", rating: "good", now: T0 - DAY_MS }]);
+    const state = run(
+      [
+        { type: "reviewCard", itemId: "bague", rating: "again", now: T0 },
+        { type: "reviewCard", itemId: "bague", rating: "good", now: T0 },
+        { type: "reviewCard", itemId: "bain", rating: "good", now: T0 },
+        { type: "reviewCard", itemId: "bain", rating: "good", now: T0 },
+      ],
+      yesterday,
+    );
+    expect(state.history["2026-11-10"]).toMatchObject({ newWordIds: ["bague"], reviewedWordIds: ["bain"] });
   });
 
   it("keeps one history record per day", () => {
@@ -132,8 +150,11 @@ describe("appReducer", () => {
       { type: "reviewCard", itemId: "bague", rating: "good", now: T0 + DAY_MS },
     ]);
     expect(state.history).toEqual({
-      "2026-11-10": { seconds: 90, reviews: 2, newWords: 1, modulesCompleted: 1 },
-      "2026-11-11": { seconds: 0, reviews: 1, newWords: 1, modulesCompleted: 0 },
+      "2026-11-10": {
+        seconds: 90, reviews: 2, newWords: 1, modulesCompleted: 1,
+        newWordIds: ["bain"], reviewedWordIds: [], lessonId: "l1", readingId: "r1", phoneticsId: "p1",
+      },
+      "2026-11-11": { seconds: 0, reviews: 1, newWords: 1, modulesCompleted: 0, newWordIds: ["bague"], reviewedWordIds: [] },
     });
   });
 
@@ -179,7 +200,8 @@ describe("storage", () => {
         now: T0,
         lessonId: "l1",
         phoneticsId: "p1",
-        plan: { recall: 10, grammar: 15, output: 10, phonetics: 5 },
+        readingId: "r1",
+        plan: { recall: 10, grammar: 20, output: 15, reading: 10, phonetics: 5 },
       },
       { type: "completeLesson", lessonId: "l1" },
     ]);
@@ -224,14 +246,14 @@ describe("storage", () => {
     const { store } = memoryStore({ [STORAGE_KEY]: JSON.stringify(v2) });
     const loaded = loadState(store);
 
-    expect(loaded.version).toBe(4);
+    expect(loaded.version).toBe(5);
     expect(loaded.acceptedAnswers).toEqual({});
     expect(loaded.history).toEqual({
-      "2026-11-10": { seconds: 300, reviews: 7, newWords: 7, modulesCompleted: 2 },
+      "2026-11-10": { seconds: 300, reviews: 7, newWords: 7, modulesCompleted: 2, newWordIds: [], reviewedWordIds: [] },
     });
     expect("introduced" in loaded).toBe(false);
     expect(loaded.completedLessons).toEqual(["reading-rules"]);
-    expect(loaded.session?.lessonId).toBe("etre-avoir");
+    expect(loaded.session).toBeNull(); // a four-module session is dropped at v5
     // The limit still knows about the seven words already introduced that day.
     expect(introducedToday(loaded, new Date(2026, 10, 10, 18).getTime())).toBe(7);
   });
@@ -248,7 +270,7 @@ describe("storage", () => {
     const { store, data } = memoryStore({ [STORAGE_KEY]: JSON.stringify(v1) });
     const loaded = loadState(store);
 
-    expect(loaded.version).toBe(4); // walked 1 -> 2 -> 3 -> 4
+    expect(loaded.version).toBe(5); // walked 1 -> 2 -> 3 -> 4 -> 5
     expect(loaded.cards).toEqual({ bain: card });
     expect(loaded.settings.languageMode).toBe("EN");
     expect(loaded.history["2026-11-10"]?.newWords).toBe(1);

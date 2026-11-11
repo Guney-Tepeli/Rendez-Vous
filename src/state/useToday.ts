@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { LESSONS, findLesson } from "../data/lessons";
 import { PHONETICS_CARDS, findPhoneticsCard } from "../data/phonetics";
+import { findReading, readingForLesson } from "../data/readings";
 import { SELF_TALK_PROMPTS } from "../data/selfTalk";
 import { RAW_WORD_IDS } from "../data/vocabulary";
 import { pickAtLevel, pickByDay, pickLesson, planMinutes } from "../domain/daily";
@@ -35,8 +36,11 @@ export function useToday() {
     const phonetics =
       (session && findPhoneticsCard(session.phoneticsId)) ?? pickByDay(PHONETICS_CARDS, dateKey);
 
+    const reading = (session && findReading(session.readingId)) ?? readingForLesson(lesson.id);
+
     return {
       now,
+      reading,
       session,
       queueSize,
       plan: planMinutes(queueSize),

@@ -23,6 +23,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Sık kullanım: bir durumu açıklamak (parce que ile) ve déjà ile. Il était fatigué parce qu'il n'avait pas dormi. Olumsuzda ne ... pas yardımcı fiili sarar.",
         EN: "Common uses: explaining a situation (with parce que) and with déjà. Il était fatigué parce qu'il n'avait pas dormi. In the negative, ne ... pas wraps the auxiliary.",
       },
+      {
+        TR: "İstisnalar: hareket fiilleri (aller, venir, partir, arriver, rester, tomber, naître, mourir…) ve bütün dönüşlü fiiller être alır: elle était partie, ils s'étaient levés. Nesne (COD) fiilden önce geldiyse avoir ile de uyum yapılır: les photos que j'avais prises. Dikkat: venir de'nin geçmişi plus-que-parfait değil imparfait'dir: Il venait de partir = Daha yeni çıkmıştı.",
+        EN: "Exceptions: verbs of movement (aller, venir, partir, arriver, rester, tomber, naître, mourir…) and all reflexive verbs take être: elle était partie, ils s'étaient levés. If the direct object comes before the verb, avoir agrees too: les photos que j'avais prises. Careful: the past of venir de is the imparfait, not the plus-que-parfait: Il venait de partir = He had just left.",
+      },
+      {
+        TR: "Türkçe konuşanların tipik hataları: “-mıştı” ile “-dı” arasındaki farkı Fransızcaya taşımamak.\n✗ Quand je suis arrivé, le film a commencé. (= vardığım anda başladı)\n✓ Quand je suis arrivé, le film avait commencé. (= vardığımda çoktan başlamıştı)\n✗ Elle avait parti. → ✓ Elle était partie.",
+        EN: "Typical mistakes (common for Turkish speakers): not marking which past event came first.\n✗ Quand je suis arrivé, le film a commencé. (= it started the moment I arrived)\n✓ Quand je suis arrivé, le film avait commencé. (= it had already started)\n✗ Elle avait parti. → ✓ Elle était partie.",
+      },
+      {
+        TR: "Akılda tutmak için: bir zaman çizgisi çiz. Daha önce olan → plus-que-parfait, sonra olan → passé composé ya da imparfait. Türkçede “-mıştı / -mıştım” duyduğun her yerde avait / était düşün.",
+        EN: "How to remember: draw a timeline. What happened earlier → plus-que-parfait; what came later → passé composé or imparfait. Wherever English says “had done”, think avait / était.",
+      },
     ],
     examples: [
       {
@@ -36,6 +48,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Elle était contente parce qu'elle avait réussi son examen.",
         translation: { TR: "Sınavını geçmiş olduğu için mutluydu.", EN: "She was happy because she had passed her exam." },
+      },
+      {
+        fr: "Ils s'étaient déjà couchés quand j'ai téléphoné.",
+        translation: { TR: "Telefon ettiğimde çoktan yatmışlardı.", EN: "They had already gone to bed when I phoned." },
+      },
+      {
+        fr: "Je n'avais jamais vu la mer avant ce voyage.",
+        translation: { TR: "Bu yolculuktan önce denizi hiç görmemiştim.", EN: "I had never seen the sea before this trip." },
+      },
+      {
+        fr: "Les photos qu'elle avait prises étaient magnifiques.",
+        translation: { TR: "Çekmiş olduğu fotoğraflar harikaydı.", EN: "The photos she had taken were wonderful." },
       },
     ],
     exercises: [
@@ -89,6 +113,58 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Elle était déjà partie quand je suis arrivée.",
         ],
       },
+      {
+        type: "choice",
+        id: "plus-que-parfait-7",
+        text: "Quand nous sommes arrivés au cinéma, le film ___ déjà commencé.",
+        options: ["avait", "a", "aura"],
+        answer: 0,
+        translation: { TR: "Sinemaya vardığımızda film çoktan başlamıştı.", EN: "When we arrived at the cinema, the film had already started." },
+      },
+      {
+        type: "choice",
+        id: "plus-que-parfait-8",
+        text: "Elle ___ partie avant le dîner.",
+        options: ["avait", "était", "a"],
+        answer: 1,
+        translation: { TR: "Akşam yemeğinden önce gitmişti.", EN: "She had left before dinner." },
+      },
+      {
+        type: "fill",
+        id: "plus-que-parfait-9",
+        text: "Je n'___ jamais vu la mer avant ce voyage.",
+        answers: ["avais"],
+        translation: { TR: "Bu yolculuktan önce denizi hiç görmemiştim.", EN: "I had never seen the sea before this trip." },
+      },
+      {
+        type: "build",
+        id: "plus-que-parfait-10",
+        tokens: ["Ils", "s'étaient", "déjà", "couchés", "quand", "j'ai", "appelé"],
+        translation: { TR: "Aradığımda çoktan yatmışlardı.", EN: "They had already gone to bed when I called." },
+      },
+      {
+        type: "choice",
+        id: "plus-que-parfait-11",
+        text: "Il ___ fatigué parce qu'il avait travaillé toute la nuit.",
+        options: ["a été", "avait", "était"],
+        answer: 2,
+        translation: { TR: "Bütün gece çalışmış olduğu için yorgundu.", EN: "He was tired because he had worked all night." },
+      },
+      {
+        type: "free",
+        id: "plus-que-parfait-12",
+        prompt: { TR: "Fransızca yaz: “Kapıyı açtığımda herkes gitmişti.”", EN: "Write in French: “When I opened the door, everyone had left.”" },
+        answers: [
+          "Quand j'ai ouvert la porte, tout le monde était parti.",
+          "Quand j'ai ouvert la porte, tout le monde était déjà parti.",
+          "Quand j'ai ouvert la porte, tous étaient partis.",
+          "Quand j'ai ouvert la porte, tous étaient déjà partis.",
+          "Tout le monde était parti quand j'ai ouvert la porte.",
+          "Tout le monde était déjà parti quand j'ai ouvert la porte.",
+          "Tous étaient partis quand j'ai ouvert la porte.",
+          "Tous étaient déjà partis quand j'ai ouvert la porte.",
+        ],
+      },
     ],
   },
   {
@@ -112,6 +188,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Geçmişten bakınca gelecek: ana fiil geçmişteyse “-acağını” conditionnel ile söylenir. Il a dit qu'il viendrait = Geleceğini söyledi.",
         EN: "The future seen from the past: after a past main verb, “would” is the conditional. Il a dit qu'il viendrait = He said he would come.",
       },
+      {
+        TR: "İstisnalar: kök, futur'deki düzensiz kökün aynısıdır: être → ser-, avoir → aur-, aller → ir-, faire → fer-, pouvoir → pourr-, vouloir → voudr-, devoir → devr-, savoir → saur-, venir → viendr-, voir → verr-, falloir → il faudrait. Bazı -er fiilleri yazımda değişir: acheter → j'achèterais, appeler → j'appellerais.",
+        EN: "Exceptions: the stem is the same irregular stem as in the future: être → ser-, avoir → aur-, aller → ir-, faire → fer-, pouvoir → pourr-, vouloir → voudr-, devoir → devr-, savoir → saur-, venir → viendr-, voir → verr-, falloir → il faudrait. Some -er verbs change their spelling: acheter → j'achèterais, appeler → j'appellerais.",
+      },
+      {
+        TR: "Tipik hatalar:\n✗ Tu dois dormir plus. (emir gibi, sert) → ✓ Tu devrais dormir plus. (öğüt: “uyumalısın”)\n✗ Il a dit qu'il viendra. → ✓ Il a dit qu'il viendrait.\n✗ J'aimerai un café. (gelecek: “seveceğim”) → ✓ J'aimerais un café. (istek)",
+        EN: "Typical mistakes:\n✗ Tu dois dormir plus. (sounds like an order) → ✓ Tu devrais dormir plus. (advice: “you should”)\n✗ Il a dit qu'il viendra. → ✓ Il a dit qu'il viendrait.\n✗ J'aimerai un café. (future: “I will like”) → ✓ J'aimerais un café. (a wish)",
+      },
+      {
+        TR: "Akılda tutmak için: -rais = futur'ün r'si + imparfait'nin -ais'i. “Gelecek + geçmiş = olası dünya.” Konuşmada en çok dört kalıp döner; bunları hazır ezberle: je voudrais, j'aimerais, tu devrais, on pourrait.",
+        EN: "How to remember: -rais = the r of the future + the -ais of the imparfait. “Future + past = a possible world.” Four chunks cover most of everyday speech; learn them ready-made: je voudrais, j'aimerais, tu devrais, on pourrait.",
+      },
     ],
     examples: [
       {
@@ -125,6 +213,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Elle m'a dit qu'elle arriverait à huit heures.",
         translation: { TR: "Bana saat sekizde varacağını söyledi.", EN: "She told me she would arrive at eight." },
+      },
+      {
+        fr: "On pourrait aller au cinéma ce soir.",
+        translation: { TR: "Bu akşam sinemaya gidebiliriz.", EN: "We could go to the cinema tonight." },
+      },
+      {
+        fr: "Il faudrait réserver une table.",
+        translation: { TR: "Bir masa ayırtmak gerekir.", EN: "We ought to book a table." },
+      },
+      {
+        fr: "D'après les médecins, ce médicament serait dangereux.",
+        translation: { TR: "Doktorlara göre bu ilaç tehlikeliymiş.", EN: "According to the doctors, this medicine is said to be dangerous." },
       },
     ],
     exercises: [
@@ -172,6 +272,52 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “(O erkek) bize yazacağını söyledi.”", EN: "Write in French: “He said he would write to us.”" },
         answers: ["Il a dit qu'il nous écrirait.", "Il nous a dit qu'il nous écrirait."],
       },
+      {
+        type: "fill",
+        id: "conditionnel-uses-7",
+        text: "Vous ___ fermer la fenêtre, s'il vous plaît ? (pouvoir)",
+        answers: ["pourriez"],
+        translation: { TR: "Pencereyi kapatabilir misiniz, lütfen?", EN: "Could you close the window, please?" },
+      },
+      {
+        type: "choice",
+        id: "conditionnel-uses-8",
+        text: "À ta place, je ___ à ma mère. (parler)",
+        options: ["parlerai", "parlerais", "parlais"],
+        answer: 1,
+        translation: { TR: "Yerinde olsam annemle konuşurdum.", EN: "In your place, I would talk to my mother." },
+      },
+      {
+        type: "choice",
+        id: "conditionnel-uses-9",
+        text: "Il a dit qu'il ___ à huit heures.",
+        options: ["arrivera", "arrive", "arriverait"],
+        answer: 2,
+        translation: { TR: "Saat sekizde varacağını söyledi.", EN: "He said he would arrive at eight." },
+      },
+      {
+        type: "build",
+        id: "conditionnel-uses-10",
+        tokens: ["On", "pourrait", "aller", "au", "cinéma", "ce", "soir"],
+        translation: { TR: "Bu akşam sinemaya gidebiliriz.", EN: "We could go to the cinema tonight." },
+      },
+      {
+        type: "choice",
+        id: "conditionnel-uses-11",
+        text: "Selon la police, le voleur ___ en Espagne.",
+        options: ["serait", "sera", "était"],
+        answer: 0,
+        translation: { TR: "Polise göre hırsız İspanya'daymış.", EN: "According to the police, the thief is apparently in Spain." },
+      },
+      {
+        type: "free",
+        id: "conditionnel-uses-12",
+        prompt: { TR: "Fransızca yaz: “Bitirdiğini ve geleceğini bana söyledi.”", EN: "Write in French: “He told me he had finished and that he would come.”" },
+        answers: [
+          "Il m'a dit qu'il avait fini et qu'il viendrait.",
+          "Il m'a dit qu'il avait terminé et qu'il viendrait.",
+        ],
+      },
     ],
   },
   {
@@ -191,6 +337,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Yazım: si + il → s'il, si + ils → s'ils. Ama si elle, si on kısalmaz.",
         EN: "Spelling: si + il → s'il, si + ils → s'ils. But si elle and si on do not shorten.",
       },
+      {
+        TR: "İstisnalar: si “-ip -mediği” anlamında (dolaylı soru) kullanılırsa koşul değildir ve futur alabilir: Je ne sais pas s'il viendra = Gelip gelmeyeceğini bilmiyorum. Ana cümlede yakın gelecek de olur: S'il pleut, on va rester. Si'den sonra passé composé da gelebilir: Si tu as fini, tu peux partir.",
+        EN: "Exceptions: when si means “whether” (an indirect question) it is not a condition and can take the future: Je ne sais pas s'il viendra = I don't know whether he'll come. The main clause can also use the near future: S'il pleut, on va rester. Si can also be followed by the passé composé: Si tu as fini, tu peux partir.",
+      },
+      {
+        TR: "Tipik hatalar (Türkçe “yağacaksa” düşüncesi):\n✗ S'il pleuvra demain, je resterai. → ✓ S'il pleut demain, je resterai.\n✗ Si il vient… → ✓ S'il vient…\n✗ S'elle vient… → ✓ Si elle vient…",
+        EN: "Typical mistakes:\n✗ S'il pleuvra demain, je resterai. → ✓ S'il pleut demain, je resterai.\n✗ Si il vient… → ✓ S'il vient…\n✗ S'elle vient… → ✓ Si elle vient…",
+      },
+      {
+        TR: "Akılda tutmak için: si ile futur aynı yan cümlede yaşamaz; futur hep öbür tarafa geçer. Formül: Si + présent → présent / futur / impératif. Kısaltma yalnız il ve ils ile: s'il, s'ils.",
+        EN: "How to remember: si and the future never share a clause; the future always moves to the other side. Formula: Si + present → present / future / imperative. Elision only with il and ils: s'il, s'ils.",
+      },
     ],
     examples: [
       {
@@ -204,6 +362,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Si vous avez une question, levez la main.",
         translation: { TR: "Sorunuz varsa elinizi kaldırın.", EN: "If you have a question, raise your hand." },
+      },
+      {
+        fr: "Si on mélange le bleu et le jaune, on obtient du vert.",
+        translation: { TR: "Maviyle sarıyı karıştırırsan yeşil elde edersin.", EN: "If you mix blue and yellow, you get green." },
+      },
+      {
+        fr: "Si tu as fini, tu peux partir.",
+        translation: { TR: "Bitirdiysen gidebilirsin.", EN: "If you've finished, you can go." },
+      },
+      {
+        fr: "Je ne sais pas s'il viendra demain.",
+        translation: { TR: "Yarın gelip gelmeyeceğini bilmiyorum.", EN: "I don't know whether he'll come tomorrow." },
       },
     ],
     exercises: [
@@ -251,6 +421,89 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Je vous appellerai demain si j'ai le temps.",
         ],
       },
+      {
+        type: "fill",
+        id: "si-present-6",
+        text: "___ ils arrivent tôt, nous mangerons ensemble.",
+        answers: ["S'ils"],
+        translation: { TR: "Erken gelirlerse birlikte yemek yiyeceğiz.", EN: "If they arrive early, we'll eat together." },
+      },
+      {
+        type: "choice",
+        id: "si-present-7",
+        text: "S'il ___ demain, nous resterons à la maison.",
+        options: ["pleuvra", "pleut", "pleuvrait"],
+        answer: 1,
+        translation: { TR: "Yarın yağmur yağarsa evde kalacağız.", EN: "If it rains tomorrow, we'll stay at home." },
+      },
+      {
+        type: "choice",
+        id: "si-present-8",
+        text: "Si tu es fatigué, ___ !",
+        options: ["repose-toi", "tu te reposerais", "te reposes"],
+        answer: 0,
+        translation: { TR: "Yorgunsan dinlen!", EN: "If you're tired, rest!" },
+      },
+      {
+        type: "build",
+        id: "si-present-9",
+        tokens: ["Si", "vous", "avez", "faim,", "mangez", "une", "pomme"],
+        translation: { TR: "Açsanız bir elma yiyin.", EN: "If you're hungry, eat an apple." },
+      },
+      {
+        type: "choice",
+        id: "si-present-10",
+        text: "Si vous ___ le temps, venez nous voir.",
+        options: ["aurez", "auriez", "avez"],
+        answer: 2,
+        translation: { TR: "Vaktiniz olursa bizi görmeye gelin.", EN: "If you have time, come and see us." },
+      },
+      {
+        type: "free",
+        id: "si-present-11",
+        prompt: { TR: "Fransızca yaz: “Yarın hava güzel olursa denize gideceğiz.”", EN: "Write in French: “If the weather is nice tomorrow, we'll go to the beach.”" },
+        answers: [
+          "S'il fait beau demain, nous irons à la plage.",
+          "S'il fait beau demain, nous irons à la mer.",
+          "S'il fait beau demain, on ira à la plage.",
+          "S'il fait beau demain, on ira à la mer.",
+          "S'il fait beau demain, nous allons aller à la plage.",
+          "S'il fait beau demain, nous allons aller à la mer.",
+          "S'il fait beau demain, on va aller à la plage.",
+          "S'il fait beau demain, on va aller à la mer.",
+          "Demain, s'il fait beau, nous irons à la plage.",
+          "Demain, s'il fait beau, nous irons à la mer.",
+          "Demain, s'il fait beau, on ira à la plage.",
+          "Demain, s'il fait beau, on ira à la mer.",
+          "Demain, s'il fait beau, nous allons aller à la plage.",
+          "Demain, s'il fait beau, nous allons aller à la mer.",
+          "Demain, s'il fait beau, on va aller à la plage.",
+          "Demain, s'il fait beau, on va aller à la mer.",
+          "Nous irons à la plage s'il fait beau demain.",
+          "Nous irons à la mer s'il fait beau demain.",
+          "On ira à la plage s'il fait beau demain.",
+          "On ira à la mer s'il fait beau demain.",
+          "Nous allons aller à la plage s'il fait beau demain.",
+          "Nous allons aller à la mer s'il fait beau demain.",
+          "On va aller à la plage s'il fait beau demain.",
+          "On va aller à la mer s'il fait beau demain.",
+        ],
+      },
+      {
+        type: "free",
+        id: "si-present-12",
+        prompt: { TR: "Fransızca yaz: “Yorgunsan otur!”", EN: "Write in French: “If you're tired, sit down!”" },
+        answers: [
+          "Si tu es fatigué, assieds-toi !",
+          "Si tu es fatigué, assois-toi !",
+          "Si tu es fatiguée, assieds-toi !",
+          "Si tu es fatiguée, assois-toi !",
+          "Si vous êtes fatigué, asseyez-vous !",
+          "Si vous êtes fatiguée, asseyez-vous !",
+          "Si vous êtes fatigués, asseyez-vous !",
+          "Si vous êtes fatiguées, asseyez-vous !",
+        ],
+      },
     ],
   },
   {
@@ -270,6 +523,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Tek başına Et si + imparfait bir öneridir: Et si on allait au cinéma ? = Ya sinemaya gitsek? Öğüt kalıbı: Si j'étais toi / À ta place, ...",
         EN: "On its own, Et si + imparfait is a suggestion: Et si on allait au cinéma ? = How about going to the cinema? For advice: Si j'étais toi / À ta place, ...",
       },
+      {
+        TR: "İstisnalar: sıra değişebilir, kural aynı kalır: Je ferais le tour du monde si j'étais riche. Si “her ne zaman” anlamında geçmişteki bir alışkanlığı anlatıyorsa koşul değildir; iki tarafta da imparfait olur: Si (= quand) il pleuvait, nous restions à la maison.",
+        EN: "Exceptions: the order can change, the rule stays the same: Je ferais le tour du monde si j'étais riche. When si means “whenever” for a past habit, it is not a condition and both sides take the imparfait: Si (= quand) il pleuvait, nous restions à la maison.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede “-sa” ve “-rdı” iki ayrı ek, Fransızcada da iki ayrı zaman.\n✗ Si j'aurais le temps, je viendrais. → ✓ Si j'avais le temps, je viendrais.\n✗ Si j'avais de l'argent, j'achèterai une maison. (futur) → ✓ … j'achèterais une maison.",
+        EN: "Typical mistakes: the two halves need two different forms.\n✗ Si j'aurais le temps, je viendrais. → ✓ Si j'avais le temps, je viendrais.\n✗ Si j'avais de l'argent, j'achèterai une maison. (future) → ✓ … j'achèterais une maison.",
+      },
+      {
+        TR: "Akılda tutmak için: “-sam / -saydım” → imparfait (si tarafı), “-rdım” → conditionnel (ana cümle). İki taraf da -ais ile biter; r'li olan (-rais) asla si'nin yanında durmaz.",
+        EN: "How to remember: the si side is the imparfait, the result side is the conditional. Both end in -ais; the one with r (-rais) never stands next to si.",
+      },
     ],
     examples: [
       {
@@ -283,6 +548,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Et si on partait ce week-end ?",
         translation: { TR: "Ya bu hafta sonu bir yere gitsek?", EN: "How about going away this weekend?" },
+      },
+      {
+        fr: "Je serais plus calme si je dormais mieux.",
+        translation: { TR: "Daha iyi uyusam daha sakin olurdum.", EN: "I would be calmer if I slept better." },
+      },
+      {
+        fr: "Si j'étais toi, je chercherais un autre travail.",
+        translation: { TR: "Senin yerinde olsam başka bir iş arardım.", EN: "If I were you, I would look for another job." },
+      },
+      {
+        fr: "Si nous avions plus de temps, nous apprendrions le japonais.",
+        translation: { TR: "Daha çok vaktimiz olsa Japonca öğrenirdik.", EN: "If we had more time, we would learn Japanese." },
       },
     ],
     exercises: [
@@ -341,6 +618,54 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Je travaillerais en France si je parlais bien le français.",
         ],
       },
+      {
+        type: "fill",
+        id: "si-imparfait-7",
+        text: "Si tu ___ plus tôt, tu serais moins fatigué. (se coucher)",
+        answers: ["te couchais"],
+        translation: { TR: "Daha erken yatsan daha az yorgun olurdun.", EN: "If you went to bed earlier, you would be less tired." },
+      },
+      {
+        type: "choice",
+        id: "si-imparfait-8",
+        text: "Si j'___ une voiture, je t'emmènerais.",
+        options: ["aurais", "avais", "ai"],
+        answer: 1,
+        translation: { TR: "Arabam olsa seni götürürdüm.", EN: "If I had a car, I would take you." },
+      },
+      {
+        type: "choice",
+        id: "si-imparfait-9",
+        text: "Si elle parlait anglais, elle ___ à Londres.",
+        options: ["travaillerait", "travaillera", "travaillait", "travaille"],
+        answer: 0,
+        translation: { TR: "İngilizce konuşsa Londra'da çalışırdı.", EN: "If she spoke English, she would work in London." },
+      },
+      {
+        type: "build",
+        id: "si-imparfait-10",
+        tokens: ["Je", "serais", "plus", "calme", "si", "je", "dormais", "mieux"],
+        translation: { TR: "Daha iyi uyusam daha sakin olurdum.", EN: "I would be calmer if I slept better." },
+      },
+      {
+        type: "choice",
+        id: "si-imparfait-11",
+        text: "S'il fait beau demain, nous ___ à la plage.",
+        options: ["irions", "allions", "irons"],
+        answer: 2,
+        translation: { TR: "Yarın hava güzel olursa denize gideceğiz.", EN: "If the weather is nice tomorrow, we'll go to the beach." },
+      },
+      {
+        type: "free",
+        id: "si-imparfait-12",
+        prompt: { TR: "Fransızca yaz: “Daha çok vaktim olsa sana daha sık yazardım.”", EN: "Write in French: “If I had more time, I would write to you more often.”" },
+        answers: [
+          "Si j'avais plus de temps, je t'écrirais plus souvent.",
+          "Si j'avais plus de temps, je vous écrirais plus souvent.",
+          "Je t'écrirais plus souvent si j'avais plus de temps.",
+          "Je vous écrirais plus souvent si j'avais plus de temps.",
+        ],
+      },
     ],
   },
   {
@@ -364,6 +689,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Sonuç ŞİMDİ ise ana cümle conditionnel présent olur: Si j'avais dormi, je ne serais pas fatigué maintenant.",
         EN: "If the result is NOW, the main clause takes the present conditional: Si j'avais dormi, je ne serais pas fatigué maintenant.",
       },
+      {
+        TR: "İstisna (karışık koşul): koşul bugün de geçerliyse ama sonuç geçmişteyse si + imparfait → conditionnel passé: Si j'étais plus courageux, je lui aurais parlé hier. Être alan fiillerde uyum unutulmaz: Si elle était partie, elle serait arrivée à l'heure.",
+        EN: "Exception (mixed condition): if the condition is still true now but the result was in the past, use si + imparfait → past conditional: Si j'étais plus courageux, je lui aurais parlé hier. With être verbs, agreement still applies: Si elle était partie, elle serait arrivée à l'heure.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “bilseydim gelmezdim” hem bugün hem geçmiş için kullanılır; Fransızca ikisini ayırır.\n✗ Si j'aurais su… → ✓ Si j'avais su…\n✗ Si j'avais su, je ne viendrais pas. (geçmiş kastediliyorsa) → ✓ … je ne serais pas venu.\n✗ J'aurais dû de partir. → ✓ J'aurais dû partir.",
+        EN: "Typical mistakes:\n✗ Si j'aurais su… → ✓ Si j'avais su…\n✗ Si j'avais su, je ne viendrais pas. (when talking about the past) → ✓ … je ne serais pas venu.\n✗ J'aurais dû de partir. → ✓ J'aurais dû partir.",
+      },
+      {
+        TR: "Akılda tutmak için: geçmişe bir basamak in. Şimdiki hayal: si + imparfait → -rais. Geçmiş hayal: si + plus-que-parfait → aurais / serais + participe. Ezber cümle: Si j'avais su, je ne serais pas venu.",
+        EN: "How to remember: step one notch back into the past. Imaginary now: si + imparfait → -rais. Imaginary past: si + plus-que-parfait → aurais / serais + participle. Model sentence: Si j'avais su, je ne serais pas venu.",
+      },
     ],
     examples: [
       {
@@ -377,6 +714,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Si nous avions écouté le guide, nous ne serions pas perdus.",
         translation: { TR: "Rehberi dinleseydik şimdi kaybolmuş olmazdık.", EN: "If we had listened to the guide, we wouldn't be lost." },
+      },
+      {
+        fr: "Si elle avait pris le train, elle serait arrivée à l'heure.",
+        translation: { TR: "Trene binseydi zamanında varmış olurdu.", EN: "If she had taken the train, she would have arrived on time." },
+      },
+      {
+        fr: "Tu aurais pu me prévenir !",
+        translation: { TR: "Bana haber verebilirdin!", EN: "You could have warned me!" },
+      },
+      {
+        fr: "Si j'étais plus courageux, je lui aurais parlé hier.",
+        translation: { TR: "Daha cesur olsaydım dün onunla konuşurdum.", EN: "If I were braver, I would have spoken to him yesterday." },
       },
     ],
     exercises: [
@@ -435,6 +784,110 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Vous auriez pu me téléphoner !",
         ],
       },
+      {
+        type: "fill",
+        id: "si-plus-que-parfait-7",
+        text: "Si elle avait pris le train, elle ___ arrivée à l'heure.",
+        answers: ["serait"],
+        translation: { TR: "Trene binseydi zamanında varmış olurdu.", EN: "If she had taken the train, she would have arrived on time." },
+      },
+      {
+        type: "choice",
+        id: "si-plus-que-parfait-8",
+        text: "Si j'___ su, je serais venu.",
+        options: ["aurais", "avais", "ai"],
+        answer: 1,
+        translation: { TR: "Bilseydim gelirdim.", EN: "If I had known, I would have come." },
+      },
+      {
+        type: "choice",
+        id: "si-plus-que-parfait-9",
+        text: "Si tu avais révisé, tu ___ ton examen.",
+        options: ["aurais réussi", "réussiras", "avais réussi", "réussis"],
+        answer: 0,
+        translation: { TR: "Ders çalışsaydın sınavı geçerdin.", EN: "If you had studied, you would have passed your exam." },
+      },
+      {
+        type: "build",
+        id: "si-plus-que-parfait-10",
+        tokens: ["Tu", "aurais", "pu", "me", "prévenir"],
+        translation: { TR: "Bana haber verebilirdin.", EN: "You could have warned me." },
+      },
+      {
+        type: "choice",
+        id: "si-plus-que-parfait-11",
+        text: "Si j'avais de l'argent, j'___ une maison.",
+        options: ["achèterai", "achetais", "achèterais"],
+        answer: 2,
+        translation: { TR: "Param olsa bir ev alırdım.", EN: "If I had money, I would buy a house." },
+      },
+      {
+        type: "free",
+        id: "si-plus-que-parfait-12",
+        prompt: { TR: "Fransızca yaz: “Beni dinleseydin kaybolmazdık.”", EN: "Write in French: “If you had listened to me, we wouldn't have got lost.”" },
+        answers: [
+          "Si tu m'avais écouté, nous ne nous serions pas perdus.",
+          "Si tu m'avais écouté, nous ne nous serions pas perdues.",
+          "Si tu m'avais écouté, on ne se serait pas perdu.",
+          "Si tu m'avais écouté, on ne se serait pas perdus.",
+          "Si tu m'avais écouté, on ne se serait pas perdues.",
+          "Si tu m'avais écoutée, nous ne nous serions pas perdus.",
+          "Si tu m'avais écoutée, nous ne nous serions pas perdues.",
+          "Si tu m'avais écoutée, on ne se serait pas perdu.",
+          "Si tu m'avais écoutée, on ne se serait pas perdus.",
+          "Si tu m'avais écoutée, on ne se serait pas perdues.",
+          "Si vous m'aviez écouté, nous ne nous serions pas perdus.",
+          "Si vous m'aviez écouté, nous ne nous serions pas perdues.",
+          "Si vous m'aviez écouté, on ne se serait pas perdu.",
+          "Si vous m'aviez écouté, on ne se serait pas perdus.",
+          "Si vous m'aviez écouté, on ne se serait pas perdues.",
+          "Si vous m'aviez écoutée, nous ne nous serions pas perdus.",
+          "Si vous m'aviez écoutée, nous ne nous serions pas perdues.",
+          "Si vous m'aviez écoutée, on ne se serait pas perdu.",
+          "Si vous m'aviez écoutée, on ne se serait pas perdus.",
+          "Si vous m'aviez écoutée, on ne se serait pas perdues.",
+          "Si vous m'aviez écoutés, nous ne nous serions pas perdus.",
+          "Si vous m'aviez écoutés, nous ne nous serions pas perdues.",
+          "Si vous m'aviez écoutés, on ne se serait pas perdu.",
+          "Si vous m'aviez écoutés, on ne se serait pas perdus.",
+          "Si vous m'aviez écoutés, on ne se serait pas perdues.",
+          "Si vous m'aviez écoutées, nous ne nous serions pas perdus.",
+          "Si vous m'aviez écoutées, nous ne nous serions pas perdues.",
+          "Si vous m'aviez écoutées, on ne se serait pas perdu.",
+          "Si vous m'aviez écoutées, on ne se serait pas perdus.",
+          "Si vous m'aviez écoutées, on ne se serait pas perdues.",
+          "Nous ne nous serions pas perdus si tu m'avais écouté.",
+          "Nous ne nous serions pas perdus si tu m'avais écoutée.",
+          "Nous ne nous serions pas perdus si vous m'aviez écouté.",
+          "Nous ne nous serions pas perdus si vous m'aviez écoutée.",
+          "Nous ne nous serions pas perdus si vous m'aviez écoutés.",
+          "Nous ne nous serions pas perdus si vous m'aviez écoutées.",
+          "Nous ne nous serions pas perdues si tu m'avais écouté.",
+          "Nous ne nous serions pas perdues si tu m'avais écoutée.",
+          "Nous ne nous serions pas perdues si vous m'aviez écouté.",
+          "Nous ne nous serions pas perdues si vous m'aviez écoutée.",
+          "Nous ne nous serions pas perdues si vous m'aviez écoutés.",
+          "Nous ne nous serions pas perdues si vous m'aviez écoutées.",
+          "On ne se serait pas perdu si tu m'avais écouté.",
+          "On ne se serait pas perdu si tu m'avais écoutée.",
+          "On ne se serait pas perdu si vous m'aviez écouté.",
+          "On ne se serait pas perdu si vous m'aviez écoutée.",
+          "On ne se serait pas perdu si vous m'aviez écoutés.",
+          "On ne se serait pas perdu si vous m'aviez écoutées.",
+          "On ne se serait pas perdus si tu m'avais écouté.",
+          "On ne se serait pas perdus si tu m'avais écoutée.",
+          "On ne se serait pas perdus si vous m'aviez écouté.",
+          "On ne se serait pas perdus si vous m'aviez écoutée.",
+          "On ne se serait pas perdus si vous m'aviez écoutés.",
+          "On ne se serait pas perdus si vous m'aviez écoutées.",
+          "On ne se serait pas perdues si tu m'avais écouté.",
+          "On ne se serait pas perdues si tu m'avais écoutée.",
+          "On ne se serait pas perdues si vous m'aviez écouté.",
+          "On ne se serait pas perdues si vous m'aviez écoutée.",
+          "On ne se serait pas perdues si vous m'aviez écoutés.",
+          "On ne se serait pas perdues si vous m'aviez écoutées.",
+        ],
+      },
     ],
   },
   {
@@ -454,6 +907,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Gelecekteki bir ana kadar bitmiş olacak iş: Demain à midi, j'aurai terminé = Yarın öğlene kadar bitirmiş olacağım.\nDikkat: j'aurai (futur) ile j'aurais (conditionnel) neredeyse aynı okunur, yazımı farklıdır.",
         EN: "Something finished by a future point: Demain à midi, j'aurai terminé = By noon tomorrow, I will have finished.\nCareful: j'aurai (future) and j'aurais (conditional) sound almost the same but are spelled differently.",
       },
+      {
+        TR: "İstisnalar ve ek kullanımlar: quand gibi lorsque, dès que, une fois que da gelecekten söz ederken futur antérieur alır: Dès que j'aurai reçu ta lettre, je te répondrai. Dönüşlü fiiller ve être alanlar uyum yapar: elles se seront levées. Bir de geçmiş hakkında tahmin için kullanılır: Il n'est pas là ? Il aura oublié = Gelmedi mi? Unutmuştur.",
+        EN: "Exceptions and extra uses: like quand, lorsque, dès que and une fois que take the futur antérieur when talking about the future: Dès que j'aurai reçu ta lettre, je te répondrai. Reflexive and être verbs agree: elles se seront levées. It can also express a guess about the past: Il n'est pas là ? Il aura oublié = He's not here? He must have forgotten.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “bitirince / bitirdiğimde” zaman eki taşımadığı için présent kullanılıyor.\n✗ Quand je finis mes devoirs, je sortirai. → ✓ Quand j'aurai fini mes devoirs, je sortirai.\n✗ Quand j'aurais fini… (şart kipi yazımı) → ✓ Quand j'aurai fini…",
+        EN: "Typical mistakes: English “when I have finished” uses a present form, so learners copy it.\n✗ Quand je finis mes devoirs, je sortirai. → ✓ Quand j'aurai fini mes devoirs, je sortirai.\n✗ Quand j'aurais fini… (conditional spelling) → ✓ Quand j'aurai fini…",
+      },
+      {
+        TR: "Akılda tutmak için: iki gelecek olay var; önce bitecek olan → futur antérieur, sonra gelen → futur simple. Yazımda: j'aurai (s yok) = gelecek, j'aurais (s var) = şart.",
+        EN: "How to remember: two future events; the one finished first → futur antérieur, the one after → futur simple. In spelling: j'aurai (no s) = future, j'aurais (with s) = conditional.",
+      },
     ],
     examples: [
       {
@@ -467,6 +932,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Dans un an, j'aurai fini mes études.",
         translation: { TR: "Bir yıl sonra okulumu bitirmiş olacağım.", EN: "In a year, I will have finished my studies." },
+      },
+      {
+        fr: "Dès que j'aurai reçu ta lettre, je te répondrai.",
+        translation: { TR: "Mektubunu alır almaz sana cevap vereceğim.", EN: "As soon as I have received your letter, I'll answer you." },
+      },
+      {
+        fr: "Elles seront parties avant ton arrivée.",
+        translation: { TR: "Sen gelmeden önce gitmiş olacaklar.", EN: "They will have left before you arrive." },
+      },
+      {
+        fr: "Il n'est pas encore là ? Il aura oublié notre rendez-vous.",
+        translation: { TR: "Hâlâ gelmedi mi? Randevumuzu unutmuştur.", EN: "He's not here yet? He must have forgotten our appointment." },
       },
     ],
     exercises: [
@@ -515,6 +992,135 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Quand je serai rentrée, je vous appellerai.",
         ],
       },
+      {
+        type: "fill",
+        id: "futur-anterieur-6",
+        text: "Dès que j'___ reçu ta lettre, je te répondrai.",
+        answers: ["aurai"],
+        translation: { TR: "Mektubunu alır almaz sana cevap vereceğim.", EN: "As soon as I have received your letter, I'll answer you." },
+      },
+      {
+        type: "choice",
+        id: "futur-anterieur-7",
+        text: "Quand tu ___ tes devoirs, tu pourras jouer.",
+        options: ["finis", "auras fini", "aurais fini"],
+        answer: 1,
+        translation: { TR: "Ödevlerini bitirince oynayabileceksin.", EN: "When you have finished your homework, you'll be able to play." },
+      },
+      {
+        type: "choice",
+        id: "futur-anterieur-8",
+        text: "Je t'appellerai dès que je ___ arrivé.",
+        options: ["serai", "suis", "serais"],
+        answer: 0,
+        translation: { TR: "Varır varmaz seni arayacağım.", EN: "I'll call you as soon as I have arrived." },
+      },
+      {
+        type: "build",
+        id: "futur-anterieur-9",
+        tokens: ["Elles", "seront", "parties", "avant", "ton", "arrivée"],
+        translation: { TR: "Sen gelmeden önce gitmiş olacaklar.", EN: "They will have left before you arrive." },
+      },
+      {
+        type: "choice",
+        id: "futur-anterieur-10",
+        text: "Demain avant midi, j'___ terminé ce rapport.",
+        options: ["aurais", "avais", "aurai"],
+        answer: 2,
+        translation: { TR: "Yarın öğleden önce bu raporu bitirmiş olacağım.", EN: "By noon tomorrow, I will have finished this report." },
+      },
+      {
+        type: "free",
+        id: "futur-anterieur-11",
+        prompt: { TR: "Fransızca yaz: “Eve dönünce sana yazacağım.”", EN: "Write in French: “When I get home, I'll write to you.”" },
+        answers: [
+          "Quand je serai rentré, je t'écrirai.",
+          "Quand je serai rentré, je vous écrirai.",
+          "Quand je serai rentré à la maison, je t'écrirai.",
+          "Quand je serai rentré à la maison, je vous écrirai.",
+          "Quand je serai rentré chez moi, je t'écrirai.",
+          "Quand je serai rentré chez moi, je vous écrirai.",
+          "Quand je serai rentrée, je t'écrirai.",
+          "Quand je serai rentrée, je vous écrirai.",
+          "Quand je serai rentrée à la maison, je t'écrirai.",
+          "Quand je serai rentrée à la maison, je vous écrirai.",
+          "Quand je serai rentrée chez moi, je t'écrirai.",
+          "Quand je serai rentrée chez moi, je vous écrirai.",
+          "Dès que je serai rentré, je t'écrirai.",
+          "Dès que je serai rentré, je vous écrirai.",
+          "Dès que je serai rentré à la maison, je t'écrirai.",
+          "Dès que je serai rentré à la maison, je vous écrirai.",
+          "Dès que je serai rentré chez moi, je t'écrirai.",
+          "Dès que je serai rentré chez moi, je vous écrirai.",
+          "Dès que je serai rentrée, je t'écrirai.",
+          "Dès que je serai rentrée, je vous écrirai.",
+          "Dès que je serai rentrée à la maison, je t'écrirai.",
+          "Dès que je serai rentrée à la maison, je vous écrirai.",
+          "Dès que je serai rentrée chez moi, je t'écrirai.",
+          "Dès que je serai rentrée chez moi, je vous écrirai.",
+          "Lorsque je serai rentré, je t'écrirai.",
+          "Lorsque je serai rentré, je vous écrirai.",
+          "Lorsque je serai rentré à la maison, je t'écrirai.",
+          "Lorsque je serai rentré à la maison, je vous écrirai.",
+          "Lorsque je serai rentré chez moi, je t'écrirai.",
+          "Lorsque je serai rentré chez moi, je vous écrirai.",
+          "Lorsque je serai rentrée, je t'écrirai.",
+          "Lorsque je serai rentrée, je vous écrirai.",
+          "Lorsque je serai rentrée à la maison, je t'écrirai.",
+          "Lorsque je serai rentrée à la maison, je vous écrirai.",
+          "Lorsque je serai rentrée chez moi, je t'écrirai.",
+          "Lorsque je serai rentrée chez moi, je vous écrirai.",
+          "Je t'écrirai quand je serai rentré.",
+          "Je t'écrirai quand je serai rentré à la maison.",
+          "Je t'écrirai quand je serai rentré chez moi.",
+          "Je t'écrirai quand je serai rentrée.",
+          "Je t'écrirai quand je serai rentrée à la maison.",
+          "Je t'écrirai quand je serai rentrée chez moi.",
+          "Je t'écrirai dès que je serai rentré.",
+          "Je t'écrirai dès que je serai rentré à la maison.",
+          "Je t'écrirai dès que je serai rentré chez moi.",
+          "Je t'écrirai dès que je serai rentrée.",
+          "Je t'écrirai dès que je serai rentrée à la maison.",
+          "Je t'écrirai dès que je serai rentrée chez moi.",
+          "Je t'écrirai lorsque je serai rentré.",
+          "Je t'écrirai lorsque je serai rentré à la maison.",
+          "Je t'écrirai lorsque je serai rentré chez moi.",
+          "Je t'écrirai lorsque je serai rentrée.",
+          "Je t'écrirai lorsque je serai rentrée à la maison.",
+          "Je t'écrirai lorsque je serai rentrée chez moi.",
+          "Je vous écrirai quand je serai rentré.",
+          "Je vous écrirai quand je serai rentré à la maison.",
+          "Je vous écrirai quand je serai rentré chez moi.",
+          "Je vous écrirai quand je serai rentrée.",
+          "Je vous écrirai quand je serai rentrée à la maison.",
+          "Je vous écrirai quand je serai rentrée chez moi.",
+          "Je vous écrirai dès que je serai rentré.",
+          "Je vous écrirai dès que je serai rentré à la maison.",
+          "Je vous écrirai dès que je serai rentré chez moi.",
+          "Je vous écrirai dès que je serai rentrée.",
+          "Je vous écrirai dès que je serai rentrée à la maison.",
+          "Je vous écrirai dès que je serai rentrée chez moi.",
+          "Je vous écrirai lorsque je serai rentré.",
+          "Je vous écrirai lorsque je serai rentré à la maison.",
+          "Je vous écrirai lorsque je serai rentré chez moi.",
+          "Je vous écrirai lorsque je serai rentrée.",
+          "Je vous écrirai lorsque je serai rentrée à la maison.",
+          "Je vous écrirai lorsque je serai rentrée chez moi.",
+        ],
+      },
+      {
+        type: "free",
+        id: "futur-anterieur-12",
+        prompt: { TR: "Fransızca yaz: “Hava güzel olursa yemeği yedikten sonra dışarı çıkacağız.”", EN: "Write in French: “If the weather's nice, we'll go out when we've eaten.”" },
+        answers: [
+          "S'il fait beau, nous sortirons quand nous aurons mangé.",
+          "S'il fait beau, on sortira quand on aura mangé.",
+          "S'il fait beau, nous sortirons après avoir mangé.",
+          "S'il fait beau, on sortira après avoir mangé.",
+          "Quand nous aurons mangé, nous sortirons s'il fait beau.",
+          "Quand on aura mangé, on sortira s'il fait beau.",
+        ],
+      },
     ],
   },
   {
@@ -538,6 +1144,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "pouvoir: puisse, puisses, puisse, puissions, puissiez, puissent\nsavoir: sache, saches, sache, sachions, sachiez, sachent\nvouloir: veuille, veuilles, veuille, voulions, vouliez, veuillent",
         EN: "pouvoir: puisse, puisses, puisse, puissions, puissiez, puissent\nsavoir: sache, saches, sache, sachions, sachiez, sachent\nvouloir: veuille, veuilles, veuille, voulions, vouliez, veuillent",
       },
+      {
+        TR: "İstisnalar: bazı fiillerin iki kökü vardır (nous/vous ayrı): venir → que je vienne / que nous venions, boire → que je boive / que nous buvions, voir → que je voie / que nous voyions, croire → que je croie / que nous croyions. Kişisiz fiiller: falloir → qu'il faille, pleuvoir → qu'il pleuve. -ier fiillerinde çift i: que nous étudiions.",
+        EN: "Exceptions: some verbs have two stems (nous/vous differ): venir → que je vienne / que nous venions, boire → que je boive / que nous buvions, voir → que je voie / que nous voyions, croire → que je croie / que nous croyions. Impersonal verbs: falloir → qu'il faille, pleuvoir → qu'il pleuve. -ier verbs get a double i: que nous étudiions.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede “-malısın” tek bir ek; Fransızcada que'den sonra kip değişir.\n✗ Il faut que tu viens. → ✓ Il faut que tu viennes.\n✗ Il faut que je suis là. → ✓ Il faut que je sois là.\n✗ Il faut tu partes. → ✓ Il faut que tu partes. (que düşmez)",
+        EN: "Typical mistakes: after que the mood changes.\n✗ Il faut que tu viens. → ✓ Il faut que tu viennes.\n✗ Il faut que je suis là. → ✓ Il faut que je sois là.\n✗ Il faut tu partes. → ✓ Il faut que tu partes. (que is never dropped)",
+      },
+      {
+        TR: "Akılda tutmak için: -er fiillerinde je / tu / il / ils biçimleri présent ile aynı sesi verir (que je parle); fark yalnız nous / vous'da: -ions / -iez, tıpkı imparfait gibi. Asıl ezber yükü yedi fiil: être, avoir, aller, faire, pouvoir, savoir, vouloir.",
+        EN: "How to remember: for -er verbs, je / tu / il / ils sound the same as the present (que je parle); only nous / vous differ: -ions / -iez, just like the imparfait. The real memory load is seven verbs: être, avoir, aller, faire, pouvoir, savoir, vouloir.",
+      },
     ],
     examples: [
       {
@@ -551,6 +1169,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Il faut qu'ils fassent attention.",
         translation: { TR: "Dikkat etmeleri gerek.", EN: "They need to be careful." },
+      },
+      {
+        fr: "Il faut que nous prenions une décision.",
+        translation: { TR: "Bir karar vermemiz gerek.", EN: "We need to make a decision." },
+      },
+      {
+        fr: "Il faut que tu boives plus d'eau.",
+        translation: { TR: "Daha çok su içmen gerek.", EN: "You need to drink more water." },
+      },
+      {
+        fr: "Il faut qu'il y ait assez de chaises.",
+        translation: { TR: "Yeterince sandalye olması gerek.", EN: "There need to be enough chairs." },
       },
     ],
     exercises: [
@@ -601,6 +1231,56 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Il faut que vous soyez patientes.",
         ],
       },
+      {
+        type: "choice",
+        id: "subjonctif-formation-7",
+        text: "Il faut que tu ___ à l'heure.",
+        options: ["es", "sois", "seras"],
+        answer: 1,
+        translation: { TR: "Zamanında gelmen gerek.", EN: "You need to be on time." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-formation-8",
+        text: "Il faut que nous ___ le bus de huit heures. (prendre)",
+        options: ["prenions", "prennions", "prenons", "prenne"],
+        answer: 0,
+        translation: { TR: "Saat sekiz otobüsüne binmemiz gerek.", EN: "We need to take the eight o'clock bus." },
+      },
+      {
+        type: "build",
+        id: "subjonctif-formation-9",
+        tokens: ["Il", "faut", "que", "nous", "prenions", "une", "décision"],
+        translation: { TR: "Bir karar vermemiz gerek.", EN: "We need to make a decision." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-formation-10",
+        text: "Il faut qu'ils ___ attention.",
+        options: ["font", "feront", "fassent"],
+        answer: 2,
+        translation: { TR: "Dikkat etmeleri gerek.", EN: "They need to be careful." },
+      },
+      {
+        type: "free",
+        id: "subjonctif-formation-11",
+        prompt: { TR: "Fransızca yaz: “Bu akşam ödevlerini yapman gerek.” (il faut que)", EN: "Write in French: “You need to do your homework tonight.” (il faut que)" },
+        answers: [
+          "Il faut que tu fasses tes devoirs ce soir.",
+          "Il faut que vous fassiez vos devoirs ce soir.",
+          "Ce soir, il faut que tu fasses tes devoirs.",
+          "Ce soir, il faut que vous fassiez vos devoirs.",
+        ],
+      },
+      {
+        type: "free",
+        id: "subjonctif-formation-12",
+        prompt: { TR: "Fransızca yaz: “Oraya gitmemiz gerek.” (il faut que + y)", EN: "Write in French: “We have to go there.” (il faut que + y)" },
+        answers: [
+          "Il faut que nous y allions.",
+          "Il faut qu'on y aille.",
+        ],
+      },
     ],
   },
   {
@@ -620,6 +1300,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Özne aynıysa que yok, mastar var: Je veux partir (Je veux que je parte DEĞİL). Türkçede de “gitmek istiyorum” ↔ “gitmeni istiyorum” farkı var.\nİstisna: espérer que + indicatif: J'espère que tu vas bien.",
         EN: "Same subject → no que, use the infinitive: Je veux partir (NOT Je veux que je parte).\nException: espérer que takes the indicative: J'espère que tu vas bien.",
       },
+      {
+        TR: "İstisnalar: il vaut mieux que (“-sa daha iyi”) de subjonctif alır: Il vaut mieux que tu restes. Ama kesinlik bildiren kalıplar indicatif ister: il est sûr que, il est certain que, il est probable que. Espérer da indicatif ile kalır, genelde futur ile: J'espère que tu viendras.",
+        EN: "Exceptions: il vaut mieux que (“it's better that”) also takes the subjunctive: Il vaut mieux que tu restes. But phrases of certainty take the indicative: il est sûr que, il est certain que, il est probable que. Espérer stays with the indicative too, often the future: J'espère que tu viendras.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “gelmeni istiyorum” yapısı mastara benzediği için:\n✗ Je veux toi venir. / ✗ Je veux que tu viens. → ✓ Je veux que tu viennes.\n✗ Je veux que je parte. → ✓ Je veux partir. (özne aynı)\n✗ J'espère que tu sois bien. → ✓ J'espère que tu vas bien.",
+        EN: "Typical mistakes (English “I want you to come” pushes towards an infinitive):\n✗ Je veux toi venir. / ✗ Je veux que tu viens. → ✓ Je veux que tu viennes.\n✗ Je veux que je parte. → ✓ Je veux partir. (same subject)\n✗ J'espère que tu sois bien. → ✓ J'espère que tu vas bien.",
+      },
+      {
+        TR: "Akılda tutmak için: Türkçede “-mesini / -manı / -mesi gerek” (gelmeni, yapmasını) ile kurduğun her istek ve gereklilik = que + subjonctif. Özne aynıysa (“gitmek istiyorum”) mastar kullan. Espérer “umut”, yani olacağına inandığın bir şey: indicatif.",
+        EN: "How to remember: every “want / need someone else to do” = que + subjunctive. If the subject is the same (“I want to go”), use the infinitive. Espérer expresses something you believe will happen: indicative.",
+      },
     ],
     examples: [
       {
@@ -633,6 +1325,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Je souhaite que vous passiez de bonnes vacances.",
         translation: { TR: "İyi tatiller geçirmenizi dilerim.", EN: "I hope you have a good holiday." },
+      },
+      {
+        fr: "Il vaut mieux que tu restes à la maison.",
+        translation: { TR: "Evde kalman daha iyi olur.", EN: "You'd better stay at home." },
+      },
+      {
+        fr: "Je préfère que nous partions demain.",
+        translation: { TR: "Yarın gitmemizi tercih ederim.", EN: "I'd rather we left tomorrow." },
+      },
+      {
+        fr: "J'espère que vous viendrez à la fête.",
+        translation: { TR: "Umarım partiye gelirsiniz.", EN: "I hope you'll come to the party." },
       },
     ],
     exercises: [
@@ -687,6 +1391,58 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Je veux que vous veniez en avance.",
         ],
       },
+      {
+        type: "choice",
+        id: "subjonctif-necessity-will-7",
+        text: "Je veux que tu ___ la vérité. (dire)",
+        options: ["dis", "dises", "diras"],
+        answer: 1,
+        translation: { TR: "Doğruyu söylemeni istiyorum.", EN: "I want you to tell the truth." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-necessity-will-8",
+        text: "J'espère que tu ___ bien dormi.",
+        options: ["as", "aies", "aurais"],
+        answer: 0,
+        translation: { TR: "Umarım iyi uyumuşsundur.", EN: "I hope you slept well." },
+      },
+      {
+        type: "build",
+        id: "subjonctif-necessity-will-9",
+        tokens: ["Il", "vaut", "mieux", "que", "tu", "restes", "ici"],
+        translation: { TR: "Burada kalman daha iyi olur.", EN: "You'd better stay here." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-necessity-will-10",
+        text: "Je veux ___ ce soir.",
+        options: ["que je sorte", "que je sors", "sortir"],
+        answer: 2,
+        translation: { TR: "Bu akşam dışarı çıkmak istiyorum.", EN: "I want to go out tonight." },
+      },
+      {
+        type: "free",
+        id: "subjonctif-necessity-will-11",
+        prompt: { TR: "Fransızca yaz: “Erken gelmenizi tercih ederim.”", EN: "Write in French: “I'd prefer you to come early.”" },
+        answers: [
+          "Je préfère que vous veniez tôt.",
+          "Je préfère que tu viennes tôt.",
+          "Je préférerais que vous veniez tôt.",
+          "Je préférerais que tu viennes tôt.",
+          "J'aimerais mieux que vous veniez tôt.",
+          "J'aimerais mieux que tu viennes tôt.",
+        ],
+      },
+      {
+        type: "free",
+        id: "subjonctif-necessity-will-12",
+        prompt: { TR: "Fransızca yaz: “Annem ona yardım etmemi istiyor.”", EN: "Write in French: “My mother wants me to help her.”" },
+        answers: [
+          "Ma mère veut que je l'aide.",
+          "Ma mère voudrait que je l'aide.",
+        ],
+      },
     ],
   },
   {
@@ -710,6 +1466,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Özne aynıysa de + mastar: Je suis content de te voir (Je suis content que je te voie DEĞİL).",
         EN: "Same subject → de + infinitive: Je suis content de te voir (NOT Je suis content que je te voie).",
       },
+      {
+        TR: "İstisnalar: il est possible que subjonctif alır, ama il est probable que indicatif alır (olasılık yüksek = olguya yakın). Avoir peur que'den sonra resmî dilde anlamsız bir ne gelebilir: J'ai peur qu'il ne soit trop tard. Bu ne olumsuzluk değildir. Est-ce que ile sorulan soruda (Est-ce que tu penses qu'il a raison ?) indicatif de doğrudur.",
+        EN: "Exceptions: il est possible que takes the subjunctive, but il est probable que takes the indicative (high probability = close to fact). In formal French a meaningless ne can follow avoir peur que: J'ai peur qu'il ne soit trop tard. This ne is not a negation. In a question with est-ce que (Est-ce que tu penses qu'il a raison ?) the indicative is fine.",
+      },
+      {
+        TR: "Tipik hatalar:\n✗ Je pense qu'il soit malade. → ✓ Je pense qu'il est malade.\n✗ Je ne pense pas qu'il a raison. → ✓ Je ne pense pas qu'il ait raison.\n✗ Je suis content que je te vois. → ✓ Je suis content de te voir.",
+        EN: "Typical mistakes:\n✗ Je pense qu'il soit malade. → ✓ Je pense qu'il est malade.\n✗ Je ne pense pas qu'il a raison. → ✓ Je ne pense pas qu'il ait raison.\n✗ Je suis content que je te vois. → ✓ Je suis content de te voir.",
+      },
+      {
+        TR: "Akılda tutmak için: kesinlik = indicatif; duygu, şüphe, belirsizlik = subjonctif. Olumlu penser / croire bir bilgi verir (“bence haklı”) → indicatif. “ne pas” eklenince bilgi şüpheye döner (“haklı olduğunu sanmıyorum”) → subjonctif.",
+        EN: "How to remember: certainty = indicative; feeling, doubt, uncertainty = subjunctive. Affirmative penser / croire states information → indicative. Add “ne pas” and the information becomes doubt → subjunctive.",
+      },
     ],
     examples: [
       {
@@ -723,6 +1491,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Je ne crois pas que ce soit vrai.",
         translation: { TR: "Bunun doğru olduğunu sanmıyorum.", EN: "I don't think it's true." },
+      },
+      {
+        fr: "Il est possible qu'il pleuve demain.",
+        translation: { TR: "Yarın yağmur yağması mümkün.", EN: "It may rain tomorrow." },
+      },
+      {
+        fr: "Je suis désolé que vous soyez malade.",
+        translation: { TR: "Hasta olmanıza üzüldüm.", EN: "I'm sorry you're ill." },
+      },
+      {
+        fr: "Il est probable qu'elle viendra.",
+        translation: { TR: "Muhtemelen gelecek.", EN: "She'll probably come." },
       },
     ],
     exercises: [
@@ -769,6 +1549,68 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Je suis triste que vous partiez.",
         ],
       },
+      {
+        type: "choice",
+        id: "subjonctif-feelings-doubt-7",
+        text: "Je ne crois pas qu'il ___ la réponse.",
+        options: ["sait", "sache", "saura"],
+        answer: 1,
+        translation: { TR: "Cevabı bildiğini sanmıyorum.", EN: "I don't think he knows the answer." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-feelings-doubt-8",
+        text: "Je crois que tu ___ raison.",
+        options: ["as", "aies", "avoir"],
+        answer: 0,
+        translation: { TR: "Bence haklısın.", EN: "I think you're right." },
+      },
+      {
+        type: "build",
+        id: "subjonctif-feelings-doubt-9",
+        tokens: ["Il", "est", "possible", "qu'il", "pleuve", "demain"],
+        translation: { TR: "Yarın yağmur yağması mümkün.", EN: "It may rain tomorrow." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-feelings-doubt-10",
+        text: "Je suis content ___ te voir.",
+        options: ["que", "à", "de"],
+        answer: 2,
+        translation: { TR: "Seni gördüğüme sevindim.", EN: "I'm glad to see you." },
+      },
+      {
+        type: "free",
+        id: "subjonctif-feelings-doubt-11",
+        prompt: { TR: "Fransızca yaz: “Haklı olduğundan emin değilim.”", EN: "Write in French: “I'm not sure he's right.”" },
+        answers: [
+          "Je ne suis pas sûr qu'il ait raison.",
+          "Je ne suis pas sûre qu'il ait raison.",
+        ],
+      },
+      {
+        type: "free",
+        id: "subjonctif-feelings-doubt-12",
+        prompt: { TR: "Fransızca yaz: “Burada olmana sevindim ama erken gitmen gerek.”", EN: "Write in French: “I'm glad you're here, but you have to leave early.”" },
+        answers: [
+          "Je suis content que tu sois là, mais il faut que tu partes tôt.",
+          "Je suis content que tu sois ici, mais il faut que tu partes tôt.",
+          "Je suis content que vous soyez là, mais il faut que vous partiez tôt.",
+          "Je suis content que vous soyez ici, mais il faut que vous partiez tôt.",
+          "Je suis contente que tu sois là, mais il faut que tu partes tôt.",
+          "Je suis contente que tu sois ici, mais il faut que tu partes tôt.",
+          "Je suis contente que vous soyez là, mais il faut que vous partiez tôt.",
+          "Je suis contente que vous soyez ici, mais il faut que vous partiez tôt.",
+          "Je suis heureux que tu sois là, mais il faut que tu partes tôt.",
+          "Je suis heureux que tu sois ici, mais il faut que tu partes tôt.",
+          "Je suis heureux que vous soyez là, mais il faut que vous partiez tôt.",
+          "Je suis heureux que vous soyez ici, mais il faut que vous partiez tôt.",
+          "Je suis heureuse que tu sois là, mais il faut que tu partes tôt.",
+          "Je suis heureuse que tu sois ici, mais il faut que tu partes tôt.",
+          "Je suis heureuse que vous soyez là, mais il faut que vous partiez tôt.",
+          "Je suis heureuse que vous soyez ici, mais il faut que vous partiez tôt.",
+        ],
+      },
     ],
   },
   {
@@ -788,6 +1630,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Özne aynıysa que yerine edat + mastar: pour partir, avant de partir, sans parler, à condition de payer.\nJe travaille pour gagner ma vie ↔ Je travaille pour que mes enfants puissent étudier.",
         EN: "Same subject → preposition + infinitive instead of que: pour partir, avant de partir, sans parler, à condition de payer.\nJe travaille pour gagner ma vie ↔ Je travaille pour que mes enfants puissent étudier.",
       },
+      {
+        TR: "Başka subjonctif bağlaçları: jusqu'à ce que (“-e kadar”), en attendant que (“-ene kadar, beklerken”), pourvu que (“yeter ki”). Avant que'den sonra yazı dilinde anlamsız bir ne görebilirsin: avant qu'il ne pleuve; olumsuzluk değildir. Dès que, pendant que, tandis que, depuis que ise indicatif ile kalır.",
+        EN: "More subjunctive conjunctions: jusqu'à ce que (“until”), en attendant que (“while waiting for”), pourvu que (“as long as”). After avant que you may see a meaningless ne in writing: avant qu'il ne pleuve; it is not a negation. Dès que, pendant que, tandis que, depuis que stay with the indicative.",
+      },
+      {
+        TR: "Tipik hatalar:\n✗ Bien qu'il est malade… → ✓ Bien qu'il soit malade…\n✗ Je travaille pour que je gagne de l'argent. → ✓ Je travaille pour gagner de l'argent. (özne aynı)\n✗ Après qu'il soit parti… (Fransızlar da yapar) → ✓ Après qu'il est parti…",
+        EN: "Typical mistakes:\n✗ Bien qu'il est malade… → ✓ Bien qu'il soit malade…\n✗ Je travaille pour que je gagne de l'argent. → ✓ Je travaille pour gagner de l'argent. (same subject)\n✗ Après qu'il soit parti… (even French speakers do this) → ✓ Après qu'il est parti…",
+      },
+      {
+        TR: "Akılda tutmak için: henüz gerçekleşmemiş ya da gerçeğe karşı duran şey → subjonctif. Türkçe ipucu: “-sın diye, -madan önce, -mesine rağmen, -meden, -mek şartıyla, -ene kadar” duyunca subjonctif. Olmuş bir olgu (“çünkü, -ken, -dikten sonra”) → indicatif.",
+        EN: "How to remember: something not yet real, or going against reality → subjunctive (so that, before, although, without, provided that, until). A fact that happened (because, while, after) → indicative.",
+      },
     ],
     examples: [
       {
@@ -801,6 +1655,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Tu peux sortir à condition que tu rentres avant minuit.",
         translation: { TR: "Gece yarısından önce dönmen şartıyla çıkabilirsin.", EN: "You can go out provided that you're back before midnight." },
+      },
+      {
+        fr: "Attends ici jusqu'à ce que je revienne.",
+        translation: { TR: "Ben dönene kadar burada bekle.", EN: "Wait here until I come back." },
+      },
+      {
+        fr: "Je vais faire les courses avant que le magasin ferme.",
+        translation: { TR: "Mağaza kapanmadan önce alışverişe gideceğim.", EN: "I'll go shopping before the shop closes." },
+      },
+      {
+        fr: "Nous sommes sortis après que la pluie s'est arrêtée.",
+        translation: { TR: "Yağmur durduktan sonra dışarı çıktık.", EN: "We went out after the rain had stopped." },
       },
     ],
     exercises: [
@@ -851,6 +1717,70 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "On sort bien qu'il pleuve.",
         ],
       },
+      {
+        type: "choice",
+        id: "subjonctif-conjunctions-7",
+        text: "Bien qu'il ___ malade, il est venu.",
+        options: ["est", "soit", "sera"],
+        answer: 1,
+        translation: { TR: "Hasta olmasına rağmen geldi.", EN: "Although he's ill, he came." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-conjunctions-8",
+        text: "Je lis pendant que les enfants ___ à l'école.",
+        options: ["sont", "soient", "seraient"],
+        answer: 0,
+        translation: { TR: "Çocuklar okuldayken kitap okuyorum.", EN: "I read while the children are at school." },
+      },
+      {
+        type: "build",
+        id: "subjonctif-conjunctions-9",
+        tokens: ["Attends", "ici", "jusqu'à", "ce", "que", "je", "revienne"],
+        translation: { TR: "Ben dönene kadar burada bekle.", EN: "Wait here until I come back." },
+      },
+      {
+        type: "choice",
+        id: "subjonctif-conjunctions-10",
+        text: "Je travaille ___ gagner ma vie.",
+        options: ["pour que", "sans que", "pour"],
+        answer: 2,
+        translation: { TR: "Geçimimi sağlamak için çalışıyorum.", EN: "I work to earn my living." },
+      },
+      {
+        type: "free",
+        id: "subjonctif-conjunctions-11",
+        prompt: { TR: "Fransızca yaz: “Anlayabilmen için yavaş konuşuyorum.”", EN: "Write in French: “I'm speaking slowly so that you can understand.”" },
+        answers: [
+          "Je parle lentement pour que tu puisses comprendre.",
+          "Je parle lentement pour que tu comprennes.",
+          "Je parle lentement pour que vous puissiez comprendre.",
+          "Je parle lentement pour que vous compreniez.",
+          "Je parle lentement afin que tu puisses comprendre.",
+          "Je parle lentement afin que tu comprennes.",
+          "Je parle lentement afin que vous puissiez comprendre.",
+          "Je parle lentement afin que vous compreniez.",
+        ],
+      },
+      {
+        type: "free",
+        id: "subjonctif-conjunctions-12",
+        prompt: { TR: "Fransızca yaz: “Hava kararmadan önce gideceğiz.”", EN: "Write in French: “We'll leave before it gets dark.”" },
+        answers: [
+          "Nous partirons avant qu'il fasse nuit.",
+          "Nous partirons avant qu'il ne fasse nuit.",
+          "Nous partirons avant la nuit.",
+          "On partira avant qu'il fasse nuit.",
+          "On partira avant qu'il ne fasse nuit.",
+          "On partira avant la nuit.",
+          "Nous allons partir avant qu'il fasse nuit.",
+          "Nous allons partir avant qu'il ne fasse nuit.",
+          "Nous allons partir avant la nuit.",
+          "On va partir avant qu'il fasse nuit.",
+          "On va partir avant qu'il ne fasse nuit.",
+          "On va partir avant la nuit.",
+        ],
+      },
     ],
   },
   {
@@ -870,6 +1800,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Seçim fiile bağlı: aimer qqch → que (le film que j'aime), parler de qqch → dont (le film dont je parle). Türkçede ikisi de “-diğim” olduğu için fiilin edatına bak.\ndont'tan sonra en tekrarlanmaz: le film dont je t'ai parlé (dont je t'en ai parlé DEĞİL).",
         EN: "The choice depends on the verb: aimer qqch → que (le film que j'aime), parler de qqch → dont (le film dont je parle).\nDo not repeat en after dont: le film dont je t'ai parlé (NOT dont je t'en ai parlé).",
       },
+      {
+        TR: "İstisnalar: yer bildiren de (venir de, sortir de) için dont değil d'où kullanılır: la ville d'où je viens. Bir edatlı ifadenin içindeki isimde de dont kullanılmaz (bir sonraki ders: duquel, de qui). Dont'tan sonra sıra hep düzdür: dont + özne + fiil + nesne: l'homme dont je connais la fille.",
+        EN: "Exceptions: for de of place (venir de, sortir de) use d'où, not dont: la ville d'où je viens. Dont is not used inside a phrase with a preposition either (next lesson: duquel, de qui). After dont the order is always plain: dont + subject + verb + object: l'homme dont je connais la fille.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “babası doktor olan arkadaş” yapısı “son”u ekletir.\n✗ un ami dont son père est médecin → ✓ un ami dont le père est médecin\n✗ le livre que j'ai besoin → ✓ le livre dont j'ai besoin\n✗ le film dont je t'en ai parlé → ✓ le film dont je t'ai parlé",
+        EN: "Typical mistakes:\n✗ un ami dont son père est médecin → ✓ un ami dont le père est médecin\n✗ le livre que j'ai besoin → ✓ le livre dont j'ai besoin\n✗ le film dont je t'en ai parlé → ✓ le film dont je t'ai parlé",
+      },
+      {
+        TR: "Akılda tutmak için: fiili ilgi zamirsiz dene. “parler DE ce livre” → de var → dont. “aimer ce livre” → de yok → que. dont zaten “de + o şey” demektir; içine ikinci bir de, en ya da son koyma.",
+        EN: "How to remember: try the verb without the relative. “parler DE ce livre” → there is a de → dont. “aimer ce livre” → no de → que. dont already means “de + that thing”; don't add another de, en or son.",
+      },
     ],
     examples: [
       {
@@ -883,6 +1825,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "J'ai une voisine dont le fils est acteur.",
         translation: { TR: "Oğlu oyuncu olan bir komşum var.", EN: "I have a neighbour whose son is an actor." },
+      },
+      {
+        fr: "C'est l'homme dont je connais la fille.",
+        translation: { TR: "Kızını tanıdığım adam bu.", EN: "That's the man whose daughter I know." },
+      },
+      {
+        fr: "Le projet dont nous avons discuté est intéressant.",
+        translation: { TR: "Konuştuğumuz proje ilginç.", EN: "The project we discussed is interesting." },
+      },
+      {
+        fr: "La ville d'où je viens est petite.",
+        translation: { TR: "Geldiğim şehir küçük.", EN: "The town I come from is small." },
       },
     ],
     exercises: [
@@ -924,6 +1878,67 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Voilà la maison dont je rêve.",
         ],
       },
+      {
+        type: "fill",
+        id: "relative-dont-6",
+        text: "C'est une chose ___ j'ai peur.",
+        answers: ["dont"],
+        translation: { TR: "Bu korktuğum bir şey.", EN: "It's something I'm afraid of." },
+      },
+      {
+        type: "choice",
+        id: "relative-dont-7",
+        text: "Le livre ___ tu m'as parlé est génial.",
+        options: ["que", "dont", "où"],
+        answer: 1,
+        translation: { TR: "Bana bahsettiğin kitap harika.", EN: "The book you told me about is great." },
+      },
+      {
+        type: "choice",
+        id: "relative-dont-8",
+        text: "C'est le film ___ je préfère.",
+        options: ["dont", "qui", "que"],
+        answer: 2,
+        translation: { TR: "En sevdiğim film bu.", EN: "That's the film I like best." },
+      },
+      {
+        type: "build",
+        id: "relative-dont-9",
+        tokens: ["C'est", "l'homme", "dont", "je", "connais", "la", "fille"],
+        translation: { TR: "Kızını tanıdığım adam bu.", EN: "That's the man whose daughter I know." },
+      },
+      {
+        type: "choice",
+        id: "relative-dont-10",
+        text: "J'ai un ami ___ le frère habite au Canada.",
+        options: ["dont", "que", "qui"],
+        answer: 0,
+        translation: { TR: "Kardeşi Kanada'da yaşayan bir arkadaşım var.", EN: "I have a friend whose brother lives in Canada." },
+      },
+      {
+        type: "free",
+        id: "relative-dont-11",
+        prompt: { TR: "Fransızca yaz: “İhtiyacım olan kitap bu.”", EN: "Write in French: “This is the book I need.”" },
+        answers: [
+          "C'est le livre dont j'ai besoin.",
+          "Voici le livre dont j'ai besoin.",
+        ],
+      },
+      {
+        type: "free",
+        id: "relative-dont-12",
+        prompt: { TR: "Fransızca yaz: “Bahsettiğin kadın benim komşum.”", EN: "Write in French: “The woman you talked about is my neighbour.”" },
+        answers: [
+          "La femme dont tu m'as parlé est ma voisine.",
+          "La femme dont tu as parlé est ma voisine.",
+          "La femme dont tu me parles est ma voisine.",
+          "La femme dont tu parles est ma voisine.",
+          "La femme dont vous m'avez parlé est ma voisine.",
+          "La femme dont vous avez parlé est ma voisine.",
+          "La femme dont vous me parlez est ma voisine.",
+          "La femme dont vous parlez est ma voisine.",
+        ],
+      },
     ],
   },
   {
@@ -947,6 +1962,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Türkçede hepsi “-dığı” ile söylenir (üzerinde oturduğun sandalye); Fransızcada edat, ilgi zamirinin önüne gelir: la chaise sur laquelle tu es assis.",
         EN: "In English the preposition often goes to the end (the chair you're sitting on); in French it goes before the relative: la chaise sur laquelle tu es assis.",
       },
+      {
+        TR: "İstisnalar: entre ve parmi'den sonra insanlar için de lesquels / lesquelles kullanılır, qui değil: les amis parmi lesquels il y avait Paul. Yer ve zaman için dans lequel / sur lequel yerine kısaca où denebilir: la maison où (= dans laquelle) j'habite. İnsanlar için à qui da olur: la personne à qui je pense.",
+        EN: "Exceptions: after entre and parmi, use lesquels / lesquelles even for people, not qui: les amis parmi lesquels il y avait Paul. For place and time, où can replace dans lequel / sur lequel: la maison où (= dans laquelle) j'habite. For people, à qui also works: la personne à qui je pense.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede edat sona gelir (“üzerinde oturduğun sandalye”), Fransızcada öne.\n✗ la chaise que tu es assis dessus → ✓ la chaise sur laquelle tu es assis\n✗ le projet à lequel je pense → ✓ le projet auquel je pense\n✗ le stylo avec qui j'écris → ✓ le stylo avec lequel j'écris (qui yalnız insan)",
+        EN: "Typical mistakes: in English the preposition can go last; in French it never does.\n✗ la chaise que tu es assis dessus → ✓ la chaise sur laquelle tu es assis\n✗ le projet à lequel je pense → ✓ le projet auquel je pense\n✗ le stylo avec qui j'écris → ✓ le stylo avec lequel j'écris (qui is for people)",
+      },
+      {
+        TR: "Akılda tutmak için: önce edat, sonra lequel. lequel = le + quel, yani ismin cinsine ve sayısına göre değişir. à ve de, tıpkı article gibi birleşir: au → auquel, aux → auxquels, du → duquel, des → desquels.",
+        EN: "How to remember: preposition first, then lequel. lequel = le + quel, so it changes with the noun's gender and number. à and de contract just like with the article: au → auquel, aux → auxquels, du → duquel, des → desquels.",
+      },
     ],
     examples: [
       {
@@ -960,6 +1987,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "La maison à côté de laquelle j'habite est à vendre.",
         translation: { TR: "Yanında oturduğum ev satılık.", EN: "The house next to which I live is for sale." },
+      },
+      {
+        fr: "Les amis avec qui je voyage sont drôles.",
+        translation: { TR: "Birlikte seyahat ettiğim arkadaşlar komik.", EN: "The friends I travel with are funny." },
+      },
+      {
+        fr: "C'est un sujet auquel je n'ai jamais pensé.",
+        translation: { TR: "Hiç düşünmediğim bir konu bu.", EN: "It's a subject I've never thought about." },
+      },
+      {
+        fr: "Voici la maison dans laquelle j'ai grandi.",
+        translation: { TR: "İşte büyüdüğüm ev.", EN: "Here is the house I grew up in." },
       },
     ],
     exercises: [
@@ -1008,6 +2047,54 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Voici la société pour laquelle je travaille.",
         ],
       },
+      {
+        type: "choice",
+        id: "relative-compound-7",
+        text: "Le projet ___ je participe est passionnant.",
+        options: ["auquel", "duquel", "lequel"],
+        answer: 0,
+        translation: { TR: "Katıldığım proje çok heyecanlı.", EN: "The project I'm taking part in is exciting." },
+      },
+      {
+        type: "choice",
+        id: "relative-compound-8",
+        text: "C'est la table ___ j'ai posé mes clés.",
+        options: ["sur lequel", "sur laquelle", "sur qui"],
+        answer: 1,
+        translation: { TR: "Anahtarlarımı koyduğum masa bu.", EN: "That's the table I put my keys on." },
+      },
+      {
+        type: "build",
+        id: "relative-compound-9",
+        tokens: ["Voici", "la", "maison", "dans", "laquelle", "j'ai", "grandi"],
+        translation: { TR: "İşte büyüdüğüm ev.", EN: "Here is the house I grew up in." },
+      },
+      {
+        type: "choice",
+        id: "relative-compound-10",
+        text: "Les questions ___ je m'intéresse sont difficiles.",
+        options: ["auxquels", "dont", "auxquelles", "desquelles"],
+        answer: 2,
+        translation: { TR: "İlgilendiğim sorular zor.", EN: "The questions I'm interested in are difficult." },
+      },
+      {
+        type: "free",
+        id: "relative-compound-11",
+        prompt: { TR: "Fransızca yaz: “Bu, sürekli düşündüğüm bir proje.”", EN: "Write in French: “It's a project I think about all the time.”" },
+        answers: [
+          "C'est un projet auquel je pense tout le temps.",
+          "C'est un projet auquel je pense toujours.",
+          "C'est un projet auquel je pense sans arrêt.",
+        ],
+      },
+      {
+        type: "free",
+        id: "relative-compound-12",
+        prompt: { TR: "Fransızca yaz: “İhtiyacım olan anahtarlar masanın üstünde.”", EN: "Write in French: “The keys I need are on the table.”" },
+        answers: [
+          "Les clés dont j'ai besoin sont sur la table.",
+        ],
+      },
     ],
   },
   {
@@ -1027,6 +2114,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "tout ile sık kullanılır: tout ce que je sais (bildiğim her şey). Dolaylı sorularda da: Je ne sais pas ce qu'il veut.",
         EN: "Often with tout: tout ce que je sais (everything I know). Also in indirect questions: Je ne sais pas ce qu'il veut.",
       },
+      {
+        TR: "İstisnalar: ce que ünlüden önce kısalır (ce qu'il, ce qu'elle), ama ce qui asla kısalmaz: ce qui est vrai. Fiil de dışında bir edat istiyorsa ce + edat + quoi kullanılır: ce à quoi je pense (düşündüğüm şey), ce sur quoi il compte (güvendiği şey).",
+        EN: "Exceptions: ce que shortens before a vowel (ce qu'il, ce qu'elle), but ce qui never does: ce qui est vrai. If the verb needs a preposition other than de, use ce + preposition + quoi: ce à quoi je pense (what I'm thinking about), ce sur quoi il compte (what he relies on).",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “ne istediğini bilmiyorum” doğrudan soru gibi çevrilince:\n✗ Je ne sais pas qu'est-ce que tu veux. → ✓ Je ne sais pas ce que tu veux.\n✗ Je ne sais pas quoi tu veux. → ✓ Je ne sais pas ce que tu veux.\n✗ Ce que me plaît, c'est… → ✓ Ce qui me plaît, c'est…",
+        EN: "Typical mistakes (translating “what” as a direct question):\n✗ Je ne sais pas qu'est-ce que tu veux. → ✓ Je ne sais pas ce que tu veux.\n✗ Je ne sais pas quoi tu veux. → ✓ Je ne sais pas ce que tu veux.\n✗ Ce que me plaît, c'est… → ✓ Ce qui me plaît, c'est…",
+      },
+      {
+        TR: "Akılda tutmak için: “-dığı şey” = ce + ilgi zamiri. İki saniyelik test: hemen fiil mi geliyor? → ce qui. Özne mi geliyor? → ce que. Fiil de istiyor mu? → ce dont.",
+        EN: "How to remember: “the thing that / what” = ce + relative. Two-second test: a verb comes next? → ce qui. A subject comes next? → ce que. The verb needs de? → ce dont.",
+      },
     ],
     examples: [
       {
@@ -1040,6 +2139,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Je ne sais pas ce dont il a peur.",
         translation: { TR: "Neden korktuğunu bilmiyorum.", EN: "I don't know what he's afraid of." },
+      },
+      {
+        fr: "Tout ce qui brille n'est pas or.",
+        translation: { TR: "Her parlayan altın değildir.", EN: "All that glitters is not gold." },
+      },
+      {
+        fr: "Je ne sais pas ce qu'elle pense.",
+        translation: { TR: "Ne düşündüğünü bilmiyorum.", EN: "I don't know what she thinks." },
+      },
+      {
+        fr: "Ce à quoi je pense, c'est mon voyage.",
+        translation: { TR: "Düşündüğüm şey yolculuğum.", EN: "What I'm thinking about is my trip." },
       },
     ],
     exercises: [
@@ -1090,6 +2201,54 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Ce que vous dites est faux.",
         ],
       },
+      {
+        type: "choice",
+        id: "ce-qui-ce-que-ce-dont-7",
+        text: "Dis-moi ___ tu as besoin.",
+        options: ["ce que", "ce dont", "ce qui"],
+        answer: 1,
+        translation: { TR: "Neye ihtiyacın olduğunu söyle.", EN: "Tell me what you need." },
+      },
+      {
+        type: "choice",
+        id: "ce-qui-ce-que-ce-dont-8",
+        text: "Je ne comprends pas ___ il veut.",
+        options: ["ce qu'", "qu'est-ce qu'", "quoi"],
+        answer: 0,
+        translation: { TR: "Ne istediğini anlamıyorum.", EN: "I don't understand what he wants." },
+      },
+      {
+        type: "build",
+        id: "ce-qui-ce-que-ce-dont-9",
+        tokens: ["Je", "ne", "sais", "pas", "ce", "qu'elle", "pense"],
+        translation: { TR: "Ne düşündüğünü bilmiyorum.", EN: "I don't know what she thinks." },
+      },
+      {
+        type: "choice",
+        id: "ce-qui-ce-que-ce-dont-10",
+        text: "___ m'inquiète, c'est le prix.",
+        options: ["Ce que", "Ce dont", "Ce qui"],
+        answer: 2,
+        translation: { TR: "Beni endişelendiren şey fiyat.", EN: "What worries me is the price." },
+      },
+      {
+        type: "free",
+        id: "ce-qui-ce-que-ce-dont-11",
+        prompt: { TR: "Fransızca yaz: “Ne istediğini bilmiyorum.”", EN: "Write in French: “I don't know what you want.”" },
+        answers: [
+          "Je ne sais pas ce que tu veux.",
+          "Je ne sais pas ce que vous voulez.",
+        ],
+      },
+      {
+        type: "free",
+        id: "ce-qui-ce-que-ce-dont-12",
+        prompt: { TR: "Fransızca yaz: “Bana ihtiyacın olan her şeyi söyle.”", EN: "Write in French: “Tell me everything you need.”" },
+        answers: [
+          "Dis-moi tout ce dont tu as besoin.",
+          "Dites-moi tout ce dont vous avez besoin.",
+        ],
+      },
     ],
   },
   {
@@ -1109,6 +2268,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "+ qui / que / dont: Ce livre est celui que je préfère (tercih ettiğim). Ceux qui travaillent beaucoup... (çok çalışanlar).\n+ de: sahiplik, Türkçedeki “-ki” gibi: Ce n'est pas ma voiture, c'est celle de Paul = Paul'ünki.",
         EN: "+ qui / que / dont: Ce livre est celui que je préfère (the one I prefer). Ceux qui travaillent beaucoup... (those who work a lot).\n+ de: possession, like English “'s”: Ce n'est pas ma voiture, c'est celle de Paul = it's Paul's.",
       },
+      {
+        TR: "İstisnalar: ceci, cela ve ça cinsiyetsizdir; belirli bir isim yerine değil, bir fikir ya da durum yerine geçer: Ça me plaît. Cela dépend. Bu yüzden “bu güzel bir fikir” için celui değil ça / c'est kullanılır. Yazıda celui-ci “ikincisi”, celui-là “birincisi” anlamına da gelir.",
+        EN: "Exceptions: ceci, cela and ça have no gender; they stand for an idea or a situation, not a specific noun: Ça me plaît. Cela dépend. So for “that's a good idea” use ça / c'est, not celui. In writing, celui-ci can also mean “the latter” and celui-là “the former”.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede “bu, şu” tek başına durabilir; celui duramaz.\n✗ Je préfère celui. → ✓ Je préfère celui-ci.\n✗ Celle-ci voiture est belle. → ✓ Cette voiture-ci est belle. / Celle-ci est belle.\n✗ (la robe) Je prends celui-là. → ✓ Je prends celle-là.",
+        EN: "Typical mistakes: celui can never stand alone.\n✗ Je préfère celui. → ✓ Je préfère celui-ci.\n✗ Celle-ci voiture est belle. → ✓ Cette voiture-ci est belle. / Celle-ci est belle.\n✗ (la robe) Je prends celui-là. → ✓ Je prends celle-là.",
+      },
+      {
+        TR: "Akılda tutmak için: celui / celle = ce + lui / elle, yani “o (eril / dişil) olan”. Hep bir ek ister: -ci / -là, qui / que / dont ya da de. Yalnız kaldıysa cümle eksiktir. Cinsiyet, yerine geçtiği isimden gelir.",
+        EN: "How to remember: celui / celle = ce + lui / elle, “the (masculine / feminine) one”. It always needs something after it: -ci / -là, qui / que / dont, or de. If it stands alone, the sentence is incomplete. Its gender comes from the noun it replaces.",
+      },
     ],
     examples: [
       {
@@ -1122,6 +2293,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Ma chambre est plus petite que celle de mon frère.",
         translation: { TR: "Odam kardeşiminkinden daha küçük.", EN: "My room is smaller than my brother's." },
+      },
+      {
+        fr: "Quel train prends-tu ? Celui de huit heures.",
+        translation: { TR: "Hangi trene biniyorsun? Saat sekizdekine.", EN: "Which train are you taking? The eight o'clock one." },
+      },
+      {
+        fr: "Ces livres sont ceux dont je t'ai parlé.",
+        translation: { TR: "Bu kitaplar sana bahsettiklerim.", EN: "These books are the ones I told you about." },
+      },
+      {
+        fr: "Cela dépend de toi.",
+        translation: { TR: "Bu sana bağlı.", EN: "That depends on you." },
       },
     ],
     exercises: [
@@ -1158,6 +2341,62 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Bu fotoğraflar Marie'ninkiler.” (celles de)", EN: "Write in French: “These photos are Marie's.” (celles de)" },
         answers: ["Ces photos sont celles de Marie.", "Ces photos, ce sont celles de Marie."],
       },
+      {
+        type: "fill",
+        id: "demonstrative-pronouns-6",
+        text: "Quel train prends-tu ? ___ de huit heures.",
+        answers: ["Celui"],
+        translation: { TR: "Hangi trene biniyorsun? Saat sekizdekine.", EN: "Which train are you taking? The eight o'clock one." },
+      },
+      {
+        type: "choice",
+        id: "demonstrative-pronouns-7",
+        text: "J'ai deux robes. Tu préfères ___ ?",
+        options: ["celle-ci", "celui-ci", "cette"],
+        answer: 0,
+        translation: { TR: "İki elbisem var. Bunu mu tercih edersin?", EN: "I have two dresses. Do you prefer this one?" },
+      },
+      {
+        type: "choice",
+        id: "demonstrative-pronouns-8",
+        text: "Ces livres sont ___ que j'ai lus.",
+        options: ["celles", "ceux", "celui"],
+        answer: 1,
+        translation: { TR: "Bu kitaplar okuduklarım.", EN: "These books are the ones I've read." },
+      },
+      {
+        type: "build",
+        id: "demonstrative-pronouns-9",
+        tokens: ["Ces", "livres", "sont", "ceux", "dont", "je", "t'ai", "parlé"],
+        translation: { TR: "Bu kitaplar sana bahsettiklerim.", EN: "These books are the ones I told you about." },
+      },
+      {
+        type: "choice",
+        id: "demonstrative-pronouns-10",
+        text: "Ma voiture est plus rapide que ___ de mon père.",
+        options: ["celui", "ce", "celle"],
+        answer: 2,
+        translation: { TR: "Benim arabam babamınkinden daha hızlı.", EN: "My car is faster than my father's." },
+      },
+      {
+        type: "free",
+        id: "demonstrative-pronouns-11",
+        prompt: { TR: "Fransızca yaz: “Bu ayakkabılar kız kardeşiminkiler.”", EN: "Write in French: “These shoes are my sister's.”" },
+        answers: [
+          "Ces chaussures sont celles de ma sœur.",
+        ],
+      },
+      {
+        type: "free",
+        id: "demonstrative-pronouns-12",
+        prompt: { TR: "Fransızca yaz: “Bahsettiğin film bu mu, şu mu?”", EN: "Write in French: “Is the film you're talking about this one or that one?”" },
+        answers: [
+          "Le film dont tu parles, c'est celui-ci ou celui-là ?",
+          "Le film dont tu parles est celui-ci ou celui-là ?",
+          "Le film dont vous parlez, c'est celui-ci ou celui-là ?",
+          "Le film dont vous parlez est celui-ci ou celui-là ?",
+        ],
+      },
     ],
   },
   {
@@ -1177,6 +2416,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Yazım: notre / votre (sıfat, şapkasız) ↔ le nôtre / le vôtre (zamir, şapkalı ve uzun o).\nà ve de ile birleşir: à + le mien → au mien, de + les miens → des miens.",
         EN: "Spelling: notre / votre (adjective, no accent) ↔ le nôtre / le vôtre (pronoun, circumflex and long o).\nThey contract with à and de: à + le mien → au mien, de + les miens → des miens.",
       },
+      {
+        TR: "İstisnalar: konuşmada sahipliği söylemenin en yaygın yolu être à + vurgulu zamirdir: Ce livre est à moi (bu kitap benim). Les miens çoğulda “ailem, yakınlarım” anlamına da gelir. Le leur / la leur / les leurs şapka almaz; nôtre / vôtre'den farklı olarak.",
+        EN: "Exceptions: in speech, the most common way to say who owns something is être à + stressed pronoun: Ce livre est à moi (this book is mine). In the plural, les miens can also mean “my family”. Le leur / la leur / les leurs take no circumflex, unlike nôtre / vôtre.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede “benimki” cinsiyet taşımaz.\n✗ Ta voiture est rouge, le mien est bleu. → ✓ … la mienne est bleue. (voiture dişil)\n✗ (la voiture de Paul) C'est le sien. → ✓ C'est la sienne. (sahibe değil eşyaya uyar)\n✗ C'est mien. → ✓ C'est le mien. / C'est à moi.",
+        EN: "Typical mistakes:\n✗ Ta voiture est rouge, le mien est bleu. → ✓ … la mienne est bleue. (voiture is feminine)\n✗ (Paul's car) C'est le sien. → ✓ C'est la sienne. (it agrees with the thing, not the owner)\n✗ C'est mien. → ✓ C'est le mien. / C'est à moi.",
+      },
+      {
+        TR: "Akılda tutmak için: Türkçedeki “-ki” eki gibi düşün: benimki = le mien, seninki = le tien. Ama Fransızca bu “-ki”ye cinsiyet ve sayı ekler: neyi kastediyorsan onun le / la / les'ini al. Eşya dişilse -ienne, çoğulsa -s.",
+        EN: "How to remember: le mien = “mine”, but with a gender and a number. Take the le / la / les of the thing you mean: feminine thing → -ienne, plural → -s. The owner only decides the person (mien, tien, sien…).",
+      },
     ],
     examples: [
       {
@@ -1190,6 +2441,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "J'ai oublié mon stylo, tu peux me prêter le tien ?",
         translation: { TR: "Kalemimi unuttum, bana seninkini ödünç verebilir misin?", EN: "I forgot my pen, can you lend me yours?" },
+      },
+      {
+        fr: "Ce livre est à moi, pas à toi.",
+        translation: { TR: "Bu kitap benim, senin değil.", EN: "This book is mine, not yours." },
+      },
+      {
+        fr: "Mes parents habitent à Lyon. Et les tiens ?",
+        translation: { TR: "Benim ailem Lyon'da oturuyor. Ya seninkiler?", EN: "My parents live in Lyon. What about yours?" },
+      },
+      {
+        fr: "Ils pensent à leurs enfants, et nous pensons aux nôtres.",
+        translation: { TR: "Onlar kendi çocuklarını düşünüyor, biz de kendimizinkileri.", EN: "They think about their children, and we think about ours." },
       },
     ],
     exercises: [
@@ -1241,6 +2504,57 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Mon téléphone est vieux et le tien est neuf.",
         ],
       },
+      {
+        type: "choice",
+        id: "possessive-pronouns-7",
+        text: "Ma maison est grande. Et ___ ? (à toi)",
+        options: ["le tien", "la tienne", "ta"],
+        answer: 1,
+        translation: { TR: "Benim evim büyük. Ya seninki?", EN: "My house is big. What about yours?" },
+      },
+      {
+        type: "choice",
+        id: "possessive-pronouns-8",
+        text: "Paul a perdu sa clé. Tu peux lui prêter ___ ? (à toi)",
+        options: ["la sienne", "le tien", "la tienne"],
+        answer: 2,
+        translation: { TR: "Paul anahtarını kaybetti. Ona seninkini ödünç verebilir misin?", EN: "Paul lost his key. Can you lend him yours?" },
+      },
+      {
+        type: "build",
+        id: "possessive-pronouns-9",
+        tokens: ["Ce", "livre", "est", "à moi,", "pas", "à toi"],
+        translation: { TR: "Bu kitap benim, senin değil.", EN: "This book is mine, not yours." },
+      },
+      {
+        type: "choice",
+        id: "possessive-pronouns-10",
+        text: "Nous pensons à nos enfants, et vous pensez ___.",
+        options: ["aux vôtres", "à les vôtres", "aux votres"],
+        answer: 0,
+        translation: { TR: "Biz çocuklarımızı düşünüyoruz, siz de kendinizinkileri.", EN: "We think about our children, and you think about yours." },
+      },
+      {
+        type: "free",
+        id: "possessive-pronouns-11",
+        prompt: { TR: "Fransızca yaz: “Senin telefonun benimkinden daha yeni.”", EN: "Write in French: “Your phone is newer than mine.”" },
+        answers: [
+          "Ton téléphone est plus récent que le mien.",
+          "Ton téléphone est plus neuf que le mien.",
+          "Votre téléphone est plus récent que le mien.",
+          "Votre téléphone est plus neuf que le mien.",
+        ],
+      },
+      {
+        type: "free",
+        id: "possessive-pronouns-12",
+        prompt: { TR: "Fransızca yaz: “Bu benim çantam değil, Marie'ninki.”", EN: "Write in French: “This isn't my bag, it's Marie's.”" },
+        answers: [
+          "Ce n'est pas mon sac, c'est celui de Marie.",
+          "Ce sac n'est pas le mien, c'est celui de Marie.",
+          "Ce n'est pas le mien, c'est celui de Marie.",
+        ],
+      },
     ],
   },
   {
@@ -1260,6 +2574,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Olumlu emir kipinde zamirler fiilden sonra, tire ile gelir; önce doğrudan nesne: Donne-le-moi ! Donne-la-lui !\nmoi / toi + en → m'en, t'en: Donne-m'en !\nOlumsuz emirde normal sıra döner: Ne me le donne pas.",
         EN: "In the affirmative imperative the pronouns follow the verb with hyphens, direct object first: Donne-le-moi ! Donne-la-lui !\nmoi / toi + en → m'en, t'en: Donne-m'en !\nIn the negative imperative the normal order returns: Ne me le donne pas.",
       },
+      {
+        TR: "İstisnalar: me / te / nous / vous ile lui / leur yan yana gelmez; o zaman ikincisi à + vurgulu zamir olur: Je te présente à lui (NOT je te lui présente). COD zamiri yardımcı fiilden önce geldiği için participe uyum yapar: Les photos ? Je les lui ai montrées. Konuşmada il y en a çoğu zaman “y en a” diye söylenir.",
+        EN: "Exceptions: me / te / nous / vous never combine with lui / leur; the second one becomes à + stressed pronoun: Je te présente à lui (NOT je te lui présente). Because the direct object pronoun comes before the auxiliary, the participle agrees: Les photos ? Je les lui ai montrées. In speech, il y en a is often said “y en a”.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede zamir sırası serbest, Fransızcada sabit.\n✗ Je lui le donne. → ✓ Je le lui donne.\n✗ Donne-moi-le ! → ✓ Donne-le-moi !\n✗ Je ne lui l'ai pas dit. → ✓ Je ne le lui ai pas dit. (le, lui'den önce kısalmaz)",
+        EN: "Typical mistakes: the order is fixed.\n✗ Je lui le donne. → ✓ Je le lui donne.\n✗ Donne-moi-le ! → ✓ Donne-le-moi !\n✗ Je ne lui l'ai pas dit. → ✓ Je ne le lui ai pas dit. (le does not shorten before lui)",
+      },
+      {
+        TR: "Akılda tutmak için: sıra şeridini sesli tekrarla: “me te se nous vous — le la les — lui leur — y — en”. İki üçüncü kişi yan yana gelirse le / la / les önce: “le lui”. en hep en sonda: “il y en a”, “donne-m'en”.",
+        EN: "How to remember: say the line out loud: “me te se nous vous — le la les — lui leur — y — en”. When two third-person pronouns meet, le / la / les come first: “le lui”. en is always last: “il y en a”, “donne-m'en”.",
+      },
     ],
     examples: [
       {
@@ -1273,6 +2599,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Tu as des pommes ? Donne-m'en deux, s'il te plaît.",
         translation: { TR: "Elman var mı? Bana iki tane ver lütfen.", EN: "Do you have apples? Give me two, please." },
+      },
+      {
+        fr: "Les photos ? Je les lui ai montrées hier.",
+        translation: { TR: "Fotoğraflar mı? Onları dün ona gösterdim.", EN: "The photos? I showed them to her yesterday." },
+      },
+      {
+        fr: "Il nous en a parlé.",
+        translation: { TR: "Bize bundan bahsetti.", EN: "He told us about it." },
+      },
+      {
+        fr: "Ne le leur dis pas !",
+        translation: { TR: "Onu onlara söyleme!", EN: "Don't tell them that!" },
       },
     ],
     exercises: [
@@ -1315,6 +2653,58 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Ona bundan bahsetmedim.” (parler de, passé composé)", EN: "Write in French: “I didn't talk to him about it.” (parler de, passé composé)" },
         answers: ["Je ne lui en ai pas parlé."],
       },
+      {
+        type: "fill",
+        id: "double-pronouns-7",
+        text: "Les clés ? Je ___ ai données. (à Marie)",
+        answers: ["les lui"],
+        translation: { TR: "Anahtarlar mı? Onları ona verdim.", EN: "The keys? I gave them to her." },
+      },
+      {
+        type: "choice",
+        id: "double-pronouns-8",
+        text: "Tu donnes le cadeau à tes parents ? — Oui, je ___ donne.",
+        options: ["leur le", "le leur", "les leur"],
+        answer: 1,
+        translation: { TR: "Hediyeyi ailene veriyor musun? — Evet, onu onlara veriyorum.", EN: "Are you giving the present to your parents? — Yes, I'm giving it to them." },
+      },
+      {
+        type: "choice",
+        id: "double-pronouns-9",
+        text: "Le livre ? Donne-___ !",
+        options: ["le-moi", "moi-le", "me-le"],
+        answer: 0,
+        translation: { TR: "Kitap mı? Onu bana ver!", EN: "The book? Give it to me!" },
+      },
+      {
+        type: "build",
+        id: "double-pronouns-10",
+        tokens: ["Il", "nous", "en", "a", "parlé"],
+        translation: { TR: "Bize bundan bahsetti.", EN: "He told us about it." },
+      },
+      {
+        type: "choice",
+        id: "double-pronouns-11",
+        text: "Les photos ? Je les lui ai ___.",
+        options: ["montré", "montrés", "montrées"],
+        answer: 2,
+        translation: { TR: "Fotoğraflar mı? Onları ona gösterdim.", EN: "The photos? I showed them to him." },
+      },
+      {
+        type: "free",
+        id: "double-pronouns-12",
+        prompt: { TR: "Fransızca yaz: “Onu sana yarın göndereceğim.” (la lettre)", EN: "Write in French: “I'll send it to you tomorrow.” (the letter)" },
+        answers: [
+          "Je te l'enverrai demain.",
+          "Je vous l'enverrai demain.",
+          "Je vais te l'envoyer demain.",
+          "Je vais vous l'envoyer demain.",
+          "Demain, je te l'enverrai.",
+          "Demain, je vous l'enverrai.",
+          "Demain, je vais te l'envoyer.",
+          "Demain, je vais vous l'envoyer.",
+        ],
+      },
     ],
   },
   {
@@ -1338,6 +2728,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Konuşmada Fransızca edilgenden çok on'u sever, özellikle yapan belli değilse: On a volé mon vélo = Mon vélo a été volé (bisikletim çalındı).",
         EN: "In speech French often prefers on, especially when the agent is unknown: On a volé mon vélo = Mon vélo a été volé (my bike was stolen).",
       },
+      {
+        TR: "İstisnalar: yalnız doğrudan nesne alan fiiller edilgen olur. Parler à, téléphoner à, demander à gibi fiillerde edilgen kurulmaz; on kullanılır: On m'a dit que… (✗ J'ai été dit). Dönüşlü edilgen de vardır, genel kurallar için: Ce plat se mange froid (bu yemek soğuk yenir).",
+        EN: "Exceptions: only verbs with a direct object can be passive. With parler à, téléphoner à, demander à there is no passive; use on: On m'a dit que… (✗ J'ai été dit). There is also a reflexive passive for general rules: Ce plat se mange froid (this dish is eaten cold).",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede “-ıl / -ın” her fiile eklenebiliyor; Fransızcada değil.\n✗ J'ai été donné un livre. → ✓ On m'a donné un livre.\n✗ La maison a été construit. → ✓ La maison a été construite.\n✗ Les lettres a été envoyées. → ✓ Les lettres ont été envoyées.",
+        EN: "Typical mistakes (English allows “I was given”, French does not):\n✗ J'ai été donné un livre. → ✓ On m'a donné un livre.\n✗ La maison a été construit. → ✓ La maison a été construite.\n✗ Les lettres a été envoyées. → ✓ Les lettres ont été envoyées.",
+      },
+      {
+        TR: "Akılda tutmak için: edilgen = être + participe; zamanı hep être taşır, participe ise sıfat gibi öznenin cinsine ve sayısına uyar. Türkçede “bana … verildi” gibi bir cümle kuruyorsan Fransızcada on ile başla.",
+        EN: "How to remember: passive = être + participle; être carries the tense, and the participle agrees with the subject like an adjective. If English says “I was given / told / asked”, start the French sentence with on.",
+      },
     ],
     examples: [
       {
@@ -1351,6 +2753,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Cette chanteuse est connue de tout le monde.",
         translation: { TR: "Bu şarkıcıyı herkes tanır.", EN: "This singer is known to everyone." },
+      },
+      {
+        fr: "Les lettres ont été envoyées hier.",
+        translation: { TR: "Mektuplar dün gönderildi.", EN: "The letters were sent yesterday." },
+      },
+      {
+        fr: "On m'a offert un livre.",
+        translation: { TR: "Bana bir kitap hediye edildi.", EN: "I was given a book." },
+      },
+      {
+        fr: "Ce plat se mange froid.",
+        translation: { TR: "Bu yemek soğuk yenir.", EN: "This dish is eaten cold." },
       },
     ],
     exercises: [
@@ -1398,6 +2812,52 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Bu kitap herkes tarafından okunuyor.” (edilgen)", EN: "Write in French: “This book is read by everyone.” (passive)" },
         answers: ["Ce livre est lu par tout le monde.", "Ce livre est lu par tous."],
       },
+      {
+        type: "fill",
+        id: "passive-voice-7",
+        text: "Les lettres ont été ___ hier. (envoyer)",
+        answers: ["envoyées"],
+        translation: { TR: "Mektuplar dün gönderildi.", EN: "The letters were sent yesterday." },
+      },
+      {
+        type: "choice",
+        id: "passive-voice-8",
+        text: "La voiture ___ réparée demain.",
+        options: ["sera", "a été", "est été"],
+        answer: 0,
+        translation: { TR: "Araba yarın tamir edilecek.", EN: "The car will be repaired tomorrow." },
+      },
+      {
+        type: "choice",
+        id: "passive-voice-9",
+        text: "Les enfants sont ___ par leurs grands-parents. (garder)",
+        options: ["gardé", "gardés", "gardées"],
+        answer: 1,
+        translation: { TR: "Çocuklara büyükanne ve büyükbabaları bakıyor.", EN: "The children are looked after by their grandparents." },
+      },
+      {
+        type: "build",
+        id: "passive-voice-10",
+        tokens: ["Le", "voleur", "a", "été", "arrêté", "par", "la", "police"],
+        translation: { TR: "Hırsız polis tarafından yakalandı.", EN: "The thief was arrested by the police." },
+      },
+      {
+        type: "choice",
+        id: "passive-voice-11",
+        text: "___ ce conseil hier.",
+        options: ["J'ai été donné", "Je suis donné", "On m'a donné"],
+        answer: 2,
+        translation: { TR: "Bu tavsiye bana dün verildi.", EN: "I was given this advice yesterday." },
+      },
+      {
+        type: "free",
+        id: "passive-voice-12",
+        prompt: { TR: "Fransızca yaz: “Sana bahsettiğim film Paris'te çekildi.”", EN: "Write in French: “The film I told you about was shot in Paris.”" },
+        answers: [
+          "Le film dont je t'ai parlé a été tourné à Paris.",
+          "Le film dont je vous ai parlé a été tourné à Paris.",
+        ],
+      },
     ],
   },
   {
@@ -1417,6 +2877,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Gérondif'in öznesi ana cümlenin öznesiyle AYNI olmalı. “En sortant, la pluie a commencé” yanlış: çıkan yağmur değil. Dikkat: Türkçe “-ken” farklı özneye izin verir (ben çıkarken yağmur başladı), gérondif vermez.",
         EN: "The gérondif must have the SAME subject as the main verb. “En sortant, la pluie a commencé” is wrong: the rain did not go out.",
       },
+      {
+        TR: "İstisnalar ve incelikler: tout en + gérondif karşıtlık bildirir: Il mange beaucoup tout en restant mince (çok yediği hâlde zayıf kalıyor). Dönüşlü fiilde zamir kalır: en se levant, en me promenant. Gérondif hiç uyum yapmaz: Elles sont parties en courant.",
+        EN: "Exceptions and fine points: tout en + gérondif expresses contrast: Il mange beaucoup tout en restant mince (he eats a lot while staying slim). With reflexive verbs the pronoun stays: en se levant, en me promenant. The gérondif never agrees: Elles sont parties en courant.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “-arak / -ken / -ınca” her özneyle kullanılır, gérondif kullanılmaz.\n✗ En arrivant à la maison, le téléphone a sonné. → ✓ Quand je suis arrivé à la maison, le téléphone a sonné.\n✗ en mangeons → ✓ en mangeant\n✗ J'ai appris l'anglais regardant des films. → ✓ … en regardant des films.",
+        EN: "Typical mistakes:\n✗ En arrivant à la maison, le téléphone a sonné. → ✓ Quand je suis arrivé à la maison, le téléphone a sonné.\n✗ en mangeons → ✓ en mangeant\n✗ J'ai appris l'anglais regardant des films. → ✓ … en regardant des films.",
+      },
+      {
+        TR: "Akılda tutmak için: Türkçedeki “-arak / -ken / -ınca” = en + -ant, ama yalnız özne aynıysa. Kontrol sorusu: “-ant'ı yapan kişi, ana fiili yapan kişiyle aynı mı?” Değilse quand ya da pendant que kullan.",
+        EN: "How to remember: “while / by / on …-ing” = en + -ant, but only with the same subject. Check: “is the person doing the -ant the person doing the main verb?” If not, use quand or pendant que.",
+      },
     ],
     examples: [
       {
@@ -1430,6 +2902,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "En prenant le métro, vous gagnerez du temps.",
         translation: { TR: "Metroya binerseniz zaman kazanırsınız.", EN: "If you take the metro, you'll save time." },
+      },
+      {
+        fr: "Il est tombé en descendant l'escalier.",
+        translation: { TR: "Merdivenden inerken düştü.", EN: "He fell while going down the stairs." },
+      },
+      {
+        fr: "En se levant tôt, on a plus de temps.",
+        translation: { TR: "Erken kalkınca insanın daha çok vakti olur.", EN: "By getting up early, you have more time." },
+      },
+      {
+        fr: "Tout en étant fatiguée, elle a fini son travail.",
+        translation: { TR: "Yorgun olduğu hâlde işini bitirdi.", EN: "Although she was tired, she finished her work." },
       },
     ],
     exercises: [
@@ -1480,6 +2964,56 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "N'appelez pas en marchant !",
         ],
       },
+      {
+        type: "fill",
+        id: "gerondif-7",
+        text: "Il est tombé en ___ l'escalier. (descendre)",
+        answers: ["descendant"],
+        translation: { TR: "Merdivenden inerken düştü.", EN: "He fell while going down the stairs." },
+      },
+      {
+        type: "choice",
+        id: "gerondif-8",
+        text: "Je me suis coupé ___ les légumes.",
+        options: ["en coupant", "coupant", "en coupons"],
+        answer: 0,
+        translation: { TR: "Sebzeleri doğrarken elimi kestim.", EN: "I cut myself while chopping the vegetables." },
+      },
+      {
+        type: "choice",
+        id: "gerondif-9",
+        text: "Quelle phrase est correcte ?",
+        options: ["En arrivant à la gare, le train est parti.", "En arrivant à la gare, j'ai vu le train partir.", "Arrivant à la gare, le train est parti."],
+        answer: 1,
+        translation: { TR: "Hangi cümle doğru? (İstasyona varınca trenin kalktığını gördüm.)", EN: "Which sentence is correct? (When I got to the station, I saw the train leave.)" },
+      },
+      {
+        type: "build",
+        id: "gerondif-10",
+        tokens: ["On", "apprend", "en", "faisant", "des", "erreurs"],
+        translation: { TR: "İnsan hata yaparak öğrenir.", EN: "You learn by making mistakes." },
+      },
+      {
+        type: "choice",
+        id: "gerondif-11",
+        text: "Elle chante ___ sa douche.",
+        options: ["en prendant", "prenant", "en prenant"],
+        answer: 2,
+        translation: { TR: "Duş alırken şarkı söylüyor.", EN: "She sings while taking her shower." },
+      },
+      {
+        type: "free",
+        id: "gerondif-12",
+        prompt: { TR: "Fransızca yaz: “Şimdi çıkarsan zamanında varırsın.”", EN: "Write in French: “If you leave now, you'll arrive on time.”" },
+        answers: [
+          "En partant maintenant, tu arriveras à l'heure.",
+          "En partant maintenant, vous arriverez à l'heure.",
+          "Si tu pars maintenant, tu arriveras à l'heure.",
+          "Si vous partez maintenant, vous arriverez à l'heure.",
+          "Tu arriveras à l'heure en partant maintenant.",
+          "Vous arriverez à l'heure en partant maintenant.",
+        ],
+      },
     ],
   },
   {
@@ -1499,6 +3033,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Bazı çiftlerin yazımı farklı: fatiguant / fatigant, convainquant / convaincant, précédant / précédent. Günlük konuşmada participe yerine qui + fiil kullan, yeter.",
         EN: "Some pairs are spelled differently: fatiguant / fatigant, convainquant / convaincant, précédant / précédent. In everyday speech, qui + verb instead of the participle is enough.",
       },
+      {
+        TR: "İstisnalar: önce olmuş bir eylem için birleşik biçim kullanılır: ayant / étant + participe: Ayant fini son travail, il est rentré. Étant arrivée en retard, elle s'est excusée. Yazımı farklı başka çiftler: différant / différent, excellant / excellent, négligeant / négligent.",
+        EN: "Exceptions: for an action that happened before, use the compound form ayant / étant + participle: Ayant fini son travail, il est rentré. Étant arrivée en retard, elle s'est excusée. More pairs spelled differently: différant / différent, excellant / excellent, négligeant / négligent.",
+      },
+      {
+        TR: "Tipik hatalar:\n✗ des personnes parlants français → ✓ des personnes parlant français (participe değişmez)\n✗ des enfants obéissant (nitelik) → ✓ des enfants obéissants (sıfat uyum yapar)\n✗ Étant malade, le médecin est venu. (hasta olan doktor değil) → ✓ Étant malade, je suis resté au lit.",
+        EN: "Typical mistakes:\n✗ des personnes parlants français → ✓ des personnes parlant français (the participle is invariable)\n✗ des enfants obéissant (a quality) → ✓ des enfants obéissants (the adjective agrees)\n✗ Étant malade, le médecin est venu. (the doctor wasn't ill) → ✓ Étant malade, je suis resté au lit.",
+      },
+      {
+        TR: "Akılda tutmak için: arkasından bir nesne ya da tamamlayıcı geliyorsa (parlant français, donnant sur la mer) eylemdir, değişmez. Sadece niteliği söylüyorsa (une histoire amusante) sıfattır, uyum yapar. Emin değilsen qui + fiil ile değiştirmeyi dene; oturuyorsa participe'dir.",
+        EN: "How to remember: if an object or complement follows (parlant français, donnant sur la mer), it's an action and does not change. If it only describes a quality (une histoire amusante), it's an adjective and agrees. When unsure, try qui + verb; if it fits, it's the participle.",
+      },
     ],
     examples: [
       {
@@ -1512,6 +3058,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "C'est une journée fatigante.",
         translation: { TR: "Yorucu bir gün.", EN: "It's a tiring day." },
+      },
+      {
+        fr: "Ayant fini son travail, il est rentré chez lui.",
+        translation: { TR: "İşini bitirmiş olarak evine döndü.", EN: "Having finished his work, he went home." },
+      },
+      {
+        fr: "Les enfants obéissants recevront un cadeau.",
+        translation: { TR: "Söz dinleyen çocuklar hediye alacak.", EN: "Obedient children will get a present." },
+      },
+      {
+        fr: "Il cherche un appartement donnant sur la mer.",
+        translation: { TR: "Denize bakan bir daire arıyor.", EN: "He's looking for a flat overlooking the sea." },
       },
     ],
     exercises: [
@@ -1548,6 +3106,71 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Bu iş çok yorucu.” (fatiguer → sıfat)", EN: "Write in French: “This job is very tiring.” (fatiguer → adjective)" },
         answers: ["Ce travail est très fatigant.", "Ce travail est vraiment fatigant."],
       },
+      {
+        type: "fill",
+        id: "participe-present-6",
+        text: "___ fini son travail, il est rentré. (avoir)",
+        answers: ["Ayant"],
+        translation: { TR: "İşini bitirince eve döndü.", EN: "Having finished his work, he went home." },
+      },
+      {
+        type: "choice",
+        id: "participe-present-7",
+        text: "Ce sont des films ___. (passionner, sıfat)",
+        options: ["passionnant", "passionnants", "passionnantes"],
+        answer: 1,
+        translation: { TR: "Bunlar çok sürükleyici filmler.", EN: "These are gripping films." },
+      },
+      {
+        type: "choice",
+        id: "participe-present-8",
+        text: "Nous cherchons des étudiants ___ l'anglais.",
+        options: ["parlant", "parlants", "parlantes"],
+        answer: 0,
+        translation: { TR: "İngilizce konuşan öğrenciler arıyoruz.", EN: "We're looking for students who speak English." },
+      },
+      {
+        type: "build",
+        id: "participe-present-9",
+        tokens: ["Il", "cherche", "un", "appartement", "donnant", "sur", "la", "mer"],
+        translation: { TR: "Denize bakan bir daire arıyor.", EN: "He's looking for a flat overlooking the sea." },
+      },
+      {
+        type: "choice",
+        id: "participe-present-10",
+        text: "C'est un argument très ___. (convaincre, sıfat)",
+        options: ["convainquant", "convaincante", "convaincant"],
+        answer: 2,
+        translation: { TR: "Bu çok ikna edici bir argüman.", EN: "It's a very convincing argument." },
+      },
+      {
+        type: "free",
+        id: "participe-present-11",
+        prompt: { TR: "Fransızca yaz: “Fransızca konuşan bir garson arıyoruz.”", EN: "Write in French: “We're looking for a waiter who speaks French.”" },
+        answers: [
+          "Nous cherchons un serveur parlant français.",
+          "Nous cherchons un serveur qui parle français.",
+          "On cherche un serveur parlant français.",
+          "On cherche un serveur qui parle français.",
+        ],
+      },
+      {
+        type: "free",
+        id: "participe-present-12",
+        prompt: { TR: "Fransızca yaz: “Yorgun olduğu için erken yattı.” (étant)", EN: "Write in French: “Being tired, she went to bed early.” (étant)" },
+        answers: [
+          "Étant fatiguée, elle s'est couchée tôt.",
+          "Étant fatiguée, elle s'est couchée de bonne heure.",
+          "Comme elle était fatiguée, elle s'est couchée tôt.",
+          "Comme elle était fatiguée, elle s'est couchée de bonne heure.",
+          "Elle s'est couchée tôt parce qu'elle était fatiguée.",
+          "Elle s'est couchée tôt car elle était fatiguée.",
+          "Elle s'est couchée tôt, étant fatiguée.",
+          "Elle s'est couchée de bonne heure parce qu'elle était fatiguée.",
+          "Elle s'est couchée de bonne heure car elle était fatiguée.",
+          "Elle s'est couchée de bonne heure, étant fatiguée.",
+        ],
+      },
     ],
   },
   {
@@ -1567,6 +3190,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "qu'est-ce que → ce que, qu'est-ce qui → ce qui. Dolaylı soruda devrik yapı ve est-ce que olmaz:\n« Qu'est-ce que tu veux ? » → Il demande ce que je veux.\nEmir → de + mastar: « Ferme la porte ! » → Il me dit de fermer la porte.",
         EN: "qu'est-ce que → ce que, qu'est-ce qui → ce qui. No inversion and no est-ce que in an indirect question:\n« Qu'est-ce que tu veux ? » → Il demande ce que je veux.\nImperative → de + infinitive: « Ferme la porte ! » → Il me dit de fermer la porte.",
       },
+      {
+        TR: "İstisnalar: konuşma dilindeki quoi soruları da ce que olur: « Tu fais quoi ? » → Il demande ce que je fais. Olumsuz emir → de ne pas + mastar: « Ne parle pas ! » → Il me dit de ne pas parler. Kendi kendine soru için se demander: Je me demande pourquoi il est parti.",
+        EN: "Exceptions: spoken quoi questions also become ce que: « Tu fais quoi ? » → Il demande ce que je fais. A negative imperative → de ne pas + infinitive: « Ne parle pas ! » → Il me dit de ne pas parler. For asking yourself, use se demander: Je me demande pourquoi il est parti.",
+      },
+      {
+        TR: "Tipik hatalar:\n✗ Il demande est-ce que tu viens. → ✓ Il demande si tu viens.\n✗ Il demande où habites-tu. → ✓ Il demande où tu habites.\n✗ Il demande qu'est-ce que tu veux. → ✓ Il demande ce que tu veux.\n✗ Il me dit que ferme la porte. → ✓ Il me dit de fermer la porte.",
+        EN: "Typical mistakes:\n✗ Il demande est-ce que tu viens. → ✓ Il demande si tu viens.\n✗ Il demande où habites-tu. → ✓ Il demande où tu habites.\n✗ Il demande qu'est-ce que tu veux. → ✓ Il demande ce que tu veux.\n✗ Il me dit que ferme la porte. → ✓ Il me dit de fermer la porte.",
+      },
+      {
+        TR: "Akılda tutmak için: dolaylı soru düz bir cümledir: soru işareti yok, devrik yok, est-ce que yok. Üç dönüşümü ezberle: est-ce que → si, qu'est-ce que → ce que, qu'est-ce qui → ce qui. Emir → de + mastar.",
+        EN: "How to remember: an indirect question is a plain statement: no question mark, no inversion, no est-ce que. Learn three swaps: est-ce que → si, qu'est-ce que → ce que, qu'est-ce qui → ce qui. Imperative → de + infinitive.",
+      },
     ],
     examples: [
       {
@@ -1580,6 +3215,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Le serveur nous demande ce que nous voulons boire.",
         translation: { TR: "Garson ne içmek istediğimizi soruyor.", EN: "The waiter asks us what we want to drink." },
+      },
+      {
+        fr: "Il me demande ce qui se passe.",
+        translation: { TR: "Bana ne olduğunu soruyor.", EN: "He's asking me what's going on." },
+      },
+      {
+        fr: "Elle nous dit de ne pas faire de bruit.",
+        translation: { TR: "Bize gürültü yapmamamızı söylüyor.", EN: "She tells us not to make any noise." },
+      },
+      {
+        fr: "Je me demande pourquoi il est parti.",
+        translation: { TR: "Neden gittiğini merak ediyorum.", EN: "I wonder why he left." },
       },
     ],
     exercises: [
@@ -1627,6 +3274,54 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “(O erkek) yorgun olduğunu söylüyor.”", EN: "Write in French: “He says he is tired.”" },
         answers: ["Il dit qu'il est fatigué."],
       },
+      {
+        type: "fill",
+        id: "reported-speech-present-7",
+        text: "Elle nous dit de ne ___ faire de bruit.",
+        answers: ["pas"],
+        translation: { TR: "Bize gürültü yapmamamızı söylüyor.", EN: "She tells us not to make any noise." },
+      },
+      {
+        type: "choice",
+        id: "reported-speech-present-8",
+        text: "« Est-ce que tu as faim ? » → Il demande ___ j'ai faim.",
+        options: ["est-ce que", "si", "que"],
+        answer: 1,
+        translation: { TR: "Aç olup olmadığımı soruyor.", EN: "He's asking whether I'm hungry." },
+      },
+      {
+        type: "choice",
+        id: "reported-speech-present-9",
+        text: "« Qu'est-ce qui se passe ? » → Elle demande ___ se passe.",
+        options: ["ce qui", "ce que", "qu'est-ce qui"],
+        answer: 0,
+        translation: { TR: "Ne olduğunu soruyor.", EN: "She's asking what's going on." },
+      },
+      {
+        type: "build",
+        id: "reported-speech-present-10",
+        tokens: ["Elle", "me", "dit", "de", "ne", "pas", "parler"],
+        translation: { TR: "Bana konuşmamamı söylüyor.", EN: "She tells me not to talk." },
+      },
+      {
+        type: "choice",
+        id: "reported-speech-present-11",
+        text: "« Où habites-tu ? » → Il me demande où ___.",
+        options: ["habites-tu", "tu habites", "j'habite"],
+        answer: 2,
+        translation: { TR: "Bana nerede oturduğumu soruyor.", EN: "He's asking me where I live." },
+      },
+      {
+        type: "free",
+        id: "reported-speech-present-12",
+        prompt: { TR: "Fransızca yaz: “Ne düşündüğünü soruyor.”", EN: "Write in French: “He's asking what you think.”" },
+        answers: [
+          "Il demande ce que tu penses.",
+          "Il te demande ce que tu penses.",
+          "Il demande ce que vous pensez.",
+          "Il vous demande ce que vous pensez.",
+        ],
+      },
     ],
   },
   {
@@ -1646,6 +3341,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Türkçede “hasta olduğunu söyledi” derken zaman eki değişmez; Fransızca ise kaydırır: « Je suis malade » → Il a dit qu'il était malade.",
         EN: "English does the same shift: « Je suis malade » → Il a dit qu'il était malade (he said he was ill).",
       },
+      {
+        TR: "İstisnalar: söylenen şey bugün de doğruysa konuşmada présent kalabilir: Il m'a dit qu'il habite à Paris (hâlâ orada oturuyor). Emir yine de + mastar olur, değişmez: Il m'a dit de partir. Başka zaman kelimeleri: maintenant → à ce moment-là, ce matin → ce matin-là, il y a deux jours → deux jours avant.",
+        EN: "Exceptions: if what was said is still true, speech may keep the present: Il m'a dit qu'il habite à Paris (he still lives there). An imperative still becomes de + infinitive, unchanged: Il m'a dit de partir. More time words: maintenant → à ce moment-là, ce matin → ce matin-là, il y a deux jours → deux jours avant.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “geleceğini söyledi” zamanı kaydırmaz, Fransızca kaydırır.\n✗ Il a dit qu'il viendra. → ✓ Il a dit qu'il viendrait.\n✗ Elle a dit qu'elle a perdu ses clés. → ✓ … qu'elle avait perdu ses clés.\n✗ Il m'a demandé si je viendrai. → ✓ Il m'a demandé si je viendrais.",
+        EN: "Typical mistakes:\n✗ Il a dit qu'il viendra. → ✓ Il a dit qu'il viendrait.\n✗ Elle a dit qu'elle a perdu ses clés. → ✓ … qu'elle avait perdu ses clés.\n✗ Il m'a demandé si je viendrai. → ✓ Il m'a demandé si je viendrais.",
+      },
+      {
+        TR: "Akılda tutmak için: konuşan kişi geçmişteyse her şey bir basamak geri iner: est → était, a fait → avait fait, fera → ferait. Zaman kelimeleri de onunla gider: demain → le lendemain, hier → la veille.",
+        EN: "How to remember: if the speaker is in the past, everything steps back once: est → était, a fait → avait fait, fera → ferait. Time words move with it: demain → le lendemain, hier → la veille.",
+      },
     ],
     examples: [
       {
@@ -1659,6 +3366,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Ils ont promis qu'ils reviendraient le lendemain.",
         translation: { TR: "Ertesi gün döneceklerine söz verdiler.", EN: "They promised they would come back the next day." },
+      },
+      {
+        fr: "Il m'a demandé si j'avais faim.",
+        translation: { TR: "Bana aç olup olmadığımı sordu.", EN: "He asked me if I was hungry." },
+      },
+      {
+        fr: "Elle a dit qu'elle allait partir le lendemain.",
+        translation: { TR: "Ertesi gün gideceğini söyledi.", EN: "She said she was going to leave the next day." },
+      },
+      {
+        fr: "Le professeur nous a dit de lire ce livre.",
+        translation: { TR: "Öğretmen bize bu kitabı okumamızı söyledi.", EN: "The teacher told us to read this book." },
       },
     ],
     exercises: [
@@ -1702,6 +3421,53 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “(O kadın) onu bir gün önce gördüğünü söyledi.” (onu = erkek)", EN: "Write in French: “She said she had seen him the day before.”" },
         answers: ["Elle a dit qu'elle l'avait vu la veille.", "Elle m'a dit qu'elle l'avait vu la veille."],
       },
+      {
+        type: "choice",
+        id: "reported-speech-past-7",
+        text: "« Je viendrai. » → Il a dit qu'il ___.",
+        options: ["viendra", "viendrait", "vient"],
+        answer: 1,
+        translation: { TR: "Geleceğini söyledi.", EN: "He said he would come." },
+      },
+      {
+        type: "choice",
+        id: "reported-speech-past-8",
+        text: "« J'ai faim. » → Elle a dit qu'elle ___ faim.",
+        options: ["avait", "a", "aurait"],
+        answer: 0,
+        translation: { TR: "Aç olduğunu söyledi.", EN: "She said she was hungry." },
+      },
+      {
+        type: "build",
+        id: "reported-speech-past-9",
+        tokens: ["Il", "m'a", "demandé", "si", "j'avais", "faim"],
+        translation: { TR: "Bana aç olup olmadığımı sordu.", EN: "He asked me if I was hungry." },
+      },
+      {
+        type: "choice",
+        id: "reported-speech-past-10",
+        text: "« Je suis parti hier. » → Il a dit qu'il était parti ___.",
+        options: ["hier", "le lendemain", "la veille"],
+        answer: 2,
+        translation: { TR: "Bir gün önce gittiğini söyledi.", EN: "He said he had left the day before." },
+      },
+      {
+        type: "free",
+        id: "reported-speech-past-11",
+        prompt: { TR: "Fransızca yaz: “Bana yorgun olduğunu söyledi.”", EN: "Write in French: “She told me she was tired.”" },
+        answers: [
+          "Elle m'a dit qu'elle était fatiguée.",
+        ],
+      },
+      {
+        type: "free",
+        id: "reported-speech-past-12",
+        prompt: { TR: "Fransızca yaz: “Bize ertesi gün geleceklerini söylediler.”", EN: "Write in French: “They told us they would come the next day.”" },
+        answers: [
+          "Ils nous ont dit qu'ils viendraient le lendemain.",
+          "Elles nous ont dit qu'elles viendraient le lendemain.",
+        ],
+      },
     ],
   },
   {
@@ -1721,6 +3487,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Birleşmeleri unutma: à + le → au, de + le → du, de + les → des: grâce au soleil, à cause du bruit, à cause des travaux.",
         EN: "Don't forget the contractions: à + le → au, de + le → du, de + les → des: grâce au soleil, à cause du bruit, à cause des travaux.",
       },
+      {
+        TR: "Ek bağlaçlar ve istisnalar: en raison de + isim resmî ve tarafsızdır (duyurularda sık): en raison des travaux. Faute de + isim “… olmadığı için”: faute de temps. Vurgulu zamirlerle: à cause de toi, grâce à elle. Car asla cümle başında durmaz; comme ise yalnız cümle başında durur.",
+        EN: "More connectors and exceptions: en raison de + noun is formal and neutral (common in announcements): en raison des travaux. Faute de + noun means “for lack of”: faute de temps. With stressed pronouns: à cause de toi, grâce à elle. Car never starts a sentence; comme only starts one.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “yüzünden” hem isimle hem fiille kurulabiliyor; Fransızca ayırır.\n✗ à cause de il pleut → ✓ parce qu'il pleut / à cause de la pluie\n✗ Car il pleut, je reste. → ✓ Comme il pleut, je reste.\n✗ à cause de le bruit → ✓ à cause du bruit",
+        EN: "Typical mistakes:\n✗ à cause de il pleut → ✓ parce qu'il pleut / à cause de la pluie\n✗ Car il pleut, je reste. → ✓ Comme il pleut, je reste.\n✗ à cause de le bruit → ✓ à cause du bruit",
+      },
+      {
+        TR: "Akılda tutmak için: arkada fiil var mı? → parce que / puisque / comme / car. Yalnız isim mi var? → à cause de / grâce à. Sonuca bak: iyi sonuç = grâce à (“sayesinde”), kötü sonuç = à cause de (“yüzünden”).",
+        EN: "How to remember: is there a verb after it? → parce que / puisque / comme / car. Only a noun? → à cause de / grâce à. Look at the result: good result = grâce à (“thanks to”), bad result = à cause de (“because of”).",
+      },
     ],
     examples: [
       {
@@ -1734,6 +3512,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Le match a été annulé à cause de la pluie.",
         translation: { TR: "Maç yağmur yüzünden iptal edildi.", EN: "The match was cancelled because of the rain." },
+      },
+      {
+        fr: "Je reste à la maison car je suis malade.",
+        translation: { TR: "Evde kalıyorum, çünkü hastayım.", EN: "I'm staying at home, for I'm ill." },
+      },
+      {
+        fr: "Grâce au vaccin, la maladie a disparu.",
+        translation: { TR: "Aşı sayesinde hastalık ortadan kalktı.", EN: "Thanks to the vaccine, the disease disappeared." },
+      },
+      {
+        fr: "Le magasin est fermé en raison des travaux.",
+        translation: { TR: "Mağaza tadilat nedeniyle kapalı.", EN: "The shop is closed due to building work." },
       },
     ],
     exercises: [
@@ -1784,6 +3574,92 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "J'ai appris le français grâce à vous.",
         ],
       },
+      {
+        type: "choice",
+        id: "expressing-cause-7",
+        text: "Je suis en retard ___ la neige.",
+        options: ["parce que", "à cause de", "grâce à"],
+        answer: 1,
+        translation: { TR: "Kar yüzünden geç kaldım.", EN: "I'm late because of the snow." },
+      },
+      {
+        type: "choice",
+        id: "expressing-cause-8",
+        text: "___ il fait froid, je mets un manteau.",
+        options: ["Comme", "Car", "Grâce à"],
+        answer: 0,
+        translation: { TR: "Hava soğuk olduğu için palto giyiyorum.", EN: "As it's cold, I'm putting on a coat." },
+      },
+      {
+        type: "build",
+        id: "expressing-cause-9",
+        tokens: ["Je", "reste", "à", "la", "maison", "car", "je", "suis", "malade"],
+        translation: { TR: "Evde kalıyorum, çünkü hastayım.", EN: "I'm staying at home, for I'm ill." },
+      },
+      {
+        type: "choice",
+        id: "expressing-cause-10",
+        text: "J'ai trouvé un travail ___ mon cousin.",
+        options: ["à cause de", "parce que", "grâce à"],
+        answer: 2,
+        translation: { TR: "Kuzenim sayesinde iş buldum.", EN: "I found a job thanks to my cousin." },
+      },
+      {
+        type: "free",
+        id: "expressing-cause-11",
+        prompt: { TR: "Fransızca yaz: “Gürültü yüzünden uyuyamadım.”", EN: "Write in French: “I couldn't sleep because of the noise.”" },
+        answers: [
+          "Je n'ai pas pu dormir à cause du bruit.",
+          "À cause du bruit, je n'ai pas pu dormir.",
+        ],
+      },
+      {
+        type: "free",
+        id: "expressing-cause-12",
+        prompt: { TR: "Fransızca yaz: “Yağmur yağdığı için evde kaldık.”", EN: "Write in French: “As it was raining, we stayed at home.”" },
+        answers: [
+          "Comme il pleuvait, nous sommes restés à la maison.",
+          "Comme il pleuvait, nous sommes restés chez nous.",
+          "Comme il pleuvait, nous sommes restées à la maison.",
+          "Comme il pleuvait, nous sommes restées chez nous.",
+          "Comme il pleuvait, on est resté à la maison.",
+          "Comme il pleuvait, on est resté chez nous.",
+          "Comme il pleuvait, on est restés à la maison.",
+          "Comme il pleuvait, on est restés chez nous.",
+          "Comme il pleuvait, on est restées à la maison.",
+          "Comme il pleuvait, on est restées chez nous.",
+          "Nous sommes restés à la maison parce qu'il pleuvait.",
+          "Nous sommes restés à la maison car il pleuvait.",
+          "Nous sommes restés à la maison puisqu'il pleuvait.",
+          "Nous sommes restés chez nous parce qu'il pleuvait.",
+          "Nous sommes restés chez nous car il pleuvait.",
+          "Nous sommes restés chez nous puisqu'il pleuvait.",
+          "Nous sommes restées à la maison parce qu'il pleuvait.",
+          "Nous sommes restées à la maison car il pleuvait.",
+          "Nous sommes restées à la maison puisqu'il pleuvait.",
+          "Nous sommes restées chez nous parce qu'il pleuvait.",
+          "Nous sommes restées chez nous car il pleuvait.",
+          "Nous sommes restées chez nous puisqu'il pleuvait.",
+          "On est resté à la maison parce qu'il pleuvait.",
+          "On est resté à la maison car il pleuvait.",
+          "On est resté à la maison puisqu'il pleuvait.",
+          "On est resté chez nous parce qu'il pleuvait.",
+          "On est resté chez nous car il pleuvait.",
+          "On est resté chez nous puisqu'il pleuvait.",
+          "On est restés à la maison parce qu'il pleuvait.",
+          "On est restés à la maison car il pleuvait.",
+          "On est restés à la maison puisqu'il pleuvait.",
+          "On est restés chez nous parce qu'il pleuvait.",
+          "On est restés chez nous car il pleuvait.",
+          "On est restés chez nous puisqu'il pleuvait.",
+          "On est restées à la maison parce qu'il pleuvait.",
+          "On est restées à la maison car il pleuvait.",
+          "On est restées à la maison puisqu'il pleuvait.",
+          "On est restées chez nous parce qu'il pleuvait.",
+          "On est restées chez nous car il pleuvait.",
+          "On est restées chez nous puisqu'il pleuvait.",
+        ],
+      },
     ],
   },
   {
@@ -1803,6 +3679,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Yoğunluk + sonuç, Türkçedeki “o kadar … ki”:\ntellement / si + sıfat ya da zarf + que: Il est tellement fatigué qu'il dort debout.\ntellement de / tant de + isim + que: J'ai tellement de travail que je ne peux pas sortir.\nHepsi indicatif alır: sonuç bir olgudur.",
         EN: "Intensity + result, “so … that”:\ntellement / si + adjective or adverb + que: Il est tellement fatigué qu'il dort debout.\ntellement de / tant de + noun + que: J'ai tellement de travail que je ne peux pas sortir.\nAll take the indicative: the result is a fact.",
       },
+      {
+        TR: "İstisnalar: bu derste si “eğer” değil “o kadar” demektir: Il est si gentil que… Tellement bir fiili de güçlendirebilir; o zaman fiilden sonra gelir: Il a tellement mangé qu'il est malade. Sonuç bir mastarsa trop / assez … pour kullanılır: Il fait trop froid pour sortir.",
+        EN: "Exceptions: in this lesson si does not mean “if” but “so”: Il est si gentil que… Tellement can also intensify a verb; then it comes after the verb: Il a tellement mangé qu'il est malade. If the result is an infinitive, use trop / assez … pour: Il fait trop froid pour sortir.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “o kadar … ki” birebir çevrilince:\n✗ Il est très fatigué qu'il dort. → ✓ Il est tellement (si) fatigué qu'il dort. (très que almaz)\n✗ J'ai tellement travail. → ✓ J'ai tellement de travail.\n✗ … que il dort → ✓ … qu'il dort",
+        EN: "Typical mistakes:\n✗ Il est très fatigué qu'il dort. → ✓ Il est tellement (si) fatigué qu'il dort. (très cannot take que)\n✗ J'ai tellement travail. → ✓ J'ai tellement de travail.\n✗ … que il dort → ✓ … qu'il dort",
+      },
+      {
+        TR: "Akılda tutmak için: Türkçe “o kadar … ki” = tellement / si … que. Arada isim varsa de ekle: tellement DE travail, tant DE monde. Sonuç gerçekleşmiş bir olgudur, o yüzden hep indicatif.",
+        EN: "How to remember: “so … that” = tellement / si … que. With a noun, add de: tellement DE travail, tant DE monde. The result is a fact, so it always takes the indicative.",
+      },
     ],
     examples: [
       {
@@ -1816,6 +3704,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Il y avait tant de monde que nous ne sommes pas entrés.",
         translation: { TR: "O kadar kalabalıktı ki içeri girmedik.", EN: "There were so many people that we didn't go in." },
+      },
+      {
+        fr: "Il a tellement mangé qu'il est malade.",
+        translation: { TR: "O kadar çok yedi ki hasta oldu.", EN: "He ate so much that he's ill." },
+      },
+      {
+        fr: "Elle est si gentille que tout le monde l'aime.",
+        translation: { TR: "O kadar nazik ki herkes onu seviyor.", EN: "She's so kind that everyone loves her." },
+      },
+      {
+        fr: "Il fait trop froid pour sortir.",
+        translation: { TR: "Dışarı çıkmak için hava çok soğuk.", EN: "It's too cold to go out." },
       },
     ],
     exercises: [
@@ -1859,6 +3759,69 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "J'étais tellement fatiguée que je me suis tout de suite endormie.",
         ],
       },
+      {
+        type: "fill",
+        id: "expressing-consequence-6",
+        text: "Il y avait ___ de monde que nous sommes partis.",
+        answers: ["tellement", "tant"],
+        translation: { TR: "O kadar kalabalıktı ki gittik.", EN: "There were so many people that we left." },
+      },
+      {
+        type: "choice",
+        id: "expressing-consequence-7",
+        text: "Elle est ___ gentille que tout le monde l'aime.",
+        options: ["très", "si", "tant de"],
+        answer: 1,
+        translation: { TR: "O kadar nazik ki herkes onu seviyor.", EN: "She's so kind that everyone loves her." },
+      },
+      {
+        type: "choice",
+        id: "expressing-consequence-8",
+        text: "J'ai ___ devoirs que je ne peux pas sortir.",
+        options: ["tellement de", "tellement", "si"],
+        answer: 0,
+        translation: { TR: "O kadar çok ödevim var ki dışarı çıkamıyorum.", EN: "I have so much homework that I can't go out." },
+      },
+      {
+        type: "build",
+        id: "expressing-consequence-9",
+        tokens: ["Il", "a", "tellement", "mangé", "qu'il", "est", "malade"],
+        translation: { TR: "O kadar çok yedi ki hasta oldu.", EN: "He ate so much that he's ill." },
+      },
+      {
+        type: "choice",
+        id: "expressing-consequence-10",
+        text: "Le musée était fermé, ___ nous sommes allés au parc.",
+        options: ["parce que", "puisque", "c'est pourquoi"],
+        answer: 2,
+        translation: { TR: "Müze kapalıydı, bu yüzden parka gittik.", EN: "The museum was closed, that's why we went to the park." },
+      },
+      {
+        type: "free",
+        id: "expressing-consequence-11",
+        prompt: { TR: "Fransızca yaz: “Hastayım, bu yüzden evde kalıyorum.”", EN: "Write in French: “I'm ill, so I'm staying at home.”" },
+        answers: [
+          "Je suis malade, donc je reste à la maison.",
+          "Je suis malade, donc je reste chez moi.",
+          "Je suis malade, alors je reste à la maison.",
+          "Je suis malade, alors je reste chez moi.",
+          "Je suis malade, c'est pourquoi je reste à la maison.",
+          "Je suis malade, c'est pourquoi je reste chez moi.",
+          "Je suis malade, c'est pour ça que je reste à la maison.",
+          "Je suis malade, c'est pour ça que je reste chez moi.",
+          "Je suis malade, par conséquent je reste à la maison.",
+          "Je suis malade, par conséquent je reste chez moi.",
+        ],
+      },
+      {
+        type: "free",
+        id: "expressing-consequence-12",
+        prompt: { TR: "Fransızca yaz: “O kadar çok yağmur yağdı ki maç iptal edildi.”", EN: "Write in French: “It rained so much that the match was cancelled.”" },
+        answers: [
+          "Il a tellement plu que le match a été annulé.",
+          "Il a tant plu que le match a été annulé.",
+        ],
+      },
     ],
   },
   {
@@ -1878,6 +3841,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Tezat (bir şeye rağmen):\nbien que + subjonctif → “-mesine rağmen”: Bien qu'il soit tard, je travaille.\nmême si + indicatif → “-se bile”, si kuralları geçerli (futur yok): Même s'il pleut, je sortirai.\nmalgré + isim → “-e rağmen”: Malgré la pluie, nous sommes sortis.",
         EN: "Concession (in spite of something):\nbien que + subjunctive → “although”: Bien qu'il soit tard, je travaille.\nmême si + indicative → “even if”, si rules apply (no future): Même s'il pleut, je sortirai.\nmalgré + noun → “despite”: Malgré la pluie, nous sommes sortis.",
       },
+      {
+        TR: "İstisnalar: même si + imparfait → conditionnel, si kuralının aynısı: Même si j'avais le temps, je ne viendrais pas. “malgré que” özenli Fransızcada yanlış sayılır; bien que kullan. Au lieu de + mastar “-mek yerine”: Au lieu de travailler, il dort. Par contre konuşma dilinde en revanche ile aynı anlamdadır.",
+        EN: "Exceptions: même si + imparfait → conditional, exactly like the si rule: Même si j'avais le temps, je ne viendrais pas. “malgré que” is considered wrong in careful French; use bien que. Au lieu de + infinitive means “instead of”: Au lieu de travailler, il dort. In speech, par contre means the same as en revanche.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “-e rağmen” hem isimle hem fiille kurulur, Fransızca ikiye ayırır.\n✗ Malgré il pleut… → ✓ Malgré la pluie… / Bien qu'il pleuve…\n✗ Bien qu'il est riche… → ✓ Bien qu'il soit riche…\n✗ Même si il pleuvra… → ✓ Même s'il pleut…",
+        EN: "Typical mistakes:\n✗ Malgré il pleut… → ✓ Malgré la pluie… / Bien qu'il pleuve…\n✗ Bien qu'il est riche… → ✓ Bien qu'il soit riche…\n✗ Même si il pleuvra… → ✓ Même s'il pleut…",
+      },
+      {
+        TR: "Akılda tutmak için: “-e rağmen” + isim → malgré. “-mesine rağmen” + fiil → bien que + subjonctif. “-se bile” → même si + indicatif (si kuralları geçerli, futur yok). “oysa, -ken” → alors que / tandis que + indicatif.",
+        EN: "How to remember: “despite” + noun → malgré. “although” + verb → bien que + subjunctive. “even if” → même si + indicative (si rules apply, no future). “whereas” → alors que / tandis que + indicative.",
+      },
     ],
     examples: [
       {
@@ -1891,6 +3866,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Même si c'est difficile, je ne vais pas abandonner.",
         translation: { TR: "Zor olsa bile vazgeçmeyeceğim.", EN: "Even if it's difficult, I'm not going to give up." },
+      },
+      {
+        fr: "Même si j'avais le temps, je ne viendrais pas.",
+        translation: { TR: "Vaktim olsa bile gelmezdim.", EN: "Even if I had time, I wouldn't come." },
+      },
+      {
+        fr: "Il a continué malgré la fatigue.",
+        translation: { TR: "Yorgunluğa rağmen devam etti.", EN: "He carried on despite his tiredness." },
+      },
+      {
+        fr: "Au lieu de travailler, il regarde la télé.",
+        translation: { TR: "Çalışmak yerine televizyon izliyor.", EN: "Instead of working, he's watching TV." },
       },
     ],
     exercises: [
@@ -1941,6 +3928,64 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Je travaille bien que je sois fatiguée.",
         ],
       },
+      {
+        type: "choice",
+        id: "expressing-opposition-7",
+        text: "___ la fatigue, il a continué.",
+        options: ["Bien que", "Malgré", "Même si"],
+        answer: 1,
+        translation: { TR: "Yorgunluğa rağmen devam etti.", EN: "Despite his tiredness, he carried on." },
+      },
+      {
+        type: "choice",
+        id: "expressing-opposition-8",
+        text: "Bien qu'il ___ riche, il vit simplement.",
+        options: ["soit", "est", "sera"],
+        answer: 0,
+        translation: { TR: "Zengin olmasına rağmen sade yaşıyor.", EN: "Although he's rich, he lives simply." },
+      },
+      {
+        type: "build",
+        id: "expressing-opposition-9",
+        tokens: ["Même", "si", "j'avais", "le", "temps,", "je", "ne", "viendrais", "pas"],
+        translation: { TR: "Vaktim olsa bile gelmezdim.", EN: "Even if I had time, I wouldn't come." },
+      },
+      {
+        type: "choice",
+        id: "expressing-opposition-10",
+        text: "Même s'il ___ demain, nous partirons.",
+        options: ["pleuvra", "pleuve", "pleut"],
+        answer: 2,
+        translation: { TR: "Yarın yağmur yağsa bile yola çıkacağız.", EN: "Even if it rains tomorrow, we'll leave." },
+      },
+      {
+        type: "free",
+        id: "expressing-opposition-11",
+        prompt: { TR: "Fransızca yaz: “Yağmura rağmen dışarı çıktık.”", EN: "Write in French: “Despite the rain, we went out.”" },
+        answers: [
+          "Malgré la pluie, nous sommes sortis.",
+          "Malgré la pluie, nous sommes sorties.",
+          "Malgré la pluie, on est sorti.",
+          "Malgré la pluie, on est sortis.",
+          "Malgré la pluie, on est sorties.",
+          "Nous sommes sortis malgré la pluie.",
+          "Nous sommes sorties malgré la pluie.",
+          "On est sorti malgré la pluie.",
+          "On est sortis malgré la pluie.",
+          "On est sorties malgré la pluie.",
+        ],
+      },
+      {
+        type: "free",
+        id: "expressing-opposition-12",
+        prompt: { TR: "Fransızca yaz: “Yorgun olmasına rağmen bize yardım ediyor.”", EN: "Write in French: “Although she's tired, she's helping us.”" },
+        answers: [
+          "Bien qu'elle soit fatiguée, elle nous aide.",
+          "Même si elle est fatiguée, elle nous aide.",
+          "Elle nous aide bien qu'elle soit fatiguée.",
+          "Elle nous aide même si elle est fatiguée.",
+        ],
+      },
     ],
   },
   {
@@ -1960,6 +4005,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Bir şeyden kaçınmak:\npour ne pas + mastar (iki olumsuzluk sözcüğü de mastardan önce): Je pars tôt pour ne pas être en retard.\nde peur de + mastar / de peur que + subjonctif (“… korkusuyla”): Il ne dit rien de peur de se tromper.",
         EN: "Avoiding something:\npour ne pas + infinitive (both negative words before the infinitive): Je pars tôt pour ne pas être en retard.\nde peur de + infinitive / de peur que + subjunctive (“for fear of”): Il ne dit rien de peur de se tromper.",
       },
+      {
+        TR: "İstisnalar: aller, venir, partir, sortir gibi hareket fiillerinden sonra pour çoğu zaman düşer: Il est venu chercher ses clés (anahtarlarını almaya geldi). Resmî alternatifler: de façon à / de manière à + mastar, de sorte que + subjonctif. Pour que asla aynı özneyle kullanılmaz.",
+        EN: "Exceptions: after verbs of movement such as aller, venir, partir, sortir, pour is often dropped: Il est venu chercher ses clés (he came to get his keys). Formal alternatives: de façon à / de manière à + infinitive, de sorte que + subjunctive. Pour que is never used with the same subject.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “-mek için” ile “-sin diye” farkı unutulunca:\n✗ Je travaille pour que je gagne de l'argent. → ✓ Je travaille pour gagner de l'argent.\n✗ … pour que tu comprends. → ✓ … pour que tu comprennes.\n✗ pour ne être pas en retard / pour pas être… → ✓ pour ne pas être en retard",
+        EN: "Typical mistakes:\n✗ Je travaille pour que je gagne de l'argent. → ✓ Je travaille pour gagner de l'argent.\n✗ … pour que tu comprends. → ✓ … pour que tu comprennes.\n✗ pour ne être pas en retard / pour pas être… → ✓ pour ne pas être en retard",
+      },
+      {
+        TR: "Akılda tutmak için: “-mek için” (aynı özne) → pour + mastar. “-sin diye / -mesi için” (başka özne) → pour que + subjonctif. Olumsuz mastarda ne pas birlikte ve mastarın önünde durur: pour ne pas oublier.",
+        EN: "How to remember: same subject → pour + infinitive. Different subject → pour que + subjunctive. With a negative infinitive, ne pas stays together in front of it: pour ne pas oublier.",
+      },
     ],
     examples: [
       {
@@ -1973,6 +4030,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Elle a pris un taxi de peur de rater son avion.",
         translation: { TR: "Uçağını kaçırmaktan korktuğu için taksiye bindi.", EN: "She took a taxi for fear of missing her plane." },
+      },
+      {
+        fr: "Il est venu chercher ses clés.",
+        translation: { TR: "Anahtarlarını almaya geldi.", EN: "He came to get his keys." },
+      },
+      {
+        fr: "Elle parle doucement pour ne pas réveiller le bébé.",
+        translation: { TR: "Bebeği uyandırmamak için alçak sesle konuşuyor.", EN: "She speaks softly so as not to wake the baby." },
+      },
+      {
+        fr: "J'ai mis une alarme afin de ne pas oublier.",
+        translation: { TR: "Unutmamak için alarm kurdum.", EN: "I set an alarm so as not to forget." },
       },
     ],
     exercises: [
@@ -2025,6 +4094,70 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "Je suis venue afin de vous voir.",
         ],
       },
+      {
+        type: "choice",
+        id: "expressing-purpose-7",
+        text: "Je mets un réveil ___ me lever tôt.",
+        options: ["pour que", "pour", "afin que"],
+        answer: 1,
+        translation: { TR: "Erken kalkmak için çalar saat kuruyorum.", EN: "I set an alarm clock to get up early." },
+      },
+      {
+        type: "choice",
+        id: "expressing-purpose-8",
+        text: "Laisse la porte ouverte pour que le chat ___ sortir.",
+        options: ["puisse", "peut", "pourrait"],
+        answer: 0,
+        translation: { TR: "Kedi çıkabilsin diye kapıyı açık bırak.", EN: "Leave the door open so that the cat can go out." },
+      },
+      {
+        type: "build",
+        id: "expressing-purpose-9",
+        tokens: ["Elle", "parle", "doucement", "pour", "ne", "pas", "réveiller", "le", "bébé"],
+        translation: { TR: "Bebeği uyandırmamak için alçak sesle konuşuyor.", EN: "She speaks softly so as not to wake the baby." },
+      },
+      {
+        type: "choice",
+        id: "expressing-purpose-10",
+        text: "Je pars tôt ___ en retard.",
+        options: ["pour ne être pas", "pour être ne pas", "pour ne pas être"],
+        answer: 2,
+        translation: { TR: "Geç kalmamak için erken çıkıyorum.", EN: "I leave early so as not to be late." },
+      },
+      {
+        type: "free",
+        id: "expressing-purpose-11",
+        prompt: { TR: "Fransızca yaz: “Fransızca öğrenmek için Paris'e gidiyorum.”", EN: "Write in French: “I'm going to Paris to learn French.”" },
+        answers: [
+          "Je vais à Paris pour apprendre le français.",
+          "Je vais à Paris afin d' apprendre le français.",
+          "Je pars à Paris pour apprendre le français.",
+          "Je pars à Paris afin d' apprendre le français.",
+        ],
+      },
+      {
+        type: "free",
+        id: "expressing-purpose-12",
+        prompt: { TR: "Fransızca yaz: “Herkes seni duyabilsin diye yüksek sesle konuş.”", EN: "Write in French: “Speak loudly so that everyone can hear you.”" },
+        answers: [
+          "Parle fort pour que tout le monde puisse t'entendre.",
+          "Parle fort pour que tout le monde t'entende.",
+          "Parle fort pour que tout le monde puisse entendre.",
+          "Parle fort pour que tout le monde entende.",
+          "Parle fort afin que tout le monde puisse t'entendre.",
+          "Parle fort afin que tout le monde t'entende.",
+          "Parle fort afin que tout le monde puisse entendre.",
+          "Parle fort afin que tout le monde entende.",
+          "Parlez fort pour que tout le monde puisse vous entendre.",
+          "Parlez fort pour que tout le monde vous entende.",
+          "Parlez fort pour que tout le monde puisse entendre.",
+          "Parlez fort pour que tout le monde entende.",
+          "Parlez fort afin que tout le monde puisse vous entendre.",
+          "Parlez fort afin que tout le monde vous entende.",
+          "Parlez fort afin que tout le monde puisse entendre.",
+          "Parlez fort afin que tout le monde entende.",
+        ],
+      },
     ],
   },
   {
@@ -2044,6 +4177,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "avant de + mastar (aynı özne) → “-meden önce”: Lave-toi les mains avant de manger. Özne farklıysa avant que + subjonctif.\naprès + mastar geçmiş (avoir / être + participe) → “-dikten sonra”: Après avoir mangé, il est parti. Après être rentrée, elle a dormi.",
         EN: "avant de + infinitive (same subject) → “before …-ing”: Lave-toi les mains avant de manger. With a different subject: avant que + subjunctive.\naprès + past infinitive (avoir / être + participle) → “after …-ing”: Après avoir mangé, il est parti. Après être rentrée, elle a dormi.",
       },
+      {
+        TR: "İstisnalar: après que ve depuis que indicatif alır; jusqu'à ce que ve en attendant que ise subjonctif: Je t'attendrai jusqu'à ce que tu reviennes. Dönüşlü fiillerde geçmiş mastar être ile kurulur ve zamir kalır: après s'être levé(e). Özne aynıysa avant que değil avant de kullanılır.",
+        EN: "Exceptions: après que and depuis que take the indicative; jusqu'à ce que and en attendant que take the subjunctive: Je t'attendrai jusqu'à ce que tu reviennes. Reflexive verbs build the past infinitive with être and keep the pronoun: après s'être levé(e). With the same subject, use avant de, not avant que.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “-dikten sonra / -meden önce” zaman taşımaz; Fransızca taşır.\n✗ Quand je suis grand, je serai pilote. → ✓ Quand je serai grand…\n✗ Après manger, il est parti. → ✓ Après avoir mangé, il est parti.\n✗ Avant que je parte, je ferme la porte. → ✓ Avant de partir, je ferme la porte.",
+        EN: "Typical mistakes:\n✗ Quand je suis grand, je serai pilote. → ✓ Quand je serai grand…\n✗ Après manger, il est parti. → ✓ Après avoir mangé, il est parti.\n✗ Avant que je parte, je ferme la porte. → ✓ Avant de partir, je ferme la porte.",
+      },
+      {
+        TR: "Akılda tutmak için: “-dikten sonra” = après + geçmiş mastar (avoir / être + participe). “-meden önce” = avant de + yalın mastar. Gelecekten söz ediyorsan quand / dès que'nin arkasına da futur koy.",
+        EN: "How to remember: “after …-ing” = après + past infinitive (avoir / être + participle). “before …-ing” = avant de + plain infinitive. When talking about the future, put the future after quand / dès que too.",
+      },
     ],
     examples: [
       {
@@ -2057,6 +4202,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Après avoir lu la lettre, elle a pleuré.",
         translation: { TR: "Mektubu okuduktan sonra ağladı.", EN: "After reading the letter, she cried." },
+      },
+      {
+        fr: "Après s'être levée, elle a pris un café.",
+        translation: { TR: "Kalktıktan sonra bir kahve içti.", EN: "After getting up, she had a coffee." },
+      },
+      {
+        fr: "Je t'attendrai jusqu'à ce que tu reviennes.",
+        translation: { TR: "Sen dönene kadar seni bekleyeceğim.", EN: "I'll wait for you until you come back." },
+      },
+      {
+        fr: "Depuis qu'il habite ici, il est plus heureux.",
+        translation: { TR: "Burada oturduğundan beri daha mutlu.", EN: "Since he's been living here, he's happier." },
       },
     ],
     exercises: [
@@ -2107,6 +4264,78 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "J'ai regardé la télévision après avoir mangé.",
         ],
       },
+      {
+        type: "choice",
+        id: "time-clauses-7",
+        text: "Quand je ___ grand, je serai médecin.",
+        options: ["suis", "serai", "serais"],
+        answer: 1,
+        translation: { TR: "Büyüyünce doktor olacağım.", EN: "When I grow up, I'll be a doctor." },
+      },
+      {
+        type: "choice",
+        id: "time-clauses-8",
+        text: "Dès qu'il ___ à la gare, il m'appellera.",
+        options: ["arrivera", "arrive", "arriverait"],
+        answer: 0,
+        translation: { TR: "İstasyona varır varmaz beni arayacak.", EN: "As soon as he gets to the station, he'll call me." },
+      },
+      {
+        type: "build",
+        id: "time-clauses-9",
+        tokens: ["Je", "t'attendrai", "jusqu'à", "ce", "que", "tu", "reviennes"],
+        translation: { TR: "Sen dönene kadar seni bekleyeceğim.", EN: "I'll wait for you until you come back." },
+      },
+      {
+        type: "choice",
+        id: "time-clauses-10",
+        text: "Après ___ levé, il a pris une douche.",
+        options: ["avoir", "être", "s'être"],
+        answer: 2,
+        translation: { TR: "Kalktıktan sonra duş aldı.", EN: "After getting up, he had a shower." },
+      },
+      {
+        type: "free",
+        id: "time-clauses-11",
+        prompt: { TR: "Fransızca yaz: “Kahvaltı yaptıktan sonra işe gittim.” (après + geçmiş mastar)", EN: "Write in French: “After having breakfast, I went to work.” (après + past infinitive)" },
+        answers: [
+          "Après avoir pris le petit-déjeuner, je suis allé au travail.",
+          "Après avoir pris le petit-déjeuner, je suis allée au travail.",
+          "Après avoir pris le petit déjeuner, je suis allé au travail.",
+          "Après avoir pris le petit déjeuner, je suis allée au travail.",
+          "Après avoir pris mon petit-déjeuner, je suis allé au travail.",
+          "Après avoir pris mon petit-déjeuner, je suis allée au travail.",
+          "Après avoir pris mon petit déjeuner, je suis allé au travail.",
+          "Après avoir pris mon petit déjeuner, je suis allée au travail.",
+          "Je suis allé au travail après avoir pris le petit-déjeuner.",
+          "Je suis allé au travail après avoir pris le petit déjeuner.",
+          "Je suis allé au travail après avoir pris mon petit-déjeuner.",
+          "Je suis allé au travail après avoir pris mon petit déjeuner.",
+          "Je suis allée au travail après avoir pris le petit-déjeuner.",
+          "Je suis allée au travail après avoir pris le petit déjeuner.",
+          "Je suis allée au travail après avoir pris mon petit-déjeuner.",
+          "Je suis allée au travail après avoir pris mon petit déjeuner.",
+        ],
+      },
+      {
+        type: "free",
+        id: "time-clauses-12",
+        prompt: { TR: "Fransızca yaz: “Eve dönmeden önce ekmek alacağım.”", EN: "Write in French: “Before going home, I'll buy some bread.”" },
+        answers: [
+          "Avant de rentrer, j'achèterai du pain.",
+          "Avant de rentrer, je vais acheter du pain.",
+          "Avant de rentrer à la maison, j'achèterai du pain.",
+          "Avant de rentrer à la maison, je vais acheter du pain.",
+          "Avant de rentrer chez moi, j'achèterai du pain.",
+          "Avant de rentrer chez moi, je vais acheter du pain.",
+          "J'achèterai du pain avant de rentrer.",
+          "J'achèterai du pain avant de rentrer à la maison.",
+          "J'achèterai du pain avant de rentrer chez moi.",
+          "Je vais acheter du pain avant de rentrer.",
+          "Je vais acheter du pain avant de rentrer à la maison.",
+          "Je vais acheter du pain avant de rentrer chez moi.",
+        ],
+      },
     ],
   },
   {
@@ -2126,6 +4355,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Ce qui …, c'est … / Ce que …, c'est … / Ce dont …, c'est …: önce merak uyandırır, sonra söyler.\nCe qui me plaît, c'est la musique. Ce que je veux, c'est dormir. Ce dont j'ai besoin, c'est de vacances (de kalır).",
         EN: "Ce qui …, c'est … / Ce que …, c'est … / Ce dont …, c'est …: builds suspense, then says it.\nCe qui me plaît, c'est la musique. Ce que je veux, c'est dormir. Ce dont j'ai besoin, c'est de vacances (de stays).",
       },
+      {
+        TR: "İstisnalar: yazıda çoğul için ce sont … qui kullanılır (Ce sont mes voisins qui ont appelé), konuşmada c'est da olur. Fiil bir edat istiyorsa edat vurgulanan öğeyle birlikte öne gelir: C'est à toi que je parle. C'est de ça que j'ai besoin.",
+        EN: "Exceptions: in writing, the plural uses ce sont … qui (Ce sont mes voisins qui ont appelé); in speech, c'est is fine too. If the verb needs a preposition, the preposition moves forward with the highlighted element: C'est à toi que je parle. C'est de ça que j'ai besoin.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçede vurgu sesle yapılır (“Bunu BEN yaptım”), Fransızcada yapıyla.\n✗ C'est moi qui a raison. → ✓ C'est moi qui ai raison.\n✗ C'est je qui… → ✓ C'est moi qui…\n✗ C'est Paris que j'habite. → ✓ C'est à Paris que j'habite. (edat kalır)",
+        EN: "Typical mistakes:\n✗ C'est moi qui a raison. → ✓ C'est moi qui ai raison.\n✗ C'est je qui… → ✓ C'est moi qui…\n✗ C'est Paris que j'habite. → ✓ C'est à Paris que j'habite. (the preposition stays)",
+      },
+      {
+        TR: "Akılda tutmak için: vurgulamak istediğini c'est … qui / que arasına koy. Arkasından fiil geliyorsa qui, özne geliyorsa que. Kişi zamiri hep vurgulu biçimdedir (moi, toi, lui, elle, nous, vous, eux) ve fiil o kişiye göre çekilir.",
+        EN: "How to remember: put what you want to highlight between c'est and qui / que. A verb follows → qui; a subject follows → que. Personal pronouns are always the stressed form (moi, toi, lui, elle, nous, vous, eux), and the verb is conjugated for that person.",
+      },
     ],
     examples: [
       {
@@ -2139,6 +4380,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Ce que je préfère, c'est le week-end.",
         translation: { TR: "En sevdiğim şey hafta sonu.", EN: "What I like best is the weekend." },
+      },
+      {
+        fr: "C'est à toi que je parle !",
+        translation: { TR: "Ben seninle konuşuyorum!", EN: "I'm talking to YOU!" },
+      },
+      {
+        fr: "Ce sont mes voisins qui ont appelé la police.",
+        translation: { TR: "Polisi arayan komşularımdı.", EN: "It was my neighbours who called the police." },
+      },
+      {
+        fr: "C'est nous qui avons organisé la fête.",
+        translation: { TR: "Partiyi düzenleyen bizdik.", EN: "We're the ones who organised the party." },
       },
     ],
     exercises: [
@@ -2186,6 +4439,61 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
           "C'est lui qui a fait cela !",
         ],
       },
+      {
+        type: "choice",
+        id: "mise-en-relief-7",
+        text: "C'est moi qui ___ raison.",
+        options: ["a", "ai", "as"],
+        answer: 1,
+        translation: { TR: "Haklı olan benim.", EN: "I'm the one who's right." },
+      },
+      {
+        type: "choice",
+        id: "mise-en-relief-8",
+        text: "C'est ___ Paris que j'habite.",
+        options: ["à", "en", "dans"],
+        answer: 0,
+        translation: { TR: "Oturduğum yer Paris.", EN: "It's in Paris that I live." },
+      },
+      {
+        type: "build",
+        id: "mise-en-relief-9",
+        tokens: ["C'est", "à", "toi", "que", "je", "parle"],
+        translation: { TR: "Ben seninle konuşuyorum.", EN: "It's you I'm talking to." },
+      },
+      {
+        type: "choice",
+        id: "mise-en-relief-10",
+        text: "___ j'ai besoin, c'est de vacances.",
+        options: ["Ce que", "Ce qui", "Ce dont"],
+        answer: 2,
+        translation: { TR: "İhtiyacım olan şey tatil.", EN: "What I need is a holiday." },
+      },
+      {
+        type: "free",
+        id: "mise-en-relief-11",
+        prompt: { TR: "Fransızca yaz: “Bunu sana söyleyen benim.” (c'est … qui)", EN: "Write in French: “I'm the one who told you that.” (c'est … qui)" },
+        answers: [
+          "C'est moi qui te l'ai dit.",
+          "C'est moi qui vous l'ai dit.",
+          "C'est moi qui t'ai dit ça.",
+          "C'est moi qui vous ai dit ça.",
+          "C'est moi qui t'ai dit cela.",
+          "C'est moi qui vous ai dit cela.",
+        ],
+      },
+      {
+        type: "free",
+        id: "mise-en-relief-12",
+        prompt: { TR: "Fransızca yaz: “Benim istediğim, senin mutlu olman.”", EN: "Write in French: “What I want is for you to be happy.”" },
+        answers: [
+          "Ce que je veux, c'est que tu sois heureux.",
+          "Ce que je veux, c'est que tu sois heureuse.",
+          "Ce que je veux, c'est que vous soyez heureux.",
+          "Ce que je veux, c'est que vous soyez heureuse.",
+          "Ce que je veux, c'est que vous soyez heureuses.",
+        ],
+      },
     ],
   },
   {
@@ -2205,6 +4513,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         TR: "Düşünceyi düzenlemek:\nd'un côté … de l'autre (côté) → bir yandan … öte yandan\nen revanche / par contre → buna karşılık\nde plus, en plus → üstelik\npar exemple → gerekçeyi örnekle\nbref, enfin → sonuç olarak",
         EN: "Organising your ideas:\nd'un côté … de l'autre (côté) → on the one hand … on the other\nen revanche / par contre → on the other hand, by contrast\nde plus, en plus → moreover\npar exemple → back it up with an example\nbref, enfin → in short",
       },
+      {
+        TR: "İstisnalar: à mon avis, selon moi, d'après moi'dan sonra que gelmez; doğrudan cümle gelir: Selon moi, c'est vrai. Devrik soruda subjonctif de kullanılabilir: Penses-tu que ce soit vrai ? Il me semble que indicatif alır, ama il semble que çoğu zaman subjonctif alır.",
+        EN: "Exceptions: no que after à mon avis, selon moi, d'après moi; a plain clause follows: Selon moi, c'est vrai. In an inverted question the subjunctive is possible: Penses-tu que ce soit vrai ? Il me semble que takes the indicative, but il semble que often takes the subjunctive.",
+      },
+      {
+        TR: "Tipik hatalar: Türkçe “bence” doğrudan cümleye bağlanır, Fransızcada da öyle; ama olumsuz fikir kip değiştirir.\n✗ Selon moi que c'est vrai. → ✓ Selon moi, c'est vrai.\n✗ Je ne pense pas que c'est vrai. → ✓ Je ne pense pas que ce soit vrai.\n✗ Je suis d'accord à toi. → ✓ Je suis d'accord avec toi.",
+        EN: "Typical mistakes:\n✗ Selon moi que c'est vrai. → ✓ Selon moi, c'est vrai.\n✗ Je ne pense pas que c'est vrai. → ✓ Je ne pense pas que ce soit vrai.\n✗ Je suis d'accord à toi. → ✓ Je suis d'accord avec toi.",
+      },
+      {
+        TR: "Akılda tutmak için: fikrini üç adımda kur: aç (à mon avis…), destekle (par exemple, de plus…), kapat (bref…). Kip kuralı tek cümle: olumlu fikir = indicatif, olumsuz ya da şüpheli fikir = subjonctif.",
+        EN: "How to remember: build your opinion in three steps: open (à mon avis…), support (par exemple, de plus…), close (bref…). The mood rule in one line: affirmative opinion = indicative, negative or doubtful opinion = subjunctive.",
+      },
     ],
     examples: [
       {
@@ -2218,6 +4538,18 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Je trouve que les réseaux sociaux sont utiles. En revanche, ils prennent beaucoup de temps.",
         translation: { TR: "Sosyal medyayı faydalı buluyorum. Buna karşılık çok zaman alıyor.", EN: "I find social media useful. On the other hand, it takes a lot of time." },
+      },
+      {
+        fr: "À mon avis, tu as raison, mais je ne suis pas sûr que ce soit facile.",
+        translation: { TR: "Bence haklısın ama kolay olduğundan emin değilim.", EN: "In my opinion you're right, but I'm not sure it's easy." },
+      },
+      {
+        fr: "Le télétravail est pratique. De plus, on gagne du temps.",
+        translation: { TR: "Uzaktan çalışma pratik. Üstelik zaman kazanılıyor.", EN: "Remote work is practical. Moreover, you save time." },
+      },
+      {
+        fr: "Je ne crois pas que les jeunes lisent moins.",
+        translation: { TR: "Gençlerin daha az okuduğunu sanmıyorum.", EN: "I don't think young people read less." },
       },
     ],
     exercises: [
@@ -2260,6 +4592,76 @@ export const B1_LESSONS: readonly GrammarLesson[] = [
         id: "opinion-argument-6",
         prompt: { TR: "Fransızca yaz: “Onun (erkek) haklı olduğunu düşünmüyorum.”", EN: "Write in French: “I don't think he's right.”" },
         answers: ["Je ne pense pas qu'il ait raison.", "Je ne crois pas qu'il ait raison."],
+      },
+      {
+        type: "choice",
+        id: "opinion-argument-7",
+        text: "Selon moi, ce projet ___ utile.",
+        options: ["soit", "est", "qu'il est"],
+        answer: 1,
+        translation: { TR: "Bence bu proje faydalı.", EN: "In my view, this project is useful." },
+      },
+      {
+        type: "choice",
+        id: "opinion-argument-8",
+        text: "Je ne crois pas que ce ___ vrai.",
+        options: ["soit", "est", "sera"],
+        answer: 0,
+        translation: { TR: "Bunun doğru olduğunu sanmıyorum.", EN: "I don't think it's true." },
+      },
+      {
+        type: "build",
+        id: "opinion-argument-9",
+        tokens: ["À", "mon", "avis,", "tu", "as", "raison"],
+        translation: { TR: "Bence haklısın.", EN: "In my opinion, you're right." },
+      },
+      {
+        type: "choice",
+        id: "opinion-argument-10",
+        text: "La ville est chère. ___, il y a beaucoup de choses à faire.",
+        options: ["De plus", "Donc", "En revanche"],
+        answer: 2,
+        translation: { TR: "Şehir pahalı. Buna karşılık yapacak çok şey var.", EN: "The city is expensive. On the other hand, there's a lot to do." },
+      },
+      {
+        type: "free",
+        id: "opinion-argument-11",
+        prompt: { TR: "Fransızca yaz: “Bence haklısın.”", EN: "Write in French: “In my view, you're right.”" },
+        answers: [
+          "À mon avis, tu as raison.",
+          "À mon avis, vous avez raison.",
+          "Selon moi, tu as raison.",
+          "Selon moi, vous avez raison.",
+          "D'après moi, tu as raison.",
+          "D'après moi, vous avez raison.",
+          "Pour moi, tu as raison.",
+          "Pour moi, vous avez raison.",
+          "Je pense que tu as raison.",
+          "Je pense que vous avez raison.",
+          "Je crois que tu as raison.",
+          "Je crois que vous avez raison.",
+          "Je trouve que tu as raison.",
+          "Je trouve que vous avez raison.",
+        ],
+      },
+      {
+        type: "free",
+        id: "opinion-argument-12",
+        prompt: { TR: "Fransızca yaz: “Bunun iyi bir fikir olduğunu düşünmüyorum ama yine de deneyeceğim.”", EN: "Write in French: “I don't think it's a good idea, but I'll try anyway.”" },
+        answers: [
+          "Je ne pense pas que ce soit une bonne idée, mais je vais essayer quand même.",
+          "Je ne pense pas que ce soit une bonne idée, mais je vais essayer tout de même.",
+          "Je ne pense pas que ce soit une bonne idée, mais je essaierai quand même.",
+          "Je ne pense pas que ce soit une bonne idée, mais je essaierai tout de même.",
+          "Je ne pense pas que ce soit une bonne idée, mais je essayerai quand même.",
+          "Je ne pense pas que ce soit une bonne idée, mais je essayerai tout de même.",
+          "Je ne crois pas que ce soit une bonne idée, mais je vais essayer quand même.",
+          "Je ne crois pas que ce soit une bonne idée, mais je vais essayer tout de même.",
+          "Je ne crois pas que ce soit une bonne idée, mais je essaierai quand même.",
+          "Je ne crois pas que ce soit une bonne idée, mais je essaierai tout de même.",
+          "Je ne crois pas que ce soit une bonne idée, mais je essayerai quand même.",
+          "Je ne crois pas que ce soit une bonne idée, mais je essayerai tout de même.",
+        ],
       },
     ],
   },

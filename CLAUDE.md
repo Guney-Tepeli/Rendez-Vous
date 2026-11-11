@@ -10,10 +10,17 @@ has full details; the grammar course runs A1 to B1.
 
 | Content | Amount | Days at the default pace |
 |---|---|---|
-| Words (all enriched) | 2,999: A1 774 · A2 993 · B1 1,224 · above B1 8 | 300 at 10 new words a day |
-| Grammar lessons | 78: A1 25 · A2 25 · B1 28, 4–6 exercises each | 78, then revision |
+| Words (all enriched, 3 examples each) | 2,999: A1 774 · A2 993 · B1 1,224 · above B1 8 | 300 at 10 new words a day |
+| Grammar lessons | 78: A1 25 · A2 25 · B1 28; about 6 paragraphs (rule, exceptions, typical mistakes, tip), 6 examples, 12 exercises each (fill, build, free, choice) | 78, then revision |
+| Reading texts | 78, one per lesson, 450–600 French words, 5 questions each | read on the lesson's day |
 | Phonetics cards | 23, every focus type | rotate every 23 days |
 | Self-talk prompts | 124: A1 41 · A2 41 · B1 42, shown at or below the current lesson level | |
+
+**Day plan is 60 minutes (11 Nov 2026):** recall 10 · grammar 20 · output 15 ·
+reading 10 · phonetics 5. Each day has a summary page (words, lesson,
+reading, phonetics) that saves as PDF (print) or Word (.docx). A native
+macOS app (`Rendez-Vous.app`, built by `mac/build.sh`) runs the same build
+without a server.
 
 Written answers: a wrong verdict offers "my answer was right too", behind a
 check-first warning; an accepted answer is remembered per exercise.
@@ -39,7 +46,8 @@ the model's knowledge. See Open.
 | Command | What |
 |---|---|
 | `npm run dev` | Vite dev server |
-| `npm test` | Vitest, 100 tests (+3 single-file checks), all deterministic (fixed clock) |
+| `npm test` | Vitest, 109 tests (+3 single-file checks), all deterministic (fixed clock) |
+| `./mac/build.sh` | Build `Rendez-Vous.app` (web build + universal Swift binary + icon, ad-hoc signed). `SKIP_WEB=1` reuses `dist/`. `RENDEZVOUS_SELFTEST=1 Rendez-Vous.app/Contents/MacOS/Rendez-Vous` prints a JSON self-check and quits |
 | `npm run typecheck` | `tsc --noEmit`, strict |
 | `VOCAB_FILE=src/data/vocab/x.json npx vitest run src/data/vocab/check.test.ts` | Check one vocabulary file while writing it |
 | `npm run seed` | Rebuild `seed/raw-words.json` from `FrenchWords.xlsx` in the repo root (git-ignored); add `-- --families` to list folded word families |
@@ -74,7 +82,12 @@ the model's knowledge. See Open.
 | `src/data/phonetics.ts`, `selfTalk.ts` | Phonetics cards, self-talk prompts (with level) |
 | `src/state/useToday.ts` | Derives today's queue, plan, lesson, card from state |
 | `src/state/useModuleTimer.ts` | Counts visible time, reports to the store in batches |
-| `src/styles.css` | All styling; colour tokens with light and dark values |
+| `src/styles.css` | All styling; colour tokens with light and dark values; `@media print` for the PDF |
+| `src/data/readings.ts`, `src/data/readings/*.ts` | Reading texts (one file per writer, sorted by lesson order) and their rules |
+| `src/screens/ReadingModule.tsx` | Text with per-paragraph translation and audio, then 5 questions |
+| `src/domain/summary.ts`, `src/screens/SummaryScreen.tsx` | Day summary built from history; PDF via print, Word via `src/lib/docx.ts` |
+| `src/lib/native.ts` | Save / print through the Mac app's bridge, browser fallback |
+| `mac/` | `RendezVous.swift` (AppKit + WKWebView, `rendezvous://` scheme), `icon.swift`, `build.sh` |
 
 ## Decisions
 
@@ -131,12 +144,24 @@ the model's knowledge. See Open.
 | D50 | Speech picks a voice explicitly: natural France-French first (Thomas, Amélie, Marie…), novelty voices (Grandpa, Rocko…) never | Measured: with no voice set, utterances ended in ~130 ms (nothing spoken) in the test browser; with Thomas set, 4.9 s for two sentences | Leaving it to the browser |
 | D51 | "Slow" speech rate 0.4 | Measured with Thomas: 0.6 only ~11% slower than 0.9; 0.4 is the floor (+42% vs 1.0) | 0.6 |
 | D52 | Word dialog remounts on every open (ever-growing key) | A close and a re-open in the same React update left a closed dialog mounted: 5 of 8 keyboard re-opens failed on the phone view; 8 of 8 after the fix | Boolean / entry state |
+| D53 | State v5: each day records new / reviewed word ids and the day's lesson, reading, phonetics ids; v4 days get empty lists | The summary page needs what was learned that day, which counts alone cannot give | Rebuilding it from SRS cards (loses the day) |
+| D54 | Day plan 60 minutes: recall 10 · grammar 20 · output 15 · reading 10 · phonetics 5 | Owner asked for more grammar and sentence work and a daily reading | Keeping 40 and squeezing reading in |
+| D55 | New exercise type `choice` (options + answer index); no "my answer was right" override on it | Reinforcement with less typing; a choice cannot be "also right" | Only typed exercises |
+| D56 | Lessons grow to about 6 paragraphs, 6 examples, 12 exercises; old exercise ids unchanged | Owner asked for a wider, more reinforcing grammar part; stored accepted answers point at ids | Rewriting lessons |
+| D57 | One reading text per lesson (78), 450–600 words, 5 questions, using only grammar taught so far (best effort) | Owner asked for ~500 words daily; tying it to the lesson repeats the day's grammar | Free-standing texts by level |
+| D58 | Day summary: PDF through the print dialog with print CSS, Word through the `docx` package loaded on demand | Print-to-PDF needs no library; Word cannot be made without one (dependency approved by the owner); lazy load keeps it out of the main bundle | A PDF library; Markdown only |
+| D59 | Mac app is a small Swift/AppKit wrapper (WKWebView, custom `rendezvous://` scheme serving the bundled build), ad-hoc signed, no DMG | No server or browser, real localStorage, icon in Finder; owner said DMG not needed. A custom scheme instead of `file://` because ES modules and storage are unreliable there | Electron / Tauri (new dependencies, 100+ MB); a localhost server |
+| D60 | Word entries need at least 3 examples (schema) | Owner asked for three sentences per word | Two |
 | D9 | Default instruction language TR | Assumption, one line in `initialState()` | EN |
 
 ## Open
 
-- **Human review of content.** 2,999 word entries, 78 lessons, 23 phonetics
-  cards, 124 prompts were written by subagents. Checked: ~150 word entries
+- **Human review of content.** 2,999 word entries (3 examples each), 78 lessons,
+  78 reading texts, 23 phonetics cards, 124 prompts were written by subagents.
+  Reading texts and the lesson expansion (11 Nov 2026) are not read by a
+  person: Turkish translations not checked by a native speaker; some texts
+  and exercises use grammar from later lessons (small items, not tested);
+  a few readings sit just above the 450-word floor. Checked: ~150 word entries
   read, 110 verified on fr.wiktionary (109 / 110 match; 1 IPA fixed: auberge de jeunesse), 1 lesson read. Lessons,
   phonetics IPA and example sentences beyond that are unverified.
 - No automated UI tests remain in the repo (removed with their tools).
@@ -156,6 +181,14 @@ the model's knowledge. See Open.
   (200 at 15, 150 at 20).
 - Bundle is 2.1 MB (640 KB gzipped) because all vocabulary is bundled.
 - An LLM answer judge (option B) is not built.
+- `Rendez-Vous.app` in the repo is a build artifact: it must be rebuilt with
+  `mac/build.sh` after code or content changes, or it shows old content.
+  Not checked: opening a downloaded copy on another Mac (Gatekeeper).
+- Browser check (11 Nov 2026): reading module (translation toggle, right /
+  wrong marking, score), choice exercise, 3 examples on the card back, day
+  summary, Word file (valid .docx, 11.9 KB) all work, no console errors.
+  Not checked: the PDF print dialog (needs a person), the Mac app's save
+  panel by hand (bridge reported present by the self-test).
 - Audio: technically verified (voice found, speech runs, slow is slower); not judged by ear.
 - Position inside a module is not saved; free-text answers are a fixed list
   plus what the learner accepted.

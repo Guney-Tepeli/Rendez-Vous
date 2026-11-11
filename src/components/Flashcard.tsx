@@ -63,6 +63,17 @@ export function Flashcard({ entry, card, revealed, now, onReveal, onRate, onDeta
                   <SpeakButton text={displayWord(entry)} />
                 </p>
                 <p className="meaning">{l(item.meaning)}</p>
+                <ul className="card-examples">
+                  {item.examples.map((example) => (
+                    <li key={example.fr}>
+                      <span className="fr" lang="fr">
+                        {example.fr}
+                      </span>
+                      <SpeakButton text={example.fr} />
+                      <span className="gloss">{l(example.translation)}</span>
+                    </li>
+                  ))}
+                </ul>
                 <button type="button" className="link" onClick={onDetails}>
                   {t("review.details")}
                 </button>

@@ -3,6 +3,7 @@ import { checkAnswer } from "../domain/answers";
 import { parseMarked, plainText } from "../domain/phonetics";
 import type { Localized } from "../domain/types";
 import { LESSONS } from "./lessons";
+import { READINGS, frenchWordCount } from "./readings";
 import { PHONETICS_CARDS } from "./phonetics";
 import { SELF_TALK_PROMPTS } from "./selfTalk";
 
@@ -24,14 +25,21 @@ describe("lessons", () => {
     expect(new Set(exerciseIds).size).toBe(exerciseIds.length);
   });
 
-  it("are bilingual throughout and bring all three exercise types", () => {
+  it("are bilingual throughout and bring all four exercise types", () => {
     for (const lesson of LESSONS) {
       expect(complete(lesson.title), lesson.id).toBe(true);
       expect(lesson.content.every(complete), lesson.id).toBe(true);
-      expect(lesson.examples.length, lesson.id).toBeGreaterThanOrEqual(2);
+      expect(lesson.examples.length, lesson.id).toBeGreaterThanOrEqual(6);
       expect(lesson.examples.every((example) => complete(example.translation)), lesson.id).toBe(true);
       const types = new Set(lesson.exercises.map((exercise) => exercise.type));
-      expect([...types].sort(), lesson.id).toEqual(["build", "fill", "free"]);
+      for (const type of ["build", "fill", "free", "choice"]) expect(types.has(type as never), `${lesson.id} ${type}`).toBe(true);
+    }
+  });
+
+  it("are long enough to reinforce: 12 or more exercises, at least 5 paragraphs", () => {
+    for (const lesson of LESSONS) {
+      expect(lesson.exercises.length, lesson.id).toBeGreaterThanOrEqual(12);
+      expect(lesson.content.length, lesson.id).toBeGreaterThanOrEqual(5);
     }
   });
 
@@ -48,6 +56,14 @@ describe("lessons", () => {
           expect(complete(exercise.translation), exercise.id).toBe(true);
           // Two identical tiles would make a right answer look wrong.
           expect(new Set(exercise.tokens).size, exercise.id).toBe(exercise.tokens.length);
+          break;
+        case "choice":
+          expect(exercise.options.length, exercise.id).toBeGreaterThanOrEqual(2);
+          expect(exercise.options.length, exercise.id).toBeLessThanOrEqual(5);
+          expect(new Set(exercise.options).size, exercise.id).toBe(exercise.options.length);
+          expect(exercise.options[exercise.answer], exercise.id).toBeDefined();
+          expect(exercise.text.split("___").length, exercise.id).toBeLessThanOrEqual(2);
+          expect(complete(exercise.translation), exercise.id).toBe(true);
           break;
         case "free":
           expect(complete(exercise.prompt), exercise.id).toBe(true);
@@ -97,5 +113,49 @@ describe("self-talk prompts", () => {
   it("cover a week and are bilingual", () => {
     expect(SELF_TALK_PROMPTS.length).toBeGreaterThanOrEqual(7);
     expect(SELF_TALK_PROMPTS.every((prompt) => complete(prompt.meaning))).toBe(true);
+  });
+});
+
+describe("reading texts", () => {
+  const lessonIds = new Set(LESSONS.map((lesson) => lesson.id));
+  const lessonLevel = new Map(LESSONS.map((lesson) => [lesson.id, lesson.level]));
+
+  it("cover every lesson", () => {
+    const covered = new Set(READINGS.map((text) => text.lessonId));
+    expect([...lessonIds].filter((id) => !covered.has(id))).toEqual([]);
+    expect(READINGS.length).toBe(LESSONS.length);
+  });
+
+  it("belong to an existing lesson, one each, with matching id and level", () => {
+    const seen = new Set<string>();
+    for (const text of READINGS) {
+      expect(lessonIds.has(text.lessonId), text.id).toBe(true);
+      expect(text.id, text.id).toBe(`reading-${text.lessonId}`);
+      expect(seen.has(text.lessonId), `${text.lessonId} has two texts`).toBe(false);
+      expect(text.level, text.id).toBe(lessonLevel.get(text.lessonId));
+      seen.add(text.lessonId);
+    }
+  });
+
+  it("are about 500 words, bilingual, with 5 well-formed questions", () => {
+    for (const text of READINGS) {
+      const words = frenchWordCount(text);
+      expect(words, `${text.id}: ${words} words`).toBeGreaterThanOrEqual(450);
+      expect(words, `${text.id}: ${words} words`).toBeLessThanOrEqual(600);
+      expect(text.paragraphs.length, text.id).toBeGreaterThanOrEqual(5);
+      expect(text.paragraphs.length, text.id).toBeLessThanOrEqual(8);
+      expect(complete(text.title), text.id).toBe(true);
+      for (const paragraph of text.paragraphs) {
+        expect([paragraph.fr, paragraph.TR, paragraph.EN].every((part) => part.trim() !== ""), text.id).toBe(true);
+      }
+      expect(text.questions.length, text.id).toBe(5);
+      for (const question of text.questions) {
+        expect(complete(question.question) && question.question.fr.trim() !== "", text.id).toBe(true);
+        expect(question.options.length, text.id).toBeGreaterThanOrEqual(3);
+        expect(question.options.length, text.id).toBeLessThanOrEqual(4);
+        expect(new Set(question.options).size, text.id).toBe(question.options.length);
+        expect(question.options[question.answer], text.id).toBeDefined();
+      }
+    }
   });
 });

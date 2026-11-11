@@ -55,7 +55,7 @@ const MIN_RECALL_MINUTES = 2;
  * The 10/15/10/5 split is a base, not a rule. The one thing known in advance
  * is how many cards wait in recall: on a light day recall needs less than
  * its 10 minutes, and the freed time goes to output, where producing French
- * is the best use of it. The total stays 40.
+ * is the best use of it. The total stays 60.
  */
 export function planMinutes(queueSize: number): Record<ModuleId, number> {
   const plan = Object.fromEntries(

@@ -56,13 +56,13 @@ describe("planMinutes", () => {
   const total = (plan: Record<string, number>) => Object.values(plan).reduce((a, b) => a + b, 0);
 
   it("keeps the base split on a full day", () => {
-    expect(planMinutes(30)).toEqual({ recall: 10, grammar: 15, output: 10, phonetics: 5 });
+    expect(planMinutes(30)).toEqual({ recall: 10, grammar: 20, output: 15, reading: 10, phonetics: 5 });
   });
 
-  it("moves spare recall time to output and always totals 40", () => {
-    expect(planMinutes(10)).toEqual({ recall: 5, grammar: 15, output: 15, phonetics: 5 });
-    expect(planMinutes(0)).toEqual({ recall: 2, grammar: 15, output: 18, phonetics: 5 });
-    for (const size of [0, 1, 7, 10, 19, 20, 200]) expect(total(planMinutes(size))).toBe(40);
+  it("moves spare recall time to output and always totals 60", () => {
+    expect(planMinutes(10)).toEqual({ recall: 5, grammar: 20, output: 20, reading: 10, phonetics: 5 });
+    expect(planMinutes(0)).toEqual({ recall: 2, grammar: 20, output: 23, reading: 10, phonetics: 5 });
+    for (const size of [0, 1, 7, 10, 19, 20, 200]) expect(total(planMinutes(size))).toBe(60);
   });
 });
 

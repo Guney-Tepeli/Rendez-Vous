@@ -40,7 +40,8 @@ export function isAppState(value: unknown): value is AppState {
       (isObject(session) &&
         Array.isArray(session.modules) &&
         typeof session.lessonId === "string" &&
-        typeof session.phoneticsId === "string"))
+        typeof session.phoneticsId === "string" &&
+        typeof session.readingId === "string"))
   );
 }
 
@@ -93,6 +94,19 @@ export function migrate(value: unknown): unknown {
   if (state.version === 3) {
     // v4 remembers answers the learner accepted by hand. Nothing to carry over.
     state = { ...state, version: 4, acceptedAnswers: {} };
+  }
+
+  if (state.version === 4) {
+    // v5: days list their words and content (for the day summary), and the
+    // day has five modules. Old days get empty lists; an unfinished
+    // four-module session cannot become a five-module one, so it is dropped.
+    const history: Record<string, unknown> = {};
+    if (isObject(state.history)) {
+      for (const [date, day] of Object.entries(state.history)) {
+        history[date] = isObject(day) ? { ...day, newWordIds: [], reviewedWordIds: [] } : day;
+      }
+    }
+    state = { ...state, version: 5, history, session: null };
   }
 
   return state;

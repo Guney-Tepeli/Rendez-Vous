@@ -2,10 +2,12 @@
  * The grammar course, A1 to B1, one lesson per day in this order.
  *
  * Rules every lesson follows (content.test.ts checks them):
- *   - small: two to four short paragraphs, at least two examples
+ *   - short paragraphs: the rule, then exceptions, typical mistakes of a
+ *     Turkish speaker, and a tip to remember it (about six); six examples
  *   - bilingual: every text has TR and EN
- *   - brings its own output exercises, all three kinds (fill, build, free),
- *     so what was read in the grammar module is produced minutes later
+ *   - brings its own output exercises (twelve: fill, build, free, choice),
+ *     easy to hard, the last ones reviewing earlier lessons, so what was
+ *     read in the grammar module is produced minutes later
  *   - ids unique across the whole course; never renamed once published,
  *     because finished lessons are stored by id
  *

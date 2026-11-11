@@ -4,8 +4,8 @@ import { currentStreak, lastDays, learnedCount } from "./progress";
 import { newCard } from "./srs";
 import type { DayRecord, History } from "./types";
 
-const active: DayRecord = { seconds: 1500, reviews: 12, newWords: 10, modulesCompleted: 4 };
-const opened: DayRecord = { seconds: 40, reviews: 2, newWords: 2, modulesCompleted: 0 };
+const active: DayRecord = { seconds: 1500, reviews: 12, newWords: 10, modulesCompleted: 4, newWordIds: [], reviewedWordIds: [] };
+const opened: DayRecord = { seconds: 40, reviews: 2, newWords: 2, modulesCompleted: 0, newWordIds: [], reviewedWordIds: [] };
 const TODAY = "2026-12-01";
 
 describe("shiftDateKey", () => {

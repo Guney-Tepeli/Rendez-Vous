@@ -23,6 +23,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Harf grupları tek ses verir:\nou → «u» (vous)\noi → «ua» (moi)\nau, eau → «o» (beau)\nch → «ş» (chat)",
         EN: "Letter groups make one sound:\nou → “oo” (vous)\noi → “wa” (moi)\nau, eau → “o” (beau)\nch → “sh” (chat)",
       },
+      {
+        TR: "Bazı harfler bulunduğu yere göre değişir: c, e / i / y önünde «s» (cinéma), a / o / u önünde «k» (café); ç her zaman «s» (français). g, e / i önünde «j» (rouge), a / o / u önünde «g» (gare). h hiç okunmaz: hôtel → «otel», homme → «om».",
+        EN: "Some letters change with their neighbours: c is “s” before e / i / y (cinéma) and “k” before a / o / u (café); ç is always “s” (français). g is “zh” before e / i (rouge) and a hard “g” before a / o / u (gare). h is never pronounced: hôtel → “o-tel”, homme → “om”.",
+      },
+      {
+        TR: "Türkçe konuşanların tipik hatası her harfi okumaktır. Yanlış: petit → «pe-tit», vous → «vus», table → «ta-ble». Doğru: «pöti», «vu», «tabl». İkinci hata ou'yu «ov», oi'yi «oy» okumaktır. Doğru: vous → «vu», moi → «mua».",
+        EN: "The typical mistake of Turkish speakers is to pronounce every letter. Wrong: petit → “pe-tit”, vous → “vus”, table → “ta-ble”. Right: “puh-tee”, “voo”, “tabl”. A second mistake is reading ou as “ov” and oi as “oy”. Right: vous → “voo”, moi → “mwa”.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: yazıya değil kulağa güven. Yeni bir kelimede önce son harfe bak: c, r, f, l mi (CaReFuL)? Değilse sustur. Sonra harf gruplarını (ou, oi, au, eau, ch) tek ses say ve kelimeyi yüksek sesle söyle.",
+        EN: "How to remember: trust your ear, not the spelling. In a new word look at the last letter first: is it c, r, f or l (CaReFuL)? If not, silence it. Then count letter groups (ou, oi, au, eau, ch) as one sound and say the word out loud.",
+      },
     ],
     examples: [
       {
@@ -36,6 +48,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Vous parlez avec moi ?",
         translation: { TR: "Benimle mi konuşuyorsunuz?", EN: "Are you talking with me?" },
+      },
+      {
+        fr: "Un café, s'il vous plaît.",
+        translation: { TR: "Bir kahve lütfen.", EN: "A coffee, please." },
+      },
+      {
+        fr: "Merci beaucoup, au revoir !",
+        translation: { TR: "Çok teşekkürler, hoşça kal!", EN: "Thank you very much, goodbye!" },
+      },
+      {
+        fr: "Le garçon est grand.",
+        translation: { TR: "Oğlan uzun boylu.", EN: "The boy is tall." },
       },
     ],
     exercises: [
@@ -65,6 +89,61 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “İyi akşamlar”", EN: "Write in French: “Good evening”" },
         answers: ["Bonsoir"],
       },
+      {
+        type: "fill",
+        id: "reading-rules-5",
+        text: "Au ___ !",
+        answers: ["revoir"],
+        translation: { TR: "Hoşça kal!", EN: "Goodbye!" },
+      },
+      {
+        type: "choice",
+        id: "reading-rules-6",
+        text: "Quel mot contient le son « ou » ?",
+        options: ["moi", "chat", "vous", "beau"],
+        answer: 2,
+        translation: { TR: "Hangi kelimede «u» sesi var?", EN: "Which word contains the “oo” sound?" },
+      },
+      {
+        type: "choice",
+        id: "reading-rules-7",
+        text: "Quel mot a une lettre finale prononcée ?",
+        options: ["petit", "avec", "grand", "vous"],
+        answer: 1,
+        translation: { TR: "Hangi kelimenin son harfi okunur?", EN: "Which word has a pronounced final letter?" },
+      },
+      {
+        type: "free",
+        id: "reading-rules-8",
+        prompt: { TR: "Fransızca yaz: “Teşekkürler.”", EN: "Write in French: “Thank you.”" },
+        answers: ["Merci"],
+      },
+      {
+        type: "build",
+        id: "reading-rules-9",
+        tokens: ["Un", "café", "s'il", "vous", "plaît"],
+        translation: { TR: "Bir kahve lütfen.", EN: "A coffee, please." },
+      },
+      {
+        type: "choice",
+        id: "reading-rules-10",
+        text: "Quel mot se termine par une lettre muette ?",
+        options: ["bonjour", "neuf", "avec", "grand"],
+        answer: 3,
+        translation: { TR: "Hangi kelimenin son harfi okunmaz?", EN: "Which word ends in a silent letter?" },
+      },
+      {
+        type: "free",
+        id: "reading-rules-11",
+        prompt: { TR: "Fransızca yaz: “Hoşça kal.”", EN: "Write in French: “Goodbye.”" },
+        answers: ["Au revoir"],
+      },
+      {
+        type: "free",
+        id: "reading-rules-12",
+        prompt: { TR: "Fransızca yaz: “Çok teşekkürler.”", EN: "Write in French: “Thank you very much.”" },
+        answers: ["Merci beaucoup"],
+      },
     ],
   },
   {
@@ -84,6 +163,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Dikkat: yaş avoir ile söylenir. “Yirmi yaşındayım” = J'ai vingt ans (kelimesi kelimesine: yirmi yılım var).",
         EN: "Careful: age uses avoir. “I am twenty” = J'ai vingt ans (literally: I have twenty years).",
       },
+      {
+        TR: "avoir ile söylenen birkaç durum Türkçedeki “-im var” kalıbına benzer: j'ai faim (acıktım), j'ai soif (susadım), j'ai froid (üşüyorum), j'ai chaud (sıcak basıyor), j'ai peur (korkuyorum). Hepsi avoir ile; Fransızcada “ben acıyım” denmez.",
+        EN: "Some states use avoir, much like the Turkish “I have …” pattern: j'ai faim (I'm hungry), j'ai soif (I'm thirsty), j'ai froid (I'm cold), j'ai chaud (I'm hot), j'ai peur (I'm afraid). All with avoir; French never says “I am hungry” with être.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je suis 20 ans. · Je suis faim. · Elle étudiante. Doğru: J'ai vingt ans. · J'ai faim. · Elle est étudiante. Türkçede üçüncü kişide “-dir” düşer (“O öğrenci”), Fransızcada fiil asla düşmez.",
+        EN: "Typical mistakes. Wrong: Je suis 20 ans. · Je suis faim. · Elle étudiante. Right: J'ai vingt ans. · J'ai faim. · Elle est étudiante. Turkish drops the verb in the third person (“O öğrenci”); French never drops it.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: kim olduğun ya da nasıl olduğun için être (“-im, -sin”); sahip olduğun, yaşın ve bedensel durumların için avoir (“var”). j' + ai ve je + suis'i her gün yüksek sesle say.",
+        EN: "How to remember: être for who or how you are (the Turkish “-im, -sin” endings); avoir for what you have, your age and bodily states (“var”). Say j'ai and je suis out loud every day.",
+      },
     ],
     examples: [
       {
@@ -97,6 +188,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Nous sommes à Paris.",
         translation: { TR: "Paris'teyiz.", EN: "We are in Paris." },
+      },
+      {
+        fr: "J'ai faim.",
+        translation: { TR: "Acıktım.", EN: "I'm hungry." },
+      },
+      {
+        fr: "Vous êtes turc ?",
+        translation: { TR: "Türk müsünüz?", EN: "Are you Turkish?" },
+      },
+      {
+        fr: "Ils ont deux enfants.",
+        translation: { TR: "İki çocukları var.", EN: "They have two children." },
       },
     ],
     exercises: [
@@ -126,6 +229,62 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Yirmi yaşındayım.”", EN: "Write in French: “I am twenty years old.”" },
         answers: ["J'ai vingt ans.", "J'ai 20 ans."],
       },
+      {
+        type: "fill",
+        id: "etre-avoir-5",
+        text: "Tu ___ étudiant ?",
+        answers: ["es"],
+        translation: { TR: "Öğrenci misin?", EN: "Are you a student?" },
+      },
+      {
+        type: "fill",
+        id: "etre-avoir-6",
+        text: "Nous ___ faim.",
+        answers: ["avons"],
+        translation: { TR: "Acıktık.", EN: "We are hungry." },
+      },
+      {
+        type: "choice",
+        id: "etre-avoir-7",
+        text: "Ils ___ à Lyon.",
+        options: ["est", "sont", "ont", "sommes"],
+        answer: 1,
+        translation: { TR: "Lyon'dalar.", EN: "They are in Lyon." },
+      },
+      {
+        type: "choice",
+        id: "etre-avoir-8",
+        text: "J'___ vingt ans.",
+        options: ["suis", "as", "ai", "est"],
+        answer: 2,
+        translation: { TR: "Yirmi yaşındayım.", EN: "I am twenty years old." },
+      },
+      {
+        type: "free",
+        id: "etre-avoir-9",
+        prompt: { TR: "Fransızca yaz: “Üşüyorum.”", EN: "Write in French: “I am cold.”" },
+        answers: ["J'ai froid."],
+      },
+      {
+        type: "build",
+        id: "etre-avoir-10",
+        tokens: ["Vous", "êtes", "à", "Lyon"],
+        translation: { TR: "Lyon'dasınız.", EN: "You are in Lyon." },
+      },
+      {
+        type: "choice",
+        id: "etre-avoir-11",
+        text: "Vous ___ faim ?",
+        options: ["avez", "êtes", "avons", "ont"],
+        answer: 0,
+        translation: { TR: "Aç mısınız?", EN: "Are you hungry?" },
+      },
+      {
+        type: "free",
+        id: "etre-avoir-12",
+        prompt: { TR: "Fransızca yaz: “Biz öğrenciyiz.”", EN: "Write in French: “We are students.”" },
+        answers: ["Nous sommes étudiants.", "Nous sommes étudiantes.", "On est étudiants.", "On est étudiantes."],
+      },
     ],
   },
   {
@@ -141,6 +300,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Kulağa dikkat: parle, parles ve parlent aynı okunur («parl»). -e, -es, -ent ekleri yazılır ama söylenmez. Yalnız -ons ve -ez duyulur.",
         EN: "Listen: parle, parles and parlent sound the same (“parl”). The endings -e, -es, -ent are written but not said. Only -ons and -ez are heard.",
       },
+      {
+        TR: "Küçük istisnalar: manger → nous mangeons (g yumuşak kalsın diye e eklenir), commencer → nous commençons (ç). Sesli harfle başlayan fiilde je → j': j'aime, j'habite, j'écoute. Mastarı -er ile biten ama düzensiz tek fiil aller'dir, ona ayrı bakacağız.",
+        EN: "Small exceptions: manger → nous mangeons (an extra e keeps the g soft), commencer → nous commençons (ç). Before a vowel je becomes j': j'aime, j'habite, j'écoute. The only common -er verb that is irregular is aller; we will look at it separately.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je parler français. · Nous parle français. · Parle français. Doğru: Je parle français. · Nous parlons français. Türkçede özne düşebilir (konuşuyorum), Fransızcada je / tu / il ... zorunludur ve fiil çekilir, mastar kalmaz.",
+        EN: "Typical mistakes. Wrong: Je parler français. · Nous parle français. · Parle français. Right: Je parle français. · Nous parlons français. Turkish can drop the subject (konuşuyorum); French needs je / tu / il ... and the verb must be conjugated, not left in the infinitive.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: önce -er'i at (parl-), sonra eki yapıştır: -e, -es, -e, -ons, -ez, -ent. Bu altı eki bir şarkı gibi söyle. Bir kez öğrendin mi yüzlerce fiil (chanter, travailler, écouter, regarder) aynı kalıpla çekilir.",
+        EN: "How to remember: drop -er (parl-) and stick on the ending: -e, -es, -e, -ons, -ez, -ent. Chant those six endings like a song. Once you know them, hundreds of verbs (chanter, travailler, écouter, regarder) follow the same pattern.",
+      },
     ],
     examples: [
       {
@@ -154,6 +325,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Ils aiment le chocolat.",
         translation: { TR: "Çikolatayı severler.", EN: "They like chocolate." },
+      },
+      {
+        fr: "J'habite à Paris.",
+        translation: { TR: "Paris'te oturuyorum.", EN: "I live in Paris." },
+      },
+      {
+        fr: "Vous travaillez à Lyon ?",
+        translation: { TR: "Lyon'da mı çalışıyorsunuz?", EN: "Do you work in Lyon?" },
+      },
+      {
+        fr: "Nous mangeons ici.",
+        translation: { TR: "Burada yemek yiyoruz.", EN: "We eat here." },
       },
     ],
     exercises: [
@@ -183,6 +366,61 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Fransızca konuşuyorum.”", EN: "Write in French: “I speak French.”" },
         answers: ["Je parle français."],
       },
+      {
+        type: "fill",
+        id: "er-verbs-5",
+        text: "Nous ___ ici. (manger)",
+        answers: ["mangeons"],
+        translation: { TR: "Burada yemek yiyoruz.", EN: "We eat here." },
+      },
+      {
+        type: "choice",
+        id: "er-verbs-6",
+        text: "Vous ___ français ?",
+        options: ["parlons", "parlez", "parle", "parlent"],
+        answer: 1,
+        translation: { TR: "Fransızca konuşuyor musunuz?", EN: "Do you speak French?" },
+      },
+      {
+        type: "choice",
+        id: "er-verbs-7",
+        text: "Elles ___ à Lyon.",
+        options: ["habitent", "habites", "habitons", "habite"],
+        answer: 0,
+        translation: { TR: "Lyon'da oturuyorlar.", EN: "They live in Lyon." },
+      },
+      {
+        type: "free",
+        id: "er-verbs-8",
+        prompt: { TR: "Fransızca yaz: “Biz Paris'te oturuyoruz.”", EN: "Write in French: “We live in Paris.”" },
+        answers: ["Nous habitons à Paris.", "On habite à Paris."],
+      },
+      {
+        type: "build",
+        id: "er-verbs-9",
+        tokens: ["Nous", "travaillons", "à", "Lyon"],
+        translation: { TR: "Lyon'da çalışıyoruz.", EN: "We work in Lyon." },
+      },
+      {
+        type: "choice",
+        id: "er-verbs-10",
+        text: "J'___ Paris.",
+        options: ["aimons", "aimes", "aime", "aiment"],
+        answer: 2,
+        translation: { TR: "Paris'i seviyorum.", EN: "I love Paris." },
+      },
+      {
+        type: "free",
+        id: "er-verbs-11",
+        prompt: { TR: "Fransızca yaz: “Onlar Fransızca konuşuyor.”", EN: "Write in French: “They speak French.”" },
+        answers: ["Ils parlent français.", "Elles parlent français."],
+      },
+      {
+        type: "free",
+        id: "er-verbs-12",
+        prompt: { TR: "Fransızca yaz: “Ben öğrenciyim ve Lyon'da oturuyorum.”", EN: "Write in French: “I am a student and I live in Lyon.”" },
+        answers: ["Je suis étudiant et j'habite à Lyon.", "Je suis étudiante et j'habite à Lyon."],
+      },
     ],
   },
   {
@@ -202,6 +440,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Olumsuzdan sonra un / une / des → de olur:\nJ'ai une voiture → Je n'ai pas de voiture.",
         EN: "After a negative, un / une / des become de:\nJ'ai une voiture → Je n'ai pas de voiture.",
       },
+      {
+        TR: "Konuşmada ne çoğu zaman düşer: Je sais pas. Yazıda ikisini de yaz. Aynı kalıpta başka olumsuzlar da var: ne ... jamais (asla), ne ... plus (artık yok), ne ... rien (hiçbir şey): Je ne mange jamais de viande. İstisna: être'den sonra un / une / des değişmez: Je ne suis pas un enfant.",
+        EN: "In speech ne often disappears: Je sais pas. In writing keep both. Other negations use the same frame: ne ... jamais (never), ne ... plus (no longer), ne ... rien (nothing): Je ne mange jamais de viande. Exception: after être, un / une / des do not change: Je ne suis pas un enfant.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je pas parle anglais. · Je ne parle anglais. · Je n'ai pas une voiture. Doğru: Je ne parle pas anglais. · Je n'ai pas de voiture. Türkçede olumsuzluk fiile yapışan tek bir ektir (-me); Fransızcada iki parçadır ve ikisi de gerekir.",
+        EN: "Typical mistakes. Wrong: Je pas parle anglais. · Je ne parle anglais. · Je n'ai pas une voiture. Right: Je ne parle pas anglais. · Je n'ai pas de voiture. Turkish negates with one suffix on the verb (-me); French uses two parts and needs both.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: sandviç. Ekmekler ne ve pas, içindeki fiil. Fiil ünlüyle başlıyorsa n' olur. Olumsuzda miktar sıfırdır, bu yüzden un / une / des → de: “hiç araba yok” = pas de voiture.",
+        EN: "How to remember: a sandwich. The bread is ne and pas, the verb is the filling. If the verb starts with a vowel it is n'. In a negative the quantity is zero, so un / une / des → de: “no car at all” = pas de voiture.",
+      },
     ],
     examples: [
       {
@@ -215,6 +465,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Je n'ai pas de voiture.",
         translation: { TR: "Arabam yok.", EN: "I don't have a car." },
+      },
+      {
+        fr: "Nous n'habitons pas à Paris.",
+        translation: { TR: "Paris'te oturmuyoruz.", EN: "We don't live in Paris." },
+      },
+      {
+        fr: "Je n'ai plus faim.",
+        translation: { TR: "Artık aç değilim.", EN: "I'm not hungry any more." },
+      },
+      {
+        fr: "Elle ne parle jamais anglais.",
+        translation: { TR: "O asla İngilizce konuşmaz.", EN: "She never speaks English." },
       },
     ],
     exercises: [
@@ -244,6 +506,61 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Kedim yok.”", EN: "Write in French: “I don't have a cat.”" },
         answers: ["Je n'ai pas de chat."],
       },
+      {
+        type: "fill",
+        id: "ne-pas-5",
+        text: "Il n'a pas ___ frère.",
+        answers: ["de"],
+        translation: { TR: "Onun erkek kardeşi yok.", EN: "He doesn't have a brother." },
+      },
+      {
+        type: "choice",
+        id: "ne-pas-6",
+        text: "Je ___ parle pas anglais.",
+        options: ["ne", "n'", "non", "pas"],
+        answer: 0,
+        translation: { TR: "İngilizce konuşmuyorum.", EN: "I don't speak English." },
+      },
+      {
+        type: "choice",
+        id: "ne-pas-7",
+        text: "Elle n'a pas ___ voiture.",
+        options: ["un", "une", "de", "des"],
+        answer: 2,
+        translation: { TR: "Onun arabası yok.", EN: "She doesn't have a car." },
+      },
+      {
+        type: "free",
+        id: "ne-pas-8",
+        prompt: { TR: "Fransızca yaz: “Ben Türk değilim.”", EN: "Write in French: “I am not Turkish.”" },
+        answers: ["Je ne suis pas turc.", "Je ne suis pas turque."],
+      },
+      {
+        type: "build",
+        id: "ne-pas-9",
+        tokens: ["Elle", "n'habite", "pas", "à", "Lyon"],
+        translation: { TR: "O (kadın) Lyon'da oturmuyor.", EN: "She doesn't live in Lyon." },
+      },
+      {
+        type: "choice",
+        id: "ne-pas-10",
+        text: "Tu ___ as pas faim.",
+        options: ["ne", "n'", "non", "pas"],
+        answer: 1,
+        translation: { TR: "Aç değilsin.", EN: "You are not hungry." },
+      },
+      {
+        type: "free",
+        id: "ne-pas-11",
+        prompt: { TR: "Fransızca yaz: “Fransızca konuşmuyoruz.”", EN: "Write in French: “We don't speak French.”" },
+        answers: ["Nous ne parlons pas français.", "On ne parle pas français."],
+      },
+      {
+        type: "free",
+        id: "ne-pas-12",
+        prompt: { TR: "Fransızca yaz: “Aç değilim ve üşümüyorum.”", EN: "Write in French: “I'm not hungry and I'm not cold.”" },
+        answers: ["Je n'ai pas faim et je n'ai pas froid.", "Je n'ai pas faim et pas froid.", "Je n'ai pas faim, je n'ai pas froid."],
+      },
     ],
   },
   {
@@ -263,6 +580,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Olumsuzda ne ... pas yalnız aller'i sarar:\nIl ne va pas venir.",
         EN: "In the negative, ne ... pas wraps only aller:\nIl ne va pas venir.",
       },
+      {
+        TR: "Zaman ifadeleri yardımcı olur: demain (yarın), ce soir (bu akşam), bientôt (yakında), la semaine prochaine (gelecek hafta). Soru: Tu vas manger ? / Est-ce que tu vas manger ? Aller'in kendisi de mastar olabilir: Je vais aller à Paris (Paris'e gideceğim).",
+        EN: "Time words help: demain (tomorrow), ce soir (tonight), bientôt (soon), la semaine prochaine (next week). Question: Tu vas manger ? / Est-ce que tu vas manger ? Aller can itself be the infinitive: Je vais aller à Paris (I'm going to go to Paris).",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je vais mange. · Je vais mangeons. · Je manger demain. Doğru: Je vais manger. Türkçede -ecek eki tek fiile yapışır; Fransızcada iki fiil var: çekilen aller ve olduğu gibi kalan mastar.",
+        EN: "Typical mistakes. Wrong: Je vais mange. · Je vais mangeons. · Je manger demain. Right: Je vais manger. Turkish uses one suffix (-ecek) on one verb; French has two verbs: the conjugated aller and an infinitive that stays as it is.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: “yemeye gidiyorum” = je vais manger. Önce aller'i özneye göre çek (vais, vas, va, allons, allez, vont), sonra mastarı değiştirmeden ekle. Olumsuzda ve soruda yalnız aller yer değiştirir.",
+        EN: "How to remember: “I'm going to eat” = je vais manger. Conjugate aller for the subject first (vais, vas, va, allons, allez, vont), then add the infinitive unchanged. In negatives and questions only aller moves.",
+      },
     ],
     examples: [
       {
@@ -276,6 +605,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Il ne va pas venir.",
         translation: { TR: "O gelmeyecek.", EN: "He is not going to come." },
+      },
+      {
+        fr: "Tu vas travailler demain ?",
+        translation: { TR: "Yarın çalışacak mısın?", EN: "Are you going to work tomorrow?" },
+      },
+      {
+        fr: "Elles vont habiter à Lyon.",
+        translation: { TR: "Lyon'da oturacaklar.", EN: "They are going to live in Lyon." },
+      },
+      {
+        fr: "Je ne vais pas parler anglais.",
+        translation: { TR: "İngilizce konuşmayacağım.", EN: "I'm not going to speak English." },
       },
     ],
     exercises: [
@@ -305,6 +646,61 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Yemek yiyeceğiz.”", EN: "Write in French: “We are going to eat.”" },
         answers: ["Nous allons manger.", "On va manger."],
       },
+      {
+        type: "fill",
+        id: "futur-proche-5",
+        text: "Nous ___ habiter à Lyon.",
+        answers: ["allons"],
+        translation: { TR: "Lyon'da oturacağız.", EN: "We are going to live in Lyon." },
+      },
+      {
+        type: "choice",
+        id: "futur-proche-6",
+        text: "Elle ___ manger.",
+        options: ["vais", "vas", "va", "vont"],
+        answer: 2,
+        translation: { TR: "Yemek yiyecek.", EN: "She is going to eat." },
+      },
+      {
+        type: "choice",
+        id: "futur-proche-7",
+        text: "Je vais ___ demain.",
+        options: ["parlé", "parler", "parle", "parlons"],
+        answer: 1,
+        translation: { TR: "Yarın konuşacağım.", EN: "I'm going to talk tomorrow." },
+      },
+      {
+        type: "free",
+        id: "futur-proche-8",
+        prompt: { TR: "Fransızca yaz: “Yarın çalışacağım.”", EN: "Write in French: “I'm going to work tomorrow.”" },
+        answers: ["Je vais travailler demain.", "Demain, je vais travailler.", "Demain je vais travailler."],
+      },
+      {
+        type: "build",
+        id: "futur-proche-9",
+        tokens: ["Je", "ne", "vais", "pas", "manger"],
+        translation: { TR: "Yemek yemeyeceğim.", EN: "I'm not going to eat." },
+      },
+      {
+        type: "choice",
+        id: "futur-proche-10",
+        text: "Vous ne ___ pas travailler.",
+        options: ["allons", "va", "vont", "allez"],
+        answer: 3,
+        translation: { TR: "Çalışmayacaksınız.", EN: "You are not going to work." },
+      },
+      {
+        type: "free",
+        id: "futur-proche-11",
+        prompt: { TR: "Fransızca yaz: “Lyon'da oturacaksınız.”", EN: "Write in French: “You are going to live in Lyon.”" },
+        answers: ["Vous allez habiter à Lyon.", "Tu vas habiter à Lyon."],
+      },
+      {
+        type: "free",
+        id: "futur-proche-12",
+        prompt: { TR: "Fransızca yaz: “Yemek yemeyeceğiz.”", EN: "Write in French: “We are not going to eat.”" },
+        answers: ["Nous n'allons pas manger.", "On ne va pas manger."],
+      },
     ],
   },
   {
@@ -328,6 +724,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Sevmek, sevmemek gibi fiillerde genel anlam için belirli artikel kullanılır: J'aime le chocolat = Çikolatayı (genel olarak) severim.",
         EN: "With verbs of liking, French uses the definite article for things in general: J'aime le chocolat = I like chocolate.",
       },
+      {
+        TR: "İstisnalar: -age çoğu zaman eril ama la plage, la page, l'image dişil. Cinsiyetle anlamı değişenler: le tour (tur, gezi) / la tour (kule), le poste (iş, görev) / la poste (postane). Bir erkek de kadın da le professeur olabilir; kadın için la professeure de duyulur.",
+        EN: "Exceptions: -age is mostly masculine but la plage, la page, l'image are feminine. Some words change meaning with gender: le tour (tour, trip) / la tour (tower), le poste (job, post) / la poste (post office). Both a man and a woman can be le professeur; la professeure is also heard for a woman.",
+      },
+      {
+        TR: "Tipik hatalar. Türkçede artikel olmadığı için unutulur. Yanlış: J'ai chat. · J'ai un voiture. · Il aime chocolat. Doğru: J'ai un chat. · J'ai une voiture. · Il aime le chocolat. Cinsiyeti tahmin etmek yerine ismi artikeliyle öğren.",
+        EN: "Typical mistakes. Turkish has no articles, so they get forgotten. Wrong: J'ai chat. · J'ai un voiture. · Il aime chocolat. Right: J'ai un chat. · J'ai une voiture. · Il aime le chocolat. Do not guess the gender; learn each noun with its article.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: sözlüğe «livre» değil «le livre», «table» değil «la table» yaz. İstersen eril isimleri mavi, dişilleri kırmızı kalemle yaz. Olumsuzda unutma: J'ai un chat → Je n'ai pas de chat.",
+        EN: "How to remember: write “le livre” and “la table”, never the bare noun. If it helps, write masculine nouns in blue and feminine ones in red. And remember the negative: J'ai un chat → Je n'ai pas de chat.",
+      },
     ],
     examples: [
       {
@@ -341,6 +749,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Les enfants aiment le chocolat.",
         translation: { TR: "Çocuklar çikolatayı sever.", EN: "Children like chocolate." },
+      },
+      {
+        fr: "Une amie habite à Lyon.",
+        translation: { TR: "Bir arkadaşım (kız) Lyon'da oturuyor.", EN: "A friend (female) lives in Lyon." },
+      },
+      {
+        fr: "Le professeur n'a pas de voiture.",
+        translation: { TR: "Öğretmenin arabası yok.", EN: "The teacher doesn't have a car." },
+      },
+      {
+        fr: "Les enfants vont manger le fromage.",
+        translation: { TR: "Çocuklar peyniri yiyecek.", EN: "The children are going to eat the cheese." },
       },
     ],
     exercises: [
@@ -377,6 +797,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Bir kedim var.”", EN: "Write in French: “I have a cat.”" },
         answers: ["J'ai un chat."],
       },
+      {
+        type: "fill",
+        id: "articles-6",
+        text: "J'aime ___ musique.",
+        answers: ["la"],
+        translation: { TR: "Müziği severim.", EN: "I like music." },
+      },
+      {
+        type: "choice",
+        id: "articles-7",
+        text: "___ amie habite à Lyon.",
+        options: ["La", "Le", "L'", "Les"],
+        answer: 2,
+        translation: { TR: "Arkadaş (kız) Lyon'da oturuyor.", EN: "The friend lives in Lyon." },
+      },
+      {
+        type: "choice",
+        id: "articles-8",
+        text: "Elle a ___ chien.",
+        options: ["une", "des", "un", "les"],
+        answer: 2,
+        translation: { TR: "Onun bir köpeği var.", EN: "She has a dog." },
+      },
+      {
+        type: "free",
+        id: "articles-9",
+        prompt: { TR: "Fransızca yaz: “Öğretmen müziği sever.”", EN: "Write in French: “The teacher likes music.”" },
+        answers: ["Le professeur aime la musique.", "La professeur aime la musique.", "La professeure aime la musique."],
+      },
+      {
+        type: "build",
+        id: "articles-10",
+        tokens: ["Une", "amie", "habite", "à", "Paris"],
+        translation: { TR: "Bir arkadaşım (kız) Paris'te oturuyor.", EN: "A friend (female) lives in Paris." },
+      },
+      {
+        type: "choice",
+        id: "articles-11",
+        text: "Quel mot est féminin ?",
+        options: ["le fromage", "la nation", "le moment", "le bateau"],
+        answer: 1,
+        translation: { TR: "Hangi kelime dişil?", EN: "Which word is feminine?" },
+      },
+      {
+        type: "free",
+        id: "articles-12",
+        prompt: { TR: "Fransızca yaz: “Arabam yok.”", EN: "Write in French: “I don't have a car.”" },
+        answers: ["Je n'ai pas de voiture."],
+      },
     ],
   },
   {
@@ -400,6 +869,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Karışık bir grupta (erkek + kadın) sıfat eril çoğul olur: Paul et Marie sont contents.",
         EN: "For a mixed group (men and women) the adjective is masculine plural: Paul et Marie sont contents.",
       },
+      {
+        TR: "Düzensizler: un œil → des yeux, un travail → des travaux. Sıfatlarda da aynı: beau → beaux, nouveau → nouveaux, normal → normaux. Dişilde ünsüz ikilenenler: bon → bonne, gentil → gentille. Eril ve dişili aynı olanlar: jeune, rouge, triste, facile.",
+        EN: "Irregular ones: un œil → des yeux, un travail → des travaux. Adjectives do the same: beau → beaux, nouveau → nouveaux, normal → normaux. Some double the consonant in the feminine: bon → bonne, gentil → gentille. Same for both genders: jeune, rouge, triste, facile.",
+      },
+      {
+        TR: "Tipik hatalar. Türkçede sıfat değişmez, bu yüzden unutulur. Yanlış: Elle est heureux. · Les filles sont content. · des bateau. Doğru: Elle est heureuse. · Les filles sont contentes. · des bateaux. Bir de çoğul -s'yi sesli okumak: «livrs» değil, «livr».",
+        EN: "Typical mistakes. Turkish adjectives never change, so agreement gets forgotten. Wrong: Elle est heureux. · Les filles sont content. · des bateau. Right: Elle est heureuse. · Les filles sont contentes. · des bateaux. Another one: pronouncing the plural -s. It is “livr”, not “livrs”.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: sıfat ismin aynasıdır. Cümleyi kurarken önce ismin cinsiyetine ve sayısına bak (dişil çoğul mu?), sonra sıfata -e, -s ya da -es ekle. Çoğulu kulakla değil artikelden duy: le / les, un / des.",
+        EN: "How to remember: the adjective is the noun's mirror. First check the noun's gender and number (feminine plural?), then add -e, -s or -es to the adjective. Hear the plural in the article, not the noun: le / les, un / des.",
+      },
     ],
     examples: [
       {
@@ -413,6 +894,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Les filles sont grandes.",
         translation: { TR: "Kızlar uzun boylu.", EN: "The girls are tall." },
+      },
+      {
+        fr: "Les chevaux sont grands.",
+        translation: { TR: "Atlar iri.", EN: "The horses are big." },
+      },
+      {
+        fr: "Les filles sont gentilles.",
+        translation: { TR: "Kızlar nazik.", EN: "The girls are kind." },
+      },
+      {
+        fr: "Paul et Marie sont fatigués.",
+        translation: { TR: "Paul ile Marie yorgun.", EN: "Paul and Marie are tired." },
       },
     ],
     exercises: [
@@ -449,6 +942,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Onlar (kadınlar) yorgun.”", EN: "Write in French: “They (women) are tired.”" },
         answers: ["Elles sont fatiguées."],
       },
+      {
+        type: "fill",
+        id: "plural-agreement-6",
+        text: "Les ___ sont petits. (cheval)",
+        answers: ["chevaux"],
+        translation: { TR: "Atlar küçük.", EN: "The horses are small." },
+      },
+      {
+        type: "choice",
+        id: "plural-agreement-7",
+        text: "Les filles sont ___.",
+        options: ["content", "contents", "contentes", "contente"],
+        answer: 2,
+        translation: { TR: "Kızlar memnun.", EN: "The girls are happy." },
+      },
+      {
+        type: "choice",
+        id: "plural-agreement-8",
+        text: "Elle est ___.",
+        options: ["heureux", "heureuse", "heureuxe", "heureus"],
+        answer: 1,
+        translation: { TR: "O (kadın) mutlu.", EN: "She is happy." },
+      },
+      {
+        type: "free",
+        id: "plural-agreement-9",
+        prompt: { TR: "Fransızca yaz: “Kediler küçük.”", EN: "Write in French: “The cats are small.”" },
+        answers: ["Les chats sont petits."],
+      },
+      {
+        type: "build",
+        id: "plural-agreement-10",
+        tokens: ["Les", "voitures", "ne", "sont", "pas", "grandes"],
+        translation: { TR: "Arabalar büyük değil.", EN: "The cars are not big." },
+      },
+      {
+        type: "choice",
+        id: "plural-agreement-11",
+        text: "Paul et Marie sont ___.",
+        options: ["contente", "contents", "contentes", "content"],
+        answer: 1,
+        translation: { TR: "Paul ile Marie memnun.", EN: "Paul and Marie are happy." },
+      },
+      {
+        type: "free",
+        id: "plural-agreement-12",
+        prompt: { TR: "Fransızca yaz: “Çocuklar yorgun değil.”", EN: "Write in French: “The children are not tired.”" },
+        answers: ["Les enfants ne sont pas fatigués."],
+      },
     ],
   },
   {
@@ -468,6 +1010,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "beau, nouveau, vieux sesli harfle başlayan eril bir ismin önünde biçim değiştirir: bel, nouvel, vieil.\nun bel hôtel · un nouvel appartement · un vieil ami\nDişilleri: belle · nouvelle · vieille",
         EN: "beau, nouveau, vieux change before a masculine noun starting with a vowel: bel, nouvel, vieil.\nun bel hôtel · un nouvel appartement · un vieil ami\nFeminine: belle · nouvelle · vieille",
       },
+      {
+        TR: "Bazı sıfatların anlamı yerine göre değişir: un grand homme (ünlü adam) ≠ un homme grand (uzun boylu adam); un pauvre homme (zavallı adam) ≠ un homme pauvre (yoksul adam). Önce gelen sıfat da ismin cinsiyetine ve sayısına uyar: une petite maison, des petits chats.",
+        EN: "A few adjectives change meaning with position: un grand homme (a great man) ≠ un homme grand (a tall man); un pauvre homme (a poor wretch) ≠ un homme pauvre (a man without money). An adjective in front still agrees with the noun: une petite maison, des petits chats.",
+      },
+      {
+        TR: "Tipik hatalar. Türkçe sırasını aktarmak: J'ai une rouge voiture. · Il a un français ami. Doğru: J'ai une voiture rouge. · Il a un ami français. Tersi de olur: J'ai un chat petit ✗ → J'ai un petit chat. Bir de uyumu unutmak: une petit maison ✗ → une petite maison.",
+        EN: "Typical mistakes. Copying the Turkish order: J'ai une rouge voiture. · Il a un français ami. Right: J'ai une voiture rouge. · Il a un ami français. The reverse happens too: J'ai un chat petit ✗ → J'ai un petit chat. And forgetting agreement: une petit maison ✗ → une petite maison.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: BAGS. Beauty (beau, joli), Age (jeune, vieux, nouveau), Goodness (bon, mauvais), Size (grand, petit): bu sıfatlar önde. Renk, milliyet, biçim gibi geri kalanlar arkada. Tereddüt edersen sıfatı arkaya koy; çoğunlukla doğrudur.",
+        EN: "How to remember: BAGS. Beauty (beau, joli), Age (jeune, vieux, nouveau), Goodness (bon, mauvais), Size (grand, petit) go in front. The rest (colour, nationality, shape) go after. When in doubt put the adjective after; it is usually right.",
+      },
     ],
     examples: [
       {
@@ -481,6 +1035,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Nous avons un nouvel appartement.",
         translation: { TR: "Yeni bir dairemiz var.", EN: "We have a new flat." },
+      },
+      {
+        fr: "Paul a une voiture bleue.",
+        translation: { TR: "Paul'ün mavi bir arabası var.", EN: "Paul has a blue car." },
+      },
+      {
+        fr: "Nous avons un bon professeur.",
+        translation: { TR: "İyi bir öğretmenimiz var.", EN: "We have a good teacher." },
+      },
+      {
+        fr: "J'ai un ami français.",
+        translation: { TR: "Fransız bir arkadaşım var.", EN: "I have a French friend." },
       },
     ],
     exercises: [
@@ -516,6 +1082,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Kırmızı bir arabam var.”", EN: "Write in French: “I have a red car.”" },
         answers: ["J'ai une voiture rouge."],
       },
+      {
+        type: "fill",
+        id: "adjective-position-6",
+        text: "Elle a une ___ maison. (joli)",
+        answers: ["jolie"],
+        translation: { TR: "Onun güzel bir evi var.", EN: "She has a pretty house." },
+      },
+      {
+        type: "choice",
+        id: "adjective-position-7",
+        text: "Choisis la bonne phrase.",
+        options: ["Il a un français ami.", "Il a un ami français.", "Il a un ami française.", "Il a une ami français."],
+        answer: 1,
+        translation: { TR: "Doğru cümleyi seç.", EN: "Choose the correct sentence." },
+      },
+      {
+        type: "choice",
+        id: "adjective-position-8",
+        text: "Choisis la bonne phrase.",
+        options: ["J'ai un chat petit.", "J'ai une petite chat.", "J'ai un petit chat.", "J'ai des petit chat."],
+        answer: 2,
+        translation: { TR: "Doğru cümleyi seç.", EN: "Choose the correct sentence." },
+      },
+      {
+        type: "free",
+        id: "adjective-position-9",
+        prompt: { TR: "Fransızca yaz: “Mavi bir arabam var.”", EN: "Write in French: “I have a blue car.”" },
+        answers: ["J'ai une voiture bleue."],
+      },
+      {
+        type: "build",
+        id: "adjective-position-10",
+        tokens: ["Elle", "a", "un", "petit", "chien"],
+        translation: { TR: "Onun küçük bir köpeği var.", EN: "She has a small dog." },
+      },
+      {
+        type: "choice",
+        id: "adjective-position-11",
+        text: "Nous avons un ___ appartement.",
+        options: ["nouvel", "nouveau", "nouvelle", "nouveaux"],
+        answer: 0,
+        translation: { TR: "Yeni bir dairemiz var.", EN: "We have a new flat." },
+      },
+      {
+        type: "free",
+        id: "adjective-position-12",
+        prompt: { TR: "Fransızca yaz: “Fransız bir arkadaşım yok.”", EN: "Write in French: “I don't have a French friend.”" },
+        answers: ["Je n'ai pas d'ami français.", "Je n'ai pas d'amie française."],
+      },
     ],
   },
   {
@@ -535,6 +1150,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Soru kelimesi est-ce que ile başa gelir ya da konuşmada sona kalır:\nOù est-ce que tu habites ? = Tu habites où ?\n“Ne” için: başta que (sesli harften önce qu'), sonda quoi:\nQu'est-ce que tu manges ? = Tu manges quoi ?",
         EN: "The question word goes in front with est-ce que, or at the end in casual speech:\nOù est-ce que tu habites ? = Tu habites où ?\nFor “what”: que at the front (qu' before a vowel), quoi at the end:\nQu'est-ce que tu manges ? = Tu manges quoi ?",
       },
+      {
+        TR: "Sesli harften önce est-ce que → est-ce qu': Est-ce qu'il parle anglais ? Olumsuz bir soruya “evet” demek için oui değil si kullanılır: Tu n'aimes pas le café ? — Si, j'aime le café. (Aksine, seviyorum.)",
+        EN: "Before a vowel est-ce que becomes est-ce qu': Est-ce qu'il parle anglais ? To say “yes” to a negative question use si, not oui: Tu n'aimes pas le café ? — Si, j'aime le café. (On the contrary, I do.)",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Pourquoi ? — Pour que... (cevapta) · Est-ce que tu parles-tu français ? (iki kez soru) · Combien frères ? Doğru: Pourquoi ? — Parce que... · Est-ce que tu parles français ? · Combien de frères ? Türkçedeki sona eklenen “mi” gibi bir şey yok; soru yapısı başa gelir ya da sesle yapılır.",
+        EN: "Typical mistakes. Wrong: Pourquoi ? — Pour que... (as the answer) · Est-ce que tu parles-tu français ? (asking twice) · Combien frères ? Right: Pourquoi ? — Parce que... · Est-ce que tu parles français ? · Combien de frères ? There is no question suffix like Turkish “mi”; the question is built at the front or with your voice.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: üç seviye. Ses yükseltmek = günlük konuşma, est-ce que = her yerde güvenli, devrik yapı = resmi. Başlangıçta ilk ikisi yeter. Kalıp: soru kelimesi + est-ce que + özne + fiil.",
+        EN: "How to remember: three levels. Rising voice = everyday speech, est-ce que = safe everywhere, inversion = formal. At the start the first two are enough. Pattern: question word + est-ce que + subject + verb.",
+      },
     ],
     examples: [
       {
@@ -548,6 +1175,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Tu as combien de frères ?",
         translation: { TR: "Kaç erkek kardeşin var?", EN: "How many brothers do you have?" },
+      },
+      {
+        fr: "Pourquoi est-ce que tu ne manges pas ? — Parce que je n'ai pas faim.",
+        translation: { TR: "Neden yemiyorsun? — Çünkü aç değilim.", EN: "Why aren't you eating? — Because I'm not hungry." },
+      },
+      {
+        fr: "Quand est-ce que tu vas travailler ?",
+        translation: { TR: "Ne zaman çalışacaksın?", EN: "When are you going to work?" },
+      },
+      {
+        fr: "Tu n'aimes pas le café ? — Si, j'aime le café.",
+        translation: { TR: "Kahve sevmiyor musun? — Hayır, seviyorum.", EN: "Don't you like coffee? — Yes, I do." },
       },
     ],
     exercises: [
@@ -598,6 +1237,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
           "Parlez-vous anglais ?",
         ],
       },
+      {
+        type: "fill",
+        id: "questions-6",
+        text: "___ est-ce que tu vas travailler ? — Demain.",
+        answers: ["Quand"],
+        translation: { TR: "Ne zaman çalışacaksın? — Yarın.", EN: "When are you going to work? — Tomorrow." },
+      },
+      {
+        type: "choice",
+        id: "questions-7",
+        text: "___ habitez-vous ? — À Lyon.",
+        options: ["Quand", "Qui", "Où", "Pourquoi"],
+        answer: 2,
+        translation: { TR: "Nerede oturuyorsunuz? — Lyon'da.", EN: "Where do you live? — In Lyon." },
+      },
+      {
+        type: "choice",
+        id: "questions-8",
+        text: "Pourquoi tu ne manges pas ? — ___ je n'ai pas faim.",
+        options: ["Pour que", "Pourquoi", "Parce que", "Que"],
+        answer: 2,
+        translation: { TR: "Neden yemiyorsun? — Çünkü aç değilim.", EN: "Why aren't you eating? — Because I'm not hungry." },
+      },
+      {
+        type: "free",
+        id: "questions-9",
+        prompt: { TR: "Fransızca yaz: “Kaç erkek kardeşin var?”", EN: "Write in French: “How many brothers do you have?”" },
+        answers: ["Tu as combien de frères ?", "Combien de frères est-ce que tu as ?", "Combien de frères as-tu ?", "Vous avez combien de frères ?", "Combien de frères est-ce que vous avez ?", "Combien de frères avez-vous ?"],
+      },
+      {
+        type: "build",
+        id: "questions-10",
+        tokens: ["Où", "est-ce", "que", "vous", "habitez"],
+        translation: { TR: "Nerede oturuyorsunuz?", EN: "Where do you live?" },
+      },
+      {
+        type: "choice",
+        id: "questions-11",
+        text: "Tu n'aimes pas le café ? — ___, j'aime le café.",
+        options: ["Non", "Si", "Aussi", "Peut-être"],
+        answer: 1,
+        translation: { TR: "Kahve sevmiyor musun? — Hayır, seviyorum.", EN: "Don't you like coffee? — Yes, I do." },
+      },
+      {
+        type: "free",
+        id: "questions-12",
+        prompt: { TR: "Fransızca yaz: “Neden Fransızca konuşmuyorsun?”", EN: "Write in French: “Why don't you speak French?”" },
+        answers: ["Pourquoi est-ce que tu ne parles pas français ?", "Pourquoi tu ne parles pas français ?", "Pourquoi ne parles-tu pas français ?", "Pourquoi est-ce que vous ne parlez pas français ?", "Pourquoi vous ne parlez pas français ?", "Pourquoi ne parlez-vous pas français ?"],
+      },
     ],
   },
   {
@@ -617,6 +1305,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "la ve l' ile kaynaşma olmaz:\nJe vais au cinéma · à la plage · à l'école\nJe viens du marché · de la gare · de l'hôpital",
         EN: "la and l' never merge:\nJe vais au cinéma · à la plage · à l'école\nJe viens du marché · de la gare · de l'hôpital",
       },
+      {
+        TR: "Şehir adlarında artikel ve kaynaşma yoktur: Je vais à Paris, je viens de Paris. Bazı şehirlerde artikel adın parçasıdır: Le Havre → Je vais au Havre. Soru: Tu viens d'où ? (Nereden geliyorsun?) venir ailesi: devenir (olmak), revenir (geri gelmek) aynı çekilir. Ek bilgi: venir de + mastar = az önce yaptı: Je viens de manger (Az önce yedim).",
+        EN: "City names take no article and no contraction: Je vais à Paris, je viens de Paris. In some cities the article is part of the name: Le Havre → Je vais au Havre. Question: Tu viens d'où ? (Where do you come from?) The venir family (devenir = to become, revenir = to come back) is conjugated the same way. Bonus: venir de + infinitive = just did: Je viens de manger (I just ate).",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je vais à le cinéma. · Je viens de le marché. · Je vais au plage. · Il vient du Paris. Doğru: Je vais au cinéma. · Je viens du marché. · Je vais à la plage. · Il vient de Paris. Türkçedeki -e / -den ekleri hiç kaynaşmaz, bu yüzden Fransızcadaki kaynaşma gözden kaçar.",
+        EN: "Typical mistakes. Wrong: Je vais à le cinéma. · Je viens de le marché. · Je vais au plage. · Il vient du Paris. Right: Je vais au cinéma. · Je viens du marché. · Je vais à la plage. · Il vient de Paris. Turkish -e / -den never fuse with anything, so the French fusion is easy to miss.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: kaynaşma yalnız le ve les ile olur. à le → au, de le → du, à les → aux, de les → des. La ve l' ile hiç kaynaşmaz. Cümlede le görürsen kendine sor: à / de + le = ? Sonra yaz.",
+        EN: "How to remember: fusion happens only with le and les. à le → au, de le → du, à les → aux, de les → des. La and l' never fuse. When you see le, ask yourself: à / de + le = ? Then write it.",
+      },
     ],
     examples: [
       {
@@ -630,6 +1330,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Les enfants vont au parc.",
         translation: { TR: "Çocuklar parka gidiyor.", EN: "The children are going to the park." },
+      },
+      {
+        fr: "Tu viens d'où ?",
+        translation: { TR: "Nereden geliyorsun?", EN: "Where do you come from?" },
+      },
+      {
+        fr: "Elle va à l'hôpital.",
+        translation: { TR: "Hastaneye gidiyor.", EN: "She is going to the hospital." },
+      },
+      {
+        fr: "Les enfants vont aux toilettes.",
+        translation: { TR: "Çocuklar tuvalete gidiyor.", EN: "The children are going to the toilets." },
       },
     ],
     exercises: [
@@ -666,6 +1378,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Okula gidiyorum.”", EN: "Write in French: “I am going to school.”" },
         answers: ["Je vais à l'école."],
       },
+      {
+        type: "fill",
+        id: "aller-venir-contractions-6",
+        text: "Tu viens ___ gare ?",
+        answers: ["de la"],
+        translation: { TR: "İstasyondan mı geliyorsun?", EN: "Are you coming from the station?" },
+      },
+      {
+        type: "choice",
+        id: "aller-venir-contractions-7",
+        text: "Je vais ___ école.",
+        options: ["au", "à l'", "à la", "aux"],
+        answer: 1,
+        translation: { TR: "Okula gidiyorum.", EN: "I'm going to school." },
+      },
+      {
+        type: "choice",
+        id: "aller-venir-contractions-8",
+        text: "Elle vient ___ marché.",
+        options: ["de la", "du", "de l'", "des"],
+        answer: 1,
+        translation: { TR: "Pazardan geliyor.", EN: "She comes from the market." },
+      },
+      {
+        type: "free",
+        id: "aller-venir-contractions-9",
+        prompt: { TR: "Fransızca yaz: “Sinemaya gidiyoruz.”", EN: "Write in French: “We are going to the cinema.”" },
+        answers: ["Nous allons au cinéma.", "On va au cinéma."],
+      },
+      {
+        type: "build",
+        id: "aller-venir-contractions-10",
+        tokens: ["Ils", "viennent", "de", "la", "gare"],
+        translation: { TR: "İstasyondan geliyorlar.", EN: "They are coming from the station." },
+      },
+      {
+        type: "choice",
+        id: "aller-venir-contractions-11",
+        text: "Les enfants vont ___ parc.",
+        options: ["aux", "à la", "à l'", "au"],
+        answer: 3,
+        translation: { TR: "Çocuklar parka gidiyor.", EN: "The children are going to the park." },
+      },
+      {
+        type: "free",
+        id: "aller-venir-contractions-12",
+        prompt: { TR: "Fransızca yaz: “Yarın okula gitmeyeceğim.”", EN: "Write in French: “I'm not going to go to school tomorrow.”" },
+        answers: ["Je ne vais pas aller à l'école demain.", "Demain, je ne vais pas aller à l'école.", "Demain je ne vais pas aller à l'école.", "Je ne vais pas à l'école demain.", "Demain, je ne vais pas à l'école.", "Demain je ne vais pas à l'école."],
+      },
     ],
   },
   {
@@ -685,6 +1446,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "mettre = koymak, giymek:\nje mets · tu mets · il/elle met\nnous mettons · vous mettez · ils/elles mettent",
         EN: "mettre = to put, to put on:\nje mets · tu mets · il/elle met\nnous mettons · vous mettez · ils/elles mettent",
       },
+      {
+        TR: "Hava durumu faire ile söylenir: il fait beau (güzel), il fait froid (soğuk), il fait chaud (sıcak), il fait mauvais (kötü). prendre “yemek, içmek, binmek, almak” için geniş kullanılır: prendre un café, prendre le bus, prendre une douche (duş almak). mettre'in ailesi: permettre (izin vermek), promettre (söz vermek). Üç fiilde de vous faites ve ils font gibi sapmalara dikkat.",
+        EN: "Weather uses faire: il fait beau (nice), il fait froid (cold), il fait chaud (hot), il fait mauvais (bad). prendre covers “to eat, drink, ride, take”: prendre un café, prendre le bus, prendre une douche. The family of mettre: permettre (to allow), promettre (to promise). Watch the oddities in vous faites and ils font.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Vous faisez du sport. · Ils fonts. · Je prend le bus. · Je fais le bus. Doğru: Vous faites du sport. · Ils font. · Je prends le bus. Tekilde -s, -s, -t: je prends, tu prends, il prend. Türkçede “binmek” ve “yapmak” ayrı fiiller, Fransızcada otobüs için faire değil prendre.",
+        EN: "Typical mistakes. Wrong: Vous faisez du sport. · Ils fonts. · Je prend le bus. · Je fais le bus. Right: Vous faites du sport. · Ils font. · Je prends le bus. Singular endings are -s, -s, -t: je prends, tu prends, il prend. For a bus you take, not do: prendre, not faire.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: faire için üç sapmayı ezberle: vous faites, ils font, nous faisons (okunuşu «fözõ»). prendre ve mettre'te tekil aynı kalıp: -s, -s, -t (prend, met: d ve t kalır). apprendre ve comprendre prendre gibi çekilir, yani bir fiilde dört fiil öğrenmiş olursun.",
+        EN: "How to remember: learn faire's three oddities: vous faites, ils font, nous faisons (said “fuh-zon”). Prendre and mettre share one singular pattern: -s, -s, -t (prend, met). Apprendre and comprendre follow prendre, so one verb gives you four.",
+      },
     ],
     examples: [
       {
@@ -698,6 +1471,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Nous apprenons le français.",
         translation: { TR: "Fransızca öğreniyoruz.", EN: "We are learning French." },
+      },
+      {
+        fr: "Il fait froid aujourd'hui.",
+        translation: { TR: "Bugün hava soğuk.", EN: "It's cold today." },
+      },
+      {
+        fr: "Elle prend un café.",
+        translation: { TR: "Kahve içiyor.", EN: "She is having a coffee." },
+      },
+      {
+        fr: "Vous mettez un manteau ?",
+        translation: { TR: "Mont mu giyiyorsunuz?", EN: "Are you putting on a coat?" },
       },
     ],
     exercises: [
@@ -734,6 +1519,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Fransızca öğreniyoruz.”", EN: "Write in French: “We are learning French.”" },
         answers: ["Nous apprenons le français.", "On apprend le français."],
       },
+      {
+        type: "fill",
+        id: "faire-prendre-6",
+        text: "Elle ___ un café. (prendre)",
+        answers: ["prend"],
+        translation: { TR: "Kahve içiyor.", EN: "She is having a coffee." },
+      },
+      {
+        type: "choice",
+        id: "faire-prendre-7",
+        text: "Nous ___ du sport.",
+        options: ["faites", "font", "faisons", "faisez"],
+        answer: 2,
+        translation: { TR: "Spor yapıyoruz.", EN: "We do sport." },
+      },
+      {
+        type: "choice",
+        id: "faire-prendre-8",
+        text: "Ils ___ le bus.",
+        options: ["prend", "prennent", "prenons", "prenez"],
+        answer: 1,
+        translation: { TR: "Otobüse biniyorlar.", EN: "They take the bus." },
+      },
+      {
+        type: "free",
+        id: "faire-prendre-9",
+        prompt: { TR: "Fransızca yaz: “Otobüse biniyorum.”", EN: "Write in French: “I take the bus.”" },
+        answers: ["Je prends le bus."],
+      },
+      {
+        type: "build",
+        id: "faire-prendre-10",
+        tokens: ["Nous", "prenons", "le", "métro", "ce", "soir"],
+        translation: { TR: "Bu akşam metroya biniyoruz.", EN: "We are taking the metro tonight." },
+      },
+      {
+        type: "choice",
+        id: "faire-prendre-11",
+        text: "Tu ___ un manteau.",
+        options: ["mets", "mettes", "mettez", "mettent"],
+        answer: 0,
+        translation: { TR: "Mont giyiyorsun.", EN: "You put on a coat." },
+      },
+      {
+        type: "free",
+        id: "faire-prendre-12",
+        prompt: { TR: "Fransızca yaz: “Yarın spor yapacağım.”", EN: "Write in French: “I'm going to do sport tomorrow.”" },
+        answers: ["Je vais faire du sport demain.", "Demain, je vais faire du sport.", "Demain je vais faire du sport."],
+      },
     ],
   },
   {
@@ -753,6 +1587,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Mastardan grubu anlayamazsın. Yeni bir -ir fiilinde nous biçimine bak: -issons varsa finir gibi çekilir.",
         EN: "The infinitive doesn't tell you the group. Check the nous form of a new -ir verb: if it has -issons, it follows finir.",
       },
+      {
+        TR: "Sık kullanılan 2. grup fiiller: finir (bitirmek), choisir (seçmek), réussir (başarmak), grandir (büyümek), réfléchir (düşünmek). Sık kullanılan kısa gövdeli olanlar: partir, sortir, dormir, sentir, servir. Dikkat: ouvrir (açmak) -ir ile biter ama -er gibi çekilir: j'ouvre la porte.",
+        EN: "Common group 2 verbs: finir (to finish), choisir (to choose), réussir (to succeed), grandir (to grow), réfléchir (to think). Common short-stem ones: partir, sortir, dormir, sentir, servir. Careful: ouvrir (to open) ends in -ir but is conjugated like an -er verb: j'ouvre la porte.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je finisse. · Nous finons. · Nous partissons. · Je partis. Doğru: Je finis. · Nous finissons. · Nous partons. · Je pars. -iss- yalnız finir kalıbında ve yalnız çoğulda (nous, vous, ils / elles) görünür; partir kalıbında hiç yoktur.",
+        EN: "Typical mistakes. Wrong: Je finisse. · Nous finons. · Nous partissons. · Je partis. Right: Je finis. · Nous finissons. · Nous partons. · Je pars. The -iss- appears only in the finir pattern and only in the plural (nous, vous, ils / elles); the partir pattern never has it.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: nous biçimine bak. -issons varsa finir gibi çekilir (tekil: -is, -is, -it). Yoksa partir gibi: gövde kısalır (par-, sor-, dor-) ve tekil -s, -s, -t olur. Yeni bir -ir fiilini sözlükte nasıl çekildiğine bakarak öğren.",
+        EN: "How to remember: look at the nous form. If it has -issons, it works like finir (singular -is, -is, -it). If not, it works like partir: the stem shortens (par-, sor-, dor-) and the singular is -s, -s, -t. Learn each new -ir verb by checking how it conjugates.",
+      },
     ],
     examples: [
       {
@@ -766,6 +1612,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Le bébé dort bien.",
         translation: { TR: "Bebek iyi uyuyor.", EN: "The baby sleeps well." },
+      },
+      {
+        fr: "Elle choisit un restaurant.",
+        translation: { TR: "Bir restoran seçiyor.", EN: "She is choosing a restaurant." },
+      },
+      {
+        fr: "Vous sortez ce soir ?",
+        translation: { TR: "Bu akşam dışarı çıkıyor musunuz?", EN: "Are you going out tonight?" },
+      },
+      {
+        fr: "Je ne dors pas bien.",
+        translation: { TR: "İyi uyumuyorum.", EN: "I don't sleep well." },
       },
     ],
     exercises: [
@@ -802,6 +1660,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Yarın yola çıkıyorum.”", EN: "Write in French: “I am leaving tomorrow.”" },
         answers: ["Je pars demain.", "Demain, je pars.", "Demain je pars."],
       },
+      {
+        type: "fill",
+        id: "ir-verbs-6",
+        text: "Vous ___ un restaurant. (choisir)",
+        answers: ["choisissez"],
+        translation: { TR: "Bir restoran seçiyorsunuz.", EN: "You are choosing a restaurant." },
+      },
+      {
+        type: "choice",
+        id: "ir-verbs-7",
+        text: "Nous ___ demain.",
+        options: ["partissons", "partons", "partez", "partent"],
+        answer: 1,
+        translation: { TR: "Yarın yola çıkıyoruz.", EN: "We are leaving tomorrow." },
+      },
+      {
+        type: "choice",
+        id: "ir-verbs-8",
+        text: "Ils ___ le travail.",
+        options: ["finissent", "finit", "finisent", "finissons"],
+        answer: 0,
+        translation: { TR: "İşi bitiriyorlar.", EN: "They finish the work." },
+      },
+      {
+        type: "free",
+        id: "ir-verbs-9",
+        prompt: { TR: "Fransızca yaz: “Ben iyi uyuyorum.”", EN: "Write in French: “I sleep well.”" },
+        answers: ["Je dors bien."],
+      },
+      {
+        type: "build",
+        id: "ir-verbs-10",
+        tokens: ["Elle", "ne", "choisit", "pas", "le", "restaurant"],
+        translation: { TR: "O (kadın) restoranı seçmiyor.", EN: "She is not choosing the restaurant." },
+      },
+      {
+        type: "choice",
+        id: "ir-verbs-11",
+        text: "Tu ___ bien.",
+        options: ["dormes", "dort", "dormis", "dors"],
+        answer: 3,
+        translation: { TR: "İyi uyuyorsun.", EN: "You sleep well." },
+      },
+      {
+        type: "free",
+        id: "ir-verbs-12",
+        prompt: { TR: "Fransızca yaz: “Yarın Paris'ten ayrılacağız.”", EN: "Write in French: “We are going to leave Paris tomorrow.”" },
+        answers: ["Nous allons partir de Paris demain.", "Demain, nous allons partir de Paris.", "Demain nous allons partir de Paris.", "On va partir de Paris demain.", "Demain, on va partir de Paris.", "Demain on va partir de Paris."],
+      },
     ],
   },
   {
@@ -825,6 +1732,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Sesli harfle başlayan dişil isimden önce ma / ta / sa yerine mon / ton / son gelir, kulağa rahat gelsin diye: mon amie, ton école, son adresse.",
         EN: "Before a feminine noun starting with a vowel, use mon / ton / son instead of ma / ta / sa, for the sound: mon amie, ton école, son adresse.",
       },
+      {
+        TR: "Türkçedeki -in / -ün eki Fransızcada de ile kurulur: la voiture de Paul = Paul'ün arabası. Birden çok sahip için çoğul biçimler: leurs enfants (onların çocukları). Son / sa / ses bazen karışıklık yaratır: son frère hem Paul'ün hem Marie'nin kardeşi olabilir; bağlam söyler.",
+        EN: "Where Turkish uses the -in / -ün suffix, French uses de: la voiture de Paul = Paul's car. For several owners use the plural forms: leurs enfants (their children). Son / sa / ses can be unclear: son frère can be Paul's or Marie's brother; the context tells.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: ma père · son mère (kadın bir erkeğin annesini anlatırken de) · Paul et son voiture · mon amie ✓ ama ma amie ✗. Doğru: mon père · sa mère · sa voiture · mon amie. Seçimi sahip değil, sahip olunan isim belirler: père eril, mère dişil.",
+        EN: "Typical mistakes. Wrong: ma père · son mère · Paul et son voiture · ma amie. Right: mon père · sa mère · sa voiture · mon amie. The owner does not decide the form; the thing owned does: père is masculine, mère is feminine.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: önce ismin cinsiyetine ve sayısına bak, sahibin kişisine sonra bak. Tek eril → mon / ton / son; tek dişil → ma / ta / sa; çoğul → mes / tes / ses. Sesli harfle başlayan dişil isimde mon / ton / son.",
+        EN: "How to remember: look at the noun's gender and number first, the owner's person second. Singular masculine → mon / ton / son; singular feminine → ma / ta / sa; plural → mes / tes / ses. Before a vowel use mon / ton / son.",
+      },
     ],
     examples: [
       {
@@ -838,6 +1757,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Ils aiment leurs enfants.",
         translation: { TR: "Çocuklarını seviyorlar.", EN: "They love their children." },
+      },
+      {
+        fr: "La voiture de Paul est rouge.",
+        translation: { TR: "Paul'ün arabası kırmızı.", EN: "Paul's car is red." },
+      },
+      {
+        fr: "Vos enfants sont grands.",
+        translation: { TR: "Çocuklarınız büyük.", EN: "Your children are big." },
+      },
+      {
+        fr: "Il aime sa mère.",
+        translation: { TR: "Annesini seviyor.", EN: "He loves his mother." },
       },
     ],
     exercises: [
@@ -874,6 +1805,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Onun arabası kırmızı.”", EN: "Write in French: “His car is red.”" },
         answers: ["Sa voiture est rouge."],
       },
+      {
+        type: "fill",
+        id: "possessives-6",
+        text: "___ amis habitent à Paris. (onların)",
+        answers: ["Leurs"],
+        translation: { TR: "Onların arkadaşları Paris'te oturuyor.", EN: "Their friends live in Paris." },
+      },
+      {
+        type: "choice",
+        id: "possessives-7",
+        text: "Elle aime ___ père.",
+        options: ["sa", "son", "ses", "leur"],
+        answer: 1,
+        translation: { TR: "Babasını seviyor.", EN: "She loves her father." },
+      },
+      {
+        type: "choice",
+        id: "possessives-8",
+        text: "Nous aimons ___ voiture.",
+        options: ["nos", "votre", "notre", "leur"],
+        answer: 2,
+        translation: { TR: "Arabamızı seviyoruz.", EN: "We love our car." },
+      },
+      {
+        type: "free",
+        id: "possessives-9",
+        prompt: { TR: "Fransızca yaz: “Annem Lyon'da oturuyor.”", EN: "Write in French: “My mother lives in Lyon.”" },
+        answers: ["Ma mère habite à Lyon."],
+      },
+      {
+        type: "build",
+        id: "possessives-10",
+        tokens: ["Notre", "professeur", "est", "gentil"],
+        translation: { TR: "Öğretmenimiz nazik.", EN: "Our teacher is kind." },
+      },
+      {
+        type: "choice",
+        id: "possessives-11",
+        text: "Ils parlent avec ___ enfants.",
+        options: ["leur", "leurs", "sa", "son"],
+        answer: 1,
+        translation: { TR: "Çocuklarıyla konuşuyorlar.", EN: "They talk with their children." },
+      },
+      {
+        type: "free",
+        id: "possessives-12",
+        prompt: { TR: "Fransızca yaz: “Kız kardeşim Paris'te oturmuyor.”", EN: "Write in French: “My sister doesn't live in Paris.”" },
+        answers: ["Ma sœur n'habite pas à Paris."],
+      },
     ],
   },
   {
@@ -893,6 +1873,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Fransızca genelde “bu” ile “şu”yu ayırmaz. Gerekirse isme -ci (bu) ya da -là (şu) eklenir: ce livre-ci / ce livre-là. Zaman ifadelerinde çok kullanılır: ce matin, ce soir, cette semaine.",
         EN: "French usually doesn't separate “this” and “that”. When needed, add -ci (this) or -là (that): ce livre-ci / ce livre-là. Very common in time phrases: ce matin, ce soir, cette semaine.",
       },
+      {
+        TR: "cet yalnız eril isimlerin önünde gelir: cet homme, cet hôtel, cet après-midi (öğleden sonra eril sayılır). Dişil isimde sesli harf olsa bile cette kalır: cette amie, cette école. Zaman kalıpları: ce matin, ce soir, cette nuit, cette semaine, ces jours-ci (bu günlerde).",
+        EN: "Cet appears only before masculine nouns: cet homme, cet hôtel, cet après-midi (afternoon is masculine). A feminine noun starting with a vowel still takes cette: cette amie, cette école. Time phrases: ce matin, ce soir, cette nuit, cette semaine, ces jours-ci (these days).",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: ce maison · cet maison · cette homme · ce hôtel. Doğru: cette maison · cet hôtel · cet homme. Türkçede “bu” hiç değişmez; Fransızcada ismin cinsiyeti ve baş harfi seçimi belirler. Ayrıca artikelle birlikte kullanma: ce le livre ✗ → ce livre.",
+        EN: "Typical mistakes. Wrong: ce maison · cet maison · cette homme · ce hôtel. Right: cette maison · cet hôtel · cet homme. Turkish “bu” never changes; in French the noun's gender and first letter decide. Also do not combine it with an article: ce le livre ✗ → ce livre.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: ce / cet / cette / ces artikelin yerine geçer; artikel zaten orada olmasın. Dört biçimi tabloya yaz: ce (m) · cet (m + sesli) · cette (f) · ces (çoğul). Sorular: dişil mi? → cette, her zaman. Eril ve sesli harf mi? → cet.",
+        EN: "How to remember: ce / cet / cette / ces replace the article, so do not add one. Write the four forms in a table: ce (m) · cet (m + vowel) · cette (f) · ces (plural). Feminine? → cette, always. Masculine and a vowel? → cet.",
+      },
     ],
     examples: [
       {
@@ -906,6 +1898,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Je vais partir cette semaine.",
         translation: { TR: "Bu hafta yola çıkacağım.", EN: "I am going to leave this week." },
+      },
+      {
+        fr: "Cette maison est petite.",
+        translation: { TR: "Bu ev küçük.", EN: "This house is small." },
+      },
+      {
+        fr: "Ces enfants sont gentils.",
+        translation: { TR: "Bu çocuklar nazik.", EN: "These children are kind." },
+      },
+      {
+        fr: "Elle aime ce restaurant.",
+        translation: { TR: "Bu restoranı seviyor.", EN: "She likes this restaurant." },
       },
     ],
     exercises: [
@@ -942,6 +1946,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Bu kitap ilginç.”", EN: "Write in French: “This book is interesting.”" },
         answers: ["Ce livre est intéressant.", "Ce livre-ci est intéressant."],
       },
+      {
+        type: "fill",
+        id: "demonstratives-6",
+        text: "___ après-midi, je vais travailler.",
+        answers: ["Cet"],
+        translation: { TR: "Bu öğleden sonra çalışacağım.", EN: "This afternoon I'm going to work." },
+      },
+      {
+        type: "choice",
+        id: "demonstratives-7",
+        text: "___ amie est française.",
+        options: ["Ce", "Cet", "Cette", "Ces"],
+        answer: 2,
+        translation: { TR: "Bu arkadaş (kız) Fransız.", EN: "This friend is French." },
+      },
+      {
+        type: "choice",
+        id: "demonstratives-8",
+        text: "___ hôtels sont grands.",
+        options: ["Cet", "Ces", "Cette", "Ce"],
+        answer: 1,
+        translation: { TR: "Bu oteller büyük.", EN: "These hotels are big." },
+      },
+      {
+        type: "free",
+        id: "demonstratives-9",
+        prompt: { TR: "Fransızca yaz: “Bu araba kırmızı.”", EN: "Write in French: “This car is red.”" },
+        answers: ["Cette voiture est rouge.", "Cette voiture-ci est rouge."],
+      },
+      {
+        type: "build",
+        id: "demonstratives-10",
+        tokens: ["Ces", "enfants", "vont", "à", "l'école"],
+        translation: { TR: "Bu çocuklar okula gidiyor.", EN: "These children are going to school." },
+      },
+      {
+        type: "choice",
+        id: "demonstratives-11",
+        text: "Je prends ___ livre.",
+        options: ["cette", "cet", "ces", "ce"],
+        answer: 3,
+        translation: { TR: "Bu kitabı alıyorum.", EN: "I'm taking this book." },
+      },
+      {
+        type: "free",
+        id: "demonstratives-12",
+        prompt: { TR: "Fransızca yaz: “Bu hafta bu restorana gideceğiz.”", EN: "Write in French: “We are going to go to this restaurant this week.”" },
+        answers: ["Nous allons aller à ce restaurant cette semaine.", "Cette semaine, nous allons aller à ce restaurant.", "Cette semaine nous allons aller à ce restaurant.", "On va aller à ce restaurant cette semaine.", "Cette semaine, on va aller à ce restaurant.", "Cette semaine on va aller à ce restaurant.", "Nous allons à ce restaurant cette semaine.", "On va à ce restaurant cette semaine.", "Cette semaine, nous allons à ce restaurant.", "Cette semaine, on va à ce restaurant."],
+      },
     ],
   },
   {
@@ -965,6 +2018,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Miktar sözcüklerinden sonra da yalnız de gelir:\nbeaucoup de sucre · un peu de lait · un kilo de pommes · une bouteille d'eau",
         EN: "After words of quantity, only de:\nbeaucoup de sucre · un peu de lait · un kilo de pommes · une bouteille d'eau",
       },
+      {
+        TR: "Sevmek, nefret etmek, tercih etmek fiilleri genel anlam taşır, bu yüzden belirli artikelle gelir: J'aime le café. · Je déteste la viande. · Je préfère le thé. Miktar sözcükleri hep de ile gelir: beaucoup de, un peu de, trop de, assez de, un kilo de, une bouteille de.",
+        EN: "Verbs of liking, hating and preferring express a general idea, so they take the definite article: J'aime le café. · Je déteste la viande. · Je préfère le thé. Quantity words always take de: beaucoup de, un peu de, trop de, assez de, un kilo de, une bouteille de.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je mange pain. · Je prends de la eau. · Je ne mange pas du pain. · beaucoup du sucre. Doğru: Je mange du pain. · Je prends de l'eau. · Je ne mange pas de pain. · beaucoup de sucre. Türkçede “ekmek yiyorum” der geçeriz; Fransızcada artikel yazmak zorunlu.",
+        EN: "Typical mistakes. Wrong: Je mange pain. · Je prends de la eau. · Je ne mange pas du pain. · beaucoup du sucre. Right: Je mange du pain. · Je prends de l'eau. · Je ne mange pas de pain. · beaucoup de sucre. Turkish just says “ekmek yiyorum”; in French the article is compulsory.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: sayabiliyor musun? Bir croissant, iki croissant → un / des. Sayamıyorsan (su, süt, ekmek, para, sabır) → du / de la / de l'. “Biraz” diye düşün: du pain = biraz ekmek. Olumsuz ve miktar sözcüğünden sonra hepsi de / d'.",
+        EN: "How to remember: can you count it? One croissant, two croissants → un / des. If you cannot (water, milk, bread, money, patience) → du / de la / de l'. Think “some”: du pain = some bread. After a negative or a quantity word, all of them become de / d'.",
+      },
     ],
     examples: [
       {
@@ -978,6 +2043,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "J'achète un kilo de tomates.",
         translation: { TR: "Bir kilo domates alıyorum.", EN: "I buy a kilo of tomatoes." },
+      },
+      {
+        fr: "Nous achetons du fromage.",
+        translation: { TR: "Peynir alıyoruz.", EN: "We are buying cheese." },
+      },
+      {
+        fr: "Tu ne prends pas de sucre ?",
+        translation: { TR: "Şeker almıyor musun?", EN: "Don't you take sugar?" },
+      },
+      {
+        fr: "Nous avons beaucoup de pain.",
+        translation: { TR: "Çok ekmeğimiz var.", EN: "We have a lot of bread." },
       },
     ],
     exercises: [
@@ -1014,6 +2091,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Ekmek alıyorum.”", EN: "Write in French: “I am buying bread.”" },
         answers: ["J'achète du pain.", "Je prends du pain."],
       },
+      {
+        type: "fill",
+        id: "partitive-6",
+        text: "Elle prend ___ sucre.",
+        answers: ["du"],
+        translation: { TR: "Şeker alıyor.", EN: "She takes sugar." },
+      },
+      {
+        type: "choice",
+        id: "partitive-7",
+        text: "Nous mangeons ___ soupe.",
+        options: ["du", "de la", "de l'", "des"],
+        answer: 1,
+        translation: { TR: "Çorba yiyoruz.", EN: "We are eating soup." },
+      },
+      {
+        type: "choice",
+        id: "partitive-8",
+        text: "Je ne prends pas ___ lait.",
+        options: ["du", "de la", "de", "d'"],
+        answer: 2,
+        translation: { TR: "Süt almıyorum.", EN: "I don't take milk." },
+      },
+      {
+        type: "free",
+        id: "partitive-9",
+        prompt: { TR: "Fransızca yaz: “Peynir yiyorum.”", EN: "Write in French: “I'm eating cheese.”" },
+        answers: ["Je mange du fromage."],
+      },
+      {
+        type: "build",
+        id: "partitive-10",
+        tokens: ["Nous", "avons", "beaucoup", "de", "pain"],
+        translation: { TR: "Çok ekmeğimiz var.", EN: "We have a lot of bread." },
+      },
+      {
+        type: "choice",
+        id: "partitive-11",
+        text: "Elle aime ___ chocolat.",
+        options: ["le", "du", "de", "des"],
+        answer: 0,
+        translation: { TR: "Çikolatayı sever.", EN: "She likes chocolate." },
+      },
+      {
+        type: "free",
+        id: "partitive-12",
+        prompt: { TR: "Fransızca yaz: “Yarın biraz ekmek alacağım.”", EN: "Write in French: “Tomorrow I'm going to buy some bread.”" },
+        answers: ["Je vais acheter du pain demain.", "Demain, je vais acheter du pain.", "Demain je vais acheter du pain.", "Je vais acheter un peu de pain demain.", "Demain, je vais acheter un peu de pain.", "Demain je vais acheter un peu de pain."],
+      },
     ],
   },
   {
@@ -1033,6 +2159,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Tarih: le + sayı + ay: le 14 juillet. Ayın biri için premier: le premier mai. Gün ve ay adları küçük harfle yazılır. Nous sommes lundi = Bugün pazartesi.",
         EN: "Dates: le + number + month: le 14 juillet. The first is premier: le premier mai. Days and months take no capital letter. Nous sommes lundi = Today is Monday.",
       },
+      {
+        TR: "Küçük istisnalar: “et” yalnız 21, 31, 41, 51, 61 ve 71'de gelir (vingt et un, soixante et onze); 81 ve 91'de gelmez (quatre-vingt-un, quatre-vingt-onze). quatre-vingts sonunda başka sayı yoksa -s alır: quatre-vingts ama quatre-vingt-deux. Saatte heure: une heure (tekil), deux heures (çoğul).",
+        EN: "Small exceptions: “et” appears only in 21, 31, 41, 51, 61 and 71 (vingt et un, soixante et onze); not in 81 and 91 (quatre-vingt-un, quatre-vingt-onze). Quatre-vingts takes an -s only when nothing follows: quatre-vingts but quatre-vingt-deux. In times: une heure (singular), deux heures (plural).",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: vingt-un · quatre-vingt et un · Il est trois et demie · Il est trois heure et demi. Doğru: vingt et un · quatre-vingt-un · Il est trois heures et demie. Ayrıca Belçika'da duyduğun septante ve nonante standart Fransa Fransızcasında yoktur: soixante-dix, quatre-vingt-dix de.",
+        EN: "Typical mistakes. Wrong: vingt-un · quatre-vingt et un · Il est trois et demie · Il est trois heure et demi. Right: vingt et un · quatre-vingt-un · Il est trois heures et demie. Also, septante and nonante (heard in Belgium) are not standard in France: say soixante-dix and quatre-vingt-dix.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: sayıyı bir hesap gibi oku. 70 = 60 + 10, 80 = 4 × 20, 90 = 4 × 20 + 10. Saati hep aynı iskelete oturt: Il est + sayı + heure(s) + (et quart / et demie / moins le quart / moins dix). Günde bir kez saati Fransızca söyle.",
+        EN: "How to remember: read a number like a sum. 70 = 60 + 10, 80 = 4 × 20, 90 = 4 × 20 + 10. Always put the time in the same frame: Il est + number + heure(s) + (et quart / et demie / moins le quart / moins dix). Say the time in French once a day.",
+      },
     ],
     examples: [
       {
@@ -1046,6 +2184,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "J'ai soixante-dix euros.",
         translation: { TR: "Yetmiş avrom var.", EN: "I have seventy euros." },
+      },
+      {
+        fr: "Nous sommes le quatorze juillet.",
+        translation: { TR: "Bugün 14 Temmuz.", EN: "It is the 14th of July." },
+      },
+      {
+        fr: "Il est trois heures moins le quart.",
+        translation: { TR: "Saat üçe çeyrek var.", EN: "It is a quarter to three." },
+      },
+      {
+        fr: "J'ai quatre-vingt-dix euros.",
+        translation: { TR: "Doksan avrom var.", EN: "I have ninety euros." },
       },
     ],
     exercises: [
@@ -1082,6 +2232,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Saat dokuz.”", EN: "Write in French: “It is nine o'clock.”" },
         answers: ["Il est neuf heures.", "Il est 9 heures.", "Il est 9 h.", "Il est 9h."],
       },
+      {
+        type: "fill",
+        id: "numbers-time-6",
+        text: "Il est cinq heures ___ quart.",
+        answers: ["et"],
+        translation: { TR: "Saat beşi çeyrek geçiyor.", EN: "It is a quarter past five." },
+      },
+      {
+        type: "choice",
+        id: "numbers-time-7",
+        text: "71 = ___",
+        options: ["soixante-onze", "soixante et onze", "septante et un", "soixante-dix-un"],
+        answer: 1,
+        translation: { TR: "71 nasıl yazılır?", EN: "How do you write 71?" },
+      },
+      {
+        type: "choice",
+        id: "numbers-time-8",
+        text: "Il est trois heures ___. (3:30)",
+        options: ["et demi", "et quart", "et demie", "moins demie"],
+        answer: 2,
+        translation: { TR: "Saat üç buçuk.", EN: "It is half past three." },
+      },
+      {
+        type: "free",
+        id: "numbers-time-9",
+        prompt: { TR: "Fransızca yaz: “Saat sekiz buçuk.”", EN: "Write in French: “It is half past eight.”" },
+        answers: ["Il est huit heures et demie.", "Il est 8 heures et demie.", "Il est 8 h 30.", "Il est 8h30.", "Il est huit heures trente.", "Il est 8 heures 30."],
+      },
+      {
+        type: "build",
+        id: "numbers-time-10",
+        tokens: ["Il", "est", "trois", "heures", "moins", "le", "quart"],
+        translation: { TR: "Saat üçe çeyrek var.", EN: "It is a quarter to three." },
+      },
+      {
+        type: "choice",
+        id: "numbers-time-11",
+        text: "80 = ___",
+        options: ["quatre-vingts", "quatre-vingt", "octante", "vingt-quatre"],
+        answer: 0,
+        translation: { TR: "80 nasıl yazılır?", EN: "How do you write 80?" },
+      },
+      {
+        type: "free",
+        id: "numbers-time-12",
+        prompt: { TR: "Fransızca yaz: “Saat yedide okula gideceğim.”", EN: "Write in French: “I'm going to go to school at seven.”" },
+        answers: ["Je vais aller à l'école à sept heures.", "À sept heures, je vais aller à l'école.", "À sept heures je vais aller à l'école.", "Je vais à l'école à sept heures.", "À sept heures, je vais à l'école.", "À sept heures je vais à l'école.", "Je vais aller à l'école à 7 heures.", "Je vais à l'école à 7 heures.", "Je vais aller à l'école à 7 h.", "Je vais à l'école à 7 h.", "Je vais aller à l'école à 7h.", "Je vais à l'école à 7h."],
+      },
     ],
   },
   {
@@ -1101,6 +2300,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Kibar istek için je veux değil je voudrais (isterdim) de: Je voudrais un café, s'il vous plaît. Dükkânda je veux kaba duyulur.",
         EN: "For a polite request say je voudrais (I would like), not je veux: Je voudrais un café, s'il vous plaît. In a shop je veux sounds rude.",
       },
+      {
+        TR: "Birkaç ek kullanım. Rica: Je peux entrer ? (Girebilir miyim?) · Vous pouvez répéter ? (Tekrar edebilir misiniz?). devoir + isim = borçlu olmak: Je dois dix euros. Je veux bien = olur, isterim (kabul). vouloir dire = demek istemek: Qu'est-ce que ça veut dire ?",
+        EN: "A few extra uses. Requests: Je peux entrer ? (May I come in?) · Vous pouvez répéter ? (Can you repeat?). devoir + noun = to owe: Je dois dix euros. Je veux bien = sure, I'd like that. vouloir dire = to mean: Qu'est-ce que ça veut dire ?",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je peux venir pas. · Je veux manges. · Je dois pars. · Je peux parles français. Doğru: Je ne peux pas venir. · Je veux manger. · Je dois partir. · Je peux parler français. İki fiilden yalnız ilki çekilir, ikincisi mastar kalır. Bir de dükkânda Je veux un café kabadır, Je voudrais de.",
+        EN: "Typical mistakes. Wrong: Je peux venir pas. · Je veux manges. · Je dois pars. · Je peux parles français. Right: Je ne peux pas venir. · Je veux manger. · Je dois partir. · Je peux parler français. Of the two verbs only the first is conjugated; the second stays an infinitive. And in a shop Je veux un café is rude; say Je voudrais.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: modal + mastar, hep aynı iskelet. veux / peux tekilde -x ile biter (je veux, tu veux, je peux, tu peux); il / elle -t alır (veut, peut). Kibar istek için kalıbı ezberle: Je voudrais + isim ya da mastar.",
+        EN: "How to remember: modal + infinitive, always the same frame. Veux / peux end in -x in the singular (je veux, tu veux, je peux, tu peux); il / elle take -t (veut, peut). For polite requests memorise the frame: Je voudrais + noun or infinitive.",
+      },
     ],
     examples: [
       {
@@ -1114,6 +2325,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Nous devons partir.",
         translation: { TR: "Gitmemiz gerekiyor.", EN: "We have to leave." },
+      },
+      {
+        fr: "Vous pouvez répéter, s'il vous plaît ?",
+        translation: { TR: "Tekrar edebilir misiniz lütfen?", EN: "Can you repeat, please?" },
+      },
+      {
+        fr: "Je dois travailler ce soir.",
+        translation: { TR: "Bu akşam çalışmam gerek.", EN: "I have to work tonight." },
+      },
+      {
+        fr: "Ils veulent habiter à Paris.",
+        translation: { TR: "Paris'te oturmak istiyorlar.", EN: "They want to live in Paris." },
       },
     ],
     exercises: [
@@ -1150,6 +2373,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Fransızca öğrenmek istiyorum.”", EN: "Write in French: “I want to learn French.”" },
         answers: ["Je veux apprendre le français.", "Je voudrais apprendre le français."],
       },
+      {
+        type: "fill",
+        id: "modal-verbs-6",
+        text: "Nous ___ partir demain. (devoir)",
+        answers: ["devons"],
+        translation: { TR: "Yarın gitmemiz gerek.", EN: "We have to leave tomorrow." },
+      },
+      {
+        type: "choice",
+        id: "modal-verbs-7",
+        text: "Tu ___ venir ?",
+        options: ["peut", "pouvez", "peux", "peuvent"],
+        answer: 2,
+        translation: { TR: "Gelebilir misin?", EN: "Can you come?" },
+      },
+      {
+        type: "choice",
+        id: "modal-verbs-8",
+        text: "Elle ne ___ pas venir.",
+        options: ["peux", "peut", "peuvent", "pouvez"],
+        answer: 1,
+        translation: { TR: "O (kadın) gelemiyor.", EN: "She can't come." },
+      },
+      {
+        type: "free",
+        id: "modal-verbs-9",
+        prompt: { TR: "Fransızca yaz: “Gelemiyorum.”", EN: "Write in French: “I can't come.”" },
+        answers: ["Je ne peux pas venir."],
+      },
+      {
+        type: "build",
+        id: "modal-verbs-10",
+        tokens: ["Vous", "devez", "parler", "lentement"],
+        translation: { TR: "Yavaş konuşmanız gerek.", EN: "You have to speak slowly." },
+      },
+      {
+        type: "choice",
+        id: "modal-verbs-11",
+        text: "Pour être poli : Je ___ un café.",
+        options: ["veux", "veut", "voulons", "voudrais"],
+        answer: 3,
+        translation: { TR: "Kibar olmak için: Bir kahve isterim.", EN: "To be polite: I'd like a coffee." },
+      },
+      {
+        type: "free",
+        id: "modal-verbs-12",
+        prompt: { TR: "Fransızca yaz: “Yarın Paris'e gitmek istiyoruz.”", EN: "Write in French: “We want to go to Paris tomorrow.”" },
+        answers: ["Nous voulons aller à Paris demain.", "Demain, nous voulons aller à Paris.", "Demain nous voulons aller à Paris.", "On veut aller à Paris demain.", "Demain, on veut aller à Paris.", "Demain on veut aller à Paris."],
+      },
     ],
   },
   {
@@ -1169,6 +2441,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Konum edatları da Türkçenin tersine ismin önüne gelir:\ndans (içinde) · sur (üstünde) · sous (altında)\ndevant (önünde) · derrière (arkasında) · entre (arasında)\nà côté de (yanında) → à côté du cinéma, à côté de la gare",
         EN: "Position words:\ndans (in) · sur (on) · sous (under)\ndevant (in front of) · derrière (behind) · entre (between)\nà côté de (next to) → à côté du cinéma, à côté de la gare",
       },
+      {
+        TR: "İstisnalar: sesli harfle başlayan eril ülkelerde de en kullanılır: en Iran, en Israël. “-den” için sesli harf önünde d': d'Italie, d'Iran. Adalar çoğunlukla à: à Cuba, à Chypre. Birden fazla ülke adı çoğul gelirse: aux États-Unis, aux Pays-Bas (Hollanda), des Pays-Bas.",
+        EN: "Exceptions: masculine countries that start with a vowel also take en: en Iran, en Israël. For “from”, d' before a vowel: d'Italie, d'Iran. Islands mostly take à: à Cuba, à Chypre. Plural country names: aux États-Unis, aux Pays-Bas (the Netherlands), des Pays-Bas.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: J'habite à France. · Je vais à Italie. · Je viens de le Japon. · Il est en Paris. Doğru: J'habite en France. · Je vais en Italie. · Je viens du Japon. · Il est à Paris. Türkçede tek ek (-de, -e) hepsini karşılar; Fransızcada yerin türü (şehir, dişil ülke, eril ülke) edatı seçer. sur (üstünde) ve sous (altında) kolay karışır.",
+        EN: "Typical mistakes. Wrong: J'habite à France. · Je vais à Italie. · Je viens de le Japon. · Il est en Paris. Right: J'habite en France. · Je vais en Italie. · Je viens du Japon. · Il est à Paris. Turkish has one suffix (-de, -e) for all of these; French picks the preposition by the kind of place (city, feminine country, masculine country). Sur (on) and sous (under) are easy to mix up.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: ülke -e ile bitiyorsa çoğunlukla dişildir (la France, l'Italie, la Turquie) → en. Diğerleri eril (le Japon, le Canada) → au. Şehir her zaman à. Konum edatları için bir kutu çiz: kutunun içi dans, üstü sur, altı sous, önü devant, arkası derrière.",
+        EN: "How to remember: a country ending in -e is usually feminine (la France, l'Italie, la Turquie) → en. Others are masculine (le Japon, le Canada) → au. A city is always à. For position words draw a box: inside is dans, on top is sur, under is sous, in front is devant, behind is derrière.",
+      },
     ],
     examples: [
       {
@@ -1182,6 +2466,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "La banque est à côté de la poste.",
         translation: { TR: "Banka postanenin yanında.", EN: "The bank is next to the post office." },
+      },
+      {
+        fr: "Il habite aux États-Unis.",
+        translation: { TR: "Amerika'da oturuyor.", EN: "He lives in the United States." },
+      },
+      {
+        fr: "Nous venons d'Italie.",
+        translation: { TR: "İtalya'dan geliyoruz.", EN: "We come from Italy." },
+      },
+      {
+        fr: "Le chat est devant la porte.",
+        translation: { TR: "Kedi kapının önünde.", EN: "The cat is in front of the door." },
       },
     ],
     exercises: [
@@ -1218,6 +2514,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Türkiye'de oturuyorum.”", EN: "Write in French: “I live in Turkey.”" },
         answers: ["J'habite en Turquie.", "Je vis en Turquie."],
       },
+      {
+        type: "fill",
+        id: "places-prepositions-6",
+        text: "Ils habitent ___ Canada.",
+        answers: ["au"],
+        translation: { TR: "Kanada'da oturuyorlar.", EN: "They live in Canada." },
+      },
+      {
+        type: "choice",
+        id: "places-prepositions-7",
+        text: "Elle va ___ Italie.",
+        options: ["au", "à", "en", "aux"],
+        answer: 2,
+        translation: { TR: "İtalya'ya gidiyor.", EN: "She is going to Italy." },
+      },
+      {
+        type: "choice",
+        id: "places-prepositions-8",
+        text: "Je viens ___ Japon.",
+        options: ["de", "du", "des", "d'"],
+        answer: 1,
+        translation: { TR: "Japonya'dan geliyorum.", EN: "I come from Japan." },
+      },
+      {
+        type: "free",
+        id: "places-prepositions-9",
+        prompt: { TR: "Fransızca yaz: “Fransa'da oturuyorum.”", EN: "Write in French: “I live in France.”" },
+        answers: ["J'habite en France.", "Je vis en France."],
+      },
+      {
+        type: "build",
+        id: "places-prepositions-10",
+        tokens: ["Ils", "viennent", "des", "États-Unis"],
+        translation: { TR: "Amerika'dan geliyorlar.", EN: "They come from the United States." },
+      },
+      {
+        type: "choice",
+        id: "places-prepositions-11",
+        text: "Le chat dort ___ la table.",
+        options: ["derrière", "entre", "dans", "sous"],
+        answer: 3,
+        translation: { TR: "Kedi masanın altında uyuyor.", EN: "The cat is sleeping under the table." },
+      },
+      {
+        type: "free",
+        id: "places-prepositions-12",
+        prompt: { TR: "Fransızca yaz: “Yarın Japonya'ya gideceğiz.”", EN: "Write in French: “We are going to go to Japan tomorrow.”" },
+        answers: ["Nous allons aller au Japon demain.", "Demain, nous allons aller au Japon.", "Demain nous allons aller au Japon.", "Nous allons au Japon demain.", "On va aller au Japon demain.", "On va au Japon demain.", "Demain, on va au Japon.", "Demain on va au Japon.", "Demain, on va aller au Japon.", "Demain on va aller au Japon.", "Demain, nous allons au Japon.", "Demain nous allons au Japon."],
+      },
     ],
   },
   {
@@ -1241,6 +2586,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Olumsuzda zamir fiilden ayrılmaz, ne ... pas ikisini birlikte sarar: Je ne me lève pas tôt.",
         EN: "In the negative the pronoun stays with the verb, and ne ... pas wraps both: Je ne me lève pas tôt.",
       },
+      {
+        TR: "Bazı fiillerin anlamı dönüşlüde değişir: appeler (çağırmak) → s'appeler (adı olmak), lever (kaldırmak) → se lever (kalkmak), promener → se promener (gezmek). Çoğulda “birbirini” anlamı da çıkar: Ils se parlent (birbirleriyle konuşurlar). Mastarla: Je vais me coucher (Yatacağım): zamir özneye uyar, fiil mastar kalır.",
+        EN: "Some verbs change meaning when reflexive: appeler (to call) → s'appeler (to be named), lever (to lift) → se lever (to get up), promener → se promener (to go for a walk). In the plural it can also mean “each other”: Ils se parlent (They talk to each other). With an infinitive: Je vais me coucher (I'm going to bed): the pronoun matches the subject, the verb stays an infinitive.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je me appelle. · Il se lève pas. · Je vais se coucher. · Je lave (kendimi yıkamak isterken). Doğru: Je m'appelle. · Il ne se lève pas. · Je vais me coucher. · Je me lave. Je lave la voiture ise “arabayı yıkıyorum” demektir.",
+        EN: "Typical mistakes. Wrong: Je me appelle. · Il se lève pas. · Je vais se coucher. · Je lave (meaning “I wash myself”). Right: Je m'appelle. · Il ne se lève pas. · Je vais me coucher. · Je me lave. Je lave la voiture means “I wash the car”.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: zamiri özneyle eşle: je → me, tu → te, il → se, nous → nous, vous → vous, ils → se. “Kendimi, kendini” diye çevir. Her sabah rutinini Fransızca anlat: je me lève, je me lave, je m'habille, je me couche.",
+        EN: "How to remember: match the pronoun to the subject: je → me, tu → te, il → se, nous → nous, vous → vous, ils → se. Translate it as “myself, yourself”. Describe your morning routine in French: je me lève, je me lave, je m'habille, je me couche.",
+      },
     ],
     examples: [
       {
@@ -1254,6 +2611,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Nous nous couchons tard.",
         translation: { TR: "Geç yatarız.", EN: "We go to bed late." },
+      },
+      {
+        fr: "Je vais me coucher tôt.",
+        translation: { TR: "Erken yatacağım.", EN: "I'm going to go to bed early." },
+      },
+      {
+        fr: "Elle s'habille vite.",
+        translation: { TR: "Hızlı giyiniyor.", EN: "She gets dressed quickly." },
+      },
+      {
+        fr: "Ils se parlent beaucoup.",
+        translation: { TR: "Birbirleriyle çok konuşurlar.", EN: "They talk to each other a lot." },
       },
     ],
     exercises: [
@@ -1290,6 +2659,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Adım Ali.”", EN: "Write in French: “My name is Ali.”" },
         answers: ["Je m'appelle Ali."],
       },
+      {
+        type: "fill",
+        id: "reflexive-verbs-6",
+        text: "Nous ___ levons à sept heures.",
+        answers: ["nous"],
+        translation: { TR: "Saat yedide kalkarız.", EN: "We get up at seven." },
+      },
+      {
+        type: "choice",
+        id: "reflexive-verbs-7",
+        text: "Il ___ appelle Paul.",
+        options: ["m'", "t'", "s'", "se"],
+        answer: 2,
+        translation: { TR: "Adı Paul.", EN: "His name is Paul." },
+      },
+      {
+        type: "choice",
+        id: "reflexive-verbs-8",
+        text: "Je vais ___ coucher.",
+        options: ["se", "me", "te", "nous"],
+        answer: 1,
+        translation: { TR: "Yatacağım.", EN: "I'm going to go to bed." },
+      },
+      {
+        type: "free",
+        id: "reflexive-verbs-9",
+        prompt: { TR: "Fransızca yaz: “Sen erken kalkıyorsun.”", EN: "Write in French: “You get up early.”" },
+        answers: ["Tu te lèves tôt.", "Vous vous levez tôt."],
+      },
+      {
+        type: "build",
+        id: "reflexive-verbs-10",
+        tokens: ["Elle", "se", "couche", "à", "dix", "heures"],
+        translation: { TR: "Saat onda yatıyor.", EN: "She goes to bed at ten." },
+      },
+      {
+        type: "choice",
+        id: "reflexive-verbs-11",
+        text: "Tu ne ___ lèves pas tôt.",
+        options: ["te", "t'", "me", "se"],
+        answer: 0,
+        translation: { TR: "Erken kalkmıyorsun.", EN: "You don't get up early." },
+      },
+      {
+        type: "free",
+        id: "reflexive-verbs-12",
+        prompt: { TR: "Fransızca yaz: “Yarın erken kalkmayacağım.”", EN: "Write in French: “I'm not going to get up early tomorrow.”" },
+        answers: ["Je ne vais pas me lever tôt demain.", "Demain, je ne vais pas me lever tôt.", "Demain je ne vais pas me lever tôt."],
+      },
     ],
   },
   {
@@ -1309,6 +2727,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Düzensiz olanlar:\nêtre: sois · soyons · soyez\navoir: aie · ayons · ayez\naller: va · allons · allez\nOlumsuz emir: Ne parle pas ! · Ne mangez pas !",
         EN: "Irregular ones:\nêtre: sois · soyons · soyez\navoir: aie · ayons · ayez\naller: va · allons · allez\nNegative: Ne parle pas ! · Ne mangez pas !",
       },
+      {
+        TR: "Dönüşlü fiilde olumlu emirde zamir fiilin arkasına geçer ve tire ile bağlanır; te, toi olur: Lève-toi ! Levons-nous ! Levez-vous ! Olumsuzda zamir yerinde kalır: Ne te lève pas ! Kibar olmak için s'il te plaît / s'il vous plaît ekle. Vas-y ! = Haydi, git!",
+        EN: "With reflexive verbs the positive imperative puts the pronoun after the verb with a hyphen, and te becomes toi: Lève-toi ! Levons-nous ! Levez-vous ! In the negative the pronoun stays in front: Ne te lève pas ! Add s'il te plaît / s'il vous plaît to be polite. Vas-y ! = Go on!",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Parles ! · Tu mange ! · Ne pas parle ! · Viens tu ! Doğru: Parle ! · Mange ! · Ne parle pas ! · Viens ! Emirde özne zamiri yoktur (Türkçedeki gibi); ve -er fiillerinde tu biçiminin sonundaki -s düşer.",
+        EN: "Typical mistakes. Wrong: Parles ! · Tu mange ! · Ne pas parle ! · Viens tu ! Right: Parle ! · Mange ! · Ne parle pas ! · Viens ! The imperative has no subject pronoun (like Turkish), and -er verbs drop the -s of the tu form.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: emir = şimdiki zaman − özne. Tekil -er fiillerinde son -s'yi at. Resmi ya da kibar konuşuyorsan vous biçimini kullan (Parlez !). Olumsuzda ne ... pas fiili sarar, tıpkı her zamanki gibi.",
+        EN: "How to remember: imperative = present tense minus the subject. Drop the final -s of singular -er verbs. When you are formal or polite use the vous form (Parlez !). In the negative ne ... pas wraps the verb as usual.",
+      },
     ],
     examples: [
       {
@@ -1322,6 +2752,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Soyez patients !",
         translation: { TR: "Sabırlı olun!", EN: "Be patient!" },
+      },
+      {
+        fr: "Prenez le bus !",
+        translation: { TR: "Otobüse binin!", EN: "Take the bus!" },
+      },
+      {
+        fr: "Lève-toi, il est sept heures !",
+        translation: { TR: "Kalk, saat yedi!", EN: "Get up, it is seven o'clock!" },
+      },
+      {
+        fr: "Ne mangez pas le gâteau !",
+        translation: { TR: "Pastayı yemeyin!", EN: "Don't eat the cake!" },
       },
     ],
     exercises: [
@@ -1358,6 +2800,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Buraya gel!”", EN: "Write in French: “Come here!”" },
         answers: ["Viens ici !", "Venez ici !"],
       },
+      {
+        type: "fill",
+        id: "imperative-6",
+        text: "___-toi, il est sept heures !",
+        answers: ["Lève"],
+        translation: { TR: "Kalk, saat yedi!", EN: "Get up, it is seven o'clock!" },
+      },
+      {
+        type: "choice",
+        id: "imperative-7",
+        text: "(parler, tu) ___ lentement !",
+        options: ["Parles", "Parle", "Parlez", "Parlons"],
+        answer: 1,
+        translation: { TR: "Yavaş konuş!", EN: "Speak slowly!" },
+      },
+      {
+        type: "choice",
+        id: "imperative-8",
+        text: "(finir, vous) ___ le travail !",
+        options: ["Finis", "Finissons", "Finissez", "Finez"],
+        answer: 2,
+        translation: { TR: "İşi bitirin!", EN: "Finish the work!" },
+      },
+      {
+        type: "free",
+        id: "imperative-9",
+        prompt: { TR: "Fransızca yaz: “Otobüse bin!”", EN: "Write in French: “Take the bus!”" },
+        answers: ["Prends le bus !", "Prenez le bus !"],
+      },
+      {
+        type: "build",
+        id: "imperative-10",
+        tokens: ["Écoutez", "bien", "le", "professeur"],
+        translation: { TR: "Öğretmeni iyi dinleyin.", EN: "Listen carefully to the teacher." },
+      },
+      {
+        type: "choice",
+        id: "imperative-11",
+        text: "(être, tu) ___ gentil !",
+        options: ["Sois", "Es", "Soyez", "Étais"],
+        answer: 0,
+        translation: { TR: "Nazik ol!", EN: "Be kind!" },
+      },
+      {
+        type: "free",
+        id: "imperative-12",
+        prompt: { TR: "Fransızca yaz: “Bu akşam sinemaya gidelim!”", EN: "Write in French: “Let's go to the cinema tonight!”" },
+        answers: ["Allons au cinéma ce soir !", "Ce soir, allons au cinéma !", "Ce soir allons au cinéma !"],
+      },
     ],
   },
   {
@@ -1377,6 +2868,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "il faut = gerekir, lazım. Arkasından mastar ya da isim gelir; özne her zaman il'dir:\nIl faut partir. (Gitmek lazım.)\nIl faut du temps. (Zaman lazım.)\nDikkat: Il ne faut pas fumer = sigara içilmemeli (yasak). “Gerek yok” anlamına gelmez.",
         EN: "il faut = it is necessary, one must. It takes an infinitive or a noun; the subject is always il:\nIl faut partir. (We have to go.)\nIl faut du temps. (It takes time.)\nCareful: Il ne faut pas fumer = you must not smoke. It does not mean “you don't have to”.",
       },
+      {
+        TR: "il y a zaman için de kullanılır: il y a deux ans = iki yıl önce. Konuşmada il düşebilir: Y a un problème. il faut kuralı: il ne faut pas = yapılmamalı, yasak. “Gerek yok” demek için il ne faut pas değil, pas besoin de kalıbı kullanılır (ileride göreceksin).",
+        EN: "il y a also expresses time: il y a deux ans = two years ago. In speech il can disappear: Y a un problème. A note on il faut: il ne faut pas = must not, forbidden. To say “there is no need” you do not use il ne faut pas but pas besoin de (you will see it later).",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Il a un parc ici. (o sahip) · Il y a pas de pain. (yazıda) · Je faut partir. · Il faut je partir. Doğru: Il y a un parc ici. · Il n'y a pas de pain. · Il faut partir. Türkçedeki “var / yok” iki farklı fiile bölünür: il y a / il n'y a pas. il faut'ta özne hep il'dir, fiil hiç çekilmez.",
+        EN: "Typical mistakes. Wrong: Il a un parc ici. (he owns one) · Il y a pas de pain. (in writing) · Je faut partir. · Il faut je partir. Right: Il y a un parc ici. · Il n'y a pas de pain. · Il faut partir. Turkish “var / yok” becomes il y a / il n'y a pas. In il faut the subject is always il and the verb never changes.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: il y a'yı tek bir kelime gibi ezberle, içindeki y “orada” demektir (“orada var”). Olumsuzda il n'y a pas de: ne ... pas ikisini sarar, artikel de olur. il faut + mastar ya da isim; fiil değişmez, çekimini düşünmene gerek yok.",
+        EN: "How to remember: learn il y a as one word; the y means “there” (“there is”). In the negative: il n'y a pas de; ne ... pas wraps both and the article becomes de. il faut + infinitive or noun; the verb never changes, so there is no conjugation to think about.",
+      },
     ],
     examples: [
       {
@@ -1390,6 +2893,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Il faut acheter du pain.",
         translation: { TR: "Ekmek almak lazım.", EN: "We need to buy bread." },
+      },
+      {
+        fr: "Qu'est-ce qu'il y a ?",
+        translation: { TR: "Ne var? / Ne oldu?", EN: "What is there? / What's wrong?" },
+      },
+      {
+        fr: "Il faut beaucoup de temps.",
+        translation: { TR: "Çok zaman lazım.", EN: "It takes a lot of time." },
+      },
+      {
+        fr: "Il ne faut pas parler ici.",
+        translation: { TR: "Burada konuşulmamalı.", EN: "You must not talk here." },
       },
     ],
     exercises: [
@@ -1426,6 +2941,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Ekmek yok.”", EN: "Write in French: “There is no bread.”" },
         answers: ["Il n'y a pas de pain."],
       },
+      {
+        type: "fill",
+        id: "il-y-a-il-faut-6",
+        text: "Il n'y a pas ___ café ici.",
+        answers: ["de"],
+        translation: { TR: "Burada kafe yok.", EN: "There is no café here." },
+      },
+      {
+        type: "choice",
+        id: "il-y-a-il-faut-7",
+        text: "___ un parc ici ?",
+        options: ["Est-ce qu'il a", "Est-ce que y a", "Est-ce qu'il y a", "Est-ce qu'ils y a"],
+        answer: 2,
+        translation: { TR: "Burada bir park var mı?", EN: "Is there a park here?" },
+      },
+      {
+        type: "choice",
+        id: "il-y-a-il-faut-8",
+        text: "Il ___ partir.",
+        options: ["fait", "faut", "faux", "faudra"],
+        answer: 1,
+        translation: { TR: "Gitmek lazım.", EN: "We have to leave." },
+      },
+      {
+        type: "free",
+        id: "il-y-a-il-faut-9",
+        prompt: { TR: "Fransızca yaz: “Burada bir park var.”", EN: "Write in French: “There is a park here.”" },
+        answers: ["Il y a un parc ici."],
+      },
+      {
+        type: "build",
+        id: "il-y-a-il-faut-10",
+        tokens: ["Il", "ne", "faut", "pas", "fumer", "ici"],
+        translation: { TR: "Burada sigara içilmez.", EN: "You must not smoke here." },
+      },
+      {
+        type: "choice",
+        id: "il-y-a-il-faut-11",
+        text: "Il n'y a pas ___ pain.",
+        options: ["du", "des", "un", "de"],
+        answer: 3,
+        translation: { TR: "Ekmek yok.", EN: "There is no bread." },
+      },
+      {
+        type: "free",
+        id: "il-y-a-il-faut-12",
+        prompt: { TR: "Fransızca yaz: “Yarın çok çalışmak lazım.”", EN: "Write in French: “We have to work a lot tomorrow.”" },
+        answers: ["Il faut beaucoup travailler demain.", "Demain, il faut beaucoup travailler.", "Demain il faut beaucoup travailler.", "Il faut travailler beaucoup demain."],
+      },
     ],
   },
   {
@@ -1445,6 +3009,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Vurgu ve kısa cevaplar için de kullanılır; Türkçede “Ben mi? Ben Türküm.” derken vurguladığın gibi:\nMoi, je suis turc.\nQui parle français ? — Moi !\nJ'aime le café. — Moi aussi ! (Ben de!)\nJe n'aime pas le thé. — Moi non plus. (Ben de sevmem.)",
         EN: "Also for emphasis and short answers:\nMoi, je suis turc.\nQui parle français ? — Moi !\nJ'aime le café. — Moi aussi ! (Me too!)\nJe n'aime pas le thé. — Moi non plus. (Me neither.)",
       },
+      {
+        TR: "Ek kullanımlar. c'est + vurgulu zamir: C'est moi ! (Benim!) · Ce sont eux. (Onlar.) İki özneyi birleştirirken: Lui et moi, nous habitons à Lyon. (O ve ben ...) Soru sormak için: Et toi ? (Ya sen?) -même ekiyle: moi-même (kendim). chez + vurgulu: chez moi = benim evimde.",
+        EN: "More uses. c'est + stressed pronoun: C'est moi ! (It's me!) · Ce sont eux. (It's them.) To join two subjects: Lui et moi, nous habitons à Lyon. (He and I ...) To ask back: Et toi ? (And you?) With -même: moi-même (myself). chez + stressed: chez moi = at my place.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Tu viens avec je ? · C'est je. · Avec il. · Moi non (Ben de değil diye). Doğru: Tu viens avec moi ? · C'est moi. · Avec lui. · Moi non plus. Özne zamirleri (je, tu, il) edattan sonra tek başına gelmez; vurgulu biçim gerekir.",
+        EN: "Typical mistakes. Wrong: Tu viens avec je ? · C'est je. · Avec il. · Moi non (meaning “me neither”). Right: Tu viens avec moi ? · C'est moi. · Avec lui. · Moi non plus. Subject pronouns (je, tu, il) cannot stand alone after a preposition; the stressed form is needed.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: yalnız dört biçim değişir: je → moi, tu → toi, il → lui, ils → eux. Geri kalanı aynı: elle, nous, vous, elles. Kural: edattan sonra ya da fiilsiz kalan cümlede (kısa cevaplarda) vurgulu zamir kullan. Benim için olumlu: moi aussi, olumsuz: moi non plus.",
+        EN: "How to remember: only four forms change: je → moi, tu → toi, il → lui, ils → eux. The rest stay the same: elle, nous, vous, elles. Rule: use the stressed pronoun after a preposition and in short answers without a verb. Positive: moi aussi; negative: moi non plus.",
+      },
     ],
     examples: [
       {
@@ -1458,6 +3034,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Ce cadeau est pour toi.",
         translation: { TR: "Bu hediye senin için.", EN: "This present is for you." },
+      },
+      {
+        fr: "C'est moi !",
+        translation: { TR: "Benim!", EN: "It's me!" },
+      },
+      {
+        fr: "Lui et moi, nous habitons à Lyon.",
+        translation: { TR: "O ve ben Lyon'da oturuyoruz.", EN: "He and I live in Lyon." },
+      },
+      {
+        fr: "Et toi, tu es turc ?",
+        translation: { TR: "Peki sen, Türk müsün?", EN: "And you, are you Turkish?" },
       },
     ],
     exercises: [
@@ -1501,6 +3089,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
           "Venez-vous avec moi ?",
         ],
       },
+      {
+        type: "fill",
+        id: "stressed-pronouns-6",
+        text: "Je parle avec ___. (o, kadın)",
+        answers: ["elle"],
+        translation: { TR: "Onunla konuşuyorum.", EN: "I'm talking with her." },
+      },
+      {
+        type: "choice",
+        id: "stressed-pronouns-7",
+        text: "Je viens avec ___.",
+        options: ["je", "me", "mon", "moi"],
+        answer: 3,
+        translation: { TR: "Seninle değil, benimle geliyorum.", EN: "I'm coming with me." },
+      },
+      {
+        type: "choice",
+        id: "stressed-pronouns-8",
+        text: "Ils habitent chez ___. (onlar, erkek)",
+        options: ["ils", "eux", "leur", "lui"],
+        answer: 1,
+        translation: { TR: "Onların evinde oturuyorlar.", EN: "They live at their place." },
+      },
+      {
+        type: "free",
+        id: "stressed-pronouns-9",
+        prompt: { TR: "Fransızca yaz: “Ben de Türküm.”", EN: "Write in French: “I am Turkish too.”" },
+        answers: ["Moi aussi, je suis turc.", "Moi aussi, je suis turque.", "Moi aussi je suis turc.", "Moi aussi je suis turque.", "Je suis turc aussi.", "Je suis turque aussi.", "Je suis aussi turc.", "Je suis aussi turque."],
+      },
+      {
+        type: "build",
+        id: "stressed-pronouns-10",
+        tokens: ["Il", "habite", "chez", "eux"],
+        translation: { TR: "O (erkek) onların evinde oturuyor.", EN: "He lives at their place." },
+      },
+      {
+        type: "choice",
+        id: "stressed-pronouns-11",
+        text: "Je n'aime pas le thé. — Moi ___.",
+        options: ["aussi", "non", "non plus", "pas"],
+        answer: 2,
+        translation: { TR: "Çayı sevmiyorum. — Ben de sevmem.", EN: "I don't like tea. — Me neither." },
+      },
+      {
+        type: "free",
+        id: "stressed-pronouns-12",
+        prompt: { TR: "Fransızca yaz: “Yarın onlarla (erkekler) Paris'e gideceğiz.”", EN: "Write in French: “Tomorrow we are going to go to Paris with them (men).”" },
+        answers: ["Nous allons aller à Paris avec eux demain.", "Demain, nous allons aller à Paris avec eux.", "Demain nous allons aller à Paris avec eux.", "Nous allons à Paris avec eux demain.", "On va aller à Paris avec eux demain.", "On va à Paris avec eux demain.", "Demain, on va à Paris avec eux.", "Demain on va à Paris avec eux.", "Demain, on va aller à Paris avec eux.", "Demain on va aller à Paris avec eux.", "Demain, nous allons à Paris avec eux.", "Demain nous allons à Paris avec eux.", "Avec eux, nous allons aller à Paris demain."],
+      },
     ],
   },
   {
@@ -1524,6 +3161,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Olumsuzda ne ... pas yalnız avoir'ı sarar: Je n'ai pas mangé.",
         EN: "In the negative, ne ... pas wraps only avoir: Je n'ai pas mangé.",
       },
+      {
+        TR: "Zaman ifadeleri: hier (dün), hier soir (dün akşam), la semaine dernière (geçen hafta), déjà (zaten, daha önce). “Henüz değil” için ne ... pas encore: Je n'ai pas encore fini. “Hiç” için ne ... jamais: Je n'ai jamais mangé ça. Avoir ile ortaç özneye uymaz: Elle a mangé, Ils ont mangé, ortaç aynı kalır.",
+        EN: "Time words: hier (yesterday), hier soir (last night), la semaine dernière (last week), déjà (already, before). “Not yet” is ne ... pas encore: Je n'ai pas encore fini. “Never” is ne ... jamais: Je n'ai jamais mangé ça. With avoir the participle does not agree with the subject: Elle a mangé, Ils ont mangé; the participle stays the same.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Je mange hier. · J'ai manger. · J'ai prendu. · J'ai faisé. Doğru: J'ai mangé hier. · J'ai mangé. · J'ai pris. · J'ai fait. Düzenli kalıbı düzensiz fiile uygulamak (prendu, faisé) çok yaygındır. -er fiillerinde ortaç mastarla aynı okunur («manjé»): yazarken -é mi -er mi diye dur ve düşün: “yedim” = ortaç = -é.",
+        EN: "Typical mistakes. Wrong: Je mange hier. · J'ai manger. · J'ai prendu. · J'ai faisé. Right: J'ai mangé hier. · J'ai mangé. · J'ai pris. · J'ai fait. Applying the regular pattern to irregular verbs (prendu, faisé) is very common. For -er verbs the participle sounds like the infinitive (“man-jay”): when writing, stop and ask yourself: is it -é or -er? “I ate” = participle = -é.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: formül avoir + ortaç. Ortaçları gruplara böl: -er → -é, -ir → -i, -re → -u ve kısa bir ezber listesi (fait, pris, mis, vu, eu, été). Kart tut: “prendre → pris”. Her gün “Hier, j'ai ...” ile üç cümle yaz.",
+        EN: "How to remember: formula avoir + participle. Sort participles into groups: -er → -é, -ir → -i, -re → -u, plus a short memorised list (fait, pris, mis, vu, eu, été). Keep flash cards: “prendre → pris”. Write three sentences a day starting with “Hier, j'ai ...”.",
+      },
     ],
     examples: [
       {
@@ -1537,6 +3186,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Elle n'a pas compris.",
         translation: { TR: "O (kadın) anlamadı.", EN: "She didn't understand." },
+      },
+      {
+        fr: "Hier soir, nous avons regardé un film.",
+        translation: { TR: "Dün akşam bir film izledik.", EN: "Last night we watched a film." },
+      },
+      {
+        fr: "Tu as déjà mangé ?",
+        translation: { TR: "Yemek yedin mi?", EN: "Have you already eaten?" },
+      },
+      {
+        fr: "Je n'ai pas encore fini.",
+        translation: { TR: "Henüz bitirmedim.", EN: "I haven't finished yet." },
       },
     ],
     exercises: [
@@ -1573,6 +3234,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         prompt: { TR: "Fransızca yaz: “Dün Fransızca konuştum.”", EN: "Write in French: “Yesterday I spoke French.”" },
         answers: ["Hier, j'ai parlé français.", "Hier j'ai parlé français.", "J'ai parlé français hier."],
       },
+      {
+        type: "fill",
+        id: "passe-compose-avoir-6",
+        text: "J'ai ___ mon travail. (finir)",
+        answers: ["fini"],
+        translation: { TR: "İşimi bitirdim.", EN: "I finished my work." },
+      },
+      {
+        type: "choice",
+        id: "passe-compose-avoir-7",
+        text: "Hier, j'ai ___ français.",
+        options: ["parler", "parlé", "parle", "parlée"],
+        answer: 1,
+        translation: { TR: "Dün Fransızca konuştum.", EN: "Yesterday I spoke French." },
+      },
+      {
+        type: "choice",
+        id: "passe-compose-avoir-8",
+        text: "Nous avons ___ un film.",
+        options: ["regarder", "regarde", "regardons", "regardé"],
+        answer: 3,
+        translation: { TR: "Bir film izledik.", EN: "We watched a film." },
+      },
+      {
+        type: "free",
+        id: "passe-compose-avoir-9",
+        prompt: { TR: "Fransızca yaz: “Dün bir film izledim.”", EN: "Write in French: “I watched a film yesterday.”" },
+        answers: ["Hier, j'ai regardé un film.", "Hier j'ai regardé un film.", "J'ai regardé un film hier."],
+      },
+      {
+        type: "build",
+        id: "passe-compose-avoir-10",
+        tokens: ["Elle", "a", "pris", "le", "bus"],
+        translation: { TR: "Otobüse bindi.", EN: "She took the bus." },
+      },
+      {
+        type: "choice",
+        id: "passe-compose-avoir-11",
+        text: "Elle a ___ un manteau. (mettre)",
+        options: ["mettu", "mis", "mit", "mise"],
+        answer: 1,
+        translation: { TR: "Mont giydi.", EN: "She put on a coat." },
+      },
+      {
+        type: "free",
+        id: "passe-compose-avoir-12",
+        prompt: { TR: "Fransızca yaz: “Dün ekmek almadım.”", EN: "Write in French: “I didn't buy bread yesterday.”" },
+        answers: ["Hier, je n'ai pas acheté de pain.", "Hier je n'ai pas acheté de pain.", "Je n'ai pas acheté de pain hier."],
+      },
     ],
   },
   {
@@ -1592,6 +3302,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Düzensiz ortaçlar: venir → venu · naître → né · mourir → mort.\nDönüşlü fiiller de hep être alır: Je me suis levé(e).",
         EN: "Irregular participles: venir → venu · naître → né · mourir → mort.\nReflexive verbs always take être too: Je me suis levé(e).",
       },
+      {
+        TR: "Aynı fiil bazen être, bazen avoir alır. Nesnesi (neyi?) varsa avoir, yoksa être: Je suis sorti (çıktım) ↔ J'ai sorti la voiture (arabayı çıkardım). Aynısı monter, descendre, rentrer, retourner için de geçerli: Elle est montée / Elle a monté les valises. vous için uyum kişiye bağlıdır: Vous êtes allé (bir erkek), allée (bir kadın), allés (birkaç kişi).",
+        EN: "The same verb sometimes takes être, sometimes avoir. With an object (what?) use avoir, without one use être: Je suis sorti (I went out) ↔ J'ai sorti la voiture (I took the car out). The same goes for monter, descendre, rentrer, retourner: Elle est montée / Elle a monté les valises. With vous the agreement depends on who you address: Vous êtes allé (one man), allée (one woman), allés (several people).",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: J'ai allé à Paris. · Je suis mangé. · Elle est allé. · Ils sont parti. Doğru: Je suis allé à Paris. · J'ai mangé. · Elle est allée. · Ils sont partis. İki ayrı hata var: yardımcı fiili yanlış seçmek ve ortaç uyumunu unutmak. Uyum duyulmaz ama yazılır; yazıda puan kaybettirir.",
+        EN: "Typical mistakes. Wrong: J'ai allé à Paris. · Je suis mangé. · Elle est allé. · Ils sont parti. Right: Je suis allé à Paris. · J'ai mangé. · Elle est allée. · Ils sont partis. Two separate errors: choosing the wrong auxiliary and forgetting agreement. Agreement is not heard but it is written, so it costs you in writing.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: hareket mantığı. Gitmek, gelmek, çıkmak, girmek, düşmek, kalmak, doğmak, ölmek: bu fiiller être alır; dönüşlüler de. Yazarken kendine sor: özne dişil mi? Çoğul mu? Öyleyse ortaca -e, -s ya da -es ekle.",
+        EN: "How to remember: think of motion. Going, coming, leaving, entering, falling, staying, being born, dying: these take être, and so do reflexive verbs. When writing ask yourself: is the subject feminine? Plural? Then add -e, -s or -es to the participle.",
+      },
     ],
     examples: [
       {
@@ -1605,6 +3327,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Je suis né à Istanbul.",
         translation: { TR: "İstanbul'da doğdum.", EN: "I was born in Istanbul." },
+      },
+      {
+        fr: "Elles sont parties hier soir.",
+        translation: { TR: "Dün akşam gittiler (kadınlar).", EN: "They (women) left last night." },
+      },
+      {
+        fr: "Je suis tombée dans la rue.",
+        translation: { TR: "Sokakta düştüm (kadın).", EN: "I fell in the street (female speaker)." },
+      },
+      {
+        fr: "Marie et Paul sont arrivés ce matin.",
+        translation: { TR: "Marie ile Paul bu sabah geldi.", EN: "Marie and Paul arrived this morning." },
       },
     ],
     exercises: [
@@ -1648,6 +3382,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
           "Hier soir je suis sortie.",
         ],
       },
+      {
+        type: "fill",
+        id: "passe-compose-etre-6",
+        text: "Il est ___ à Paris. (arriver)",
+        answers: ["arrivé"],
+        translation: { TR: "Paris'e vardı.", EN: "He arrived in Paris." },
+      },
+      {
+        type: "choice",
+        id: "passe-compose-etre-7",
+        text: "Je ___ allé à Lyon.",
+        options: ["ai", "suis", "es", "est"],
+        answer: 1,
+        translation: { TR: "Lyon'a gittim.", EN: "I went to Lyon." },
+      },
+      {
+        type: "choice",
+        id: "passe-compose-etre-8",
+        text: "Elles sont ___ hier soir.",
+        options: ["partis", "parti", "partie", "parties"],
+        answer: 3,
+        translation: { TR: "Dün akşam gittiler (kadınlar).", EN: "They (women) left last night." },
+      },
+      {
+        type: "free",
+        id: "passe-compose-etre-9",
+        prompt: { TR: "Fransızca yaz: “Dün Paris'e gittim.”", EN: "Write in French: “I went to Paris yesterday.”" },
+        answers: ["Hier, je suis allé à Paris.", "Hier, je suis allée à Paris.", "Hier je suis allé à Paris.", "Hier je suis allée à Paris.", "Je suis allé à Paris hier.", "Je suis allée à Paris hier."],
+      },
+      {
+        type: "build",
+        id: "passe-compose-etre-10",
+        tokens: ["Elle", "est", "restée", "à", "la", "maison"],
+        translation: { TR: "Evde kaldı.", EN: "She stayed at home." },
+      },
+      {
+        type: "choice",
+        id: "passe-compose-etre-11",
+        text: "Nous ___ restés à la maison.",
+        options: ["avons", "êtes", "sommes", "ont"],
+        answer: 2,
+        translation: { TR: "Evde kaldık.", EN: "We stayed at home." },
+      },
+      {
+        type: "free",
+        id: "passe-compose-etre-12",
+        prompt: { TR: "Fransızca yaz: “Dün akşam evde kalmadım.”", EN: "Write in French: “I didn't stay at home last night.”" },
+        answers: ["Hier soir, je ne suis pas resté à la maison.", "Hier soir, je ne suis pas restée à la maison.", "Hier soir je ne suis pas resté à la maison.", "Hier soir je ne suis pas restée à la maison.", "Je ne suis pas resté à la maison hier soir.", "Je ne suis pas restée à la maison hier soir.", "Hier soir, je ne suis pas resté chez moi.", "Hier soir, je ne suis pas restée chez moi.", "Hier soir je ne suis pas resté chez moi.", "Hier soir je ne suis pas restée chez moi.", "Je ne suis pas resté chez moi hier soir.", "Je ne suis pas restée chez moi hier soir."],
+      },
     ],
   },
   {
@@ -1667,6 +3450,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         TR: "Kısa kural: un, une, mon, le … varsa c'est; artikel yoksa il / elle est.\nBir durumu ya da şeyi genel olarak yorumlarken c'est + eril sıfat: Paris ? C'est beau ! · C'est difficile.",
         EN: "Quick rule: un, une, mon, le … → c'est; no article → il / elle est.\nTo comment on a situation or a thing in general: c'est + masculine adjective: Paris ? C'est beau ! · C'est difficile.",
       },
+      {
+        TR: "Meslek sıfatla genişlerse artikel gelir ve c'est kullanılır: Il est médecin → C'est un excellent médecin. Saat ve hava için hep il: Il est trois heures. Il fait beau. Tarih için c'est: C'est le cinq mai. Genel yorumda c'est + eril sıfat değişmez: C'est bon ! C'est facile ! Vurgulu zamirle: C'est moi. C'est lui.",
+        EN: "If a profession gets an adjective it takes an article and c'est: Il est médecin → C'est un excellent médecin. Time and weather always use il: Il est trois heures. Il fait beau. For dates use c'est: C'est le cinq mai. In general comments c'est + masculine adjective never changes: C'est bon ! C'est facile ! With stressed pronouns: C'est moi. C'est lui.",
+      },
+      {
+        TR: "Tipik hatalar. Yanlış: Il est un médecin. · C'est médecin. · Elle est ma amie. · C'est grand. (bir kişi için) Doğru: C'est un médecin. · Il est médecin. · C'est mon amie. · Il est grand. Türkçede “o doktor” ile “o bir doktor” neredeyse aynı; Fransızcada artikel varsa c'est, yoksa il est.",
+        EN: "Typical mistakes. Wrong: Il est un médecin. · C'est médecin. · Elle est ma amie. · C'est grand. (about a person) Right: C'est un médecin. · Il est médecin. · C'est mon amie. · Il est grand. In Turkish “o doktor” and “o bir doktor” are almost the same; in French with an article use c'est, without one use il est.",
+      },
+      {
+        TR: "Nasıl hatırlarsın: “Kim bu?” sorusunun cevabı c'est (artikelli, özel isimli); “Nasıl biri / ne iş yapıyor?” sorusunun cevabı il / elle est (çıplak sıfat, meslek, milliyet). Bir şey hakkında genel bir yargı veriyorsan c'est + eril sıfat.",
+        EN: "How to remember: the answer to “Who is this?” is c'est (article, proper name); the answer to “What is he like / what does he do?” is il / elle est (bare adjective, profession, nationality). For a general judgement about something use c'est + masculine adjective.",
+      },
     ],
     examples: [
       {
@@ -1680,6 +3475,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Paris ? C'est magnifique !",
         translation: { TR: "Paris mi? Muhteşem!", EN: "Paris? It's wonderful!" },
+      },
+      {
+        fr: "Mon voisin ? C'est un ingénieur.",
+        translation: { TR: "Komşum mu? Mühendis.", EN: "My neighbour? He is an engineer." },
+      },
+      {
+        fr: "Marie ? Elle est française.",
+        translation: { TR: "Marie mi? Fransız.", EN: "Marie? She is French." },
+      },
+      {
+        fr: "Apprendre le français, c'est difficile.",
+        translation: { TR: "Fransızca öğrenmek zor.", EN: "Learning French is difficult." },
       },
     ],
     exercises: [
@@ -1715,6 +3522,55 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         id: "c-est-il-est-5",
         prompt: { TR: "Fransızca yaz: “O (erkek) öğretmen.”", EN: "Write in French: “He is a teacher.”" },
         answers: ["Il est professeur.", "Il est prof.", "C'est un professeur.", "C'est un prof."],
+      },
+      {
+        type: "fill",
+        id: "c-est-il-est-6",
+        text: "Marie ? ___ une amie.",
+        answers: ["C'est"],
+        translation: { TR: "Marie mi? Bir arkadaşım.", EN: "Marie? She is a friend." },
+      },
+      {
+        type: "choice",
+        id: "c-est-il-est-7",
+        text: "Paul ? ___ professeur.",
+        options: ["C'est", "Il est", "Ce sont", "Elle est"],
+        answer: 1,
+        translation: { TR: "Paul mü? Öğretmen.", EN: "Paul? He is a teacher." },
+      },
+      {
+        type: "choice",
+        id: "c-est-il-est-8",
+        text: "___ ma sœur.",
+        options: ["Elle est", "Il est", "C'est", "Ils sont"],
+        answer: 2,
+        translation: { TR: "Bu benim kız kardeşim.", EN: "This is my sister." },
+      },
+      {
+        type: "free",
+        id: "c-est-il-est-9",
+        prompt: { TR: "Fransızca yaz: “Annem öğretmen.”", EN: "Write in French: “My mother is a teacher.”" },
+        answers: ["Ma mère est professeur.", "Ma mère est professeure.", "Ma mère est prof.", "Ma mère, elle est professeur.", "Ma mère, elle est professeure.", "Ma mère, elle est prof."],
+      },
+      {
+        type: "build",
+        id: "c-est-il-est-10",
+        tokens: ["C'est", "un", "très", "bon", "restaurant"],
+        translation: { TR: "Çok iyi bir restoran.", EN: "It's a very good restaurant." },
+      },
+      {
+        type: "choice",
+        id: "c-est-il-est-11",
+        text: "Les Dupont ? ___ turcs.",
+        options: ["C'est", "Ils sont", "Ce sont", "Il est"],
+        answer: 1,
+        translation: { TR: "Dupont'lar mı? Türk'ler.", EN: "The Duponts? They are Turkish." },
+      },
+      {
+        type: "free",
+        id: "c-est-il-est-12",
+        prompt: { TR: "Fransızca yaz: “Kız kardeşim doktor ve çok nazik.”", EN: "Write in French: “My sister is a doctor and she is very kind.”" },
+        answers: ["Ma sœur est médecin et elle est très gentille.", "Ma sœur est médecin. Elle est très gentille.", "Ma sœur est médecin, elle est très gentille.", "Ma sœur est docteur et elle est très gentille.", "Ma sœur est docteur. Elle est très gentille."],
       },
     ],
   },

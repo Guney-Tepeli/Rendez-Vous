@@ -59,7 +59,7 @@ export const en: Record<TranslationKey, string> = {
   "words.none": "No matches.",
 
   "dash.today": "Today's session",
-  "dash.summary": "{done} / 4 modules · {minutes} / {planned} min",
+  "dash.summary": "{done} / {total} modules · {minutes} / {planned} min",
   "dash.start": "Start",
   "dash.continue": "Continue",
   "dash.reopen": "Open again",
@@ -117,4 +117,23 @@ export const en: Record<TranslationKey, string> = {
   "output.override.cancel": "Cancel",
   "output.override.note": "This answer will count as correct for this question from now on.",
   "output.accepted": "Accepted.",
+
+  "module.reading": "Reading",
+  "output.choice": "Pick the right option",
+  "reading.questions": "Comprehension questions",
+  "reading.showTranslation": "Show translation",
+  "reading.hideTranslation": "Hide translation",
+  "reading.listen": "Listen to the paragraph",
+  "reading.missing": "The reading text for this lesson has not been added yet.",
+  "reading.words": "{n} words",
+
+  "summary.title": "Day summary",
+  "summary.open": "Day summaries",
+  "summary.empty": "No summaries yet: they appear here after a day of study.",
+  "summary.pickDay": "Pick a day",
+  "summary.pdf": "Download as PDF",
+  "summary.word": "Download as Word",
+  "summary.stats": "{minutes} min studied · modules completed: {modules}",
+  "summary.newWords": "New words",
+  "summary.reviewedWords": "Words reviewed",
 };

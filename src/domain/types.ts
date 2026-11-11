@@ -197,7 +197,54 @@ export interface FreeExercise {
   answers: string[];
 }
 
-export type Exercise = FillExercise | BuildExercise | FreeExercise;
+/**
+ * Pick the right option. `text` may contain one "___" (the gap the option
+ * fills) or be a whole question. `answer` is the index of the right option.
+ */
+export interface ChoiceExercise {
+  type: "choice";
+  id: string;
+  text: string;
+  options: string[];
+  answer: number;
+  translation: Localized;
+}
+
+export type Exercise = FillExercise | BuildExercise | FreeExercise | ChoiceExercise;
+
+// ---------------------------------------------------------------------------
+// Daily reading (content)
+// ---------------------------------------------------------------------------
+
+/** One paragraph of a reading text, with its translations. */
+export interface ReadingParagraph {
+  fr: string;
+  TR: string;
+  EN: string;
+}
+
+/** A comprehension question about the text, in French, with translations. */
+export interface ReadingQuestion {
+  question: { fr: string; TR: string; EN: string };
+  /** Options in French. */
+  options: string[];
+  answer: number;
+}
+
+/**
+ * About 500 words of French, written for the level of one grammar lesson
+ * and using that lesson's grammar. One text per lesson; read on the day the
+ * lesson is studied.
+ */
+export interface ReadingText {
+  id: string;
+  /** The GrammarLesson this text goes with. */
+  lessonId: string;
+  level: CefrLevel;
+  title: Localized;
+  paragraphs: ReadingParagraph[];
+  questions: ReadingQuestion[];
+}
 
 // ---------------------------------------------------------------------------
 // Phonetics and self-talk (content)
@@ -242,7 +289,7 @@ export interface SelfTalkPrompt {
 // Daily session (progress)
 // ---------------------------------------------------------------------------
 
-export type ModuleId = "recall" | "grammar" | "output" | "phonetics";
+export type ModuleId = "recall" | "grammar" | "output" | "reading" | "phonetics";
 
 export interface ModuleSpec {
   id: ModuleId;
@@ -250,11 +297,12 @@ export interface ModuleSpec {
   baseMinutes: number;
 }
 
-/** The 40-minute day: 10 + 15 + 10 + 5. Order is the order of play. */
+/** The 60-minute day: 10 + 20 + 15 + 10 + 5. Order is the order of play. */
 export const DAILY_MODULES: readonly ModuleSpec[] = [
   { id: "recall", baseMinutes: 10 },
-  { id: "grammar", baseMinutes: 15 },
-  { id: "output", baseMinutes: 10 },
+  { id: "grammar", baseMinutes: 20 },
+  { id: "output", baseMinutes: 15 },
+  { id: "reading", baseMinutes: 10 },
   { id: "phonetics", baseMinutes: 5 },
 ];
 
@@ -279,6 +327,7 @@ export interface DailySessionState {
    */
   lessonId: string;
   phoneticsId: string;
+  readingId: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -293,8 +342,16 @@ export interface DayRecord {
   reviews: number;
   /** Words studied for the first time. Also what the daily limit counts. */
   newWords: number;
-  /** How many of the four modules were finished. */
+  /** How many of the day's modules were finished. */
   modulesCompleted: number;
+  /** Words studied for the first time that day, in order. */
+  newWordIds: string[];
+  /** Words reviewed that day (studied before), each once. */
+  reviewedWordIds: string[];
+  /** Content of the day's session, for the day summary. */
+  lessonId?: string;
+  readingId?: string;
+  phoneticsId?: string;
 }
 
 /** Keyed by local date, "YYYY-MM-DD". */

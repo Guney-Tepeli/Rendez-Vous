@@ -60,7 +60,7 @@ export const tr = {
   "words.none": "Sonuç yok.",
 
   "dash.today": "Bugünkü çalışma",
-  "dash.summary": "{done} / 4 modül · {minutes} / {planned} dk",
+  "dash.summary": "{done} / {total} modül · {minutes} / {planned} dk",
   "dash.start": "Başla",
   "dash.continue": "Devam et",
   "dash.reopen": "Yeniden aç",
@@ -118,6 +118,25 @@ export const tr = {
   "output.override.cancel": "Vazgeç",
   "output.override.note": "Bu cevap bu soru için bundan sonra doğru sayılacak.",
   "output.accepted": "Kabul edildi.",
+
+  "module.reading": "Okuma",
+  "output.choice": "Doğru seçeneği seç",
+  "reading.questions": "Anlama soruları",
+  "reading.showTranslation": "Çeviriyi göster",
+  "reading.hideTranslation": "Çeviriyi gizle",
+  "reading.listen": "Paragrafı dinle",
+  "reading.missing": "Bu dersin okuma metni henüz eklenmedi.",
+  "reading.words": "{n} kelime",
+
+  "summary.title": "Günlük özet",
+  "summary.open": "Günlük özetler",
+  "summary.empty": "Henüz özet yok: bir gün çalışınca burada görünür.",
+  "summary.pickDay": "Gün seç",
+  "summary.pdf": "PDF olarak indir",
+  "summary.word": "Word olarak indir",
+  "summary.stats": "{minutes} dk çalışma · {modules} modül tamamlandı",
+  "summary.newWords": "Yeni kelimeler",
+  "summary.reviewedWords": "Tekrar edilen kelimeler",
 } as const;
 
 export type TranslationKey = keyof typeof tr;

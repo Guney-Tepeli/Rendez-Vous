@@ -54,9 +54,9 @@ function text(entry: Record<string, unknown>, key: string, where: string): strin
   return value;
 }
 
-function triples(entry: Record<string, unknown>, key: string, where: string): [string, string, string][] {
+function triples(entry: Record<string, unknown>, key: string, where: string, minimum: number): [string, string, string][] {
   const value = entry[key];
-  if (!Array.isArray(value) || value.length < 2) throw new VocabFormatError(`${where}: "${key}" needs at least 2 items`);
+  if (!Array.isArray(value) || value.length < minimum) throw new VocabFormatError(`${where}: "${key}" needs at least ${minimum} items`);
   return value.map((item, index) => {
     if (!Array.isArray(item) || item.length !== 3 || item.some((part) => typeof part !== "string" || part.trim() === "")) {
       throw new VocabFormatError(`${where}: ${key}[${index}] must be [French, Turkish, English], all non-empty`);
@@ -94,8 +94,8 @@ export function parseEntry(raw: unknown, file: string): VocabularyItem {
     level: level as CefrLevel,
     ipa,
     meaning: { TR: text(raw, "tr", where), EN: text(raw, "en", where) },
-    chunks: triples(raw, "chunks", where).map(([fr, TR, EN]): Chunk => ({ fr, meaning: { TR, EN } })),
-    examples: triples(raw, "examples", where).map(([fr, TR, EN]): ExampleSentence => ({ fr, translation: { TR, EN } })),
+    chunks: triples(raw, "chunks", where, 2).map(([fr, TR, EN]): Chunk => ({ fr, meaning: { TR, EN } })),
+    examples: triples(raw, "examples", where, 3).map(([fr, TR, EN]): ExampleSentence => ({ fr, translation: { TR, EN } })),
   };
 
   switch (kind) {

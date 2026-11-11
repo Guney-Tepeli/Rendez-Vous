@@ -104,7 +104,7 @@ describe("enriched items", () => {
         expect(text.EN.trim(), item.id).not.toBe("");
       }
       expect(item.chunks.length, item.id).toBeGreaterThanOrEqual(2);
-      expect(item.examples.length, item.id).toBeGreaterThanOrEqual(2);
+      expect(item.examples.length, item.id).toBeGreaterThanOrEqual(3);
       expect(item.ipa, item.id).not.toMatch(/[/[\]]/);
     }
   });
@@ -121,7 +121,7 @@ describe("vocabulary file format", () => {
   const good = {
     id: "pomme", level: "A1", pos: "noun", gender: "f", plural: "pommes", ipa: "pɔm", tr: "elma", en: "apple",
     chunks: [["une pomme de terre", "patates", "a potato"], ["une tarte aux pommes", "elmalı turta", "an apple pie"]],
-    examples: [["Je mange une pomme.", "Bir elma yiyorum.", "I'm eating an apple."], ["Les pommes sont rouges.", "Elmalar kırmızı.", "The apples are red."]],
+    examples: [["Je mange une pomme.", "Bir elma yiyorum.", "I'm eating an apple."], ["Les pommes sont rouges.", "Elmalar kırmızı.", "The apples are red."], ["Tu veux une pomme ?", "Elma ister misin?", "Do you want an apple?"]],
   };
 
   it("accepts a pronominal verb, whose nous form starts with the reflexive nous", () => {
@@ -143,7 +143,7 @@ describe("vocabulary file format", () => {
     ["a missing gender", { ...good, gender: undefined }],
     ["a level outside the scale", { ...good, level: "C1" }],
     ["IPA in slashes", { ...good, ipa: "/pɔm/" }],
-    ["only one example", { ...good, examples: [good.examples[0]] }],
+    ["only two examples", { ...good, examples: good.examples.slice(0, 2) }],
     ["a chunk without English", { ...good, chunks: [["une pomme", "bir elma"], good.chunks[1]] }],
     ["a verb with pronouns in the table", { ...good, pos: "verb", gender: undefined, plural: undefined, group: 1, present: ["je mange", "tu manges", "il mange", "nous mangeons", "vous mangez", "ils mangent"] }],
   ])("rejects %s", (_label, entry) => {

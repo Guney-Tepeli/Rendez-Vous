@@ -386,3 +386,37 @@ kbd {
   font-size: 1.1rem;
 }
 .accent-key:hover { border-color: var(--accent); }
+
+/* ---- Reading and choices ---- */
+.reading { justify-items: stretch; }
+.reading-paragraph { display: grid; gap: 4px; }
+.reading-text { font-size: 1.15rem; line-height: 1.7; }
+.reading-tools { display: flex; align-items: center; gap: 8px; }
+.questions { margin: 0; padding-left: 1.2em; display: grid; gap: 16px; width: 100%; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.choice { font-weight: 500; text-align: left; }
+.choice-picked { border-color: var(--accent); }
+.choice-right { border-color: var(--good); color: var(--good); }
+.choice-wrong { border-color: var(--again); color: var(--again); }
+
+/* ---- Examples on the card back ---- */
+.card-examples { width: 100%; display: grid; gap: 8px; text-align: left; }
+.card-examples li { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 6px; }
+.card-examples .fr { font-size: 1rem; }
+.card-examples .gloss { grid-column: 1 / -1; font-size: 0.85rem; }
+
+/* ---- Day summary ---- */
+.summary-controls { display: grid; gap: 10px; }
+.summary-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.summary { justify-items: stretch; }
+.summary section { display: grid; gap: 6px; }
+.summary-list { display: grid; gap: 8px; padding-left: 1.1em; list-style: disc; }
+
+@media print {
+  :root { color-scheme: light; --bg: #fff; --surface: #fff; --text: #000; --muted: #444; --line: #bbb; }
+  body { background: #fff; }
+  .no-print, .notice { display: none !important; }
+  .page { max-width: none; padding: 0; }
+  .panel { border: 0; padding: 0; }
+  .summary section { break-inside: avoid-page; }
+}

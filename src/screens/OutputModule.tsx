@@ -17,7 +17,7 @@ import { useRef, useState, type FormEvent } from "react";
 import { AccentBar } from "../components/AccentBar";
 import { SpeakButton } from "../components/SpeakButton";
 import { checkAnswer, fillIn, normalizeAnswer, shuffledOrder, type Verdict } from "../domain/answers";
-import type { BuildExercise, Exercise, FillExercise, FreeExercise, GrammarLesson } from "../domain/types";
+import type { BuildExercise, ChoiceExercise, Exercise, FillExercise, FreeExercise, GrammarLesson } from "../domain/types";
 import { useT } from "../i18n/useT";
 import { useAppDispatch, useAppState } from "../state/store";
 
@@ -30,12 +30,19 @@ function solution(exercise: Exercise): string {
       return exercise.tokens.join(" ");
     case "free":
       return exercise.answers[0] ?? "";
+    case "choice": {
+      const right = exercise.options[exercise.answer] ?? "";
+      return exercise.text.includes("___") ? fillIn(exercise.text, right) : right;
+    }
   }
 }
 
 /** The learner's answer as a whole sentence, for showing next to the solution. */
 function asSentence(exercise: Exercise, given: string): string {
-  return exercise.type === "fill" ? fillIn(exercise.text, given) : given;
+  if (exercise.type === "fill" || (exercise.type === "choice" && exercise.text.includes("___"))) {
+    return fillIn(exercise.text, given);
+  }
+  return given;
 }
 
 /** Check an answer against the built-in answers plus any the learner accepted earlier. */
@@ -49,6 +56,9 @@ function judge(exercise: Exercise, given: string, accepted: readonly string[]): 
       const options = [exercise.tokens.join(" "), ...accepted].map(normalizeAnswer);
       return options.includes(normalizeAnswer(given)) ? "correct" : "wrong";
     }
+    case "choice":
+      // A choice cannot be "almost right": it is the option or it is not.
+      return given === exercise.options[exercise.answer] ? "correct" : "wrong";
   }
 }
 
@@ -111,12 +121,20 @@ export function OutputModule({ lesson, onComplete }: { lesson: GrammarLesson; on
       <section className="panel exercise">
         <h3>{t(`output.${exercise.type}`)}</h3>
         <p className="prompt">{l(exercise.type === "free" ? exercise.prompt : exercise.translation)}</p>
+        {exercise.type === "choice" && (
+          <p className="fr sentence" lang="fr">
+            {exercise.text}
+          </p>
+        )}
 
         {/* `key` gives every exercise a fresh component, so typed text and
             placed tiles from the previous one cannot leak into the next. */}
         {exercise.type === "fill" && <FillInput key={exercise.id} exercise={exercise} locked={locked} onAnswer={answer} />}
         {exercise.type === "build" && <BuildInput key={exercise.id} exercise={exercise} locked={locked} onAnswer={answer} />}
         {exercise.type === "free" && <FreeInput key={exercise.id} exercise={exercise} locked={locked} onAnswer={answer} />}
+        {exercise.type === "choice" && (
+          <ChoiceInput key={exercise.id} exercise={exercise} locked={locked} onAnswer={answer} picked={outcome?.given} />
+        )}
 
         {outcome !== null && verdict !== undefined && (
           <div className={`feedback feedback-${verdict === "accepted" ? "correct" : verdict}`} role="status">
@@ -128,7 +146,7 @@ export function OutputModule({ lesson, onComplete }: { lesson: GrammarLesson; on
               <SpeakButton text={solution(exercise)} />
             </p>
 
-            {verdict === "wrong" && !confirming && (
+            {verdict === "wrong" && exercise.type !== "choice" && !confirming && (
               <button type="button" className="link" onClick={() => setConfirming(true)}>
                 {t("output.override")}
               </button>
@@ -300,6 +318,32 @@ function BuildInput({ exercise, locked, onAnswer }: InputProps<BuildExercise>) {
           {t("module.check")}
         </button>
       )}
+    </div>
+  );
+}
+
+/** Options as buttons. After answering, the picked one stays marked. */
+function ChoiceInput({
+  exercise,
+  locked,
+  onAnswer,
+  picked,
+}: InputProps<ChoiceExercise> & { picked: string | undefined }) {
+  return (
+    <div className="choices" role="group">
+      {exercise.options.map((option) => (
+        <button
+          key={option}
+          type="button"
+          className={`btn choice fr${picked === option ? " choice-picked" : ""}`}
+          lang="fr"
+          disabled={locked}
+          aria-pressed={picked === option}
+          onClick={() => onAnswer(option)}
+        >
+          {option}
+        </button>
+      ))}
     </div>
   );
 }

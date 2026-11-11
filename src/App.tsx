@@ -12,12 +12,15 @@ import { useState } from "react";
 import { ModuleFrame } from "./components/ModuleFrame";
 import { findLesson } from "./data/lessons";
 import { findPhoneticsCard } from "./data/phonetics";
+import { findReading } from "./data/readings";
 import type { ModuleId } from "./domain/types";
 import { GrammarModule } from "./screens/GrammarModule";
 import { HomeScreen } from "./screens/HomeScreen";
 import { OutputModule } from "./screens/OutputModule";
 import { PhoneticsModule } from "./screens/PhoneticsModule";
+import { ReadingModule } from "./screens/ReadingModule";
 import { RecallModule } from "./screens/RecallModule";
+import { SummaryScreen } from "./screens/SummaryScreen";
 import { useAppDispatch, useAppState } from "./state/store";
 import { useToday } from "./state/useToday";
 
@@ -26,6 +29,7 @@ export function App() {
   const dispatch = useAppDispatch();
   const today = useToday();
   const [openId, setOpenId] = useState<ModuleId | null>(null);
+  const [showSummary, setShowSummary] = useState(false);
 
   const openModule = (id: ModuleId) => {
     dispatch({
@@ -33,6 +37,7 @@ export function App() {
       now: Date.now(),
       lessonId: today.lesson.id,
       phoneticsId: today.phonetics.id,
+      readingId: today.reading?.id ?? "",
       plan: today.plan,
     });
     setOpenId(id);
@@ -46,8 +51,10 @@ export function App() {
   const lesson = session ? findLesson(session.lessonId) : undefined;
   const card = session ? findPhoneticsCard(session.phoneticsId) : undefined;
 
+  if (showSummary) return <SummaryScreen onExit={() => setShowSummary(false)} />;
+
   if (openId === null || progress === undefined || lesson === undefined || card === undefined) {
-    return <HomeScreen onOpenModule={openModule} />;
+    return <HomeScreen onOpenModule={openModule} onOpenSummary={() => setShowSummary(true)} />;
   }
 
   const complete = () => {
@@ -62,6 +69,7 @@ export function App() {
       {openId === "recall" && <RecallModule onComplete={complete} />}
       {openId === "grammar" && <GrammarModule lesson={lesson} onComplete={complete} />}
       {openId === "output" && <OutputModule lesson={lesson} onComplete={complete} />}
+      {openId === "reading" && <ReadingModule text={session ? findReading(session.readingId) : undefined} onComplete={complete} />}
       {openId === "phonetics" && <PhoneticsModule card={card} onComplete={complete} />}
     </ModuleFrame>
   );
