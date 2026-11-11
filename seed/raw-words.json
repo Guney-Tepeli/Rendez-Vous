@@ -1,0 +1,7806 @@
+[
+ {
+  "id": "à côté",
+  "fr": "à côté",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bagage",
+  "fr": "bagage",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "c'est",
+  "fr": "c'est",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "d'abord",
+  "fr": "d'abord",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "e-mail",
+  "fr": "e-mail",
+  "letter": "E",
+  "forms": [
+   "e-mails"
+  ]
+ },
+ {
+  "id": "facile",
+  "fr": "facile",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gagner",
+  "fr": "gagner",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "habiter",
+  "fr": "habiter",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "ici",
+  "fr": "ici",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "j'achète",
+  "fr": "j'achète",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "kilo",
+  "fr": "kilo",
+  "letter": "K",
+  "forms": []
+ },
+ {
+  "id": "l'ai",
+  "fr": "l'ai",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "m'appelle",
+  "fr": "m'appelle",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'ai pas",
+  "fr": "n'ai pas",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "occupé",
+  "fr": "occupé",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "page",
+  "fr": "page",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "qu'",
+  "fr": "qu'",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "radio",
+  "fr": "radio",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "s'appelle",
+  "fr": "s'appelle",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "t-shirt",
+  "fr": "t-shirt",
+  "letter": "T",
+  "forms": [
+   "t-shirts"
+  ]
+ },
+ {
+  "id": "un",
+  "fr": "un",
+  "letter": "U",
+  "forms": []
+ },
+ {
+  "id": "vacances",
+  "fr": "vacances",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "web",
+  "fr": "web",
+  "letter": "W",
+  "forms": []
+ },
+ {
+  "id": "y en",
+  "fr": "y en",
+  "letter": "Y",
+  "forms": []
+ },
+ {
+  "id": "zéro",
+  "fr": "zéro",
+  "letter": "Z",
+  "forms": []
+ },
+ {
+  "id": "à droite",
+  "fr": "à droite",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bague",
+  "fr": "bague",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "c'était",
+  "fr": "c'était",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "d'accord",
+  "fr": "d'accord",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "facilement",
+  "fr": "facilement",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gant",
+  "fr": "gant",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "habitude",
+  "fr": "habitude",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "idée",
+  "fr": "idée",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "j'ai",
+  "fr": "j'ai",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "kilomètre",
+  "fr": "kilomètre",
+  "letter": "K",
+  "forms": []
+ },
+ {
+  "id": "l'air",
+  "fr": "l'air",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "ma",
+  "fr": "ma",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'aime pas",
+  "fr": "n'aime pas",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "octobre",
+  "fr": "octobre",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "pain",
+  "fr": "pain",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "qu'est-ce qu'",
+  "fr": "qu'est-ce qu'",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "raisin",
+  "fr": "raisin",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "s'il te plaît",
+  "fr": "s'il te plaît",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "un de ces jours",
+  "fr": "un de ces jours",
+  "letter": "U",
+  "forms": []
+ },
+ {
+  "id": "vache",
+  "fr": "vache",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "week-end",
+  "fr": "week-end",
+  "letter": "W",
+  "forms": [
+   "week-ends"
+  ]
+ },
+ {
+  "id": "y sommes",
+  "fr": "y sommes",
+  "letter": "Y",
+  "forms": []
+ },
+ {
+  "id": "zoo",
+  "fr": "zoo",
+  "letter": "Z",
+  "forms": []
+ },
+ {
+  "id": "à l'étage",
+  "fr": "à l'étage",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "baguette",
+  "fr": "baguette",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ça",
+  "fr": "ça",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "eau",
+  "fr": "eau",
+  "letter": "E",
+  "forms": [
+   "eaux",
+   "d'eau",
+   "l'eau"
+  ]
+ },
+ {
+  "id": "faim",
+  "fr": "faim",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "garçon",
+  "fr": "garçon",
+  "letter": "G",
+  "forms": [
+   "garçons"
+  ]
+ },
+ {
+  "id": "hall",
+  "fr": "hall",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "il",
+  "fr": "il",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "j'y",
+  "fr": "j'y",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "l'as",
+  "fr": "l'as",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "machine à laver",
+  "fr": "machine à laver",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'allez pas",
+  "fr": "n'allez pas",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "œil",
+  "fr": "œil",
+  "letter": "O",
+  "forms": [
+   "yeux"
+  ]
+ },
+ {
+  "id": "pain grillé",
+  "fr": "pain grillé",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "qu'est-ce que",
+  "fr": "qu'est-ce que",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "raison",
+  "fr": "raison",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "s'il vous plaît",
+  "fr": "s'il vous plaît",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "t'appelle",
+  "fr": "t'appelle",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "un peu de",
+  "fr": "un peu de",
+  "letter": "U",
+  "forms": []
+ },
+ {
+  "id": "valise",
+  "fr": "valise",
+  "letter": "V",
+  "forms": [
+   "valises"
+  ]
+ },
+ {
+  "id": "yaourt",
+  "fr": "yaourt",
+  "letter": "Y",
+  "forms": []
+ },
+ {
+  "id": "à l'étranger",
+  "fr": "à l'étranger",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bain",
+  "fr": "bain",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ça te dit",
+  "fr": "ça te dit",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "d'habitude",
+  "fr": "d'habitude",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "faire",
+  "fr": "faire",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "handball",
+  "fr": "handball",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "il est",
+  "fr": "il est",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jamais",
+  "fr": "jamais",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "l'avez",
+  "fr": "l'avez",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "madame",
+  "fr": "madame",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'as pas",
+  "fr": "n'as pas",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "œuf",
+  "fr": "œuf",
+  "letter": "O",
+  "forms": [
+   "œufs"
+  ]
+ },
+ {
+  "id": "paire",
+  "fr": "paire",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quand",
+  "fr": "quand",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "randonnée",
+  "fr": "randonnée",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sa",
+  "fr": "sa",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "t'appelles",
+  "fr": "t'appelles",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "une",
+  "fr": "une",
+  "letter": "U",
+  "forms": []
+ },
+ {
+  "id": "wi-fi",
+  "fr": "wi-fi",
+  "letter": "W",
+  "forms": []
+ },
+ {
+  "id": "à l'heure",
+  "fr": "à l'heure",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "ballon",
+  "fr": "ballon",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ça va",
+  "fr": "ça va",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dangereux",
+  "fr": "dangereux",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "écharpe",
+  "fr": "écharpe",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "faire de la plongée",
+  "fr": "faire de la plongée",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gare",
+  "fr": "gare",
+  "letter": "G",
+  "forms": [
+   "gares"
+  ]
+ },
+ {
+  "id": "hebdomadaire",
+  "fr": "hebdomadaire",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "il faut",
+  "fr": "il faut",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jambe",
+  "fr": "jambe",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "mademoiselle",
+  "fr": "mademoiselle",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'en",
+  "fr": "n'en",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "pantalon",
+  "fr": "pantalon",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quarante",
+  "fr": "quarante",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "rap",
+  "fr": "rap",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sac",
+  "fr": "sac",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "ta",
+  "fr": "ta",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "université",
+  "fr": "université",
+  "letter": "U",
+  "forms": [
+   "universités"
+  ]
+ },
+ {
+  "id": "vegan",
+  "fr": "vegan",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "yoga",
+  "fr": "yoga",
+  "letter": "Y",
+  "forms": []
+ },
+ {
+  "id": "à la",
+  "fr": "à la",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "banane",
+  "fr": "banane",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ça vous dit",
+  "fr": "ça vous dit",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dans",
+  "fr": "dans",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "école",
+  "fr": "école",
+  "letter": "E",
+  "forms": [
+   "écoles"
+  ]
+ },
+ {
+  "id": "faire du ski",
+  "fr": "faire du ski",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "garer",
+  "fr": "garer",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "hélicoptère",
+  "fr": "hélicoptère",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "il n'y avait",
+  "fr": "il n'y avait",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jambon",
+  "fr": "jambon",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "la",
+  "fr": "la",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "magasin",
+  "fr": "magasin",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'est",
+  "fr": "n'est",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "office de tourisme",
+  "fr": "office de tourisme",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "papa",
+  "fr": "papa",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quart",
+  "fr": "quart",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "rapide",
+  "fr": "rapide",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "saison",
+  "fr": "saison",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "table",
+  "fr": "table",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "veiller",
+  "fr": "veiller",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "absent",
+  "fr": "absent",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bancaire",
+  "fr": "bancaire",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cadeau",
+  "fr": "cadeau",
+  "letter": "C",
+  "forms": [
+   "cadeaux"
+  ]
+ },
+ {
+  "id": "dans deux jours",
+  "fr": "dans deux jours",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "faire un voyage",
+  "fr": "faire un voyage",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "heure",
+  "fr": "heure",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "il ne faut pas",
+  "fr": "il ne faut pas",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "janvier",
+  "fr": "janvier",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "là",
+  "fr": "là",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "magazine",
+  "fr": "magazine",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'y",
+  "fr": "n'y",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "offrir",
+  "fr": "offrir",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "papi",
+  "fr": "papi",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quartier",
+  "fr": "quartier",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "rapidement",
+  "fr": "rapidement",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "salade",
+  "fr": "salade",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tableau",
+  "fr": "tableau",
+  "letter": "T",
+  "forms": [
+   "tableaux"
+  ]
+ },
+ {
+  "id": "usine",
+  "fr": "usine",
+  "letter": "U",
+  "forms": []
+ },
+ {
+  "id": "vélo",
+  "fr": "vélo",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "accueillir",
+  "fr": "accueillir",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "banque",
+  "fr": "banque",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "danser",
+  "fr": "danser",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "économiser",
+  "fr": "économiser",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "falloir",
+  "fr": "falloir",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gâteau",
+  "fr": "gâteau",
+  "letter": "G",
+  "forms": [
+   "gâteaux"
+  ]
+ },
+ {
+  "id": "heuresement",
+  "fr": "heuresement",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "il y a",
+  "fr": "il y a",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "japon",
+  "fr": "Japon",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "la leur",
+  "fr": "la leur",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "magnifique",
+  "fr": "magnifique",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "n'y avait",
+  "fr": "n'y avait",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "oignon",
+  "fr": "oignon",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "papier",
+  "fr": "papier",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quatorze",
+  "fr": "quatorze",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "rarement",
+  "fr": "rarement",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sale",
+  "fr": "sale",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "utiliser",
+  "fr": "utiliser",
+  "letter": "U",
+  "forms": []
+ },
+ {
+  "id": "vendre",
+  "fr": "vendre",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "acheter",
+  "fr": "acheter",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bar",
+  "fr": "bar",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "café",
+  "fr": "café",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "danseur",
+  "fr": "danseur",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "écouter",
+  "fr": "écouter",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "famille",
+  "fr": "famille",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "heureux",
+  "fr": "heureux",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "il y avait",
+  "fr": "il y avait",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "japonais",
+  "fr": "japonais",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "la plus",
+  "fr": "la plus",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mai",
+  "fr": "mai",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nager",
+  "fr": "nager",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "oiseau",
+  "fr": "oiseau",
+  "letter": "O",
+  "forms": [
+   "oiseaux"
+  ]
+ },
+ {
+  "id": "pâques",
+  "fr": "Pâques",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quatre",
+  "fr": "quatre",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "réception",
+  "fr": "réception",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "saler",
+  "fr": "saler",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "taille",
+  "fr": "taille",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vendredi",
+  "fr": "vendredi",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "acteur",
+  "fr": "acteur",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "barbe",
+  "fr": "barbe",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cahier",
+  "fr": "cahier",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "date",
+  "fr": "date",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "écrire",
+  "fr": "écrire",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fantastique",
+  "fr": "fantastique",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gauche",
+  "fr": "gauche",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "hier",
+  "fr": "hier",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "île",
+  "fr": "île",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jardin",
+  "fr": "jardin",
+  "letter": "J",
+  "forms": [
+   "jardins"
+  ]
+ },
+ {
+  "id": "là-bas",
+  "fr": "là-bas",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "maigrir",
+  "fr": "maigrir",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "naissance",
+  "fr": "naissance",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "par",
+  "fr": "par",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quatre-vingt",
+  "fr": "quatre-vingt",
+  "letter": "Q",
+  "forms": [
+   "quatre-vingts"
+  ]
+ },
+ {
+  "id": "réceptionniste",
+  "fr": "réceptionniste",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "salle",
+  "fr": "salle",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tante",
+  "fr": "tante",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "venir",
+  "fr": "venir",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "actrice",
+  "fr": "actrice",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "barbecue",
+  "fr": "barbecue",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cahier d'activités",
+  "fr": "cahier d'activités",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "de",
+  "fr": "de",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "église",
+  "fr": "église",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "farine",
+  "fr": "farine",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "génial",
+  "fr": "génial",
+  "letter": "G",
+  "forms": [
+   "géniaux"
+  ]
+ },
+ {
+  "id": "histoire",
+  "fr": "histoire",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "ils",
+  "fr": "ils",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "lac",
+  "fr": "lac",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "maillot de bain",
+  "fr": "maillot de bain",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nation",
+  "fr": "nation",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "omelette",
+  "fr": "omelette",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "par exemple",
+  "fr": "par exemple",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quatre-vingt-dix",
+  "fr": "quatre-vingt-dix",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "recette",
+  "fr": "recette",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "salon",
+  "fr": "salon",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tard",
+  "fr": "tard",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "venons de",
+  "fr": "venons de",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "addition",
+  "fr": "addition",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "basket",
+  "fr": "basket",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "campagne",
+  "fr": "campagne",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "de l'après-midi",
+  "fr": "de l'après-midi",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "électricité",
+  "fr": "électricité",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fatigué",
+  "fr": "fatigué",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "hiver",
+  "fr": "hiver",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "ils sont",
+  "fr": "ils sont",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jaune",
+  "fr": "jaune",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "laine",
+  "fr": "laine",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "main",
+  "fr": "main",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nationalité",
+  "fr": "nationalité",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on",
+  "fr": "on",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parapluie",
+  "fr": "parapluie",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "recevoir",
+  "fr": "recevoir",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "salut",
+  "fr": "salut",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tasse",
+  "fr": "tasse",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vent",
+  "fr": "vent",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "ado",
+  "fr": "ado",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bateau",
+  "fr": "bateau",
+  "letter": "B",
+  "forms": [
+   "bateaux"
+  ]
+ },
+ {
+  "id": "canadien",
+  "fr": "canadien",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "début",
+  "fr": "début",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "électrique",
+  "fr": "électrique",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fauteuil",
+  "fr": "fauteuil",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "genou",
+  "fr": "genou",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "homme",
+  "fr": "homme",
+  "letter": "H",
+  "forms": [
+   "hommes"
+  ]
+ },
+ {
+  "id": "immédiatement",
+  "fr": "immédiatement",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jazz",
+  "fr": "jazz",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lait",
+  "fr": "lait",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "maintenant",
+  "fr": "maintenant",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "ne",
+  "fr": "ne",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on devrait",
+  "fr": "on devrait",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parc",
+  "fr": "parc",
+  "letter": "P",
+  "forms": [
+   "parcs"
+  ]
+ },
+ {
+  "id": "quatrième",
+  "fr": "quatrième",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "réfrigérateur",
+  "fr": "réfrigérateur",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "samedi",
+  "fr": "samedi",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "taxi",
+  "fr": "taxi",
+  "letter": "T",
+  "forms": [
+   "taxis"
+  ]
+ },
+ {
+  "id": "vérifier",
+  "fr": "vérifier",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "adolescent",
+  "fr": "adolescent",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "canapé",
+  "fr": "canapé",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "décembre",
+  "fr": "décembre",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "éléphant",
+  "fr": "éléphant",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "felicitations",
+  "fr": "felicitations",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "genre",
+  "fr": "genre",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "homme de ménage",
+  "fr": "homme de ménage",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "immeuble",
+  "fr": "immeuble",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "je",
+  "fr": "je",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "langue",
+  "fr": "langue",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mais",
+  "fr": "mais",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "ne faisait",
+  "fr": "ne faisait",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on est",
+  "fr": "on est",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parce qu'",
+  "fr": "parce qu'",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "que",
+  "fr": "que",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "regarder",
+  "fr": "regarder",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sandwich",
+  "fr": "sandwich",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "verre",
+  "fr": "verre",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "adorer",
+  "fr": "adorer",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "beau",
+  "fr": "beau",
+  "letter": "B",
+  "forms": [
+   "bel",
+   "beaux"
+  ]
+ },
+ {
+  "id": "capitale",
+  "fr": "capitale",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "décorations",
+  "fr": "décorations",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "élève",
+  "fr": "élève",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "femme",
+  "fr": "femme",
+  "letter": "F",
+  "forms": [
+   "femmes"
+  ]
+ },
+ {
+  "id": "gens",
+  "fr": "gens",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "imperméable",
+  "fr": "imperméable",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "je ne sais pas",
+  "fr": "je ne sais pas",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lapin",
+  "fr": "lapin",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "maison",
+  "fr": "maison",
+  "letter": "M",
+  "forms": [
+   "maisons"
+  ]
+ },
+ {
+  "id": "ne me",
+  "fr": "ne me",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on mange",
+  "fr": "on mange",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parce que",
+  "fr": "parce que",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "québécois",
+  "fr": "québécois",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "remplir",
+  "fr": "remplir",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sans",
+  "fr": "sans",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "te",
+  "fr": "te",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vers",
+  "fr": "vers",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "adresse",
+  "fr": "adresse",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "beaucoup",
+  "fr": "beaucoup",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "carotte",
+  "fr": "carotte",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "degré",
+  "fr": "degré",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "elle",
+  "fr": "elle",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "femme de ménage",
+  "fr": "femme de ménage",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gentil",
+  "fr": "gentil",
+  "letter": "G",
+  "forms": [
+   "gentils",
+   "gentille",
+   "gentilles"
+  ]
+ },
+ {
+  "id": "honte",
+  "fr": "honte",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "important",
+  "fr": "important",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jeu",
+  "fr": "jeu",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "laver",
+  "fr": "laver",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "ne se",
+  "fr": "ne se",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on se voit",
+  "fr": "on se voit",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "quel",
+  "fr": "quel",
+  "letter": "Q",
+  "forms": [
+   "quelle",
+   "quelles"
+  ]
+ },
+ {
+  "id": "rencontrer",
+  "fr": "rencontrer",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sans contact",
+  "fr": "sans contact",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "télé",
+  "fr": "télé",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vert",
+  "fr": "vert",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "adulte",
+  "fr": "adulte",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "carré",
+  "fr": "carré",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dehors",
+  "fr": "dehors",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "elles",
+  "fr": "elles",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "hôpital",
+  "fr": "hôpital",
+  "letter": "H",
+  "forms": [
+   "hôpitaux"
+  ]
+ },
+ {
+  "id": "imprimante",
+  "fr": "imprimante",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jeu de société",
+  "fr": "jeu de société",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "le",
+  "fr": "le",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mal",
+  "fr": "mal",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "ne te",
+  "fr": "ne te",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on sort",
+  "fr": "on sort",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "pardon",
+  "fr": "pardon",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rendre",
+  "fr": "rendre",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "santé",
+  "fr": "santé",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "télécharger",
+  "fr": "télécharger",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "veste",
+  "fr": "veste",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "aéroport",
+  "fr": "aéroport",
+  "letter": "A",
+  "forms": [
+   "aéroports"
+  ]
+ },
+ {
+  "id": "bébé",
+  "fr": "bébé",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "carte",
+  "fr": "carte",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "déjà",
+  "fr": "déjà",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "elles sont",
+  "fr": "elles sont",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fenêtre",
+  "fr": "fenêtre",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "incroyable",
+  "fr": "incroyable",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jeudi",
+  "fr": "jeudi",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "le leur",
+  "fr": "le leur",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "malade",
+  "fr": "malade",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "neige",
+  "fr": "neige",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on va",
+  "fr": "on va",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parents",
+  "fr": "parents",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rentrer",
+  "fr": "rentrer",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sapin",
+  "fr": "sapin",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "téléphone",
+  "fr": "téléphone",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vêtements",
+  "fr": "vêtements",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "carte d'identité",
+  "fr": "carte d'identité",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "déjeuner",
+  "fr": "déjeuner",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "embouteillage",
+  "fr": "embouteillage",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fermé",
+  "fr": "fermé",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "horaire",
+  "fr": "horaire",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "indien",
+  "fr": "indien",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jeune",
+  "fr": "jeune",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "le plus",
+  "fr": "le plus",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "malheureusement",
+  "fr": "malheureusement",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "neiger",
+  "fr": "neiger",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "on y va",
+  "fr": "on y va",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "paresseux",
+  "fr": "paresseux",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quelqu'un",
+  "fr": "quelqu'un",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "repas",
+  "fr": "repas",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "saucisse",
+  "fr": "saucisse",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "télévision",
+  "fr": "télévision",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "veut dire",
+  "fr": "veut dire",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "africain",
+  "fr": "africain",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "belge",
+  "fr": "belge",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "carte de crédit",
+  "fr": "carte de crédit",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "délicieux",
+  "fr": "délicieux",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "émission",
+  "fr": "émission",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fermer",
+  "fr": "fermer",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "géographie",
+  "fr": "géographie",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "horloge",
+  "fr": "horloge",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "information",
+  "fr": "information",
+  "letter": "I",
+  "forms": [
+   "informations"
+  ]
+ },
+ {
+  "id": "joli",
+  "fr": "joli",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "leçon",
+  "fr": "leçon",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "maman",
+  "fr": "maman",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nettoyer",
+  "fr": "nettoyer",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "oncle",
+  "fr": "oncle",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parfait",
+  "fr": "parfait",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quelque chose",
+  "fr": "quelque chose",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "répondre",
+  "fr": "répondre",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sauf",
+  "fr": "sauf",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tellement",
+  "fr": "tellement",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "viande",
+  "fr": "viande",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "afrique",
+  "fr": "Afrique",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "besoin",
+  "fr": "besoin",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "carte postale",
+  "fr": "carte postale",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "demain",
+  "fr": "demain",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "employé",
+  "fr": "employé",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fête",
+  "fr": "fête",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "glace",
+  "fr": "glace",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "hôtel",
+  "fr": "hôtel",
+  "letter": "H",
+  "forms": [
+   "hôtels"
+  ]
+ },
+ {
+  "id": "jouer",
+  "fr": "jouer",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lègue",
+  "fr": "lègue",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mamie",
+  "fr": "mamie",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "neuf",
+  "fr": "neuf",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "onze",
+  "fr": "onze",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parfois",
+  "fr": "parfois",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quelques",
+  "fr": "quelques",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "réponse",
+  "fr": "réponse",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "savoir",
+  "fr": "savoir",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "temps",
+  "fr": "temps",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vide",
+  "fr": "vide",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "âge",
+  "fr": "âge",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "beurre",
+  "fr": "beurre",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "casque",
+  "fr": "casque",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "demander",
+  "fr": "demander",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "employeur",
+  "fr": "employeur",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "février",
+  "fr": "février",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grâce",
+  "fr": "grâce",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "ingénieur",
+  "fr": "ingénieur",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jouet",
+  "fr": "jouet",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "légume",
+  "fr": "légume",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "manger",
+  "fr": "manger",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "neuvième",
+  "fr": "neuvième",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "opéra",
+  "fr": "opéra",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parfum",
+  "fr": "parfum",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "question",
+  "fr": "question",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "reportage",
+  "fr": "reportage",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "se",
+  "fr": "se",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tennis",
+  "fr": "tennis",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vidéo",
+  "fr": "vidéo",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "agréable",
+  "fr": "agréable",
+  "letter": "A",
+  "forms": [
+   "agréables"
+  ]
+ },
+ {
+  "id": "bibliothèque",
+  "fr": "bibliothèque",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "casquette",
+  "fr": "casquette",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "demie",
+  "fr": "demie",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "emprunter",
+  "fr": "emprunter",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fille",
+  "fr": "fille",
+  "letter": "F",
+  "forms": [
+   "filles"
+  ]
+ },
+ {
+  "id": "grammaire",
+  "fr": "grammaire",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "huile",
+  "fr": "huile",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "inquiet",
+  "fr": "inquiet",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jour",
+  "fr": "jour",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lentement",
+  "fr": "lentement",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "manteau",
+  "fr": "manteau",
+  "letter": "M",
+  "forms": [
+   "manteaux"
+  ]
+ },
+ {
+  "id": "neveu",
+  "fr": "neveu",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "or",
+  "fr": "or",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "parking",
+  "fr": "parking",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "qui",
+  "fr": "qui",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "réservation",
+  "fr": "réservation",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "second",
+  "fr": "second",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "terminer",
+  "fr": "terminer",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vie",
+  "fr": "vie",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "bien",
+  "fr": "bien",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "casser",
+  "fr": "casser",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dent",
+  "fr": "dent",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en",
+  "fr": "en",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "gramme",
+  "fr": "gramme",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "huit",
+  "fr": "huit",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "intelligent",
+  "fr": "intelligent",
+  "letter": "I",
+  "forms": [
+   "intelligente",
+   "intelligents",
+   "intelligentes"
+  ]
+ },
+ {
+  "id": "jour férié",
+  "fr": "jour férié",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "les",
+  "fr": "les",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "nez",
+  "fr": "nez",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "orange",
+  "fr": "orange",
+  "letter": "O",
+  "forms": [
+   "oranges"
+  ]
+ },
+ {
+  "id": "parler",
+  "fr": "parler",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quinze",
+  "fr": "quinze",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "réserver",
+  "fr": "réserver",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "secrétaire",
+  "fr": "secrétaire",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tes",
+  "fr": "tes",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vieil",
+  "fr": "vieil",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "aider",
+  "fr": "aider",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bientôt",
+  "fr": "bientôt",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cathédrale",
+  "fr": "cathédrale",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "depecher",
+  "fr": "depecher",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en achète",
+  "fr": "en achète",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "film",
+  "fr": "film",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grand",
+  "fr": "grand",
+  "letter": "G",
+  "forms": [
+   "grande",
+   "grands",
+   "grandes"
+  ]
+ },
+ {
+  "id": "huitième",
+  "fr": "huitième",
+  "letter": "H",
+  "forms": []
+ },
+ {
+  "id": "journal",
+  "fr": "journal",
+  "letter": "J",
+  "forms": [
+   "journaux"
+  ]
+ },
+ {
+  "id": "les courses",
+  "fr": "les courses",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "manuel",
+  "fr": "manuel",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "noël",
+  "fr": "noël",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "partie",
+  "fr": "partie",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quoi",
+  "fr": "quoi",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "responsable",
+  "fr": "responsable",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "seize",
+  "fr": "seize",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tête",
+  "fr": "tête",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "viens de",
+  "fr": "viens de",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "ail",
+  "fr": "ail",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bienvenue",
+  "fr": "bienvenue",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ce",
+  "fr": "ce",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dépenser",
+  "fr": "dépenser",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en ai",
+  "fr": "en ai",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fils",
+  "fr": "fils",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grand-mère",
+  "fr": "grand-mère",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "journaliste",
+  "fr": "journaliste",
+  "letter": "J",
+  "forms": [
+   "journalistes"
+  ]
+ },
+ {
+  "id": "les leur",
+  "fr": "les leur",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "marché",
+  "fr": "marché",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "noir",
+  "fr": "noir",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "ordinateur",
+  "fr": "ordinateur",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "partir",
+  "fr": "partir",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "quotidien",
+  "fr": "quotidien",
+  "letter": "Q",
+  "forms": []
+ },
+ {
+  "id": "ressembler",
+  "fr": "ressembler",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sel",
+  "fr": "sel",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "thé",
+  "fr": "thé",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vieux",
+  "fr": "vieux",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "aime bien",
+  "fr": "aime bien",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bière",
+  "fr": "bière",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ce sont",
+  "fr": "ce sont",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dernier",
+  "fr": "dernier",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en as",
+  "fr": "en as",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fin",
+  "fr": "fin",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grand-père",
+  "fr": "grand-père",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "les magasins",
+  "fr": "les magasins",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "marcher",
+  "fr": "marcher",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nom",
+  "fr": "nom",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "oreille",
+  "fr": "oreille",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "partout",
+  "fr": "partout",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "restaurant",
+  "fr": "restaurant",
+  "letter": "R",
+  "forms": [
+   "restaurants"
+  ]
+ },
+ {
+  "id": "semaine",
+  "fr": "semaine",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "ticket",
+  "fr": "ticket",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "village",
+  "fr": "village",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "aimer",
+  "fr": "aimer",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bijou",
+  "fr": "bijou",
+  "letter": "B",
+  "forms": [
+   "bijoux"
+  ]
+ },
+ {
+  "id": "ce sont des",
+  "fr": "ce sont des",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "derrière",
+  "fr": "derrière",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en avance",
+  "fr": "en avance",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "finir",
+  "fr": "finir",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "interdit",
+  "fr": "interdit",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "les plus",
+  "fr": "les plus",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mardi",
+  "fr": "mardi",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "non",
+  "fr": "non",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "ou",
+  "fr": "ou",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "pas",
+  "fr": "pas",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "semestre",
+  "fr": "semestre",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "timbre",
+  "fr": "timbre",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "ville",
+  "fr": "ville",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "aise",
+  "fr": "aise",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "ce sont les",
+  "fr": "ce sont les",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "des",
+  "fr": "des",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en bas",
+  "fr": "en bas",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fleur",
+  "fr": "fleur",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "intéressant",
+  "fr": "intéressant",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "journée",
+  "fr": "journée",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lettre",
+  "fr": "lettre",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mari",
+  "fr": "mari",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "non-fumeur",
+  "fr": "non-fumeur",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "où",
+  "fr": "où",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "pas d'",
+  "fr": "pas d'",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rester",
+  "fr": "rester",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sénégal",
+  "fr": "Sénégal",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "timide",
+  "fr": "timide",
+  "letter": "T",
+  "forms": [
+   "timides"
+  ]
+ },
+ {
+  "id": "vin",
+  "fr": "vin",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "ajouter",
+  "fr": "ajouter",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "billet",
+  "fr": "billet",
+  "letter": "B",
+  "forms": [
+   "billets"
+  ]
+ },
+ {
+  "id": "ce sont mes",
+  "fr": "ce sont mes",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "descendre",
+  "fr": "descendre",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en espèces",
+  "fr": "en espèces",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fleuve",
+  "fr": "fleuve",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grandir",
+  "fr": "grandir",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "internet",
+  "fr": "internet",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "juillet",
+  "fr": "juillet",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "leur",
+  "fr": "leur",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "marié",
+  "fr": "marié",
+  "letter": "M",
+  "forms": [
+   "mariée",
+   "mariés"
+  ]
+ },
+ {
+  "id": "nord",
+  "fr": "nord",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "où est-ce que",
+  "fr": "où est-ce que",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "pas de",
+  "fr": "pas de",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "resto",
+  "fr": "resto",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sentir",
+  "fr": "sentir",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "vingt",
+  "fr": "vingt",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "album",
+  "fr": "album",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "billet d'avion",
+  "fr": "billet d'avion",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ceci",
+  "fr": "ceci",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "désolé",
+  "fr": "désolé",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en face",
+  "fr": "en face",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fois",
+  "fr": "fois",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "invité",
+  "fr": "invité",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "juin",
+  "fr": "juin",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "leurs",
+  "fr": "leurs",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "nos",
+  "fr": "nos",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "oublié",
+  "fr": "oublié",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "passager",
+  "fr": "passager",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "retirer",
+  "fr": "retirer",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sept",
+  "fr": "sept",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "toi",
+  "fr": "toi",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "visage",
+  "fr": "visage",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "alcool",
+  "fr": "alcool",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "ceinture",
+  "fr": "ceinture",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dessert",
+  "fr": "dessert",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en fait",
+  "fr": "en fait",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "football",
+  "fr": "football",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grands-parents",
+  "fr": "grands-parents",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "inviter",
+  "fr": "inviter",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jupe",
+  "fr": "jupe",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lever",
+  "fr": "lever",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "notre",
+  "fr": "notre",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "oublier",
+  "fr": "oublier",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "passeport",
+  "fr": "passeport",
+  "letter": "P",
+  "forms": [
+   "passeports"
+  ]
+ },
+ {
+  "id": "retourner",
+  "fr": "retourner",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "septembre",
+  "fr": "septembre",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "toilettes",
+  "fr": "toilettes",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "visiter",
+  "fr": "visiter",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "allemagne",
+  "fr": "Allemagne",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "biologie",
+  "fr": "biologie",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cela",
+  "fr": "cela",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dessin animé",
+  "fr": "dessin animé",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en fiche",
+  "fr": "en fiche",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "forme",
+  "fr": "forme",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gratuit",
+  "fr": "gratuit",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "italie",
+  "fr": "Italie",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jus",
+  "fr": "jus",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "librairie",
+  "fr": "librairie",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "marron",
+  "fr": "marron",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nourriture",
+  "fr": "nourriture",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "ouest",
+  "fr": "ouest",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "retrouver",
+  "fr": "retrouver",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "septième",
+  "fr": "septième",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "toit",
+  "fr": "toit",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vite",
+  "fr": "vite",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "allemand",
+  "fr": "allemand",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "biscuit",
+  "fr": "biscuit",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "célèbre",
+  "fr": "célèbre",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dessiner",
+  "fr": "dessiner",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en général",
+  "fr": "en général",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "formulaire",
+  "fr": "formulaire",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grignoter",
+  "fr": "grignoter",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "italien",
+  "fr": "italien",
+  "letter": "I",
+  "forms": []
+ },
+ {
+  "id": "jus d'orange",
+  "fr": "jus d'orange",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "libre",
+  "fr": "libre",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mars",
+  "fr": "mars",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nous",
+  "fr": "nous",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "oui",
+  "fr": "oui",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "passer",
+  "fr": "passer",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "réunion",
+  "fr": "réunion",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "série",
+  "fr": "série",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tomate",
+  "fr": "tomate",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vivre",
+  "fr": "vivre",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "aller",
+  "fr": "aller",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bizarre",
+  "fr": "bizarre",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "celibataire",
+  "fr": "celibataire",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "destination",
+  "fr": "destination",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en haut",
+  "fr": "en haut",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fou",
+  "fr": "fou",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gris",
+  "fr": "gris",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "jusqu'",
+  "fr": "jusqu'",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lien",
+  "fr": "lien",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "match",
+  "fr": "match",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nouveau",
+  "fr": "nouveau",
+  "letter": "N",
+  "forms": [
+   "nouvel",
+   "nouveaux",
+   "nouvelle"
+  ]
+ },
+ {
+  "id": "ouvrir",
+  "fr": "ouvrir",
+  "letter": "O",
+  "forms": []
+ },
+ {
+  "id": "pastèque",
+  "fr": "pastèque",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "réveiller",
+  "fr": "réveiller",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sérieux",
+  "fr": "sérieux",
+  "letter": "S",
+  "forms": [
+   "sérieuses"
+  ]
+ },
+ {
+  "id": "ton",
+  "fr": "ton",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vocabulaire",
+  "fr": "vocabulaire",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "allons-y",
+  "fr": "allons-y",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "blanc",
+  "fr": "blanc",
+  "letter": "B",
+  "forms": [
+   "blancs",
+   "blanche",
+   "blanches"
+  ]
+ },
+ {
+  "id": "celle-ci",
+  "fr": "celle-ci",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "détester",
+  "fr": "détester",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en ligne",
+  "fr": "en ligne",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "four",
+  "fr": "four",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "gros",
+  "fr": "gros",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "jusqu'à",
+  "fr": "jusqu'à",
+  "letter": "J",
+  "forms": []
+ },
+ {
+  "id": "lieu",
+  "fr": "lieu",
+  "letter": "L",
+  "forms": [
+   "lieux"
+  ]
+ },
+ {
+  "id": "mathématiques",
+  "fr": "mathématiques",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pâtes",
+  "fr": "pâtes",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "revenir",
+  "fr": "revenir",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "tort",
+  "fr": "tort",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "voici",
+  "fr": "voici",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "allumer",
+  "fr": "allumer",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "celle-là",
+  "fr": "celle-là",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "deux",
+  "fr": "deux",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en mange",
+  "fr": "en mange",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fourchette",
+  "fr": "fourchette",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "grossir",
+  "fr": "grossir",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "matière",
+  "fr": "matière",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pause",
+  "fr": "pause",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rez-de-chaussée",
+  "fr": "rez-de-chaussée",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "serveur",
+  "fr": "serveur",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tôt",
+  "fr": "tôt",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "voilà",
+  "fr": "voilà",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "alors",
+  "fr": "alors",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "celles-ci",
+  "fr": "celles-ci",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "deuxième",
+  "fr": "deuxième",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en panne",
+  "fr": "en panne",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fragile",
+  "fr": "fragile",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "groupe",
+  "fr": "groupe",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "limonade",
+  "fr": "limonade",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "matin",
+  "fr": "matin",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pauvre",
+  "fr": "pauvre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "riche",
+  "fr": "riche",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "serveuses",
+  "fr": "serveuses",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "toujours",
+  "fr": "toujours",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "voir",
+  "fr": "voir",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "américain",
+  "fr": "américain",
+  "letter": "A",
+  "forms": [
+   "américaine",
+   "américains",
+   "américaines"
+  ]
+ },
+ {
+  "id": "celles-là",
+  "fr": "celles-là",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "devant",
+  "fr": "devant",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en prépare",
+  "fr": "en prépare",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "frais",
+  "fr": "frais",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "guerre",
+  "fr": "guerre",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "lire",
+  "fr": "lire",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mauvais",
+  "fr": "mauvais",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "novembre",
+  "fr": "novembre",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "payer",
+  "fr": "payer",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rien",
+  "fr": "rien",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "serviette",
+  "fr": "serviette",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "touriste",
+  "fr": "touriste",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "voisin",
+  "fr": "voisin",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "bleu",
+  "fr": "bleu",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "celui-ci",
+  "fr": "celui-ci",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "devenir",
+  "fr": "devenir",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "en promotion",
+  "fr": "en promotion",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fraise",
+  "fr": "fraise",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "guide",
+  "fr": "guide",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "litre",
+  "fr": "litre",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "me",
+  "fr": "me",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nu",
+  "fr": "nu",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "pays",
+  "fr": "pays",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rivière",
+  "fr": "rivière",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "servir",
+  "fr": "servir",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tourner",
+  "fr": "tourner",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "voiture",
+  "fr": "voiture",
+  "letter": "V",
+  "forms": [
+   "voitures"
+  ]
+ },
+ {
+  "id": "bleu clair",
+  "fr": "bleu clair",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "celui-là",
+  "fr": "celui-là",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "devoir",
+  "fr": "devoir",
+  "letter": "D",
+  "forms": [
+   "devoirs"
+  ]
+ },
+ {
+  "id": "en retard",
+  "fr": "en retard",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "français",
+  "fr": "français",
+  "letter": "F",
+  "forms": [
+   "française",
+   "françaises"
+  ]
+ },
+ {
+  "id": "guitare",
+  "fr": "guitare",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "livre",
+  "fr": "livre",
+  "letter": "L",
+  "forms": [
+   "livres"
+  ]
+ },
+ {
+  "id": "médecin",
+  "fr": "médecin",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nuage",
+  "fr": "nuage",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "pêché",
+  "fr": "pêché",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "riz",
+  "fr": "riz",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "ses",
+  "fr": "ses",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tous",
+  "fr": "tous",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "bleu foncé",
+  "fr": "bleu foncé",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cent",
+  "fr": "cent",
+  "letter": "C",
+  "forms": [
+   "cents"
+  ]
+ },
+ {
+  "id": "en veux",
+  "fr": "en veux",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "0",
+  "fr": "0",
+  "letter": "G",
+  "forms": []
+ },
+ {
+  "id": "meilleur",
+  "fr": "meilleur",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "nuit",
+  "fr": "nuit",
+  "letter": "N",
+  "forms": [
+   "nuits"
+  ]
+ },
+ {
+  "id": "pêcher",
+  "fr": "pêcher",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "robe",
+  "fr": "robe",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "seul",
+  "fr": "seul",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tous les jours",
+  "fr": "tous les jours",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vol",
+  "fr": "vol",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "ami",
+  "fr": "ami",
+  "letter": "A",
+  "forms": [
+   "amie"
+  ]
+ },
+ {
+  "id": "blond",
+  "fr": "blond",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "centime",
+  "fr": "centime",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dictionnaire",
+  "fr": "dictionnaire",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "enchanté",
+  "fr": "enchanté",
+  "letter": "E",
+  "forms": [
+   "enchantée"
+  ]
+ },
+ {
+  "id": "loin",
+  "fr": "loin",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mélanger",
+  "fr": "mélanger",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "peindre",
+  "fr": "peindre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rouge",
+  "fr": "rouge",
+  "letter": "R",
+  "forms": [
+   "rouges"
+  ]
+ },
+ {
+  "id": "seulement",
+  "fr": "seulement",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tout",
+  "fr": "tout",
+  "letter": "T",
+  "forms": [
+   "toute",
+   "toutes"
+  ]
+ },
+ {
+  "id": "voler",
+  "fr": "voler",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "boire",
+  "fr": "boire",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "centre-ville",
+  "fr": "centre-ville",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "différent",
+  "fr": "différent",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "frère",
+  "fr": "frère",
+  "letter": "F",
+  "forms": [
+   "frères"
+  ]
+ },
+ {
+  "id": "londres",
+  "fr": "Londres",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "melon",
+  "fr": "melon",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "numérique",
+  "fr": "numérique",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "pelouse",
+  "fr": "pelouse",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sexe",
+  "fr": "sexe",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tout de suite",
+  "fr": "tout de suite",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vos",
+  "fr": "vos",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "amusant",
+  "fr": "amusant",
+  "letter": "A",
+  "forms": [
+   "amusante",
+   "amusants",
+   "amusantes"
+  ]
+ },
+ {
+  "id": "boisson",
+  "fr": "boisson",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "difficile",
+  "fr": "difficile",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "encore",
+  "fr": "encore",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "long",
+  "fr": "long",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "membre",
+  "fr": "membre",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "numéro",
+  "fr": "numéro",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "pendant",
+  "fr": "pendant",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "route",
+  "fr": "route",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "short",
+  "fr": "short",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "votre",
+  "fr": "votre",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "boîte",
+  "fr": "boîte",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "céréales",
+  "fr": "céréales",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dimanche",
+  "fr": "dimanche",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "enfant",
+  "fr": "enfant",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "frigo",
+  "fr": "frigo",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "longtemps",
+  "fr": "longtemps",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "même",
+  "fr": "même",
+  "letter": "M",
+  "forms": [
+   "mêmes"
+  ]
+ },
+ {
+  "id": "naitre",
+  "fr": "naitre",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "pense que",
+  "fr": "pense que",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rue",
+  "fr": "rue",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "si",
+  "fr": "si",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "vouloir",
+  "fr": "vouloir",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "bol",
+  "fr": "bol",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "certainement",
+  "fr": "certainement",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dîner",
+  "fr": "dîner",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "ennuyeux",
+  "fr": "ennuyeux",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "froid",
+  "fr": "froid",
+  "letter": "F",
+  "forms": [
+   "froide"
+  ]
+ },
+ {
+  "id": "louer",
+  "fr": "louer",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "n'importe où",
+  "fr": "n'importe où",
+  "letter": "N",
+  "forms": []
+ },
+ {
+  "id": "penser",
+  "fr": "penser",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rugby",
+  "fr": "rugby",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "siecle",
+  "fr": "siecle",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "train",
+  "fr": "train",
+  "letter": "T",
+  "forms": [
+   "trains"
+  ]
+ },
+ {
+  "id": "vous",
+  "fr": "vous",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "bon",
+  "fr": "bon",
+  "letter": "B",
+  "forms": [
+   "bons",
+   "bonne",
+   "bonnes"
+  ]
+ },
+ {
+  "id": "ces",
+  "fr": "ces",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dire",
+  "fr": "dire",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "ensemble",
+  "fr": "ensemble",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "lui",
+  "fr": "lui",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mer",
+  "fr": "mer",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "perdre",
+  "fr": "perdre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "russe",
+  "fr": "russe",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "signer",
+  "fr": "signer",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "vous êtes",
+  "fr": "vous êtes",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "an",
+  "fr": "an",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bonbon",
+  "fr": "bonbon",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cet",
+  "fr": "cet",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "directeur",
+  "fr": "directeur",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "ensuite",
+  "fr": "ensuite",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fromage",
+  "fr": "fromage",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "lundi",
+  "fr": "lundi",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "merci",
+  "fr": "merci",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "père",
+  "fr": "père",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "roue",
+  "fr": "roue",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "simple",
+  "fr": "simple",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tram",
+  "fr": "tram",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "voyager",
+  "fr": "voyager",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "anglais",
+  "fr": "anglais",
+  "letter": "A",
+  "forms": [
+   "anglaise",
+   "anglaises"
+  ]
+ },
+ {
+  "id": "bondé",
+  "fr": "bondé",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "cette",
+  "fr": "cette",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "disponible",
+  "fr": "disponible",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "entendre",
+  "fr": "entendre",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fruit",
+  "fr": "fruit",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "lunettes",
+  "fr": "lunettes",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mercredi",
+  "fr": "mercredi",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "permis",
+  "fr": "permis",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "reparer",
+  "fr": "reparer",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "site",
+  "fr": "site",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tranche",
+  "fr": "tranche",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "vraiment",
+  "fr": "vraiment",
+  "letter": "V",
+  "forms": []
+ },
+ {
+  "id": "bonjour",
+  "fr": "bonjour",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "ceux-ci",
+  "fr": "ceux-ci",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "distributeur",
+  "fr": "distributeur",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "entier",
+  "fr": "entier",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "fumer",
+  "fr": "fumer",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "lycée",
+  "fr": "lycée",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mère",
+  "fr": "mère",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "personne",
+  "fr": "personne",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "rater",
+  "fr": "rater",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "six",
+  "fr": "six",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tranquille",
+  "fr": "tranquille",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "ceux-là",
+  "fr": "ceux-là",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dix",
+  "fr": "dix",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "entrée",
+  "fr": "entrée",
+  "letter": "E",
+  "forms": [
+   "entrées"
+  ]
+ },
+ {
+  "id": "fort",
+  "fr": "fort",
+  "letter": "F",
+  "forms": []
+ },
+ {
+  "id": "lampe",
+  "fr": "lampe",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "mes",
+  "fr": "mes",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "personnel",
+  "fr": "personnel",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "ranger",
+  "fr": "ranger",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "sixième",
+  "fr": "sixième",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "travail",
+  "fr": "travail",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "angleterre",
+  "fr": "Angleterre",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chaîne",
+  "fr": "chaîne",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dix-huit",
+  "fr": "dix-huit",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "ligne",
+  "fr": "ligne",
+  "letter": "L",
+  "forms": []
+ },
+ {
+  "id": "message",
+  "fr": "message",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "petit",
+  "fr": "petit",
+  "letter": "P",
+  "forms": [
+   "petite",
+   "petits",
+   "petites"
+  ]
+ },
+ {
+  "id": "rond",
+  "fr": "rond",
+  "letter": "R",
+  "forms": []
+ },
+ {
+  "id": "skier",
+  "fr": "skier",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "travaillent-elles",
+  "fr": "travaillent-elles",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "animal",
+  "fr": "animal",
+  "letter": "A",
+  "forms": [
+   "animaux"
+  ]
+ },
+ {
+  "id": "chaise",
+  "fr": "chaise",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dix-neuf",
+  "fr": "dix-neuf",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "entreprise",
+  "fr": "entreprise",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "métier",
+  "fr": "métier",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "petit-fils",
+  "fr": "petit-fils",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "soda",
+  "fr": "soda",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "travailler",
+  "fr": "travailler",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "animal de compagnie",
+  "fr": "animal de compagnie",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bonsoir",
+  "fr": "bonsoir",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chambre",
+  "fr": "chambre",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dix-sept",
+  "fr": "dix-sept",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "entrer",
+  "fr": "entrer",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mètre",
+  "fr": "mètre",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "sœur",
+  "fr": "sœur",
+  "letter": "S",
+  "forms": [
+   "sœurs"
+  ]
+ },
+ {
+  "id": "traverser",
+  "fr": "traverser",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "botte",
+  "fr": "botte",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "champagne",
+  "fr": "champagne",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dixième",
+  "fr": "dixième",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "enveloppe",
+  "fr": "enveloppe",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "métro",
+  "fr": "métro",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "petite-fille",
+  "fr": "petite-fille",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "treize",
+  "fr": "treize",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "année",
+  "fr": "année",
+  "letter": "A",
+  "forms": [
+   "années"
+  ]
+ },
+ {
+  "id": "bouche",
+  "fr": "bouche",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "champignon",
+  "fr": "champignon",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "document",
+  "fr": "document",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "envie",
+  "fr": "envie",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mettre",
+  "fr": "mettre",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "soif",
+  "fr": "soif",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "trente",
+  "fr": "trente",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "boucle",
+  "fr": "boucle",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chance",
+  "fr": "chance",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dollar",
+  "fr": "dollar",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "environ",
+  "fr": "environ",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "meuble",
+  "fr": "meuble",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "soin",
+  "fr": "soin",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "très",
+  "fr": "très",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "anniversaire",
+  "fr": "anniversaire",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "boulangerie",
+  "fr": "boulangerie",
+  "letter": "B",
+  "forms": [
+   "boulangeries"
+  ]
+ },
+ {
+  "id": "changer",
+  "fr": "changer",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "donner",
+  "fr": "donner",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "envoyer",
+  "fr": "envoyer",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mexicain",
+  "fr": "mexicain",
+  "letter": "M",
+  "forms": [
+   "mexicaine",
+   "mexicains",
+   "mexicaines"
+  ]
+ },
+ {
+  "id": "petits-enfants",
+  "fr": "petits-enfants",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "soir",
+  "fr": "soir",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "triste",
+  "fr": "triste",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "annuler",
+  "fr": "annuler",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chanson",
+  "fr": "chanson",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dormir",
+  "fr": "dormir",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "épice",
+  "fr": "épice",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "peut-etre",
+  "fr": "peut-etre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "soirée",
+  "fr": "soirée",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "trois",
+  "fr": "trois",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "août",
+  "fr": "août",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bouteille",
+  "fr": "bouteille",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chanter",
+  "fr": "chanter",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dos",
+  "fr": "dos",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "épisode",
+  "fr": "épisode",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "pharmacie",
+  "fr": "pharmacie",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "soixante",
+  "fr": "soixante",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "troisième",
+  "fr": "troisième",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "appareil",
+  "fr": "appareil",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bracelet",
+  "fr": "bracelet",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chanteur",
+  "fr": "chanteur",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "dossier",
+  "fr": "dossier",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "époque",
+  "fr": "époque",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "photo",
+  "fr": "photo",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "soixante-dix",
+  "fr": "soixante-dix",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "trop",
+  "fr": "trop",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "appartement",
+  "fr": "appartement",
+  "letter": "A",
+  "forms": [
+   "appartements"
+  ]
+ },
+ {
+  "id": "bras",
+  "fr": "bras",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chantilly",
+  "fr": "chantilly",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "double",
+  "fr": "double",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "équipe",
+  "fr": "équipe",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mexique",
+  "fr": "Mexique",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "photographe",
+  "fr": "photographe",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sol",
+  "fr": "sol",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "trouver",
+  "fr": "trouver",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "brésil",
+  "fr": "Brésil",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chapeau",
+  "fr": "chapeau",
+  "letter": "C",
+  "forms": [
+   "chapeaux"
+  ]
+ },
+ {
+  "id": "douche",
+  "fr": "douche",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "ère",
+  "fr": "ère",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "micro-ondes",
+  "fr": "micro-ondes",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "phrase",
+  "fr": "phrase",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "soleil",
+  "fr": "soleil",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tu",
+  "fr": "tu",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "appeler",
+  "fr": "appeler",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "brioche",
+  "fr": "brioche",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "douze",
+  "fr": "douze",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "escalier",
+  "fr": "escalier",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "midi",
+  "fr": "midi",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "physique",
+  "fr": "physique",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "solution",
+  "fr": "solution",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tu marches",
+  "fr": "tu marches",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "application",
+  "fr": "application",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "brosser",
+  "fr": "brosser",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chaque",
+  "fr": "chaque",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "droit",
+  "fr": "droit",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "espagne",
+  "fr": "Espagne",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "miel",
+  "fr": "miel",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "piano",
+  "fr": "piano",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sommeil",
+  "fr": "sommeil",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tu vas",
+  "fr": "tu vas",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "apporter",
+  "fr": "apporter",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bruit",
+  "fr": "bruit",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chat",
+  "fr": "chat",
+  "letter": "C",
+  "forms": [
+   "chats"
+  ]
+ },
+ {
+  "id": "drôle",
+  "fr": "drôle",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "espagnol",
+  "fr": "espagnol",
+  "letter": "E",
+  "forms": [
+   "espagnole"
+  ]
+ },
+ {
+  "id": "mieux",
+  "fr": "mieux",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pièce",
+  "fr": "pièce",
+  "letter": "P",
+  "forms": [
+   "pièces"
+  ]
+ },
+ {
+  "id": "son",
+  "fr": "son",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tu y",
+  "fr": "tu y",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "apprendre",
+  "fr": "apprendre",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "brun",
+  "fr": "brun",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "château",
+  "fr": "château",
+  "letter": "C",
+  "forms": [
+   "châteaux"
+  ]
+ },
+ {
+  "id": "du",
+  "fr": "du",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "mignon",
+  "fr": "mignon",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "sont-elles",
+  "fr": "sont-elles",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tunisien",
+  "fr": "tunisien",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "après",
+  "fr": "après",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bruyant",
+  "fr": "bruyant",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "detendre",
+  "fr": "detendre",
+  "letter": "D",
+  "forms": []
+ },
+ {
+  "id": "essayer",
+  "fr": "essayer",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mille",
+  "fr": "mille",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pied",
+  "fr": "pied",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sortir",
+  "fr": "sortir",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tiroir",
+  "fr": "tiroir",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "après-midi",
+  "fr": "après-midi",
+  "letter": "A",
+  "forms": [
+   "après-midis"
+  ]
+ },
+ {
+  "id": "bureau",
+  "fr": "bureau",
+  "letter": "B",
+  "forms": [
+   "bureaux"
+  ]
+ },
+ {
+  "id": "est-ce qu'",
+  "fr": "est-ce qu'",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "million",
+  "fr": "million",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pique-nique",
+  "fr": "pique-nique",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "souhaiter",
+  "fr": "souhaiter",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tapis",
+  "fr": "tapis",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "bureau de change",
+  "fr": "bureau de change",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chaud",
+  "fr": "chaud",
+  "letter": "C",
+  "forms": [
+   "chaude"
+  ]
+ },
+ {
+  "id": "est-ce que",
+  "fr": "est-ce que",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mince",
+  "fr": "mince",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "piscine",
+  "fr": "piscine",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "soupe",
+  "fr": "soupe",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "temple",
+  "fr": "temple",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "araignée",
+  "fr": "araignée",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bureau de poste",
+  "fr": "bureau de poste",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "estomac",
+  "fr": "estomac",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "minérale",
+  "fr": "minérale",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pizza",
+  "fr": "pizza",
+  "letter": "P",
+  "forms": [
+   "pizzas"
+  ]
+ },
+ {
+  "id": "souris",
+  "fr": "souris",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "transpirer",
+  "fr": "transpirer",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "arbre",
+  "fr": "arbre",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chauffeur",
+  "fr": "chauffeur",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "et",
+  "fr": "et",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "minuit",
+  "fr": "minuit",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "sous",
+  "fr": "sous",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "tien",
+  "fr": "tien",
+  "letter": "T",
+  "forms": []
+ },
+ {
+  "id": "argent",
+  "fr": "argent",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "bus",
+  "fr": "bus",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chaussette",
+  "fr": "chaussette",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "et un",
+  "fr": "et un",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "minute",
+  "fr": "minute",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "placard",
+  "fr": "placard",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "souvenir",
+  "fr": "souvenir",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "armoire",
+  "fr": "armoire",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "brûlant",
+  "fr": "brûlant",
+  "letter": "B",
+  "forms": []
+ },
+ {
+  "id": "chaussure",
+  "fr": "chaussure",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "étage",
+  "fr": "étage",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "miroir",
+  "fr": "miroir",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "place",
+  "fr": "place",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "souvent",
+  "fr": "souvent",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "arrêt",
+  "fr": "arrêt",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chef",
+  "fr": "chef",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "étagère",
+  "fr": "étagère",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mode",
+  "fr": "mode",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "spécial",
+  "fr": "spécial",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "arrêter",
+  "fr": "arrêter",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chemise",
+  "fr": "chemise",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "été",
+  "fr": "été",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "moi",
+  "fr": "moi",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plafond",
+  "fr": "plafond",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sport",
+  "fr": "sport",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "arriver",
+  "fr": "arriver",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chèque",
+  "fr": "chèque",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "être",
+  "fr": "être",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "moins",
+  "fr": "moins",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plage",
+  "fr": "plage",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "stade",
+  "fr": "stade",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "arrondissement",
+  "fr": "arrondissement",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "cher",
+  "fr": "cher",
+  "letter": "C",
+  "forms": [
+   "chers",
+   "chère",
+   "chères"
+  ]
+ },
+ {
+  "id": "étudiant",
+  "fr": "étudiant",
+  "letter": "E",
+  "forms": [
+   "étudiante",
+   "étudiants",
+   "étudiantes"
+  ]
+ },
+ {
+  "id": "mois",
+  "fr": "mois",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plaît",
+  "fr": "plaît",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "station",
+  "fr": "station",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "ascenseur",
+  "fr": "ascenseur",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chercher",
+  "fr": "chercher",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "moment",
+  "fr": "moment",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plan",
+  "fr": "plan",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "stressé",
+  "fr": "stressé",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "asseyez",
+  "fr": "asseyez",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "mon",
+  "fr": "mon",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plante",
+  "fr": "plante",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "stylo",
+  "fr": "stylo",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "assez",
+  "fr": "assez",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "monde",
+  "fr": "monde",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plat",
+  "fr": "plat",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sucre",
+  "fr": "sucre",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "assiette",
+  "fr": "assiette",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "étudier",
+  "fr": "étudier",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "monnaie",
+  "fr": "monnaie",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plein",
+  "fr": "plein",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sud",
+  "fr": "sud",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "attendre",
+  "fr": "attendre",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "cheval",
+  "fr": "cheval",
+  "letter": "C",
+  "forms": [
+   "chevaux"
+  ]
+ },
+ {
+  "id": "euro",
+  "fr": "euro",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "monsieur",
+  "fr": "monsieur",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pleuvoir",
+  "fr": "pleuvoir",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "suisse",
+  "fr": "suisse",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "attention",
+  "fr": "attention",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "européen",
+  "fr": "européen",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "montagne",
+  "fr": "montagne",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pluie",
+  "fr": "pluie",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "super",
+  "fr": "super",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "attraper",
+  "fr": "attraper",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "cheveux",
+  "fr": "cheveux",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "eux",
+  "fr": "eux",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "monter",
+  "fr": "monter",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plus",
+  "fr": "plus",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "supermarché",
+  "fr": "supermarché",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "au",
+  "fr": "au",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chez",
+  "fr": "chez",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "examen",
+  "fr": "examen",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "montrer",
+  "fr": "montrer",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plus de",
+  "fr": "plus de",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sur",
+  "fr": "sur",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "au bout de",
+  "fr": "au bout de",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chien",
+  "fr": "chien",
+  "letter": "C",
+  "forms": [
+   "chiens"
+  ]
+ },
+ {
+  "id": "excellent",
+  "fr": "excellent",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "monument",
+  "fr": "monument",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "plusieurs",
+  "fr": "plusieurs",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sûr",
+  "fr": "sûr",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "au coin de",
+  "fr": "au coin de",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "excuse-moi",
+  "fr": "excuse-moi",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mot",
+  "fr": "mot",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pneu",
+  "fr": "pneu",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sur l'avenue",
+  "fr": "sur l'avenue",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "au revoir",
+  "fr": "au revoir",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chimie",
+  "fr": "chimie",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "excusez-moi",
+  "fr": "excusez-moi",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mot de passe",
+  "fr": "mot de passe",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "poire",
+  "fr": "poire",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "surprise",
+  "fr": "surprise",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "au-dessus",
+  "fr": "au-dessus",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chine",
+  "fr": "Chine",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "exercice",
+  "fr": "exercice",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "mur",
+  "fr": "mur",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "poisson",
+  "fr": "poisson",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sushi",
+  "fr": "sushi",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "aucun",
+  "fr": "aucun",
+  "letter": "A",
+  "forms": [
+   "aucune"
+  ]
+ },
+ {
+  "id": "chinois",
+  "fr": "chinois",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "expliquer",
+  "fr": "expliquer",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "musée",
+  "fr": "musée",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "poivre",
+  "fr": "poivre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sweat-shirt",
+  "fr": "sweat-shirt",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "chocolat",
+  "fr": "chocolat",
+  "letter": "C",
+  "forms": [
+   "chocolats"
+  ]
+ },
+ {
+  "id": "expresso",
+  "fr": "expresso",
+  "letter": "E",
+  "forms": []
+ },
+ {
+  "id": "musique",
+  "fr": "musique",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pomme",
+  "fr": "pomme",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sympa",
+  "fr": "sympa",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "aujourd'hui",
+  "fr": "aujourd'hui",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "mort",
+  "fr": "mort",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pommes de terre",
+  "fr": "pommes de terre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "synagogue",
+  "fr": "synagogue",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "aussi",
+  "fr": "aussi",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "choisir",
+  "fr": "choisir",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "memoire",
+  "fr": "memoire",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "pont",
+  "fr": "pont",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "sien",
+  "fr": "sien",
+  "letter": "S",
+  "forms": []
+ },
+ {
+  "id": "australie",
+  "fr": "Australie",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chose",
+  "fr": "chose",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "moto",
+  "fr": "moto",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "populaire",
+  "fr": "populaire",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "auteur",
+  "fr": "auteur",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "chouette",
+  "fr": "chouette",
+  "letter": "C",
+  "forms": [
+   "chouettes"
+  ]
+ },
+ {
+  "id": "moteur",
+  "fr": "moteur",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "portable",
+  "fr": "portable",
+  "letter": "P",
+  "forms": [
+   "portables"
+  ]
+ },
+ {
+  "id": "automne",
+  "fr": "automne",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "moderne",
+  "fr": "moderne",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "autoroute",
+  "fr": "autoroute",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "ci",
+  "fr": "ci",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "ménage",
+  "fr": "ménage",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "porte",
+  "fr": "porte",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "autour",
+  "fr": "autour",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "ciel",
+  "fr": "ciel",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "mosquée",
+  "fr": "mosquée",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "portefeuille",
+  "fr": "portefeuille",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "autre",
+  "fr": "autre",
+  "letter": "A",
+  "forms": [
+   "autres"
+  ]
+ },
+ {
+  "id": "ciné",
+  "fr": "ciné",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "meme si",
+  "fr": "meme si",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "porter",
+  "fr": "porter",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "cinéma",
+  "fr": "cinéma",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "mien",
+  "fr": "mien",
+  "letter": "M",
+  "forms": []
+ },
+ {
+  "id": "possible",
+  "fr": "possible",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "aux",
+  "fr": "aux",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "cinq",
+  "fr": "cinq",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "poulet",
+  "fr": "poulet",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "avant",
+  "fr": "avant",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "cinquante",
+  "fr": "cinquante",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "poupée",
+  "fr": "poupée",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "avec",
+  "fr": "avec",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "cinquième",
+  "fr": "cinquième",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "pour",
+  "fr": "pour",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "avenue",
+  "fr": "avenue",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "citron",
+  "fr": "citron",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "pourquoi",
+  "fr": "pourquoi",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "avion",
+  "fr": "avion",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "classe",
+  "fr": "classe",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "pouvoir",
+  "fr": "pouvoir",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "avoir",
+  "fr": "avoir",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "clavier",
+  "fr": "clavier",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "pratique",
+  "fr": "pratique",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "avril",
+  "fr": "avril",
+  "letter": "A",
+  "forms": []
+ },
+ {
+  "id": "clé",
+  "fr": "clé",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "préférer",
+  "fr": "préférer",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "client",
+  "fr": "client",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "premier",
+  "fr": "premier",
+  "letter": "P",
+  "forms": [
+   "première"
+  ]
+ },
+ {
+  "id": "cochon",
+  "fr": "cochon",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "code",
+  "fr": "code",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prendre",
+  "fr": "prendre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "collègue",
+  "fr": "collègue",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prénom",
+  "fr": "prénom",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "collier",
+  "fr": "collier",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "préparer",
+  "fr": "préparer",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "colocataire",
+  "fr": "colocataire",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "près",
+  "fr": "près",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "combien",
+  "fr": "combien",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "présenter",
+  "fr": "présenter",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "commander",
+  "fr": "commander",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "presque",
+  "fr": "presque",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "commencé à",
+  "fr": "commencé à",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "pressé",
+  "fr": "pressé",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "commencer",
+  "fr": "commencer",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prêt",
+  "fr": "prêt",
+  "letter": "P",
+  "forms": [
+   "prête"
+  ]
+ },
+ {
+  "id": "comment",
+  "fr": "comment",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "comment est-ce que",
+  "fr": "comment est-ce que",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prêter",
+  "fr": "prêter",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "comprendre",
+  "fr": "comprendre",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prévoir",
+  "fr": "prévoir",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "compte",
+  "fr": "compte",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prévu",
+  "fr": "prévu",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "concert",
+  "fr": "concert",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "printemps",
+  "fr": "printemps",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "conduire",
+  "fr": "conduire",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prix",
+  "fr": "prix",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "confiture",
+  "fr": "confiture",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "probablement",
+  "fr": "probablement",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "confortable",
+  "fr": "confortable",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "problème",
+  "fr": "problème",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "connaître",
+  "fr": "connaître",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "prochain",
+  "fr": "prochain",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "conseiller",
+  "fr": "conseiller",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "proche",
+  "fr": "proche",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "content",
+  "fr": "content",
+  "letter": "C",
+  "forms": [
+   "contente",
+   "contents",
+   "contentes"
+  ]
+ },
+ {
+  "id": "prof",
+  "fr": "prof",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "professeur",
+  "fr": "professeur",
+  "letter": "P",
+  "forms": [
+   "professeurs"
+  ]
+ },
+ {
+  "id": "profession",
+  "fr": "profession",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "continent",
+  "fr": "continent",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "projet",
+  "fr": "projet",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "conversation",
+  "fr": "conversation",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "promener",
+  "fr": "promener",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "copain",
+  "fr": "copain",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "propre",
+  "fr": "propre",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "copine",
+  "fr": "copine",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "puis",
+  "fr": "puis",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "corps",
+  "fr": "corps",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "pull",
+  "fr": "pull",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "costume",
+  "fr": "costume",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "purée",
+  "fr": "purée",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "coton",
+  "fr": "coton",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "pyjama",
+  "fr": "pyjama",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "coucher",
+  "fr": "coucher",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "piquant",
+  "fr": "piquant",
+  "letter": "P",
+  "forms": []
+ },
+ {
+  "id": "couleur",
+  "fr": "couleur",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "courir",
+  "fr": "courir",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "course à pied",
+  "fr": "course à pied",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "cousin",
+  "fr": "cousin",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "coussin",
+  "fr": "coussin",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "couteau",
+  "fr": "couteau",
+  "letter": "C",
+  "forms": [
+   "couteaux"
+  ]
+ },
+ {
+  "id": "coûter",
+  "fr": "coûter",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "couverture",
+  "fr": "couverture",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "couvrir",
+  "fr": "couvrir",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "cravate",
+  "fr": "cravate",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "crayon",
+  "fr": "crayon",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "crème",
+  "fr": "crème",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "crème fraîche",
+  "fr": "crème fraîche",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "crêpe",
+  "fr": "crêpe",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "croire",
+  "fr": "croire",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "croissant",
+  "fr": "croissant",
+  "letter": "C",
+  "forms": [
+   "croissants"
+  ]
+ },
+ {
+  "id": "cuillère",
+  "fr": "cuillère",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "cuir",
+  "fr": "cuir",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "cuisiner",
+  "fr": "cuisiner",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "cuisinier",
+  "fr": "cuisinier",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "curry",
+  "fr": "curry",
+  "letter": "C",
+  "forms": []
+ },
+ {
+  "id": "couvert",
+  "fr": "couvert",
+  "letter": "C",
+  "forms": []
+ }
+]
