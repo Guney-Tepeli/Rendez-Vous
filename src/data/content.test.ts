@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { checkAnswer } from "../domain/answers";
 import { parseMarked, plainText } from "../domain/phonetics";
-import type { Localized } from "../domain/types";
+import type { Exercise, Localized } from "../domain/types";
 import { LESSONS } from "./lessons";
 import { READINGS, frenchWordCount } from "./readings";
 import { PHONETICS_CARDS } from "./phonetics";
@@ -224,28 +224,61 @@ const LATER_GRAMMAR: readonly { lesson: string; name: string; pattern: RegExp }[
   { lesson: "gerondif", name: "gérondif (en + -ant)", pattern: marker("en (?!(?:restaurant|argent|avant)(?!\\p{L})|attendant,)\\p{L}+ant") },
 ];
 
-describe("reading texts and later grammar", () => {
+describe("grammar from later lessons", () => {
   const order = new Map(LESSONS.map((lesson, index) => [lesson.id, index]));
+
+  /** Every marker hit in `french` whose lesson comes after position `at`. */
+  function laterGrammar(where: string, at: number, french: readonly string[]): string[] {
+    // Joined by newlines: markers contain spaces, never newlines, so a hit
+    // cannot run across two separate items.
+    const text = french.join("\n");
+    const found: string[] = [];
+    for (const entry of LATER_GRAMMAR) {
+      if ((order.get(entry.lesson) ?? 0) <= at) continue;
+      for (const match of text.matchAll(entry.pattern)) {
+        found.push(`${where}: "${match[0]}" is ${entry.name}, taught in ${entry.lesson}`);
+      }
+    }
+    return found;
+  }
+
+  /**
+   * The French a learner reads or types in an exercise, with the gap filled
+   * by the right answer. Wrong options of a choice exercise are left out: a
+   * distractor is shown as wrong, it does not teach the form.
+   */
+  function exerciseFrench(exercise: Exercise): string[] {
+    switch (exercise.type) {
+      case "fill":
+        return exercise.answers.map((answer) => exercise.text.replace("___", answer));
+      case "build":
+        return [exercise.tokens.join(" ")];
+      case "free":
+        return exercise.answers;
+      case "choice":
+        return [exercise.text.replace("___", exercise.options[exercise.answer] ?? "")];
+    }
+  }
 
   it("name lessons that exist", () => {
     expect(LATER_GRAMMAR.map((entry) => entry.lesson).filter((id) => !order.has(id))).toEqual([]);
   });
 
-  it("use no marked grammar from a later lesson, in paragraphs or questions", () => {
-    const found: string[] = [];
-    for (const text of READINGS) {
-      const at = order.get(text.lessonId) ?? 0;
-      const french = [
+  it("are not used early in reading texts, paragraphs or questions", () => {
+    const found = READINGS.flatMap((text) =>
+      laterGrammar(text.id, order.get(text.lessonId) ?? 0, [
         ...text.paragraphs.map((paragraph) => paragraph.fr),
         ...text.questions.flatMap((question) => [question.question.fr, ...question.options]),
-      ].join(" ");
-      for (const entry of LATER_GRAMMAR) {
-        if ((order.get(entry.lesson) ?? 0) <= at) continue;
-        for (const match of french.matchAll(entry.pattern)) {
-          found.push(`${text.id}: "${match[0]}" is ${entry.name}, taught in ${entry.lesson}`);
-        }
-      }
-    }
+      ]),
+    );
+    expect(found).toEqual([]);
+  });
+
+  it("are not used early in lesson examples and exercises", () => {
+    const found = LESSONS.flatMap((lesson, at) => [
+      ...laterGrammar(`${lesson.id} examples`, at, lesson.examples.map((example) => example.fr)),
+      ...lesson.exercises.flatMap((exercise) => laterGrammar(exercise.id, at, exerciseFrench(exercise))),
+    ]);
     expect(found).toEqual([]);
   });
 });
