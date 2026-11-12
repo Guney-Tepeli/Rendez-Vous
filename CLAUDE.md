@@ -162,9 +162,11 @@ the model's knowledge. See Open.
   Reading texts and the lesson expansion (11 Nov 2026) are not read by a
   person: Turkish translations not checked by a native speaker; grammar
   from later lessons: readings and lesson examples / exercises are tested
-  for marked forms (D61; 26 early gérondifs in readings rewritten, lessons
-  had none, 12 Nov 2026); unmarked forms (irregular present, "il fait"
-  weather, "depuis") are not checked;
+  for marked forms (D61, 12 Nov 2026: 26 early gérondifs, 7 early "depuis",
+  6 early group-2 -ir verbs rewritten); "il fait beau" is taught as a
+  phrase in lesson 1's examples; irregular verbs with no lesson of their
+  own (rire...) are not checked; one coherence slip fixed (lesson 1
+  reading: an unknown "black cat" replaced by Chloé's cat Mouchoir);
   a few readings sit just above the 450-word floor (25 under 470, all
   within the rule, left as they are). Checked: ~150 word entries
   read, 110 verified on fr.wiktionary (109 / 110 match; 1 IPA fixed: auberge de jeunesse), 1 lesson read. Lessons,

@@ -696,10 +696,10 @@ export const A2_LESSONS: readonly GrammarLesson[] = [
       {
         type: "choice",
         id: "direct-object-pronouns-6",
-        text: "La clé ? Je ___ cherche depuis une heure.",
+        text: "La clé ? Je ___ cherche partout.",
         options: ["le", "la", "les", "l'"],
         answer: 1,
-        translation: { TR: "Anahtar mı? Bir saattir onu arıyorum.", EN: "The key? I've been looking for it for an hour." },
+        translation: { TR: "Anahtar mı? Onu her yerde arıyorum.", EN: "The key? I'm looking for it everywhere." },
       },
       {
         type: "fill",

@@ -203,6 +203,18 @@ const LATER_GRAMMAR: readonly { lesson: string; name: string; pattern: RegExp }[
     name: "futur simple",
     pattern: marker("serai|sera|serons|seront|aurai|aura|auront|ferai|fera|irai|ira|pourra|viendra|verra"),
   },
+  {
+    lesson: "ir-verbs",
+    name: "-ir verb of group 2 (finir, choisir...)",
+    pattern: marker("(?:fin|chois|réuss|grand|réfléch|roug|obé|rempl|ag)(?:is|it|issons|issez|issent)"),
+  },
+  {
+    lesson: "modal-verbs",
+    name: "vouloir / pouvoir / devoir",
+    // "peut-être" (maybe) is an adverb, not pouvoir.
+    pattern: marker("veux|veut|voulons|voulez|veulent|peux|peut(?!-être)|pouvons|pouvez|peuvent|dois|doit|devons|devez|doivent"),
+  },
+  { lesson: "time-expressions", name: "depuis", pattern: marker("depuis") },
   // "Je voudrais" is taught as a fixed polite phrase with the modal verbs,
   // long before the conditionnel itself.
   { lesson: "modal-verbs", name: "je voudrais (fixed phrase)", pattern: marker("je voudrais") },
