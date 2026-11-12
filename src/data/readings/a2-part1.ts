@@ -8,9 +8,9 @@ const texts: readonly ReadingText[] = [
     title: { TR: "Bir hafta sonu felaketi", EN: "A weekend that went wrong" },
     paragraphs: [
       {
-        fr: "Samedi dernier, mon week-end n'a pas bien commencé. Je n'ai pas entendu mon réveil et je me suis levé très tard. Je n'ai pas pris de petit déjeuner et je n'ai pas eu le temps de me doucher. Mon ami Karim a téléphoné trois fois, mais je n'ai pas répondu. À dix heures, j'ai quitté la maison en courant.",
-        TR: "Geçen cumartesi hafta sonum iyi başlamadı. Çalar saatimi duymadım ve çok geç kalktım. Kahvaltı etmedim, duş almaya da vaktim olmadı. Arkadaşım Karim üç kez telefon etti ama cevap vermedim. Saat ona doğru koşarak evden çıktım.",
-        EN: "Last Saturday my weekend did not start well. I did not hear my alarm clock and I got up very late. I did not have breakfast and I did not have time to shower. My friend Karim called three times, but I did not answer. At ten o'clock I left the house running.",
+        fr: "Samedi dernier, mon week-end n'a pas bien commencé. Je n'ai pas entendu mon réveil et je me suis levé très tard. Je n'ai pas pris de petit déjeuner et je n'ai pas eu le temps de me doucher. Mon ami Karim a téléphoné trois fois, mais je n'ai pas répondu. À dix heures, j'ai quitté la maison très vite.",
+        TR: "Geçen cumartesi hafta sonum iyi başlamadı. Çalar saatimi duymadım ve çok geç kalktım. Kahvaltı etmedim, duş almaya da vaktim olmadı. Arkadaşım Karim üç kez telefon etti ama cevap vermedim. Saat ona doğru evden çok hızlı çıktım.",
+        EN: "Last Saturday my weekend did not start well. I did not hear my alarm clock and I got up very late. I did not have breakfast and I did not have time to shower. My friend Karim called three times, but I did not answer. At ten o'clock I left the house very quickly.",
       },
       {
         fr: "Karim a attendu devant la gare. Il n'a pas souri. « As-tu bien dormi ? » a-t-il demandé. J'ai répondu : « Trop bien ! Je suis désolé, je n'ai pas regardé l'heure. » Il a ri, et nous avons acheté deux billets pour Rouen. Le train est parti à dix heures vingt, et nous avons couru jusqu'au quai.",
@@ -243,9 +243,9 @@ const texts: readonly ReadingText[] = [
         EN: "Suddenly the phone rang. It was our neighbour, Madame Petit. She was very worried: the garden gate was open and Biscotte was running in the street. Hugo and I got up in one second, we put on our coats and we went out without breakfast. Outside, the rain was still falling.",
       },
       {
-        fr: "Dans la rue, nous avons cherché partout. Il y avait beaucoup de monde au marché, et les gens achetaient des légumes sous leurs parapluies. Nous avons demandé à un marchand s'il avait vu un petit chien blanc. Il tenait une saucisse dans la main et il a répondu en riant : « Oui, un chien blanc est passé par ici, et il a pris une saucisse ! »",
-        TR: "Sokakta her yeri aradık. Pazarda çok kalabalık vardı ve insanlar şemsiyelerinin altında sebze alıyordu. Bir satıcıya küçük beyaz bir köpek görüp görmediğini sorduk. Elinde bir sosis tutuyordu ve gülerek cevap verdi: « Evet, beyaz bir köpek buradan geçti ve bir sosis aldı! »",
-        EN: "In the street we looked everywhere. There were a lot of people at the market, and people were buying vegetables under their umbrellas. We asked a seller if he had seen a little white dog. He was holding a sausage in his hand and he answered, laughing: \"Yes, a white dog went by here, and it took a sausage!\"",
+        fr: "Dans la rue, nous avons cherché partout. Il y avait beaucoup de monde au marché, et les gens achetaient des légumes sous leurs parapluies. Nous avons demandé à un marchand s'il avait vu un petit chien blanc. Il tenait une saucisse dans la main et il a répondu avec un sourire : « Oui, un chien blanc est passé par ici, et il a pris une saucisse ! »",
+        TR: "Sokakta her yeri aradık. Pazarda çok kalabalık vardı ve insanlar şemsiyelerinin altında sebze alıyordu. Bir satıcıya küçük beyaz bir köpek görüp görmediğini sorduk. Elinde bir sosis tutuyordu ve gülümseyerek cevap verdi: « Evet, beyaz bir köpek buradan geçti ve bir sosis aldı! »",
+        EN: "In the street we looked everywhere. There were a lot of people at the market, and people were buying vegetables under their umbrellas. We asked a seller if he had seen a little white dog. He was holding a sausage in his hand and he answered with a smile: \"Yes, a white dog went by here, and it took a sausage!\"",
       },
       {
         fr: "Nous avons couru vers le parc. Des enfants jouaient au ballon près de la fontaine, et Biscotte jouait avec eux ! Elle était mouillée, sale et très heureuse. Quand elle a vu Hugo, elle a sauté dans ses bras. Une petite fille avait déjà sa laisse à la main et elle a demandé : « Il est à vous, ce chien ? »",
@@ -563,9 +563,9 @@ const texts: readonly ReadingText[] = [
         EN: "For the week we prepare a little menu. Monday, pasta: we need a packet. Tuesday, chicken: Élie buys half of one. Wednesday, salad: we have three. Thursday, pizza: we order one. Friday, rice: there is already some in the cupboard. Élie says that we eat a lot of it, but he wants some more. I do not feel like any: I prefer dessert!",
       },
       {
-        fr: "Le soir, Élie cuisine une soupe. Il demande : « Il faut de l'huile. — Il y en a dans le placard. — Et du sel ? » Nous en cherchons partout, mais nous n'en trouvons pas. Par chance, madame Bernard, notre voisine, en a toujours. Elle nous en donne un petit pot et elle nous dit en riant : « Vous êtes des étudiants, vous n'avez pas de réserves ! »",
-        TR: "Akşam Élie çorba pişiriyor. Soruyor: « Yağ lazım. — Dolapta var. — Ya tuz? » Her yerde arıyoruz ama bulamıyoruz. Neyse ki komşumuz Madame Bernard'ın hep vardır. Bize küçük bir kavanoz veriyor ve gülerek diyor ki: « Siz öğrencisiniz, yedeğiniz yok! »",
-        EN: "In the evening Élie cooks a soup. He asks: \"We need oil.\" \"There is some in the cupboard.\" \"And salt?\" We look for some everywhere, but we do not find any. Luckily, Madame Bernard, our neighbour, always has some. She gives us a small jar and says to us, laughing: \"You are students, you have no supplies!\"",
+        fr: "Le soir, Élie cuisine une soupe. Il demande : « Il faut de l'huile. — Il y en a dans le placard. — Et du sel ? » Nous en cherchons partout, mais nous n'en trouvons pas. Par chance, madame Bernard, notre voisine, en a toujours. Elle nous en donne un petit pot et elle nous dit avec un sourire : « Vous êtes des étudiants, vous n'avez pas de réserves ! »",
+        TR: "Akşam Élie çorba pişiriyor. Soruyor: « Yağ lazım. — Dolapta var. — Ya tuz? » Her yerde arıyoruz ama bulamıyoruz. Neyse ki komşumuz Madame Bernard'ın hep vardır. Bize küçük bir kavanoz veriyor ve gülümseyerek diyor ki: « Siz öğrencisiniz, yedeğiniz yok! »",
+        EN: "In the evening Élie cooks a soup. He asks: \"We need oil.\" \"There is some in the cupboard.\" \"And salt?\" We look for some everywhere, but we do not find any. Luckily, Madame Bernard, our neighbour, always has some. She gives us a small jar and says to us with a smile: \"You are students, you have no supplies!\"",
       },
       {
         fr: "Nous mangeons la soupe avec du pain et du fromage. Il en reste pour demain, et c'est une bonne nouvelle. Élie parle de ses vacances à la mer : il en parle souvent, mais il n'en a pas encore réservé. Je le regarde, et je pense : demain, il faut faire attention, parce que le frigo est plein, mais le porte-monnaie est vide !",
@@ -763,9 +763,9 @@ const texts: readonly ReadingText[] = [
         EN: "I have a big choice to make. My company is offering me a job in Grenoble, but I live in Toulouse with my wife Sonia and I like this city. Toulouse is bigger than Grenoble: it has more inhabitants and more shops. But Grenoble is as beautiful as Toulouse, with its white mountains. So where are we going to live? Sonia and I make a list.",
       },
       {
-        fr: "À Grenoble, je gagnerai plus d'argent : le salaire est meilleur de trois cents euros par mois. Mais les loyers sont plus chers là-bas : un appartement coûte autant qu'à Paris. À Toulouse, la vie est moins chère, et nous avons un appartement plus grand, avec un balcon. Sonia dit en riant : « Tu gagneras plus, mais nous aurons moins d'espace ! »",
+        fr: "À Grenoble, je gagnerai plus d'argent : le salaire est meilleur de trois cents euros par mois. Mais les loyers sont plus chers là-bas : un appartement coûte autant qu'à Paris. À Toulouse, la vie est moins chère, et nous avons un appartement plus grand, avec un balcon. Sonia rit et dit : « Tu gagneras plus, mais nous aurons moins d'espace ! »",
         TR: "Grenoble'da daha çok para kazanacağım: maaş ayda üç yüz avro daha iyi. Ama orada kiralar daha pahalı: bir daire Paris kadar tutuyor. Toulouse'da hayat daha ucuz ve balkonlu, daha büyük bir dairemiz var. Sonia gülerek diyor ki: « Daha çok kazanacaksın ama daha az yerimiz olacak! »",
-        EN: "In Grenoble I will earn more money: the salary is better by three hundred euros a month. But the rents are more expensive there: a flat costs as much as in Paris. In Toulouse life is cheaper, and we have a bigger flat, with a balcony. Sonia says, laughing: \"You will earn more, but we will have less space!\"",
+        EN: "In Grenoble I will earn more money: the salary is better by three hundred euros a month. But the rents are more expensive there: a flat costs as much as in Paris. In Toulouse life is cheaper, and we have a bigger flat, with a balcony. Sonia laughs and says: \"You will earn more, but we will have less space!\"",
       },
       {
         fr: "Le climat est différent. En été, il fait plus chaud à Toulouse qu'à Grenoble, et en hiver, il neige plus à Grenoble. Sonia aime la neige autant que moi, mais elle skie mieux que moi. Moi, je skie moins bien qu'elle, et je tombe plus souvent. Elle me dit : « Tu seras meilleur après une saison ! » Je ne la crois pas beaucoup.",
@@ -838,9 +838,9 @@ const texts: readonly ReadingText[] = [
         EN: "This summer I did a tour of France by train with my best friend, Yanis. We travelled for three weeks, with two backpacks and a small budget. When we got back, we wanted to make a ranking of our trip. So here are my records: the most beautiful, the longest, the best, the cheapest. You will see, it is a fun game!",
       },
       {
-        fr: "La plus belle ville ? Pour moi, c'est Annecy. Son lac est le plus joli de la région, et ses petites rues sont les plus charmantes du voyage. Yanis préfère Lyon, mais pour lui, la plus belle ville, c'est aussi la plus grande ! Nous ne sommes pas d'accord, mais nous nous amusons beaucoup en discutant.",
-        TR: "En güzel şehir mi? Bence Annecy. Gölü bölgenin en güzeli ve küçük sokakları gezinin en büyüleyicileri. Yanis Lyon'u tercih ediyor ama ona göre en güzel şehir aynı zamanda en büyük şehir! Aynı fikirde değiliz ama tartışırken çok eğleniyoruz.",
-        EN: "The most beautiful city? For me, it is Annecy. Its lake is the prettiest in the region, and its little streets are the most charming of the trip. Yanis prefers Lyon, but for him the most beautiful city is also the biggest! We do not agree, but we have a lot of fun discussing it.",
+        fr: "La plus belle ville ? Pour moi, c'est Annecy. Son lac est le plus joli de la région, et ses petites rues sont les plus charmantes du voyage. Yanis préfère Lyon, mais pour lui, la plus belle ville, c'est aussi la plus grande ! Nous ne sommes pas d'accord, mais nous nous amusons beaucoup pendant ces discussions.",
+        TR: "En güzel şehir mi? Bence Annecy. Gölü bölgenin en güzeli ve küçük sokakları gezinin en büyüleyicileri. Yanis Lyon'u tercih ediyor ama ona göre en güzel şehir aynı zamanda en büyük şehir! Aynı fikirde değiliz ama bu tartışmalarda çok eğleniyoruz.",
+        EN: "The most beautiful city? For me, it is Annecy. Its lake is the prettiest in the region, and its little streets are the most charming of the trip. Yanis prefers Lyon, but for him the most beautiful city is also the biggest! We do not agree, but we have a lot of fun in these discussions.",
       },
       {
         fr: "Le meilleur repas ? À Lyon, dans un petit restaurant de quartier. C'est le restaurant le moins cher de la rue, mais c'est aussi le meilleur de la ville, selon la serveuse. Le plat le plus étonnant ? Une soupe d'oignons avec du fromage, servie dans un bol énorme. Le dessert le plus sucré ? Une tarte aux noix, sans doute. Yanis en a mangé trois parts.",
@@ -863,7 +863,7 @@ const texts: readonly ReadingText[] = [
         EN: "The kindest person? A waitress in Nice, who gave us the best advice in the region. The funniest? Yanis, of course, and he is also the most tired at the end of the trip. The biggest sleeper of the group? It is him, he slept in the trains! I am the most curious: I ask people questions.",
       },
       {
-        fr: "Le paysage le plus spectaculaire ? Les falaises d'Étretat, au nord. C'est la plage la plus belle de notre voyage, et aussi la plus froide ! Yanis a fait la baignade la plus courte de sa vie : deux minutes. La chose la plus drôle, c'était son cri en entrant dans l'eau. Les mouettes ont fui, les touristes ont ri, et moi, j'ai pris la photo la plus amusante de mon téléphone.",
+        fr: "Le paysage le plus spectaculaire ? Les falaises d'Étretat, au nord. C'est la plage la plus belle de notre voyage, et aussi la plus froide ! Yanis a fait la baignade la plus courte de sa vie : deux minutes. La chose la plus drôle, c'était son cri quand il est entré dans l'eau. Les mouettes ont fui, les touristes ont ri, et moi, j'ai pris la photo la plus amusante de mon téléphone.",
         TR: "En muhteşem manzara mı? Kuzeydeki Étretat kayalıkları. Gezimizin en güzel plajı ve aynı zamanda en soğuğu! Yanis hayatının en kısa yüzmesini yaptı: iki dakika. En komik şey suya girerken attığı çığlıktı. Martılar kaçtı, turistler güldü, ben de telefonumdaki en eğlenceli fotoğrafı çektim.",
         EN: "The most spectacular landscape? The cliffs of Étretat, in the north. It is the most beautiful beach of our trip, and also the coldest! Yanis took the shortest swim of his life: two minutes. The funniest thing was his cry when he went into the water. The seagulls fled, the tourists laughed, and I took the funniest photo on my phone.",
       },

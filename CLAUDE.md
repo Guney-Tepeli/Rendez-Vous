@@ -46,7 +46,7 @@ the model's knowledge. See Open.
 | Command | What |
 |---|---|
 | `npm run dev` | Vite dev server |
-| `npm test` | Vitest, 109 tests (+3 single-file checks), all deterministic (fixed clock) |
+| `npm test` | Vitest, 112 tests (+3 single-file checks), all deterministic (fixed clock) |
 | `./mac/build.sh` | Build `Rendez-Vous.app` (web build + universal Swift binary + icon, ad-hoc signed). `SKIP_WEB=1` reuses `dist/`. `RENDEZVOUS_SELFTEST=1 Rendez-Vous.app/Contents/MacOS/Rendez-Vous` prints a JSON self-check and quits |
 | `npm run typecheck` | `tsc --noEmit`, strict |
 | `VOCAB_FILE=src/data/vocab/x.json npx vitest run src/data/vocab/check.test.ts` | Check one vocabulary file while writing it |
@@ -152,6 +152,7 @@ the model's knowledge. See Open.
 | D58 | Day summary: PDF through the print dialog with print CSS, Word through the `docx` package loaded on demand | Print-to-PDF needs no library; Word cannot be made without one (dependency approved by the owner); lazy load keeps it out of the main bundle | A PDF library; Markdown only |
 | D59 | Mac app is a small Swift/AppKit wrapper (WKWebView, custom `rendezvous://` scheme serving the bundled build), ad-hoc signed, no DMG | No server or browser, real localStorage, icon in Finder; owner said DMG not needed. A custom scheme instead of `file://` because ES modules and storage are unreliable there | Electron / Tauri (new dependencies, 100+ MB); a localhost server |
 | D60 | Word entries need at least 3 examples (schema) | Owner asked for three sentences per word | Two |
+| D61 | Readings, lesson examples and exercises are tested for grammar from later lessons by marker regexes (exercises with the gap filled by the right answer; wrong choice options skipped, they are shown as wrong), each naming the lesson that teaches it (`content.test.ts`); word edges are `(?<!\p{L})` / `(?!\p{L})`. Fixed phrases are their own marker ("je voudrais" from `modal-verbs`) or excluded ("En attendant," = meanwhile; "en restaurant") | Deterministic, catches the common slips (an early gérondif was in 26 places); JS `\b` is ASCII-only and splits "déjà" | Reading every text by hand only; a French parser (dependency) |
 | D9 | Default instruction language TR | Assumption, one line in `initialState()` | EN |
 
 ## Open
@@ -159,9 +160,13 @@ the model's knowledge. See Open.
 - **Human review of content.** 2,999 word entries (3 examples each), 78 lessons,
   78 reading texts, 23 phonetics cards, 124 prompts were written by subagents.
   Reading texts and the lesson expansion (11 Nov 2026) are not read by a
-  person: Turkish translations not checked by a native speaker; some texts
-  and exercises use grammar from later lessons (small items, not tested);
-  a few readings sit just above the 450-word floor. Checked: ~150 word entries
+  person: Turkish translations not checked by a native speaker; grammar
+  from later lessons: readings and lesson examples / exercises are tested
+  for marked forms (D61; 26 early gérondifs in readings rewritten, lessons
+  had none, 12 Nov 2026); unmarked forms (irregular present, "il fait"
+  weather, "depuis") are not checked;
+  a few readings sit just above the 450-word floor (25 under 470, all
+  within the rule, left as they are). Checked: ~150 word entries
   read, 110 verified on fr.wiktionary (109 / 110 match; 1 IPA fixed: auberge de jeunesse), 1 lesson read. Lessons,
   phonetics IPA and example sentences beyond that are unverified.
 - No automated UI tests remain in the repo (removed with their tools).
