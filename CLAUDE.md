@@ -184,7 +184,7 @@ the model's knowledge. See Open.
   touched in A2) have no lesson of their own.
 - Pace mismatch: grammar ends after 78 days, words after 300 at 10 a day
   (200 at 15, 150 at 20).
-- Bundle is 2.1 MB (640 KB gzipped) because all vocabulary is bundled.
+- Bundle is 3.5 MB (1.1 MB gzipped, measured 12 Nov 2026) because all vocabulary is bundled.
 - An LLM answer judge (option B) is not built.
 - `Rendez-Vous.app` in the repo is a build artifact: it must be rebuilt with
   `mac/build.sh` after code or content changes, or it shows old content.
@@ -194,7 +194,11 @@ the model's knowledge. See Open.
   summary, Word file (valid .docx, 11.9 KB) all work, no console errors.
   Not checked: the PDF print dialog (needs a person), the Mac app's save
   panel by hand (bridge reported present by the self-test).
-- Audio: technically verified (voice found, speech runs, slow is slower); not judged by ear.
+- Audio: technically verified (voice found, speech runs, slow is slower) and
+  checked by ear in the Mac app (12 Nov 2026): natural French voice,
+  slow is slower. The self-test's `frenchVoices` reads 0 (it calls
+  `getVoices()` once, 1.5 s after load, before WebKit has listed the voices);
+  speech still works. Not judged by ear in a browser.
 - Position inside a module is not saved; free-text answers are a fixed list
   plus what the learner accepted.
 - Progress lives in one browser; no export / sync.
