@@ -1092,18 +1092,18 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         type: "choice",
         id: "adjective-position-7",
-        text: "Choisis la bonne phrase.",
+        text: "Quelle phrase est correcte ?",
         options: ["Il a un français ami.", "Il a un ami français.", "Il a un ami française.", "Il a une ami français."],
         answer: 1,
-        translation: { TR: "Doğru cümleyi seç.", EN: "Choose the correct sentence." },
+        translation: { TR: "Hangi cümle doğru?", EN: "Which sentence is correct?" },
       },
       {
         type: "choice",
         id: "adjective-position-8",
-        text: "Choisis la bonne phrase.",
+        text: "Quelle phrase est correcte ?",
         options: ["J'ai un chat petit.", "J'ai une petite chat.", "J'ai un petit chat.", "J'ai des petit chat."],
         answer: 2,
-        translation: { TR: "Doğru cümleyi seç.", EN: "Choose the correct sentence." },
+        translation: { TR: "Hangi cümle doğru?", EN: "Which sentence is correct?" },
       },
       {
         type: "free",
