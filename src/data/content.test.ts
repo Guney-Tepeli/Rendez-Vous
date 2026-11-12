@@ -159,3 +159,93 @@ describe("reading texts", () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// Grammar from later lessons
+// ---------------------------------------------------------------------------
+//
+// A reading text may only use grammar taught up to its own lesson. Checking
+// that fully needs a person; this catches the forms that are easy to spot.
+// Each marker names the lesson that teaches it: a text for an EARLIER lesson
+// must not contain it. Markers are a best-effort net, not a parser: they miss
+// things (irregular present tense, for example) but every hit is real.
+//
+// Word edges are written as (?<!\p{L}) and (?!\p{L}), not \b: in JavaScript
+// \b only knows ASCII letters, so it sees an edge inside "déjà" (after "dé").
+// The regexes only read the text; nothing is changed.
+
+const L = "(?<!\\p{L})";
+const R = "(?!\\p{L})";
+const marker = (words: string) => new RegExp(`${L}(?:${words})${R}`, "giu");
+
+const LATER_GRAMMAR: readonly { lesson: string; name: string; pattern: RegExp }[] = [
+  {
+    lesson: "passe-compose-avoir",
+    name: "passé composé with avoir",
+    pattern: marker(
+      "(?:j'ai|tu as|il a|elle a|on a|nous avons|vous avez|ils ont|elles ont) (?:\\p{L}+é|fini|pris|fait|vu|eu|été|dit|mis|lu|bu|choisi|écrit|ouvert)",
+    ),
+  },
+  {
+    lesson: "passe-compose-etre",
+    name: "passé composé with être",
+    pattern: marker(
+      "(?:je suis|il est|elle est|nous sommes|ils sont|elles sont) (?:allée?s?|venue?s?|partie?s?|arrivée?s?|née?s?|restée?s?|rentrée?s?|tombée?s?|sortie?s?|montée?s?|descendue?s?)",
+    ),
+  },
+  {
+    lesson: "imparfait",
+    name: "imparfait",
+    pattern: marker("étais|était|étions|étaient|avais|avait|avaient|faisait|allait|pouvait|voulait|habitait|aimait"),
+  },
+  {
+    lesson: "futur-simple",
+    name: "futur simple",
+    pattern: marker("serai|sera|serons|seront|aurai|aura|auront|ferai|fera|irai|ira|pourra|viendra|verra"),
+  },
+  // "Je voudrais" is taught as a fixed polite phrase with the modal verbs,
+  // long before the conditionnel itself.
+  { lesson: "modal-verbs", name: "je voudrais (fixed phrase)", pattern: marker("je voudrais") },
+  {
+    lesson: "conditionnel-politeness",
+    name: "conditionnel",
+    pattern: marker("(?<!je )voudrais|voudrait|pourrais|pourrait|aimerais|aimerait|serait|aurait|devrais|devrait"),
+  },
+  { lesson: "relative-dont", name: "dont", pattern: marker("dont") },
+  {
+    lesson: "subjonctif-formation",
+    name: "subjonctif",
+    pattern: marker("que je sois|qu'il soit|qu'elle soit|qu'il fasse|qu'il aille|qu'il puisse|que tu sois|que nous soyons"),
+  },
+  // en + present participle. Nouns that end in -ant after "en" are not
+  // gérondifs: "transformée en restaurant", "en argent", "en avant".
+  // "En attendant," with a comma is the fixed adverb "meanwhile", not a
+  // gérondif of attendre.
+  { lesson: "gerondif", name: "gérondif (en + -ant)", pattern: marker("en (?!(?:restaurant|argent|avant)(?!\\p{L})|attendant,)\\p{L}+ant") },
+];
+
+describe("reading texts and later grammar", () => {
+  const order = new Map(LESSONS.map((lesson, index) => [lesson.id, index]));
+
+  it("name lessons that exist", () => {
+    expect(LATER_GRAMMAR.map((entry) => entry.lesson).filter((id) => !order.has(id))).toEqual([]);
+  });
+
+  it("use no marked grammar from a later lesson, in paragraphs or questions", () => {
+    const found: string[] = [];
+    for (const text of READINGS) {
+      const at = order.get(text.lessonId) ?? 0;
+      const french = [
+        ...text.paragraphs.map((paragraph) => paragraph.fr),
+        ...text.questions.flatMap((question) => [question.question.fr, ...question.options]),
+      ].join(" ");
+      for (const entry of LATER_GRAMMAR) {
+        if ((order.get(entry.lesson) ?? 0) <= at) continue;
+        for (const match of french.matchAll(entry.pattern)) {
+          found.push(`${text.id}: "${match[0]}" is ${entry.name}, taught in ${entry.lesson}`);
+        }
+      }
+    }
+    expect(found).toEqual([]);
+  });
+});

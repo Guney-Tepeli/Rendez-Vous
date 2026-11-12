@@ -303,7 +303,7 @@ const texts: readonly ReadingText[] = [
         EN: "He picked up another photo: a small red car. “Now that was a mistake! I bought it too quickly. If I had compared the prices, I would have saved a lot of money. If I had read the contract, I would have seen that the car already had an engine problem. I broke down three times in the first month. If I had listened to your great-grandfather, I wouldn't have wasted my salary.”",
       },
       {
-        fr: "Ma grand-mère est entrée avec le café. « Henri raconte encore ses regrets ? a-t-elle dit en souriant. Si tu avais appris à conduire plus tôt, tu n'aurais pas eu tous ces problèmes. Mais si tu n'avais pas été si têtu, nous n'aurions jamais acheté cette petite maison avec le jardin. » Mon grand-père a répondu : « Alors c'est vrai : si j'avais fait moins d'erreurs, notre vie aurait été moins drôle ! »",
+        fr: "Ma grand-mère est entrée avec le café. « Henri raconte encore ses regrets ? a-t-elle dit avec un sourire. Si tu avais appris à conduire plus tôt, tu n'aurais pas eu tous ces problèmes. Mais si tu n'avais pas été si têtu, nous n'aurions jamais acheté cette petite maison avec le jardin. » Mon grand-père a répondu : « Alors c'est vrai : si j'avais fait moins d'erreurs, notre vie aurait été moins drôle ! »",
         TR: "Büyükannem kahveyle içeri girdi. “Henri yine pişmanlıklarını mı anlatıyor?” dedi gülümseyerek. “Daha erken araba kullanmayı öğrenmiş olsaydın bu kadar sorun yaşamazdın. Ama bu kadar inatçı olmasaydın bahçeli şu küçük evi hiç almazdık.” Büyükbabam cevap verdi: “O hâlde doğru: daha az hata yapmış olsaydım hayatımız daha az eğlenceli olurdu!”",
         EN: "My grandmother came in with the coffee. “Is Henri telling his regrets again?” she said with a smile. “If you had learned to drive earlier, you wouldn't have had all those problems. But if you hadn't been so stubborn, we would never have bought this little house with the garden.” My grandfather answered: “So it's true: if I had made fewer mistakes, our life would have been less fun!”",
       },
@@ -318,7 +318,7 @@ const texts: readonly ReadingText[] = [
         EN: "I listened to them for a long time. I thought about my own choices. Last year, I turned down an internship in Madrid because I was afraid. If I had accepted, I would have learned Spanish and I would have met interesting people. I talked about it with my grandfather. He put his hand on my shoulder: “If you want, you can still go. If I had had your age and your luck, I wouldn't have waited.”",
       },
       {
-        fr: "En rentrant à la maison, j'ai ouvert mon ordinateur et j'ai cherché des stages pour l'été prochain. Si j'avais écouté seulement ma peur, je n'aurais rien fait. Mon grand-père m'a donné une leçon sans le savoir : on regrette moins les erreurs que les occasions perdues. Ce soir-là, j'ai envoyé trois candidatures. Si tout se passe bien, je partirai en juillet, et grand-père viendra me voir.",
+        fr: "Quand je suis rentré à la maison, j'ai ouvert mon ordinateur et j'ai cherché des stages pour l'été prochain. Si j'avais écouté seulement ma peur, je n'aurais rien fait. Mon grand-père m'a donné une leçon sans le savoir : on regrette moins les erreurs que les occasions perdues. Ce soir-là, j'ai envoyé trois candidatures. Si tout se passe bien, je partirai en juillet, et grand-père viendra me voir.",
         TR: "Eve dönünce bilgisayarımı açtım ve gelecek yaz için stajlar aradım. Yalnızca korkumu dinlemiş olsaydım hiçbir şey yapmamış olurdum. Büyükbabam farkında olmadan bana bir ders verdi: insan hatalara, kaçırılan fırsatlardan daha az pişman olur. O akşam üç başvuru gönderdim. Her şey yolunda giderse temmuzda gideceğim ve büyükbabam beni görmeye gelecek.",
         EN: "When I got home, I opened my computer and looked for internships for next summer. If I had listened only to my fear, I would have done nothing. My grandfather gave me a lesson without knowing it: we regret mistakes less than lost opportunities. That evening, I sent three applications. If all goes well, I will leave in July, and Grandpa will come to see me.",
       },
@@ -345,7 +345,7 @@ const texts: readonly ReadingText[] = [
         answer: 1,
       },
       {
-        question: { fr: "Que fait le narrateur en rentrant chez lui ?", TR: "Anlatıcı eve dönünce ne yapıyor?", EN: "What does the narrator do when he gets home?" },
+        question: { fr: "Que fait le narrateur quand il rentre chez lui ?", TR: "Anlatıcı eve dönünce ne yapıyor?", EN: "What does the narrator do when he gets home?" },
         options: ["Il appelle sa grand-mère.", "Il envoie trois candidatures.", "Il achète un billet d'avion."],
         answer: 1,
       },
@@ -573,9 +573,9 @@ const texts: readonly ReadingText[] = [
         EN: "My brother Adrien has lived in Quebec for three years. He phoned me last night to announce that he is coming back to France for a week. I am very glad he is coming, but I am also a little surprised. I didn't think he could take time off in November. “Are you sure your boss agrees?” I asked him. He laughed: “Yes, I think everything is settled.”",
       },
       {
-        fr: "Ma mère est folle de joie. Elle est heureuse qu'Adrien rentre pour l'anniversaire de papa. Mais elle a peur que le voyage soit trop fatigant pour lui, et elle regrette qu'il ne reste pas plus longtemps. « C'est dommage qu'il parte déjà dimanche prochain ! » répète-t-elle en pliant les draps de sa chambre. Moi, j'essaie de la calmer : « Maman, nous aurons quand même six jours ensemble. »",
-        TR: "Annem sevinçten deliye dönmüş durumda. Adrien'in babamın doğum günü için dönmesine çok memnun. Ama yolculuğun onun için çok yorucu olmasından korkuyor ve daha uzun kalmamasına üzülüyor. “Gelecek pazar daha şimdiden gitmesi ne yazık!” diye tekrarlıyor, odasının çarşaflarını katlarken. Ben onu sakinleştirmeye çalışıyorum: “Anne, yine de altı günümüz olacak.”",
-        EN: "My mother is overjoyed. She is happy that Adrien is coming home for Dad's birthday. But she is afraid the journey will be too tiring for him, and she regrets that he is not staying longer. “It's a pity that he's already leaving next Sunday!” she repeats while folding the sheets for his room. I try to calm her down: “Mum, we'll still have six days together.”",
+        fr: "Ma mère est folle de joie. Elle est heureuse qu'Adrien rentre pour l'anniversaire de papa. Mais elle a peur que le voyage soit trop fatigant pour lui, et elle regrette qu'il ne reste pas plus longtemps. « C'est dommage qu'il parte déjà dimanche prochain ! » répète-t-elle, et elle plie les draps de sa chambre. Moi, j'essaie de la calmer : « Maman, nous aurons quand même six jours ensemble. »",
+        TR: "Annem sevinçten deliye dönmüş durumda. Adrien'in babamın doğum günü için dönmesine çok memnun. Ama yolculuğun onun için çok yorucu olmasından korkuyor ve daha uzun kalmamasına üzülüyor. “Gelecek pazar daha şimdiden gitmesi ne yazık!” diye tekrarlıyor ve odasının çarşaflarını katlıyor. Ben onu sakinleştirmeye çalışıyorum: “Anne, yine de altı günümüz olacak.”",
+        EN: "My mother is overjoyed. She is happy that Adrien is coming home for Dad's birthday. But she is afraid the journey will be too tiring for him, and she regrets that he is not staying longer. “It's a pity that he's already leaving next Sunday!” she repeats, and she folds the sheets for his room. I try to calm her down: “Mum, we'll still have six days together.”",
       },
       {
         fr: "Papa est plus calme. Il est content de revoir son fils, mais il doute qu'Adrien ait le temps de visiter toute la famille. « Il est possible qu'il soit trop occupé, dit-il. Je ne suis pas sûr qu'il puisse venir chez ta tante à Lyon. » C'est vrai que ma tante habite loin. Je ne pense pas non plus que le voyage soit facile, car les trains sont souvent en retard en cette saison.",
@@ -878,9 +878,9 @@ const texts: readonly ReadingText[] = [
         EN: "While Tom eats his cake, Léa gives him one last piece of advice. “Make a list of everything you can cook, and of everything you would need to open your restaurant: a kitchen, customers, a little money. What is difficult is not starting, it is continuing. I don't know what awaits you, but I know what you're worth.” Tom's eyes are shining.",
       },
       {
-        fr: "En sortant du café, Tom achète un carnet bleu dans une librairie. Sur la première page, il écrit trois phrases : « Ce que j'aime. Ce que je sais faire. Ce dont le monde a besoin. » Puis il rentre chez lui à pied, avec une énergie qu'il n'avait pas ressentie depuis longtemps. Le lendemain, il invite quatre amis à dîner et prépare tout ce qu'il adore. Léa envoie un message : « Dis-moi ce qui s'est passé ! »",
+        fr: "Quand il sort du café, Tom achète un carnet bleu dans une librairie. Sur la première page, il écrit trois phrases : « Ce que j'aime. Ce que je sais faire. Ce dont le monde a besoin. » Puis il rentre chez lui à pied, avec une énergie qu'il n'avait pas ressentie depuis longtemps. Le lendemain, il invite quatre amis à dîner et prépare tout ce qu'il adore. Léa envoie un message : « Dis-moi ce qui s'est passé ! »",
         TR: "Kafeden çıkarken Tom bir kitapçıdan mavi bir defter alıyor. İlk sayfaya üç cümle yazıyor: “Sevdiğim şey. Yapabildiğim şey. Dünyanın ihtiyaç duyduğu şey.” Sonra uzun zamandır hissetmediği bir enerjiyle yürüyerek eve dönüyor. Ertesi gün dört arkadaşını yemeğe davet ediyor ve bayıldığı her şeyi hazırlıyor. Léa bir mesaj gönderiyor: “Ne olduğunu anlat bana!”",
-        EN: "On leaving the café, Tom buys a blue notebook in a bookshop. On the first page, he writes three phrases: “What I love. What I can do. What the world needs.” Then he walks home with an energy he hasn't felt for a long time. The next day, he invites four friends to dinner and cooks everything he loves. Léa sends a message: “Tell me what happened!”",
+        EN: "When he leaves the café, Tom buys a blue notebook in a bookshop. On the first page, he writes three phrases: “What I love. What I can do. What the world needs.” Then he walks home with an energy he hasn't felt for a long time. The next day, he invites four friends to dinner and cooks everything he loves. Léa sends a message: “Tell me what happened!”",
       },
     ],
     questions: [
@@ -948,9 +948,9 @@ const texts: readonly ReadingText[] = [
         EN: "On the way back, we stopped in front of a book stall. I hesitated between two novels: the one in the display and the one lying on the table. “Take the one you flicked through earlier,” Clara advised me. “The books we have already touched are the ones we end up buying.” I laughed and bought the one on the table for two euros. Those who say books are expensive have never visited this market!",
       },
       {
-        fr: "En rentrant, nous avons comparé nos trouvailles. Ma lampe était plus petite que celle de mon bureau, mais elle était plus jolie. Les robes de Clara étaient plus élégantes que celles que nous avions vues en magasin. Nous avons décidé de revenir le mois prochain, avec des sacs plus grands. Celles et ceux qui aiment les belles choses trouveront toujours leur bonheur aux puces !",
-        TR: "Dönerken buluntularımızı karşılaştırdık. Lambam masamdakinden daha küçüktü ama daha güzeldi. Clara'nın elbiseleri mağazada gördüklerimizden daha şıktı. Gelecek ay daha büyük çantalarla geri dönmeye karar verdik. Güzel şeyleri sevenler bit pazarında her zaman mutluluğu bulur!",
-        EN: "On the way home, we compared our finds. My lamp was smaller than the one on my desk, but it was prettier. Clara's dresses were more elegant than the ones we had seen in shops. We decided to come back next month, with bigger bags. Those who love beautiful things will always find happiness at the flea market!",
+        fr: "De retour à la maison, nous avons comparé nos trouvailles. Ma lampe était plus petite que celle de mon bureau, mais elle était plus jolie. Les robes de Clara étaient plus élégantes que celles que nous avions vues en magasin. Nous avons décidé de revenir le mois prochain, avec des sacs plus grands. Celles et ceux qui aiment les belles choses trouveront toujours leur bonheur aux puces !",
+        TR: "Eve dönünce buluntularımızı karşılaştırdık. Lambam masamdakinden daha küçüktü ama daha güzeldi. Clara'nın elbiseleri mağazada gördüklerimizden daha şıktı. Gelecek ay daha büyük çantalarla geri dönmeye karar verdik. Güzel şeyleri sevenler bit pazarında her zaman mutluluğu bulur!",
+        EN: "Back home, we compared our finds. My lamp was smaller than the one on my desk, but it was prettier. Clara's dresses were more elegant than the ones we had seen in shops. We decided to come back next month, with bigger bags. Those who love beautiful things will always find happiness at the flea market!",
       },
     ],
     questions: [
