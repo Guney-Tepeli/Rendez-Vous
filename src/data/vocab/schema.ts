@@ -15,7 +15,8 @@
  *    "examples":[["Je mange une pomme.","Bir elma yiyorum.","I'm eating an apple."], ...]}
  *
  * Per part of speech:
- *   noun        gender "m"|"f", plural; optional pluralOnly: true
+ *   noun        gender "m"|"f", plural; optional pluralOnly: true; optional
+ *               epicene: true (same word for a man and a woman: "un / une élève")
  *   verb        group 1|2|3, present: [je, tu, il, nous, vous, ils] (verb forms only, no pronouns)
  *   adjective   feminine
  *   expression  (nothing extra) fixed phrases, conjugated chunks
@@ -33,7 +34,7 @@ import {
 
 const POS = ["noun", "verb", "adjective", "expression", "other"] as const;
 const EXTRA_FIELDS: Record<(typeof POS)[number], readonly string[]> = {
-  noun: ["gender", "plural", "pluralOnly"],
+  noun: ["gender", "plural", "pluralOnly", "epicene"],
   verb: ["group", "present"],
   adjective: ["feminine"],
   expression: [],
@@ -106,9 +107,16 @@ export function parseEntry(raw: unknown, file: string): VocabularyItem {
       if (raw.pluralOnly !== undefined && raw.pluralOnly !== true) {
         throw new VocabFormatError(`${where}: "pluralOnly" may only be true`);
       }
-      return raw.pluralOnly === true
-        ? { ...base, pos: "noun", gender, plural, pluralOnly: true }
-        : { ...base, pos: "noun", gender, plural };
+      if (raw.epicene !== undefined && raw.epicene !== true) {
+        throw new VocabFormatError(`${where}: "epicene" may only be true`);
+      }
+      // "les vacances" has no singular to put "un" or "une" in front of.
+      if (raw.pluralOnly === true && raw.epicene === true) {
+        throw new VocabFormatError(`${where}: a noun cannot be both "pluralOnly" and "epicene"`);
+      }
+      if (raw.pluralOnly === true) return { ...base, pos: "noun", gender, plural, pluralOnly: true };
+      if (raw.epicene === true) return { ...base, pos: "noun", gender, plural, epicene: true };
+      return { ...base, pos: "noun", gender, plural };
     }
     case "verb": {
       const group = raw.group;

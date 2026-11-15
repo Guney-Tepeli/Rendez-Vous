@@ -75,6 +75,12 @@ export interface NounItem extends VocabularyBase {
   plural: string;
   /** Set for nouns that exist only in the plural ("les vacances"). */
   pluralOnly?: true;
+  /**
+   * Set for nouns spelt the same for a man and a woman ("un / une élève").
+   * `gender` still holds one value, so code that needs a single article keeps
+   * working; display code that sees this flag shows both.
+   */
+  epicene?: true;
 }
 
 export interface VerbItem extends VocabularyBase {

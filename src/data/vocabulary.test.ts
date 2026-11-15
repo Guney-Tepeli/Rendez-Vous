@@ -109,6 +109,25 @@ describe("enriched items", () => {
     }
   });
 
+  // Nouns spelt the same for a man and a woman: "un / une élève". Kept as an
+  // explicit list, like the folding exclusions (D10), so every addition is a
+  // reviewed choice. Left out on purpose: words whose feminine is spelt
+  // differently (coiffeur / coiffeuse, chef / cheffe, soldat / soldate),
+  // words with one fixed gender for everybody (un membre, un bébé, une
+  // personne, une victime, une star), and words whose entry also carries a
+  // non-person meaning of one gender (guide = guidebook, cadre = frame).
+  const EPICENE = [
+    "adulte", "architecte", "artiste", "bénévole", "camarade", "collègue", "colocataire", "comptable", "concierge",
+    "dentiste", "destinataire", "écologiste", "élève", "enfant", "fleuriste", "fonctionnaire", "internaute",
+    "journaliste", "juge", "locataire", "médecin", "ministre", "partenaire", "peintre", "photographe", "pilote",
+    "propriétaire", "réceptionniste", "scientifique", "secrétaire", "spécialiste", "stagiaire", "touriste", "vétérinaire",
+  ];
+
+  it("marks exactly the listed nouns as epicene", () => {
+    const marked = ENRICHED_ITEMS.filter((item) => item.pos === "noun" && item.epicene === true).map((item) => item.id);
+    expect([...marked].sort()).toEqual([...EPICENE].sort());
+  });
+
   it("verbs have all six present-tense forms", () => {
     for (const item of ENRICHED_ITEMS) {
       if (item.pos !== "verb") continue;
@@ -138,7 +157,15 @@ describe("vocabulary file format", () => {
     expect(item).toMatchObject({ id: "pomme", lemma: "pomme", pos: "noun", gender: "f", meaning: { TR: "elma", EN: "apple" } });
   });
 
+  it("accepts an epicene noun", () => {
+    const eleve = { ...good, id: "élève", gender: "m", plural: "élèves", epicene: true };
+    expect(parseEntry(eleve, "test.json")).toMatchObject({ pos: "noun", epicene: true });
+  });
+
   it.each([
+    ["epicene set to something other than true", { ...good, epicene: "yes" }],
+    ["epicene on a plural-only noun", { ...good, pluralOnly: true, epicene: true }],
+    ["epicene on an adjective", { ...good, pos: "adjective", gender: undefined, plural: undefined, feminine: "pomme", epicene: true }],
     ["a field from another part of speech", { ...good, present: ["a", "b", "c", "d", "e", "f"] }],
     ["a missing gender", { ...good, gender: undefined }],
     ["a level outside the scale", { ...good, level: "C1" }],

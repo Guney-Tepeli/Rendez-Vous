@@ -8,7 +8,7 @@
 import { useEffect, useRef } from "react";
 import type { WordEntry } from "../data/vocabulary";
 import { headword } from "../data/vocabulary";
-import { conjugated, withDefiniteArticle } from "../domain/french";
+import { conjugated, withBothDefiniteArticles, withDefiniteArticle } from "../domain/french";
 import { PERSONS, type LanguageMode, type VocabularyItem } from "../domain/types";
 import { useT } from "../i18n/useT";
 import { GenderBadge } from "./GenderBadge";
@@ -20,7 +20,9 @@ const OTHER: Record<LanguageMode, LanguageMode> = { TR: "EN", EN: "TR" };
 export function displayWord(entry: WordEntry): string {
   const item = entry.item;
   if (item?.pos === "noun") {
-    return item.pluralOnly ? `les ${item.lemma}` : withDefiniteArticle(item.lemma, item.gender);
+    if (item.pluralOnly) return `les ${item.lemma}`;
+    if (item.epicene) return withBothDefiniteArticles(item.lemma);
+    return withDefiniteArticle(item.lemma, item.gender);
   }
   return headword(entry);
 }
@@ -48,7 +50,7 @@ export function WordDetail({ entry }: { entry: WordEntry }) {
         <>
           <p className="detail-meta">
             <span className="pos">{t(`pos.${item.pos}`)}</span>
-            {item.pos === "noun" && <GenderBadge gender={item.gender} plural={item.pluralOnly === true} />}
+            {item.pos === "noun" && <GenderBadge gender={item.gender} plural={item.pluralOnly === true} epicene={item.epicene === true} />}
             {item.pos === "verb" && <span className="pos">{t("detail.group", { n: item.group })}</span>}
             <span className="ipa">/{item.ipa}/</span>
           </p>

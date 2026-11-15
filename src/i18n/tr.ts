@@ -24,6 +24,7 @@ export const tr = {
 
   "gender.m": "eril",
   "gender.f": "dişil",
+  "gender.mf": "eril ve dişil",
 
   "pos.noun": "isim",
   "pos.verb": "fiil",

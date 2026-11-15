@@ -58,7 +58,7 @@ export function Flashcard({ entry, card, revealed, now, onReveal, onRate, onDeta
             ) : (
               <>
                 <p className="detail-meta">
-                  {item.pos === "noun" && <GenderBadge gender={item.gender} plural={item.pluralOnly === true} />}
+                  {item.pos === "noun" && <GenderBadge gender={item.gender} plural={item.pluralOnly === true} epicene={item.epicene === true} />}
                   <span className="ipa">/{item.ipa}/</span>
                   <SpeakButton text={displayWord(entry)} />
                 </p>

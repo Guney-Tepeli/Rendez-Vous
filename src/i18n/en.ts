@@ -23,6 +23,7 @@ export const en: Record<TranslationKey, string> = {
 
   "gender.m": "masculine",
   "gender.f": "feminine",
+  "gender.mf": "masculine and feminine",
 
   "pos.noun": "noun",
   "pos.verb": "verb",
