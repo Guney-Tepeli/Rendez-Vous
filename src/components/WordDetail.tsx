@@ -16,7 +16,7 @@ import { SpeakButton } from "./SpeakButton";
 
 const OTHER: Record<LanguageMode, LanguageMode> = { TR: "EN", EN: "TR" };
 
-/** The word as you would say it: nouns carry their article. */
+/** The word as shown: nouns carry their article, epicene nouns both ("le / la journaliste"). */
 export function displayWord(entry: WordEntry): string {
   const item = entry.item;
   if (item?.pos === "noun") {
@@ -25,6 +25,17 @@ export function displayWord(entry: WordEntry): string {
     return withDefiniteArticle(item.lemma, item.gender);
   }
   return headword(entry);
+}
+
+/**
+ * The word as a speech voice should read it. Same as `displayWord`, except
+ * an epicene noun gets one article: a voice reads the "/" of "le / la
+ * journaliste" aloud. "l'élève" is already one article and stays as is.
+ */
+export function spokenWord(entry: WordEntry): string {
+  const item = entry.item;
+  if (item?.pos === "noun" && item.epicene) return withDefiniteArticle(item.lemma, item.gender);
+  return displayWord(entry);
 }
 
 export function WordDetail({ entry }: { entry: WordEntry }) {
@@ -38,7 +49,7 @@ export function WordDetail({ entry }: { entry: WordEntry }) {
         <h2 className="fr detail-word" lang="fr">
           {word}
         </h2>
-        <SpeakButton text={word} />
+        <SpeakButton text={spokenWord(entry)} />
       </header>
 
       {item === undefined ? (
