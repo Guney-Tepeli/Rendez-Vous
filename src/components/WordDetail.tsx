@@ -142,7 +142,9 @@ function GrammarSpecs({ item }: { item: VocabularyItem }) {
   const { t } = useT();
   switch (item.pos) {
     case "noun":
-      if (item.pluralOnly) return null;
+      // Plural-only nouns are already shown with "les"; uncountable nouns
+      // have no plural to show.
+      if (item.pluralOnly || item.uncountable) return null;
       return (
         <p className="spec">
           <span className="spec-label">{t("detail.plural")}</span>

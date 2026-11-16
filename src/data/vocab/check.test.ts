@@ -51,7 +51,7 @@ describe.skipIf(file === undefined)(`vocabulary file ${file ?? ""}`, () => {
     // forms (plural, feminine, a conjugated form), appear in an example.
     const missing = items.filter((item) => {
       const forms = [item.lemma];
-      if (item.pos === "noun") forms.push(item.plural);
+      if (item.pos === "noun" && !item.uncountable) forms.push(item.plural);
       if (item.pos === "adjective") forms.push(item.feminine);
       if (item.pos === "verb") forms.push(...Object.values(item.present));
       const stems = forms.map((form) => form.toLowerCase().replace(/^(je |tu |il |nous |vous |j'|l'|d'|se |s')/, "").slice(0, 3));

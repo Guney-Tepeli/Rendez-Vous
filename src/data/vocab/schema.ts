@@ -16,7 +16,8 @@
  *
  * Per part of speech:
  *   noun        gender "m"|"f", plural; optional pluralOnly: true; optional
- *               epicene: true (same word for a man and a woman: "un / une élève")
+ *               epicene: true (same word for a man and a woman: "un / une élève");
+ *               or uncountable: true and NO plural ("humour", "faim")
  *   verb        group 1|2|3, present: [je, tu, il, nous, vous, ils] (verb forms only, no pronouns)
  *   adjective   feminine
  *   expression  (nothing extra) fixed phrases, conjugated chunks
@@ -34,7 +35,7 @@ import {
 
 const POS = ["noun", "verb", "adjective", "expression", "other"] as const;
 const EXTRA_FIELDS: Record<(typeof POS)[number], readonly string[]> = {
-  noun: ["gender", "plural", "pluralOnly", "epicene"],
+  noun: ["gender", "plural", "pluralOnly", "epicene", "uncountable"],
   verb: ["group", "present"],
   adjective: ["feminine"],
   expression: [],
@@ -103,6 +104,17 @@ export function parseEntry(raw: unknown, file: string): VocabularyItem {
     case "noun": {
       const gender = raw.gender;
       if (gender !== "m" && gender !== "f") throw new VocabFormatError(`${where}: noun needs "gender": "m" or "f"`);
+      if (raw.uncountable !== undefined && raw.uncountable !== true) {
+        throw new VocabFormatError(`${where}: "uncountable" may only be true`);
+      }
+      if (raw.uncountable === true) {
+        // The point of the flag: no filler plural ("humours") can be stored.
+        if (raw.plural !== undefined) throw new VocabFormatError(`${where}: an uncountable noun has no "plural"`);
+        if (raw.pluralOnly !== undefined) throw new VocabFormatError(`${where}: a noun cannot be both "pluralOnly" and "uncountable"`);
+        // Epicene nouns name people, and people can be counted.
+        if (raw.epicene !== undefined) throw new VocabFormatError(`${where}: a noun cannot be both "epicene" and "uncountable"`);
+        return { ...base, pos: "noun", gender, uncountable: true };
+      }
       const plural = text(raw, "plural", where);
       if (raw.pluralOnly !== undefined && raw.pluralOnly !== true) {
         throw new VocabFormatError(`${where}: "pluralOnly" may only be true`);

@@ -128,6 +128,27 @@ describe("enriched items", () => {
     expect([...marked].sort()).toEqual([...EPICENE].sort());
   });
 
+  // Nouns used only in the singular in the sense the deck teaches: they carry
+  // no plural (no "les humours"). An explicit list, like EPICENE, so every
+  // addition is a reviewed choice. Checked on fr.wiktionary.org (Nov 2026):
+  // no plural in the taught sense, or a plural only in another sense
+  // ("jeunesses" = young people, "solitudes" = remote places). Left out on
+  // purpose: pollution (plural attested in that sense), lessive (also
+  // "detergent", countable), cuisine (also "kitchen"), and food mass nouns
+  // whose plural means kinds ("des laits végétaux", "des farines").
+  const UNCOUNTABLE = [
+    "argent", "bricolage", "chômage", "circulation", "confiance", "covoiturage", "cyclisme", "égalité", "électricité",
+    "enfance", "équitation", "escalade", "faim", "fatigue", "gentillesse", "honte", "humour", "jardinage", "jeunesse",
+    "justice", "météo", "musculation", "natation", "nature", "politesse", "racisme", "recyclage", "santé", "sécurité",
+    "shopping", "soif", "solidarité", "solitude", "sommeil", "tourisme", "tristesse", "vaisselle", "vieillesse",
+  ];
+
+  it("marks exactly the listed nouns as uncountable, with no plural", () => {
+    const marked = ENRICHED_ITEMS.filter((item) => item.pos === "noun" && item.uncountable === true);
+    expect(marked.map((item) => item.id).sort()).toEqual([...UNCOUNTABLE].sort());
+    expect(marked.filter((item) => item.pos === "noun" && item.plural !== undefined).map((item) => item.id)).toEqual([]);
+  });
+
   it("verbs have all six present-tense forms", () => {
     for (const item of ENRICHED_ITEMS) {
       if (item.pos !== "verb") continue;
@@ -162,7 +183,20 @@ describe("vocabulary file format", () => {
     expect(parseEntry(eleve, "test.json")).toMatchObject({ pos: "noun", epicene: true });
   });
 
+  it("accepts an uncountable noun without a plural", () => {
+    const { plural: _plural, ...withoutPlural } = good;
+    const humour = { ...withoutPlural, id: "humour", gender: "m", uncountable: true };
+    const item = parseEntry(humour, "test.json");
+    expect(item).toMatchObject({ pos: "noun", uncountable: true });
+    expect(item.pos === "noun" && item.plural).toBeUndefined();
+  });
+
   it.each([
+    ["uncountable set to something other than true", { ...good, plural: undefined, uncountable: "yes" }],
+    ["an uncountable noun that still has a plural", { ...good, uncountable: true }],
+    ["uncountable on a plural-only noun", { ...good, plural: undefined, pluralOnly: true, uncountable: true }],
+    ["uncountable on an epicene noun", { ...good, plural: undefined, epicene: true, uncountable: true }],
+    ["a countable noun without a plural", { ...good, plural: undefined }],
     ["epicene set to something other than true", { ...good, epicene: "yes" }],
     ["epicene on a plural-only noun", { ...good, pluralOnly: true, epicene: true }],
     ["epicene on an adjective", { ...good, pos: "adjective", gender: undefined, plural: undefined, feminine: "pomme", epicene: true }],
