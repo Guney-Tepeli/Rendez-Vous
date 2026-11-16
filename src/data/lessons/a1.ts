@@ -1451,6 +1451,10 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         EN: "Weather uses faire: il fait beau (nice), il fait froid (cold), il fait chaud (hot), il fait mauvais (bad). prendre covers “to eat, drink, ride, take”: prendre un café, prendre le bus, prendre une douche. The family of mettre: permettre (to allow), promettre (to promise). Watch the oddities in vous faites and ils font.",
       },
       {
+        TR: "Hava durumu: Türkçede “hava soğuk” deriz, Fransızcada özne hep il, fiil faire'dir: il fait beau · il fait mauvais · il fait chaud · il fait froid · il fait doux (ılık). Yağmur ve kar için faire değil kendi fiilleri var: il pleut (yağmur yağıyor, pleuvoir) · il neige (kar yağıyor, neiger). Soru kalıbı, olduğu gibi ezberle: Quel temps fait-il ? (Hava nasıl?) Dikkat: c'est froid “bu (nesne) soğuk” demektir (C'est froid, le café !), hava için değil. Kişinin üşümesi de faire değil avoir ile: j'ai froid (üşüyorum), j'ai chaud (sıcakladım).",
+        EN: "Weather: the subject is always il and the verb is faire: il fait beau · il fait mauvais · il fait chaud · il fait froid · il fait doux (mild). Rain and snow have their own verbs instead of faire: il pleut (it is raining, pleuvoir) · il neige (it is snowing, neiger). The question, learn it as a set phrase: Quel temps fait-il ? (What's the weather like?) Careful: c'est froid means “this (thing) is cold” (C'est froid, le café !), not the weather. Feeling cold or hot uses avoir, not faire: j'ai froid (I'm cold), j'ai chaud (I'm hot).",
+      },
+      {
         TR: "Tipik hatalar. Yanlış: Vous faisez du sport. · Ils fonts. · Je prend le bus. · Je fais le bus. Doğru: Vous faites du sport. · Ils font. · Je prends le bus. Tekilde -s, -s, -t: je prends, tu prends, il prend. Türkçede “binmek” ve “yapmak” ayrı fiiller, Fransızcada otobüs için faire değil prendre.",
         EN: "Typical mistakes. Wrong: Vous faisez du sport. · Ils fonts. · Je prend le bus. · Je fais le bus. Right: Vous faites du sport. · Ils font. · Je prends le bus. Singular endings are -s, -s, -t: je prends, tu prends, il prend. For a bus you take, not do: prendre, not faire.",
       },
@@ -1479,6 +1483,10 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Elle prend un café.",
         translation: { TR: "Kahve içiyor.", EN: "She is having a coffee." },
+      },
+      {
+        fr: "Il pleut, mais il fait doux.",
+        translation: { TR: "Yağmur yağıyor ama hava ılık.", EN: "It's raining, but it's mild." },
       },
       {
         fr: "Vous mettez un manteau ?",
@@ -1567,6 +1575,27 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         id: "faire-prendre-12",
         prompt: { TR: "Fransızca yaz: “Yarın spor yapacağım.”", EN: "Write in French: “I'm going to do sport tomorrow.”" },
         answers: ["Je vais faire du sport demain.", "Demain, je vais faire du sport.", "Demain je vais faire du sport."],
+      },
+      {
+        type: "choice",
+        id: "faire-prendre-13",
+        text: "___ froid aujourd'hui.",
+        options: ["C'est", "Il fait", "Il est", "Il a"],
+        answer: 1,
+        translation: { TR: "Bugün hava soğuk.", EN: "It's cold today." },
+      },
+      {
+        type: "fill",
+        id: "faire-prendre-14",
+        text: "En été, il ___ chaud. (faire)",
+        answers: ["fait"],
+        translation: { TR: "Yazın hava sıcak.", EN: "In summer it's hot." },
+      },
+      {
+        type: "free",
+        id: "faire-prendre-15",
+        prompt: { TR: "Fransızca yaz: “Yağmur yağıyor ama hava sıcak.”", EN: "Write in French: “It's raining, but it's hot.”" },
+        answers: ["Il pleut, mais il fait chaud."],
       },
     ],
   },
@@ -2873,6 +2902,10 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         EN: "il y a also expresses time: il y a deux ans = two years ago. In speech il can disappear: Y a un problème. A note on il faut: il ne faut pas = must not, forbidden. To say “there is no need” you do not use il ne faut pas but pas besoin de (you will see it later).",
       },
       {
+        TR: "voici / voilà = işte. Bir şeyi ya da birini göstermek, sunmak için: Voici ma sœur. (İşte kız kardeşim.) · Voilà le bus ! (İşte otobüs!) Kural olarak voici yakındakini, voilà uzaktakini gösterir; konuşmada çoğu zaman ikisi için de voilà denir. il y a ile farkı: il y a bir şeyin var olduğunu söyler (Il y a un bus. = Bir otobüs var.), voilà onu gösterir (Voilà le bus ! = İşte otobüs!). Bir işi bitirince de denir: Et voilà ! (İşte bu kadar, tamam!)",
+        EN: "voici / voilà = here is / there is, used to point something or someone out: Voici ma sœur. (This is my sister.) · Voilà le bus ! (Here comes the bus!) By the rule voici points to what is near and voilà to what is further away; in speech voilà is used for both. The difference from il y a: il y a says that something exists (Il y a un bus. = There is a bus.), voilà points at it (Voilà le bus ! = There's the bus!). It also closes a task: Et voilà ! (There you go, done!)",
+      },
+      {
         TR: "Tipik hatalar. Yanlış: Il a un parc ici. (o sahip) · Il y a pas de pain. (yazıda) · Je faut partir. · Il faut je partir. Doğru: Il y a un parc ici. · Il n'y a pas de pain. · Il faut partir. Türkçedeki “var / yok” iki farklı fiile bölünür: il y a / il n'y a pas. il faut'ta özne hep il'dir, fiil hiç çekilmez.",
         EN: "Typical mistakes. Wrong: Il a un parc ici. (he owns one) · Il y a pas de pain. (in writing) · Je faut partir. · Il faut je partir. Right: Il y a un parc ici. · Il n'y a pas de pain. · Il faut partir. Turkish “var / yok” becomes il y a / il n'y a pas. In il faut the subject is always il and the verb never changes.",
       },
@@ -2905,6 +2938,14 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
       {
         fr: "Il ne faut pas parler ici.",
         translation: { TR: "Burada konuşulmamalı.", EN: "You must not talk here." },
+      },
+      {
+        fr: "Voici ma sœur, Léa.",
+        translation: { TR: "İşte kız kardeşim Léa.", EN: "This is my sister, Léa." },
+      },
+      {
+        fr: "Regarde, voilà le bus !",
+        translation: { TR: "Bak, işte otobüs!", EN: "Look, here comes the bus!" },
       },
     ],
     exercises: [
@@ -2989,6 +3030,28 @@ export const A1_LESSONS: readonly GrammarLesson[] = [
         id: "il-y-a-il-faut-12",
         prompt: { TR: "Fransızca yaz: “Yarın çok çalışmak lazım.”", EN: "Write in French: “We have to work a lot tomorrow.”" },
         answers: ["Il faut beaucoup travailler demain.", "Demain, il faut beaucoup travailler.", "Demain il faut beaucoup travailler.", "Il faut travailler beaucoup demain."],
+      },
+      {
+        type: "choice",
+        id: "il-y-a-il-faut-13",
+        text: "___ mon frère, Paul.",
+        options: ["Il y a", "Voici", "Il faut", "Il est"],
+        answer: 1,
+        translation: { TR: "İşte kardeşim Paul.", EN: "This is my brother, Paul." },
+      },
+      {
+        type: "choice",
+        id: "il-y-a-il-faut-14",
+        text: "Regarde ! ___ le train.",
+        options: ["Il faut", "Il y a", "Voilà", "Il fait"],
+        answer: 2,
+        translation: { TR: "Bak! İşte tren.", EN: "Look! There's the train." },
+      },
+      {
+        type: "free",
+        id: "il-y-a-il-faut-15",
+        prompt: { TR: "Fransızca yaz: “İşte anahtarlar.”", EN: "Write in French: “Here are the keys.”" },
+        answers: ["Voici les clés.", "Voilà les clés.", "Voici les clefs.", "Voilà les clefs."],
       },
     ],
   },
