@@ -29,6 +29,15 @@ export function withDefiniteArticle(noun: string, gender: Gender): string {
   return `${gender === "m" ? "le" : "la"} ${noun}`;
 }
 
+/**
+ * Both articles for an epicene noun: "le / la journaliste". Before a vowel
+ * sound both contract to the same "l'", so it is written once: "l'élève".
+ */
+export function withBothDefiniteArticles(noun: string): string {
+  if (startsWithVowelSound(noun)) return `l'${noun}`;
+  return `le / la ${noun}`;
+}
+
 /** "un chat", "une maison" */
 export function withIndefiniteArticle(noun: string, gender: Gender): string {
   return `${gender === "m" ? "un" : "une"} ${noun}`;

@@ -178,6 +178,8 @@ kbd {
 .badge-label { font-weight: 400; }
 .badge-m { color: var(--masc); background: var(--masc-bg); }
 .badge-f { color: var(--fem); background: var(--fem-bg); }
+/* Epicene: neither gender's colour; tokens that already have dark values. */
+.badge-mf { color: var(--text); background: var(--line); }
 .meaning { font-size: 1.25rem; font-weight: 600; }
 .meaning-other { color: var(--muted); font-size: 0.95rem; }
 .lang-tag { font-size: 0.7rem; font-weight: 700; border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }

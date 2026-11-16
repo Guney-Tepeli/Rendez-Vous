@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { conjugated, startsWithVowelSound, withDefiniteArticle, withIndefiniteArticle } from "./french";
+import { conjugated, startsWithVowelSound, withBothDefiniteArticles, withDefiniteArticle, withIndefiniteArticle } from "./french";
 
 describe("articles", () => {
   it("uses le / la by gender", () => {
@@ -12,6 +12,12 @@ describe("articles", () => {
     expect(withDefiniteArticle("école", "f")).toBe("l'école");
     expect(withDefiniteArticle("hôtel", "m")).toBe("l'hôtel");
     expect(withDefiniteArticle("œuf", "m")).toBe("l'œuf");
+  });
+
+  it("gives an epicene noun both articles, once when both contract", () => {
+    expect(withBothDefiniteArticles("journaliste")).toBe("le / la journaliste");
+    expect(withBothDefiniteArticles("élève")).toBe("l'élève");
+    expect(withBothDefiniteArticles("enfant")).toBe("l'enfant");
   });
 
   it("does not contract before a listed h aspiré", () => {

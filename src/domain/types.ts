@@ -69,13 +69,36 @@ interface VocabularyBase {
  * Here the compiler knows: if `item.pos === "noun"`, `item.gender` exists;
  * if it is a verb, `item.gender` does not exist at all.
  */
-export interface NounItem extends VocabularyBase {
+interface NounBase extends VocabularyBase {
   pos: "noun";
   gender: Gender;
-  plural: string;
   /** Set for nouns that exist only in the plural ("les vacances"). */
   pluralOnly?: true;
+  /**
+   * Set for nouns spelt the same for a man and a woman ("un / une élève").
+   * `gender` still holds one value, so code that needs a single article keeps
+   * working; display code that sees this flag shows both.
+   */
+  epicene?: true;
 }
+
+/** A noun with a plural form ("pomme", plural "pommes"). */
+interface CountableNoun extends NounBase {
+  plural: string;
+  uncountable?: undefined;
+}
+
+/**
+ * A noun used only in the singular in the sense taught ("l'humour", "la
+ * faim"). It has no `plural` at all, so no filler plural can be stored, and
+ * after `if (item.uncountable)` the compiler knows `item.plural` is a string.
+ */
+interface UncountableNoun extends NounBase {
+  uncountable: true;
+  plural?: undefined;
+}
+
+export type NounItem = CountableNoun | UncountableNoun;
 
 export interface VerbItem extends VocabularyBase {
   pos: "verb";

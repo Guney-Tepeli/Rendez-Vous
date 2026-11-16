@@ -12,7 +12,7 @@ import { RATINGS, type Rating, type SrsCard, type Timestamp } from "../domain/ty
 import { useT } from "../i18n/useT";
 import { GenderBadge } from "./GenderBadge";
 import { SpeakButton } from "./SpeakButton";
-import { displayWord } from "./WordDetail";
+import { displayWord, spokenWord } from "./WordDetail";
 
 interface FlashcardProps {
   entry: WordEntry;
@@ -58,9 +58,9 @@ export function Flashcard({ entry, card, revealed, now, onReveal, onRate, onDeta
             ) : (
               <>
                 <p className="detail-meta">
-                  {item.pos === "noun" && <GenderBadge gender={item.gender} plural={item.pluralOnly === true} />}
+                  {item.pos === "noun" && <GenderBadge gender={item.gender} plural={item.pluralOnly === true} epicene={item.epicene === true} />}
                   <span className="ipa">/{item.ipa}/</span>
-                  <SpeakButton text={displayWord(entry)} />
+                  <SpeakButton text={spokenWord(entry)} />
                 </p>
                 <p className="meaning">{l(item.meaning)}</p>
                 <ul className="card-examples">

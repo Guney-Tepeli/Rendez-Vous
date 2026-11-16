@@ -11,7 +11,7 @@ has full details; the grammar course runs A1 to B1.
 | Content | Amount | Days at the default pace |
 |---|---|---|
 | Words (all enriched, 3 examples each) | 2,999: A1 774 · A2 993 · B1 1,224 · above B1 8 | 300 at 10 new words a day |
-| Grammar lessons | 78: A1 25 · A2 25 · B1 28; about 6 paragraphs (rule, exceptions, typical mistakes, tip), 6 examples, 12 exercises each (fill, build, free, choice) | 78, then revision |
+| Grammar lessons | 78: A1 25 · A2 25 · B1 28; about 6 paragraphs (rule, exceptions, typical mistakes, tip), 6 examples, 12 exercises each (fill, build, free, choice); `faire-prendre` and `il-y-a-il-faut` have 7 paragraphs, 7–8 examples, 15 exercises | 78, then revision |
 | Reading texts | 78, one per lesson, 450–600 French words, 5 questions each | read on the lesson's day |
 | Phonetics cards | 23, every focus type | rotate every 23 days |
 | Self-talk prompts | 124: A1 41 · A2 41 · B1 42, shown at or below the current lesson level | |
@@ -46,7 +46,7 @@ the model's knowledge. See Open.
 | Command | What |
 |---|---|
 | `npm run dev` | Vite dev server |
-| `npm test` | Vitest, 112 tests (+3 single-file checks), all deterministic (fixed clock) |
+| `npm test` | Vitest, 128 tests (+3 single-file checks), all deterministic (fixed clock) |
 | `./mac/build.sh` | Build `Rendez-Vous.app` (web build + universal Swift binary + icon, ad-hoc signed). `SKIP_WEB=1` reuses `dist/`. `RENDEZVOUS_SELFTEST=1 Rendez-Vous.app/Contents/MacOS/Rendez-Vous` prints a JSON self-check and quits |
 | `npm run typecheck` | `tsc --noEmit`, strict |
 | `VOCAB_FILE=src/data/vocab/x.json npx vitest run src/data/vocab/check.test.ts` | Check one vocabulary file while writing it |
@@ -153,6 +153,9 @@ the model's knowledge. See Open.
 | D59 | Mac app is a small Swift/AppKit wrapper (WKWebView, custom `rendezvous://` scheme serving the bundled build), ad-hoc signed, no DMG | No server or browser, real localStorage, icon in Finder; owner said DMG not needed. A custom scheme instead of `file://` because ES modules and storage are unreliable there | Electron / Tauri (new dependencies, 100+ MB); a localhost server |
 | D60 | Word entries need at least 3 examples (schema) | Owner asked for three sentences per word | Two |
 | D61 | Readings, lesson examples and exercises are tested for grammar from later lessons by marker regexes (exercises with the gap filled by the right answer; wrong choice options skipped, they are shown as wrong), each naming the lesson that teaches it (`content.test.ts`); word edges are `(?<!\p{L})` / `(?!\p{L})`. Fixed phrases are their own marker ("je voudrais" from `modal-verbs`) or excluded ("En attendant," = meanwhile; "en restaurant") | Deterministic, catches the common slips (an early gérondif was in 26 places); JS `\b` is ASCII-only and splits "déjà" | Reading every text by hand only; a French parser (dependency) |
+| D62 | Epicene nouns ("un / une élève") carry `epicene: true`; `gender` keeps one value. Shown as "le / la journaliste" ("l'élève" once when both contract) with a neutral badge; spoken with one article (`spokenWord`: "le journaliste"), because a voice reads the "/" aloud ("barre oblique", measured with `say`). No spoken French may contain "/" (tested). The 34 marked words are an explicit list in `vocabulary.test.ts`; not with `pluralOnly` | Same pattern as `pluralOnly`: code that needs one article keeps working, the compiler shows every place that reads the flag | `gender: "mf"` (every article helper must handle a third value) |
+| D63 | Uncountable nouns carry `uncountable: true` and NO `plural` (schema rejects one); `NounItem` is a union of countable / uncountable, so after `if (item.uncountable)` the compiler knows `plural` is a string. The 38 marked words are an explicit list in `vocabulary.test.ts` | No filler plural ("les humours") can be stored or shown; the compiler found the one other reader of `plural` (`check.test.ts`) | Optional `plural` (a missing plural would look like an oversight); keeping filler plurals and only hiding them |
+| D64 | Missing A1 grammar added as sections of existing lessons, not new lessons: weather (il fait…, il pleut, il neige) in `faire-prendre`, voici / voilà in `il-y-a-il-faut`; new exercise ids continue the numbering (-13 to -15). "Quel temps fait-il ?" only in the explanation, as a set phrase (quel is taught in lesson 48) | A new lesson needs a 450–600-word reading and changes the 25/25/28 counts, and `pickLesson` would send a learner past it back to it | New lessons |
 | D9 | Default instruction language TR | Assumption, one line in `initialState()` | EN |
 
 ## Open
@@ -172,8 +175,11 @@ the model's knowledge. See Open.
   read, 110 verified on fr.wiktionary (109 / 110 match; 1 IPA fixed: auberge de jeunesse), 1 lesson read. Lessons,
   phonetics IPA and example sentences beyond that are unverified.
 - No automated UI tests remain in the repo (removed with their tools).
-- Epicene nouns (journaliste, collègue…) record only one gender ("m").
-- Some uncountable nouns carry a filler plural ("humours", "chômages").
+- Nouns whose feminine is spelt differently (coiffeur / coiffeuse, professeur /
+  professeure, auteur / autrice, chef / cheffe) record only the masculine.
+  Epicene nouns are done (D62).
+- Uncountable nouns: 38 marked (D63) after a check on fr.wiktionary, which
+  labels almost none of them explicitly; the list is a judgement, not a lookup.
 - Spreadsheet typos stay as ids (heuresement, felicitations, depecher, celibataire,
   memoire, meme si, peut-etre, naitre, siecle, reparer); the shown lemma is
   correct. Fixing them in the sheet changes ids.
@@ -181,7 +187,7 @@ the model's knowledge. See Open.
   il n'y avait, ce sont des / les / mes, est-ce qu', pas d', jusqu', en fiche,
   travaillent-elles, pêché…) are kept as cards. Candidates for removal from the sheet.
 - Grammar scope vs the Inventaire: A1 passé composé with être is at full
-  scope (A2-ish); no lessons for "il fait" weather or voici / voilà;
+  scope (A2-ish); weather and voici / voilà are sections, not lessons (D64);
   nominalisation and participle agreement with a preceding object (only
   touched in A2) have no lesson of their own.
 - Pace mismatch: grammar ends after 78 days, words after 300 at 10 a day
